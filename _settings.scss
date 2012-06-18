@@ -1,0 +1,73 @@
+//-----------------------------------------------------------------------
+//  Settings
+//-----------------------------------------------------------------------
+
+// ----- @font-face ----- //
+
+// ...
+
+// ----- Variables ----- //
+
+// Colors
+
+$color-base: #222;
+$color-highlight: #0053C9;
+
+// Fonts
+
+$font-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-header: Arial, Helvetica, sans-serif;
+
+// ----- Mixins ----- //
+
+@mixin linear-gradient($direction, $color, $start, $end) {
+  background-color: $color;
+  background-image: -webkit-linear-gradient($direction, $start, $end);
+  background-image: -moz-linear-gradient($direction, $start, $end);
+  background-image: -ms-linear-gradient($direction, $start, $end);
+  background-image: -o-linear-gradient($direction, $start, $end);
+  background-image: linear-gradient($direction, $start, $end);
+}
+@mixin transform($arguments) {
+  -webkit-transform: $arguments;
+  -moz-transform: $arguments;
+  -ms-transform: $arguments;
+  transform: $arguments;
+  -webkit-backface-visibility: hidden;
+}
+@mixin transition($arguments) {
+  -webkit-transition: $arguments;
+  -moz-transition: $arguments;
+  -ms-transition: $arguments;
+  transition: $arguments;
+}
+
+// ----- Extends ----- //
+
+.group {
+  zoom: 1;
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  };
+  &:after {
+    clear: both;
+  }
+}
+.ir {
+  background-color: transparent;
+  border: 0;
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+}
+.ellipsis {
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// ----- Animations ----- //
