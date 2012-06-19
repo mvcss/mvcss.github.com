@@ -4,9 +4,9 @@ jQuery ($) ->
     $('.content-section').not(hash).hide()
     $("[data-hash=#{hash}]").addClass('active')
   else
-    window.location.hash = $('.sidebar a:first').attr('href')
-    $('.content-section').not(window.location.hash).hide()
-    $("[data-hash=#{window.location.hash}]").addClass('active')
+    url = $('.sidebar a:first').attr('href')
+    $('.content-section').not(url).hide()
+    $("[data-hash=#{url}]").addClass('active')
 
   $('.sidebar a').click (e) ->
     e.preventDefault()
