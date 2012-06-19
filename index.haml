@@ -1,0 +1,131 @@
+!!! 5
+<!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+%html{ :lang => "en" }
+<!--<![endif]-->
+%head
+  %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
+  %meta{ :charset => "utf-8" }
+  %title MVCSS
+  %link{ :href => "http://fonts.googleapis.com/css?family=Lato:300,400,,700,900", :rel => "stylesheet" }
+  %link{ :href => "http://fonts.googleapis.com/css?family=Droid+Sans+Mono", :rel => "stylesheet" }
+  %link{ :href => "css/application.css", :rel => "stylesheet" }
+%body
+  %header
+    .inner
+      %h1 MVCSS
+      %h2.tagline A Sass-based MVC CSS Architecture
+      %a.btn-default.download{ :href => 'https://github.com/mvcss/MVCSS' } Take me to the code &rarr;
+  %section.content
+    .inner
+      .main
+        .content-section#purpose
+          %h2 Purpose
+          %p As front-end devs at <a href="http://envylabs.com">Envy Labs</a>, we work primarily in medium-to-large-sized Rails applications. Each of these projects has a sizable amount of CSS undergoing normal maintenance and iteration. Depending on complexity and setup, changes to existing style can be difficult or done poorly if the <em>right way</em> is too convoluted.
+          %p <strong>MVCSS</strong> (<a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">MVC</a>-based Style Sheets) is our method for creating predictable and maintainable application style by coupling Rails controller and controller action naming conventions to contextual style tweaks.
+          %h3 What? Another Way to Write CSS?
+          %p CSS in and of itself is simple to pick up, but difficult to apply maintainably to large applications - hence the popularity of the methods listed above. <strong>MVCSS</strong> is one such manner to organize styles, and the one that we've had the most success in employing.
+          %h3 Do I Have to Use Sass?
+          %p Sass is definitely not required to employ this paradigm, but we're big fans (hence the default project files being in SCSS - blame Rails). Most of the Sass-only stuff is found in Settings.
+        .content-section#overview
+          %h2 Organizational Overview
+          %p <strong>MVCSS</strong> is broken down into three primary sections - Global (Resets, Settings, and Defaults), Modules (self-contained, reusable chunks), and Layout (context-based tweaks to base and module styles).
+          %h3 Cascade Down, Abstract Up
+          %p It's important to remember that declarations can always be moved and abstracted. If you find you're repeating position-determined styles in the Layout section, it's probably time to abstract those styles to a new or existing module. Alternatively, if you're declaring too many modular tweaks just for one-off instances, it might be time to move those tweaks to the Layout section.
+        .content-section#global
+          %h2 Global
+          %h3 Reset / Normalize
+          %p As long as the project size warrants it, we always get things started with a style reset. <a href="http://meyerweb.com/eric/tools/css/reset">Eric Meyer's Reset CSS</a> is still our favorite, but alternatives like <a href="http://necolas.github.com/normalize.css">Normalize.css</a> are easily interchangeable.
+          %h3 Settings
+          %p The settings partial centers around reusable utilities - @font-face declarations, Sass mixins and variables, classes to be used with @extend (soon to be extend directives), and keyframe animations. Grouping everything into one file allows newcomers to the project the means to find out what's available to them quickly.
+          %h3 A Note About Variables
+          %p We won't be delving too far into our CSS style guides for now, but we definitely recommend two things when making use of Sass variables: prefix the variable with what it represents ($color-base, $color-highlight, $font-base) and make use of semantic names ($color-base rather than $color-blue).
+          %h3 Base
+          %p Base contains declarations for block-level text items, inline tags, and any commonly occurring content containers. Text styles set here reflect the most common appearance of that tag in the design.
+        .content-section#modules
+          %h2 Modules
+          %p Modules in this context refer to any unit of style that can be found across multiple pages. <strong>Most of your style should be found here.</strong> This draws from the <a href="https://github.com/stubbornella/oocss/wiki">OOCSS</a> idea of separating everything into usable chunks, making it second-nature if you're familiar with that method.
+          %aside
+            %h4 Naming
+            %p While the decision between purely semantic and presentational class names is up to you, we definitely recommend naming modules independently of their possible placement - <code>.search</code> might appear on the top of one page and the bottom of another.
+          %h3 Examples of Modules
+          %p Here are some commonly occurring examples of modules:
+          %ul
+            %li Modals
+            %li Buttons
+            %li Tooltips
+            %li Navigation
+            %li Re-appearing chunks of content, like a user info card or sidebar
+        .content-section#layouts
+          %h2 Layouts
+          %p Having resets, base styles, and style modules is definitely not new - so what's the point of this <strong>MVCSS</strong> stuff? Inevitably, designs you receive (or design yourself) will contain small tweaks of base styles depending on where the element sits. For example, a sidebar on a user settings page might have a border around it, or the headline on a home page. With trump cards like <em>balance</em> and <em>contrast</em>, we're usually on the rope to figure out how to incorporate the designer's vision without messing up our precious order.
+          %p.warn <em>Note:</em> again, if you find yourself repeating tweaks across multiple layouts, it's time to abstract up to the module level.
+          %h3 Context-Based Module Adjustment
+          %p <strong>The primary idea behind MVCSS is that you can write your HTML after setting up the Global and Module sections and employ the Layout section afterwards for any minor fixes.</strong>
+          %h3 Controllers / Controller-Action
+          %p To make these contextual tweaks, we've found it easiest to couple the sections to Rails controllers. Outputting the controller name (such as Users) and the action name (such as Edit) in automatically to the <code>body</code> is trivial in Rails, giving us the ability to tweak modules as such:
+          %pre
+            :preserve
+              /* Modules */
+
+              .btn {
+                background: $color-base;
+                color: darken($color-base, 20%);
+                display: block;
+                padding: 5px;
+              }
+
+              /* Layout */
+
+              .users { /* Controller name */
+                .btn {
+                  color: #fff; /* Controller-wide tweaks */
+                }
+              }
+
+              .users-show { /* Controller action */
+                .btn {
+                  color: $color-highlight; /* Tweaks only found on a particular action */
+                }
+              }
+          %h3 Object Notes
+          %p As mentioned before, feel free to employ whatever you're comfortable with in regards to module naming, semantics, and abstraction. We tend to only use classes, but aren't as strict about using descendant selectors (<code>.tooltip h4</code>) as OOCSS recommends against. It's best to get the properties into the stylesheet without fretting over the proper level of abstraction initially, then refactoring as you continue to build out the application.
+        .content-section#code
+          %h2 Code &amp; Contributing
+          %p Our <a href="https://github.com/mvcss/MVCSS">base project setup</a> is available on GitHub.
+          %p Want to contribute? We love pull requests and comments.
+        .content-section#extra
+          %h2 Extra Stuff
+          %p Demand permitting, there are further ideas and addendum we may incorporate in the future:
+          %ul
+            %li Notes and guides on our internal naming structures - denoting hierarchy within modules, altered states, etc.
+            %li A potential RubyGem to generate formatted layout blocks when controllers are generated.
+        .content-section#about
+          %h2 The People Who Put Too Much Thought Into This
+          %p
+            %img{ :src => 'images/drew.png', :alt => 'Drew Barontini', :width => '200px', :height => '200px' }
+            %img{ :src => 'images/nick.png', :alt => 'Nick Walsh', :width => '200px', :height => '200px' }
+          %p <a href="http://twitter.com/drewbarontini">Drew Barontini</a> and <a href="http://twitter.com/nickawalsh">Nick Walsh</a> are front-end devs at <a href="http://envylabs.com">Envy Labs</a>, both adamant about alphabetizing properties, keeping personal effects at right angles, and unfortunately don't rock (or attempt to) the above facial hair.
+      %aside.sidebar
+        %ol
+          %li
+            %a{ :href => '#purpose', 'data-hash' => '#purpose' } Purpose
+          %li
+            %a{ :href => '#overview', 'data-hash' => '#overview' } Overview
+          %li
+            %a{ :href => '#global', 'data-hash' => '#global' } Global
+          %li
+            %a{ :href => '#modules', 'data-hash' => '#modules' } Modules
+          %li
+            %a{ :href => '#layouts', 'data-hash' => '#layouts' } Layouts
+          %li
+            %a{ :href => '#code', 'data-hash' => '#code' } Code &amp; Contributing
+          %li
+            %a{ :href => '#extra', 'data-hash' => '#extra' } Extra Stuff
+          %li
+            %a{ :href => '#about', 'data-hash' => '#about' } About US
+
+
+  %script{ :type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" }
+  %script{ :type => "text/javascript", :src => "js/application.js" }

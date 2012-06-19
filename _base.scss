@@ -1,0 +1,72 @@
+//-----------------------------------------------------------------------
+//  Base
+//-----------------------------------------------------------------------
+
+html {
+  background: #FFF url(../images/bg-body.png) repeat;
+  font-size: 16px;
+}
+body {
+  color: $color-base;
+  font: 62.5%/1.5 $font-base;
+}
+
+// ----- Text Content ----- //
+
+// Headings
+
+h1 { font-size: 4em; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 2em; }
+h4 { font-size: 1.8em; }
+
+// Paragraphs
+
+p {
+  color: lighten($color-base, 20%);
+  font-size: 1.6em;
+  font-weight: 400;
+}
+
+// ----- Inline Content ----- //
+
+// Links
+
+a {
+  color: $color-highlight;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+// Formatting
+
+em { font-style: italic; }
+strong { font-weight: 700; }
+code, pre {
+  background: lighten($color-base, 10%);
+  border-radius: 3px;
+  color: lighten($color-highlight, 50%);;
+  font-family: $font-monospace;
+  font-size: 1.3em;
+  margin: 10px 0 0;
+  padding: 10px;
+  width: 75%;
+  word-wrap: break-word;
+}
+code {
+  background: $color-highlight;
+  margin: 0;
+  padding: 4px;
+}
+
+// ----- Base Containers ----- //
+
+.inner {
+  margin: 0 auto;
+  padding: 0 40px;
+  max-width: 1400px;
+  min-width: 600px;
+}

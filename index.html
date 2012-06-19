@@ -1,1 +1,135 @@
-MVCSS
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang='en'></html>
+<!--<![endif]-->
+<head>
+  <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+  <meta charset='utf-8'>
+  <title>MVCSS</title>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,,700,900' rel='stylesheet'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet'>
+  <link href='css/application.css' rel='stylesheet'>
+</head>
+<body>
+  <header>
+    <div class='inner'>
+      <h1>MVCSS</h1>
+      <h2 class='tagline'>A Sass-based MVC CSS Architecture</h2>
+      <a class='btn-default download' href='https://github.com/mvcss/MVCSS'>Take me to the code &rarr;</a>
+    </div>
+  </header>
+  <section class='content'>
+    <div class='inner'>
+      <div class='main'>
+        <div class='content-section' id='purpose'>
+          <h2>Purpose</h2>
+          <p>As front-end devs at <a href="http://envylabs.com">Envy Labs</a>, we work primarily in medium-to-large-sized Rails applications. Each of these projects has a sizable amount of CSS undergoing normal maintenance and iteration. Depending on complexity and setup, changes to existing style can be difficult or done poorly if the <em>right way</em> is too convoluted.</p>
+          <p><strong>MVCSS</strong> (<a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">MVC</a>-based Style Sheets) is our method for creating predictable and maintainable application style by coupling Rails controller and controller action naming conventions to contextual style tweaks.</p>
+          <h3>What? Another Way to Write CSS?</h3>
+          <p>CSS in and of itself is simple to pick up, but difficult to apply maintainably to large applications - hence the popularity of the methods listed above. <strong>MVCSS</strong> is one such manner to organize styles, and the one that we've had the most success in employing.</p>
+          <h3>Do I Have to Use Sass?</h3>
+          <p>Sass is definitely not required to employ this paradigm, but we're big fans (hence the default project files being in SCSS - blame Rails). Most of the Sass-only stuff is found in Settings.</p>
+        </div>
+        <div class='content-section' id='overview'>
+          <h2>Organizational Overview</h2>
+          <p><strong>MVCSS</strong> is broken down into three primary sections - Global (Resets, Settings, and Defaults), Modules (self-contained, reusable chunks), and Layout (context-based tweaks to base and module styles).</p>
+          <h3>Cascade Down, Abstract Up</h3>
+          <p>It's important to remember that declarations can always be moved and abstracted. If you find you're repeating position-determined styles in the Layout section, it's probably time to abstract those styles to a new or existing module. Alternatively, if you're declaring too many modular tweaks just for one-off instances, it might be time to move those tweaks to the Layout section.</p>
+        </div>
+        <div class='content-section' id='global'>
+          <h2>Global</h2>
+          <h3>Reset / Normalize</h3>
+          <p>As long as the project size warrants it, we always get things started with a style reset. <a href="http://meyerweb.com/eric/tools/css/reset">Eric Meyer's Reset CSS</a> is still our favorite, but alternatives like <a href="http://necolas.github.com/normalize.css">Normalize.css</a> are easily interchangeable.</p>
+          <h3>Settings</h3>
+          <p>The settings partial centers around reusable utilities - @font-face declarations, Sass mixins and variables, classes to be used with @extend (soon to be extend directives), and keyframe animations. Grouping everything into one file allows newcomers to the project the means to find out what's available to them quickly.</p>
+          <h3>A Note About Variables</h3>
+          <p>We won't be delving too far into our CSS style guides for now, but we definitely recommend two things when making use of Sass variables: prefix the variable with what it represents ($color-base, $color-highlight, $font-base) and make use of semantic names ($color-base rather than $color-blue).</p>
+          <h3>Base</h3>
+          <p>Base contains declarations for block-level text items, inline tags, and any commonly occurring content containers. Text styles set here reflect the most common appearance of that tag in the design.</p>
+        </div>
+        <div class='content-section' id='modules'>
+          <h2>Modules</h2>
+          <p>Modules in this context refer to any unit of style that can be found across multiple pages. <strong>Most of your style should be found here.</strong> This draws from the <a href="https://github.com/stubbornella/oocss/wiki">OOCSS</a> idea of separating everything into usable chunks, making it second-nature if you're familiar with that method.</p>
+          <aside>
+            <h4>Naming</h4>
+            <p>While the decision between purely semantic and presentational class names is up to you, we definitely recommend naming modules independently of their possible placement - <code>.search</code> might appear on the top of one page and the bottom of another.</p>
+          </aside>
+          <h3>Examples of Modules</h3>
+          <p>Here are some commonly occurring examples of modules:</p>
+          <ul>
+            <li>Modals</li>
+            <li>Buttons</li>
+            <li>Tooltips</li>
+            <li>Navigation</li>
+            <li>Re-appearing chunks of content, like a user info card or sidebar</li>
+          </ul>
+        </div>
+        <div class='content-section' id='layouts'>
+          <h2>Layouts</h2>
+          <p>Having resets, base styles, and style modules is definitely not new - so what's the point of this <strong>MVCSS</strong> stuff? Inevitably, designs you receive (or design yourself) will contain small tweaks of base styles depending on where the element sits. For example, a sidebar on a user settings page might have a border around it, or the headline on a home page. With trump cards like <em>balance</em> and <em>contrast</em>, we're usually on the rope to figure out how to incorporate the designer's vision without messing up our precious order.</p>
+          <p class='warn'><em>Note:</em> again, if you find yourself repeating tweaks across multiple layouts, it's time to abstract up to the module level.</p>
+          <h3>Context-Based Module Adjustment</h3>
+          <p><strong>The primary idea behind MVCSS is that you can write your HTML after setting up the Global and Module sections and employ the Layout section afterwards for any minor fixes.</strong></p>
+          <h3>Controllers / Controller-Action</h3>
+          <p>To make these contextual tweaks, we've found it easiest to couple the sections to Rails controllers. Outputting the controller name (such as Users) and the action name (such as Edit) in automatically to the <code>body</code> is trivial in Rails, giving us the ability to tweak modules as such:</p>
+          <pre>/* Modules */&#x000A;&#x000A;.btn {&#x000A;  background: $color-base;&#x000A;  color: darken($color-base, 20%);&#x000A;  display: block;&#x000A;  padding: 5px;&#x000A;}&#x000A;&#x000A;/* Layout */&#x000A;&#x000A;.users { /* Controller name */&#x000A;  .btn {&#x000A;    color: #fff; /* Controller-wide tweaks */&#x000A;  }&#x000A;}&#x000A;&#x000A;.users-show { /* Controller action */&#x000A;  .btn {&#x000A;    color: $color-highlight; /* Tweaks only found on a particular action */&#x000A;  }&#x000A;}</pre>
+          <h3>Object Notes</h3>
+          <p>As mentioned before, feel free to employ whatever you're comfortable with in regards to module naming, semantics, and abstraction. We tend to only use classes, but aren't as strict about using descendant selectors (<code>.tooltip h4</code>) as OOCSS recommends against. It's best to get the properties into the stylesheet without fretting over the proper level of abstraction initially, then refactoring as you continue to build out the application.</p>
+        </div>
+        <div class='content-section' id='code'>
+          <h2>Code &amp; Contributing</h2>
+          <p>Our <a href="https://github.com/mvcss/MVCSS">base project setup</a> is available on GitHub.</p>
+          <p>Want to contribute? We love pull requests and comments.</p>
+        </div>
+        <div class='content-section' id='extra'>
+          <h2>Extra Stuff</h2>
+          <p>Demand permitting, there are further ideas and addendum we may incorporate in the future:</p>
+          <ul>
+            <li>Notes and guides on our internal naming structures - denoting hierarchy within modules, altered states, etc.</li>
+            <li>A potential RubyGem to generate formatted layout blocks when controllers are generated.</li>
+          </ul>
+        </div>
+        <div class='content-section' id='about'>
+          <h2>The People Who Put Too Much Thought Into This</h2>
+          <p>
+            <img alt='Drew Barontini' height='200px' src='images/drew.png' width='200px'>
+            <img alt='Nick Walsh' height='200px' src='images/nick.png' width='200px'>
+          </p>
+          <p><a href="http://twitter.com/drewbarontini">Drew Barontini</a> and <a href="http://twitter.com/nickawalsh">Nick Walsh</a> are front-end devs at <a href="http://envylabs.com">Envy Labs</a>, both adamant about alphabetizing properties, keeping personal effects at right angles, and unfortunately don't rock (or attempt to) the above facial hair.</p>
+        </div>
+      </div>
+      <aside class='sidebar'>
+        <ol>
+          <li>
+            <a data-hash='#purpose' href='#purpose'>Purpose</a>
+          </li>
+          <li>
+            <a data-hash='#overview' href='#overview'>Overview</a>
+          </li>
+          <li>
+            <a data-hash='#global' href='#global'>Global</a>
+          </li>
+          <li>
+            <a data-hash='#modules' href='#modules'>Modules</a>
+          </li>
+          <li>
+            <a data-hash='#layouts' href='#layouts'>Layouts</a>
+          </li>
+          <li>
+            <a data-hash='#code' href='#code'>Code &amp; Contributing</a>
+          </li>
+          <li>
+            <a data-hash='#extra' href='#extra'>Extra Stuff</a>
+          </li>
+          <li>
+            <a data-hash='#about' href='#about'>About US</a>
+          </li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js' type='text/javascript'></script>
+  <script src='js/application.js' type='text/javascript'></script>
+</body>
