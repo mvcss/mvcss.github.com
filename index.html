@@ -24,6 +24,8 @@
           <p>As front-end devs at <a href="http://envylabs.com">Envy Labs</a>, we work primarily in medium-to-large-sized Rails applications. Each of these projects has a sizable amount of CSS undergoing normal maintenance and iteration. Depending on complexity and setup, changes to existing style can be difficult or done poorly if the <em>right way</em> is too convoluted.</p>
           <p><strong>MVCSS</strong> (<a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">MVC</a>-based Style Sheets) is our method for creating predictable and maintainable application style by coupling Rails controller and controller action naming conventions to contextual style tweaks.</p>
           <h3>What? Another Way to Write CSS?</h3>
+          <p>We're big fans (and often employ tenants of) well-documented methods like <a href="https://github.com/stubbornella/oocss/wiki">OOCSS</a>, <a href="http://bem.github.com/bem-method/pages/beginning/beginning.en.html">BEM</a>, and <a href="http://smacss.com/">SMACSS</a>. These setups tend to get us ~90% through a build flawlessly before taking an unwanted turn - usually as a result of organization issues in the face of placement-dependent alterations (more on that in the Layout section).</p>
+          <h3>All This for CSS?</h3>
           <p>CSS in and of itself is simple to pick up, but difficult to apply maintainably to large applications - hence the popularity of the methods listed above. <strong>MVCSS</strong> is one such manner to organize styles, and the one that we've had the most success in employing.</p>
           <h3>Do I Have to Use Sass?</h3>
           <p>Sass is definitely not required to employ this paradigm, but we're big fans (hence the default project files being in SCSS - blame Rails). Most of the Sass-only stuff is found in Settings.</p>
@@ -64,7 +66,7 @@
         </div>
         <div class='content-section' id='layouts'>
           <h2>Layouts</h2>
-          <p>Having resets, base styles, and style modules is definitely not new - so what's the point of this <strong>MVCSS</strong> stuff? Inevitably, designs you receive (or design yourself) will contain small tweaks of base styles depending on where the element sits. For example, a sidebar on a user settings page might have a border around it, or the headline on a home page. With trump cards like <em>balance</em> and <em>contrast</em>, we're usually on the rope to figure out how to incorporate the designer's vision without messing up our precious order.</p>
+          <p>Having resets, base styles, and style modules is definitely not new - so what's the point of this <strong>MVCSS</strong> stuff? Inevitably, designs you receive (or design yourself) will contain small tweaks of base styles depending on where the element sits. For example, a sidebar on a user settings page might have a border around it, or the headline on a home page could suddenly turn white. With trump cards like <em>balance</em> and <em>contrast</em>, we're usually on the rope to figure out how to incorporate the designer's vision without messing up our precious order.</p>
           <p class='warn'><em>Note:</em> again, if you find yourself repeating tweaks across multiple layouts, it's time to abstract up to the module level.</p>
           <h3>Context-Based Module Adjustment</h3>
           <p><strong>The primary idea behind MVCSS is that you can write your HTML after setting up the Global and Module sections and employ the Layout section afterwards for any minor fixes.</strong></p>

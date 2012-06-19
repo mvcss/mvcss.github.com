@@ -1,20 +1,18 @@
 jQuery ($) ->
   if window.location.hash 
     hash = window.location.hash
-    $('.content-section').not(hash).hide()
-    $("[data-hash=#{hash}]").addClass('active')
   else
-    url = $('.sidebar a:first').attr('href')
-    $('.content-section').not(url).hide()
-    $("[data-hash=#{url}]").addClass('active')
+    hash = $('.sidebar a').first().attr('href')
+  $('.content-section').not(hash).hide()
+  $("[data-hash=#{hash}]").addClass('active')
 
   $('.sidebar a').click (e) ->
     e.preventDefault()
-    url = $(@).attr('href')
-    window.location.hash = url
+    hash = $(@).attr('href')
+    window.location.hash = hash
 
     $('.sidebar a').removeClass('active')
-    $('.content-section').hide()
+    $('.content-section').not(hash).hide()
 
     $(@).addClass('active')
-    $(url).show()
+    $(hash).show()
