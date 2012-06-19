@@ -1,0 +1,185 @@
+//-----------------------------------------------------------------------
+//  Imports
+//-----------------------------------------------------------------------
+
+@import 'reset';
+@import 'settings';
+@import 'base';
+
+//-----------------------------------------------------------------------
+//  Modules
+//-----------------------------------------------------------------------
+
+// ----- Buttons ----- //
+
+.btn {
+  background: lighten($color-base, 70%);
+  border-radius: 3px;
+  color: $color-base;
+  font: 300 1.3em $font-header;
+  padding: 7px 35px;
+  &:hover {
+    background: lighten($color-base, 60%);
+    text-decoration: none;
+  }
+}
+.btn-default {
+  @extend .btn;
+}
+
+//-----------------------------------------------------------------------
+//  Application
+//-----------------------------------------------------------------------
+
+// ----- Header ----- //
+
+header {
+  background: $color-base;
+  padding: 20px 0;
+  position: relative;
+  h1 {
+    color: #FFF;
+    font-weight: 900;
+    line-height: 1.2;
+  }
+  .tagline {
+    color: lighten($color-base, 40%);
+    font-weight: 300;
+    text-transform: none;
+    @media screen and (max-width: 800px) {
+      font-size: 2.2em;
+    }
+  }
+  .download {
+    @include transition(background 0.2s ease-in-out);
+    background: $color-highlight;
+    color: #FFF;
+    font-size: 2em;
+    font-weight: 400;
+    padding: 10px 45px;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    &:hover {
+      background: darken($color-highlight, 5%);
+    }
+    @media screen and (max-width: 800px) {
+      font-size: 1.6em;
+      padding: 10px 25px;
+    }
+  }
+}
+
+// ----- Content ----- //
+
+section.content {
+  @extend .group;
+  margin: 20px 0 100px;
+
+  // Main
+
+  .main {
+    float: right;
+    margin: 5px 0 0;
+    width: 75%;
+    h2 {
+      padding-bottom: 5px;
+    }
+    h3 {
+      padding: 10px 0 5px;
+    }
+    p {
+      max-width: 85%;
+      padding-bottom: 10px;
+      code {
+        font-size: 0.8em;
+      }
+      @media screen and (max-width: 1050px) {
+        max-width: 100%;
+      }
+    }
+    .warn {
+      background: lighten($color-base, 75%);
+      border-radius: 3px;
+      font-size: 1.3em;
+      margin: 5px 0 10px;
+      padding: 10px;
+    }
+    aside {
+      background: lighten($color-base, 75%);
+      border-radius: 3px;
+      padding: 10px 10px 10px 20px;
+      width: 80%;
+      p {
+        font-size: 1.4em;
+      }
+    }
+    ul {
+      padding-left: 20px;
+      li {
+        font-size: 1.6em;
+        list-style-type: disc;
+      }
+    }
+    a {
+      text-decoration: underline;
+      &:hover {
+        color: lighten($color-highlight, 20%);
+      }
+    }
+    img {
+      border: 3px solid $color-highlight;
+      border-radius: 6px;
+      margin: 20px 5px 5px 0;
+      padding: 3px;
+    }
+  }
+
+  // Sidebar
+
+  .sidebar {
+    float: left;
+    margin: 10px 0 0;
+    width: 20%;
+    ol {
+      li {
+        font-size: 1.6em;
+      }
+      a {
+        color: $color-base;
+        display: block;
+        padding: 4px 4px 4px 20px;
+        &:hover {
+          color: $color-highlight;
+          text-decoration: none;
+        }
+      }
+      .active {
+        background: $color-highlight;
+        border-left: 5px solid darken(desaturate($color-highlight, 20%), 15%);
+        color: #FFF;
+        padding-left: 15px;
+        position: relative;
+        &:after {
+          border-top: 16px solid transparent;
+          border-bottom: 16px solid transparent;
+          border-left: 16px solid $color-highlight;
+          content: '';
+          height: 0;
+          position: absolute;
+          right: -16px;
+          top: 0;
+          width: 0;
+          @media screen and (max-width: 930px) {
+            border: 0;
+          }
+        }
+        &:hover {
+          background: $color-highlight;
+          border-left: 5px solid darken(desaturate($color-highlight, 20%), 15%);
+          color: #FFF;
+        }
+      }
+    }
+  }
+}
