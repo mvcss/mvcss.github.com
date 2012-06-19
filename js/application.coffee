@@ -12,7 +12,7 @@ jQuery ($) ->
     window.location.hash = hash
 
     $('.sidebar a').removeClass('active')
-    $('.content-section').not(hash).hide()
+    $('.content-section').hide()
 
     $(@).addClass('active')
     $(hash).show()
