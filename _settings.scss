@@ -8,6 +8,10 @@
 
 // ----- Variables ----- //
 
+//Routes
+
+$htcRoute: "";
+
 // Colors
 
 $color-base: #222;
@@ -40,6 +44,47 @@ $font-header: sans-serif;
   -moz-transition: $arguments;
   -ms-transition: $arguments;
   transition: $arguments;
+}
+
+@mixin opacity($opacity){
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$opacity)";
+	opacity: $opacity;
+	filter: alpha(opacity=$opacity);
+	-moz-opacity: $opacity;
+	-khtml-opacity: $opacity;
+	-webkit-opacity: $opacity;
+	-moz-opacity: $opacity;
+}
+
+@mixin border-radius($rad){
+	border-radius: $rad;
+	-moz-border-radius: $rad;
+	-webkit-border-radius: $rad;
+	-o-border-radius: $rad;
+	behavior: url($htcRoute + "border-radius.htc");
+}
+
+@mixin box-shadow($x, $y, $shadow, $color) {
+	box-shadow: $x $y $shadow $color;
+	-moz-box-shadow: $x $y $shadow $color;
+	-webkit-box-shadow: $x $y $shadow $color;
+	-o-box-shadow: $x $y $shadow $color;
+}
+	
+@mixin inset-shadow($x, $y, $shadow, $color){
+	box-shadow: inset $x $y $shadow $color;
+	-moz-box-shadow: inset $x $y $shadow $color;
+	-webkit-box-shadow: inset $x $y $shadow $color;
+	-o-box-shadow: inset $x $y $shadow $color;
+}
+	
+@mixin text-shadow($x, $y, $shadow, $color){
+	
+	text-shadow: $x $y $shadow $color;
+	-moz-text-shadow: $x $y $shadow $color;
+	-webkit-text-shadow: $x $y $shadow $color;
+	-o-text-shadow: $x $y $shadow $color;
+	
 }
 
 // ----- Extends ----- //
