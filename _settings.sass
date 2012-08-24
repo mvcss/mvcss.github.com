@@ -18,30 +18,19 @@ $color-highlight: #0053C9
 $font-base: sans-serif
 $font-header: sans-serif
 
-// ----- Mixins ----- //
-
-=linear-gradient($direction, $color, $start, $end)
-  background-color: $color
-  background-image: -webkit-linear-gradient($direction, $start, $end)
-  background-image: -moz-linear-gradient($direction, $start, $end)
-  background-image: -ms-linear-gradient($direction, $start, $end)
-  background-image: -o-linear-gradient($direction, $start, $end)
-  background-image: linear-gradient($direction, $start, $end)
-=transform($arguments)
-  -webkit-transform: $arguments
-  -moz-transform: $arguments
-  -ms-transform: $arguments
-  transform: $arguments
-  -webkit-backface-visibility: hidden
-=transition($arguments)
-  -webkit-transition: $arguments
-  -moz-transition: $arguments
-  -ms-transition: $arguments
-  transition: $arguments
-
 // ----- Extends ----- //
 
-.group
+%debug
+  background-color: pink !important
+
+%ellipsis
+  overflow: hidden
+  -ms-text-overflow: ellipsis
+  -o-text-overflow: ellipsis
+  text-overflow: ellipsis
+  white-space: nowrap
+
+%group
   zoom: 1
   &:before,
   &:after
@@ -49,17 +38,10 @@ $font-header: sans-serif
     display: table
   &:after
     clear: both
-.ir
+
+%ir
   background-color: transparent
   border: 0
   color: transparent
   font: 0/0 a
   text-shadow: none
-.ellipsis
-  overflow: hidden
-  -ms-text-overflow: ellipsis
-  -o-text-overflow: ellipsis
-  text-overflow: ellipsis
-  white-space: nowrap
-
-// ----- Animations ----- //
