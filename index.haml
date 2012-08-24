@@ -76,26 +76,21 @@
             :preserve
               /* Modules */
 
-              .btn {
-                background: $color-base;
-                color: darken($color-base, 20%);
-                display: block;
-                padding: 5px;
-              }
+              .btn
+                background: $color-base
+                color: darken($color-base, 20%)
+                display: block
+                padding: 5px
 
               /* Layout */
 
-              .users { /* Controller name */
-                .btn {
-                  color: #fff; /* Controller-wide tweaks */
-                }
-              }
+              .users /* Controller name */
+                .btn
+                  color: #fff /* Controller-wide tweaks */
 
-              .users-show { /* Controller action */
-                .btn {
-                  color: $color-highlight; /* Tweaks only found on a particular action */
-                }
-              }
+              .users-show /* Controller action */
+                .btn
+                  color: $color-highlight /* Tweaks only found on a particular action */
           %h3 Object Notes
           %p As mentioned before, feel free to employ whatever you're comfortable with in regards to module naming, semantics, and abstraction. We tend to only use classes, but aren't as strict about using descendant selectors (<code>.tooltip h4</code>) as OOCSS recommends against. It's best to get the properties into the stylesheet without fretting over the proper level of abstraction initially, then refactoring as you continue to build out the application.
         .content-section#code
@@ -144,6 +139,6 @@
       t.src = '//secure.gaug.es/track.js';
       var s = document.getElementsByTagName('script')[0];
       s.parentNode.insertBefore(t, s);
-    })(); 
+    })();
   %script{ :type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" }
   %script{ :type => "text/javascript", :src => "js/application.js" }
