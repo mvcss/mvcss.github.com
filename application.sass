@@ -4,54 +4,52 @@
 
 // Import Compass here
 
-@import "reset"
-@import "settings"
-@import "base"
+@import "partials/reset"
+@import "partials/settings"
+@import "partials/base"
+@import "partials/states"
 
 //-------------------------------------
 //  Modules
 //-------------------------------------
 
-// ----- Buttons ----- //
+// ----- Module ----- //
 
-%btn
+// Examples:
+// ------------------
+// .module
+// .moduleName
+// ------------------
 
-.btn-a
-  @extend %btn
+// -- Sub-module -- //
 
-.btn-b
-  @extend %btn
+// Examples:
+// ------------------
+// .module-sub
+// .moduleName-sub
+// .moduleName-subName
+// ------------------
 
-.btn-c
-  @extend %btn
+// Modifiers //
 
-// ----- Icons ----- //
+// Examples:
+// ------------------
+// .module--modifier
+// .moduleName--modifier
+// .module-sub--modifier
+// .moduleName-sub--modifier
+// .moduleName-subName--modifer
+// ------------------
 
-i
+// State Modifiers
 
-.icn
-
-// .icn-add, .icn-close, etc.
-
-// ----- Forms ----- //
-
-form
-
-// ----- Modals ----- //
-
-.modal
-
-// ----- Tooltips ----- //
-
-.tooltip
-
-// ----- Thumbs ----- //
-
-.thumb
-
-// ----- Dropdowns ----- //
-
-.dropdown
+// Examples:
+// ------------------
+// .is-module-action
+// .is-moduleName-action
+// .is-module-sub-action
+// .is-moduleName-subName-action
+// ------------------
 
 //-------------------------------------
 //  Application
