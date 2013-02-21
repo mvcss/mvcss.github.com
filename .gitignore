@@ -1,2 +1,5 @@
 .DS_Store
 css/
+.sass-cache/
+index.html
+codekit-config.json
