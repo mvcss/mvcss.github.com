@@ -45,10 +45,10 @@
         <aside class='grid-box grid-box--1of5'>
           <ul class='sectionList'>
             <li><a href="#about" data-hash="#about">About</a></li>
-            <li><a href="#global" data-hash="#global">Global</a></li>
+            <li><a href="#core" data-hash="#core">Core</a></li>
             <li><a href="#modules" data-hash="#modules">Modules</a></li>
-            <li class='is-developing'>States</li>
-            <li><a href="#styleguide" data-hash="#styleguide">Styleguide</a></li>
+            <li><a href="#states" data-hash="#states">States</a></li>
+            <li><a href="#styleguide" data-hash="#styleguide">Style Guide</a></li>
             <li><a href="#library" data-hash="#library">Library</a></li>
             <li><a href="#contribute" data-hash="#contribute">Contribute</a></li>
             <li><a href="#creators" data-hash="#creators">Creators</a></li>
@@ -62,7 +62,7 @@
             <p><strong>MVCSS</strong> is our method for creating predictable and maintainable application style.</p>
             <div class='card'>
               <h3>What? Another Way to Write CSS?</h3>
-              <p>We're big fans (and often employ tenets of) well-documented methods like <a href="https://github.com/stubbornella/oocss/wiki">OOCSS</a>, <a href="http://bem.github.com/bem-method/pages/beginning/beginning.en.html">BEM</a>, and <a href="http://smacss.com/">SMACSS</a>. These setups tend to get us ~90% through a build flawlessly before taking an unwanted turn - usually as a result of organization issues in the face of placement-dependent alterations.</p>
+              <p>We're big fans (and often employ tenets of) well-documented methods like <a href="https://github.com/stubbornella/oocss/wiki">OOCSS</a>, <a href="http://bem.github.com/bem-method/pages/beginning/beginning.en.html">BEM</a>, and <a href="http://smacss.com/">SMACSS</a>. This bit of architecture and accompanying <a href="http://mvcss.github.com/styleguide/">Style Guide</a>/<a href="http://mvcss.github.com/library/">Library</a> meshes all of our preferred practices into one place.</p>
             </div>
             <div class='card'>
               <h3>All This for CSS?</h3>
@@ -74,12 +74,12 @@
             </div>
             <div class='card'>
               <h3>Organizational Overview</h3>
-              <p><strong>MVCSS</strong> is broken down into three primary sections - Global (Resets, Settings, and Defaults), Modules (self-contained, reusable chunks), and States.</p>
+              <p><strong>MVCSS</strong> is broken down into three primary sections - Core (Resets, Settings, and Base), Modules (self-contained, reusable chunks), and States.</p>
             </div>
           </div>
-          <!-- Global -->
-          <div class='contentSection' id='global'>
-            <h2>Global</h2>
+          <!-- Core -->
+          <div class='contentSection' id='core'>
+            <h2>Core</h2>
             <div class='card'>
               <h3>Reset / Normalize</h3>
               <p>As long as the project size warrants it, we always get things started with a style reset. <a href="http://meyerweb.com/eric/tools/css/reset">Eric Meyer's Reset CSS</a> is still our favorite, but alternatives like <a href="http://necolas.github.com/normalize.css">Normalize.css</a> are easily interchangeable.</p>
@@ -89,12 +89,8 @@
               <p>The settings partial centers on reusable utilities - @font-face declarations, variables, mixins, classes to be used with placeholder selectors, and keyframe animations. Grouping everything into one file allows newcomers to the project the means to find out what's available to them quickly.</p>
             </div>
             <div class='card'>
-              <h3>A Note About Variables</h3>
-              <p>We won't be delving too far into our CSS style guides for now, but we definitely recommend two things when making use of Sass variables: prefix the variable with what it represents ($color-base, $color-highlight, $font-base) and make use of semantic names ($color-base rather than $color-blue).</p>
-            </div>
-            <div class='card'>
               <h3>Base</h3>
-              <p>Base contains declarations for block-level text items, inline tags, and any commonly occurring content containers. Text styles set here reflect the most common appearance of that tag in the design.</p>
+              <p>This section sets any base-level styles for tags, such as <code>p</code> or <code>h1</code>, beyond what's included in the reset or nomalize. Text styles set here reflect the most common appearance of that tag in the design.</p>
             </div>
             <div class='card'>
               <h3>Inbox</h3>
@@ -124,33 +120,34 @@
           <!-- States -->
           <div class='contentSection' id='states'>
             <h2>States</h2>
+            <p>Following conventions set forth in <a href="http://smacss.com/book/type-state">SMACSS</a>, the states portion represents the condition of a module, usually altered through JavaScript. Examples include <code>.is-visible</code> and <code>.is-hidden</code>.</p>
           </div>
-          <!-- Styleguide -->
+          <!-- Style Guide -->
           <div class='contentSection' id='styleguide'>
-            <h2>Styleguide</h2>
-            <p>Please refer to the <a href="http://mvcss.github.com/styleguide/">styleguide</a> about naming your modules, sub-modules, modifiers, and states. There is also a comment full of examples in application.sass.</p>
+            <h2>Style Guide</h2>
+            <p>Everyone has a favorite way write CSS and determine how to name modules. Realizing that everyone includes us, we compiled our standards for stylesheet authoring and module naming, all available in the <a href="http://mvcss.github.com/styleguide/">style guide</a>.</p>
           </div>
           <!-- Library -->
           <div class='contentSection' id='library'>
             <h2>Library</h2>
-            <p>The <a href="http://mvcss.github.com/library/">library</a> is a built-out version of <strong>MVCSS</strong>, complete with several modules and base styles for rapid prototyping. If you want more than just the skeleton, <a href="http://mvcss.github.com/library/">take a look at the library</a>.</p>
+            <p>The <a href="http://mvcss.github.com/library/">library</a> is a collection of modules, styles, and JavaScript bits we commonly use. If you're seeking a framework moreso than a methodology, this is your jumping off point for items like grids, tabs, buttons, and forms.</p>
           </div>
           <!-- Code -->
           <div class='contentSection' id='contribute'>
             <h2>Contributing</h2>
-            <p>Our <a href="https://github.com/mvcss/MVCSS">base project setup</a> is available on GitHub.</p>
+            <p>Our <a href="https://github.com/mvcss/mvcss">base project setup</a> is available on GitHub.</p>
             <p>Want to contribute? We love pull requests and comments.</p>
           </div>
           <!-- About -->
           <div class='contentSection' id='creators'>
             <h2>The Creators</h2>
-            <div class='card'>
-              <p>
-                <img alt='Drew Barontini' height='200px' src='assets/images/drew.png' width='200px'>
-                <img alt='Nick Walsh' height='200px' src='assets/images/nick.png' width='200px'>
-              </p>
-              <p><a href="http://twitter.com/drewbarontini">Drew Barontini</a> and <a href="http://twitter.com/nickawalsh">Nick Walsh</a> are front-end devs at <a href="http://envylabs.com">Envy Labs</a>, both adamant about alphabetizing properties, keeping personal effects at right angles, and unfortunately don't rock (or attempt to) the above facial hair.</p>
-            </div>
+            <p>
+              <img alt='Drew Barontini' height='200px' src='assets/images/drew.png' width='200px'>
+              <img alt='Nick Walsh' height='200px' src='assets/images/nick.png' width='200px'>
+            </p>
+            <p><a href="http://twitter.com/drewbarontini">Drew Barontini</a> and <a href="http://twitter.com/nickawalsh">Nick Walsh</a> are front-end devs at Orlando-based <a href="http://envylabs.com">Envy Labs</a> and <a href="http://codeschool.com">Code School</a>. Both are adamant about alphabetizing properties, keeping personal effects at right angles, and unfortunately don't sport (or attempt to) the above facial hair.</p>
+            <h2>Workshop</h2>
+            <p>Interested in learning how to tackle modern applications, keep your styles maintainable, and employ a number of common patterns? We're running a day-long workshop at this year's <a href="http://frontenddesignconference.com">Front-End Design Conference</a> in St. Petersburg, FL. Space is limited!</p>
           </div>
         </div>
       </div>
