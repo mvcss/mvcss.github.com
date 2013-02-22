@@ -1,3 +1,50 @@
 //-------------------------------------
 //  Lists
 //-------------------------------------
+
+// ----- List Default Variables ----- //
+
+$list-font-size: $base-font-size !default
+$list--bulleted-style-type: square !default
+$list--numbered-style-type: decimal !default
+$list-item-margin-bottom: 10px !default
+$list--nav-item-margin-right: 25px !default
+
+// ----- List ----- //
+
+.list
+  margin: em(15px) 0 em(20px)
+  li
+    font-size: $list-font-size
+    margin-bottom: em($list-item-margin-bottom)
+
+// ----- Standard List ----- //
+
+.list--bulleted
+  padding-left: em(20px)
+  li
+    list-style-type: $list--bulleted-style-type
+
+// ----- Numbered List ----- //
+
+.list--numbered
+  padding-left: em(20px)
+  li
+    list-style-type: $list--numbered-style-type
+
+// ----- Numbered List ----- //
+
+.list--nav
+  li
+    display: inline
+    margin-right: em($list--nav-item-margin-right)
+    &:last-child
+      margin-right: 0
+
+    // Active State
+
+    &.is-active a
+      border-bottom: $border-style
+      color: $color-base
+      font-weight: bold
+      text-decoration: none

@@ -61,14 +61,14 @@ table {
   font-weight: bold;
   font-style: normal; }
 
-/* line 108, core/_settings.sass */
+/* line 107, core/_settings.sass */
 .tabs {
   zoom: 1; }
-  /* line 110, core/_settings.sass */
+  /* line 109, core/_settings.sass */
   .tabs:before, .tabs:after {
     content: "";
     display: table; }
-  /* line 114, core/_settings.sass */
+  /* line 113, core/_settings.sass */
   .tabs:after {
     clear: both; }
 
@@ -141,11 +141,20 @@ strong {
   font-weight: bold; }
 
 /* line 64, core/_base.sass */
+code {
+  background: #dadbdb;
+  border-radius: 3px;
+  color: #272829;
+  font-family: Monaco, monospace;
+  font-size: 0.875em;
+  padding: 0.14286em 0.5em; }
+
+/* line 74, core/_base.sass */
 ::selection {
   background: #545d61;
   color: white; }
 
-/* line 67, core/_base.sass */
+/* line 77, core/_base.sass */
 ::-moz-selection {
   background: #545d61;
   color: white; }
@@ -212,7 +221,7 @@ strong {
 
 /* line 26, modules/_containers.sass */
 .row--a {
-  background-color: white; }
+  background-color: #272829; }
 
 /* line 29, modules/_containers.sass */
 .row--b {
@@ -242,61 +251,61 @@ strong {
 .card--b {
   background: #cdcecf; }
 
-/* line 15, modules/_forms.sass */
+/* line 14, modules/_forms.sass */
 .form {
   margin: 1.25em 0; }
 
-/* line 20, modules/_forms.sass */
+/* line 19, modules/_forms.sass */
 input::-webkit-input-placeholder {
   color: #8b8e91; }
 
-/* line 22, modules/_forms.sass */
+/* line 21, modules/_forms.sass */
 input:-moz-placeholder {
   color: #8b8e91; }
 
-/* line 24, modules/_forms.sass */
+/* line 23, modules/_forms.sass */
 input::-moz-placeholder {
   color: #8b8e91; }
 
-/* line 26, modules/_forms.sass */
+/* line 25, modules/_forms.sass */
 input:-ms-input-placeholder {
   color: #8b8e91; }
 
-/* line 31, modules/_forms.sass */
+/* line 30, modules/_forms.sass */
 .form-header {
   margin-bottom: 0.625em; }
 
-/* line 36, modules/_forms.sass */
+/* line 35, modules/_forms.sass */
 .form-field {
   margin-bottom: 1.25em; }
 
-/* line 41, modules/_forms.sass */
+/* line 40, modules/_forms.sass */
 .form-field--submit {
   margin-top: 1.25em; }
 
-/* line 46, modules/_forms.sass */
+/* line 45, modules/_forms.sass */
 .form-label {
   display: block;
   font-size: 0.875em;
   font-weight: bold;
   margin-bottom: 0.3125em; }
-  /* line 51, modules/_forms.sass */
+  /* line 50, modules/_forms.sass */
   .form-label em {
     color: #d43322; }
 
-/* line 56, modules/_forms.sass */
+/* line 55, modules/_forms.sass */
 .form-label--radio,
 .form-label--check {
   font-size: 0.875em;
   font-weight: normal; }
 
-/* line 63, modules/_forms.sass */
+/* line 62, modules/_forms.sass */
 .form-note {
   color: #8b8e91;
   font-size: 0.875em;
   margin-top: 0.35714em; }
 
-/* line 70, modules/_forms.sass */
+/* line 69, modules/_forms.sass */
 .form-input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -308,12 +317,12 @@ input:-ms-input-placeholder {
   font-size: 0.875em;
   padding: 0.71429em 0.57143em;
   width: 100%; }
-  /* line 79, modules/_forms.sass */
+  /* line 78, modules/_forms.sass */
   .form-input:focus {
-    box-shadow: 0 0 3px rbga(#a5a8aa, 0.8);
+    border-color: #545d61;
     outline: none; }
 
-/* line 85, modules/_forms.sass */
+/* line 84, modules/_forms.sass */
 .form-select {
   width: 30%; }
 
@@ -636,6 +645,42 @@ input:-ms-input-placeholder {
   /* line 172, modules/_grids.sass */
   .grid-box--desk--11of12 {
     width: 91.666%; } }
+/* line 15, modules/_lists.sass */
+.list {
+  margin: 0.9375em 0 1.25em; }
+  /* line 17, modules/_lists.sass */
+  .list li {
+    font-size: 16px;
+    margin-bottom: 0.625em; }
+
+/* line 23, modules/_lists.sass */
+.list--bulleted {
+  padding-left: 1.25em; }
+  /* line 25, modules/_lists.sass */
+  .list--bulleted li {
+    list-style-type: square; }
+
+/* line 30, modules/_lists.sass */
+.list--numbered {
+  padding-left: 1.25em; }
+  /* line 32, modules/_lists.sass */
+  .list--numbered li {
+    list-style-type: decimal; }
+
+/* line 38, modules/_lists.sass */
+.list--nav li {
+  display: inline;
+  margin-right: 1.5625em; }
+  /* line 41, modules/_lists.sass */
+  .list--nav li:last-child {
+    margin-right: 0; }
+  /* line 46, modules/_lists.sass */
+  .list--nav li.is-active a {
+    border-bottom: 2px solid #a5a8aa;
+    color: #272829;
+    font-weight: bold;
+    text-decoration: none; }
+
 /* line 13, modules/_tables.sass */
 .table {
   -webkit-box-sizing: border-box;
