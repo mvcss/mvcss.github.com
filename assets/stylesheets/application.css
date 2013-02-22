@@ -795,10 +795,6 @@ input:-ms-input-placeholder {
   top: -5px; }
 
 /* line 61, _docs.sass */
-.example-label--b {
-  top: 0; }
-
-/* line 66, _docs.sass */
 .example-markup {
   background: #e7e7e8;
   font-family: Monaco, monospace;
@@ -807,24 +803,24 @@ input:-ms-input-placeholder {
   overflow-x: auto;
   padding: 0.76923em 1.84615em; }
 
-/* line 76, _docs.sass */
+/* line 71, _docs.sass */
 .example-markup--b {
   background: white; }
 
-/* line 81, _docs.sass */
+/* line 76, _docs.sass */
 .sectionList li {
   font-size: 1em;
   margin-top: 0.625em; }
-  /* line 84, _docs.sass */
+  /* line 79, _docs.sass */
   .sectionList li.is-developing {
     color: #a5a8aa; }
-  /* line 86, _docs.sass */
+  /* line 81, _docs.sass */
   .sectionList li a {
     color: #272829;
     display: block;
     margin-bottom: 0.625em;
     padding: 0.3125em 0; }
-    /* line 91, _docs.sass */
+    /* line 86, _docs.sass */
     .sectionList li a.is-active {
       background: #545d61;
       border-radius: 3px;
@@ -832,19 +828,19 @@ input:-ms-input-placeholder {
       padding-left: 1.25em;
       margin-left: -1.25em; }
 
-/* line 100, _docs.sass */
+/* line 95, _docs.sass */
 .example-output--grids {
   margin: 0 0.9375em; }
-  /* line 102, _docs.sass */
+  /* line 97, _docs.sass */
   .example-output--grids .grid-box {
     background: #bfc1c3;
     border-right: 2px solid #a5a8aa;
     height: 50px;
     margin-bottom: 10px; }
-    /* line 107, _docs.sass */
+    /* line 102, _docs.sass */
     .example-output--grids .grid-box:last-child {
       border-right: 0; }
-    /* line 109, _docs.sass */
+    /* line 104, _docs.sass */
     .example-output--grids .grid-box p {
       line-height: 3.125em;
       text-align: center; }
