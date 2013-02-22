@@ -1,0 +1,46 @@
+//-------------------------------------
+//  Tables
+//-------------------------------------
+
+// ----- Table Default Variables ----- //
+
+$table-font-size: 14px !default
+$table--striped-bg: lighten($color-border, 30%) !default
+$table-row-border: 1px solid $color-border !default
+
+// ----- Table ----- //
+
+.table
+  +box-sizing(border-box)
+  border-collapse: collapse
+  border-spacing: 0
+  font-size: em($table-font-size)
+  margin: em(20px, $table-font-size) 0
+  width: 100%
+
+// ----- Table Modifiers ----- //
+
+.table--striped
+  .table-body tr:nth-child(odd)
+    background: $table--striped-bg
+
+// ----- Table Row ----- //
+
+.table-row
+  border-bottom: $table-row-border
+
+  // Table Header
+
+  th, td
+    padding: em(8px, $table-font-size)
+
+  th
+    font-weight: bold
+    text-align: left
+
+  // Table Data
+
+  td .btn
+    font-size: em($table-font-size)
+    padding-bottom: em(5px, $table-font-size)
+    padding-top: em(5px, $table-font-size)

@@ -1,0 +1,69 @@
+//-------------------------------------
+//  Base
+//-------------------------------------
+
+html
+  background: $color-body
+  font-size: $base-font-size
+body
+  color: $color-base
+  font-family: $font-base
+  line-height: $base-line-height
+
+// ----- Block Content ----- //
+
+// Headings
+
+h1, h2, h3,
+h4, h5, h6
+  font-weight: bold
+h1, .h1
+  font-size: em(40px)
+h2, .h2
+  font-size: em(35px)
+h3, .h3
+  font-size: em(30px)
+h4, .h4
+  font-size: em(25px)
+h5, .h5
+  font-size: em(20px)
+h6, .h6
+  font-size: em(16px)
+
+// Paragraphs
+
+p
+  color: lighten($color-base, 15%)
+  font-size: em($base-font-size)
+  margin: 0 0 em(10px, $base-font-size)
+  a
+    text-decoration: underline
+    &:hover
+      color: darken($color-highlight, 10%)
+
+// ----- Inline Content ----- //
+
+// Links
+
+a
+  color: $color-highlight
+  text-decoration: none
+  &:hover,
+  &:focus
+    text-decoration: underline
+
+// Formatting
+
+em
+  font-style: italic
+strong
+  font-weight: bold
+
+// Selection
+
+::selection
+  background: $color-selection-bg
+  color: $color-selection
+::-moz-selection
+  background: $color-selection-bg
+  color: $color-selection

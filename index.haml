@@ -7,8 +7,140 @@
 %head
   %meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
   %meta(charset="utf-8")
-  %title
-  %link(href="css/application.css" rel="stylesheet")
+  %title MVCSS
+  %link(href="assets/stylesheets/application.css" rel="stylesheet")
+  :javascript
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32794837-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
 %body
+  / Header
+  %header.row--a.siteHeader
+    .cell
+      .grid
+        .grid-box.grid-box--3of5
+          %h1 MVCSS
+          %p A Sass-based CSS Architecture
+        .grid-box.grid-box--2of5.grid-box--middle
+          %a.btn--a.btn--block(href="https://github.com/mvcss/MVCSS") Take me to the code &rarr;
+
   / Content
+  %section.row.content
+    .cell
+      .grid
+        %aside.grid-box.grid-box--1of5
+          %ul.sectionList
+            %li <a href="#about" data-hash="#about">About</a>
+            %li <a href="#global" data-hash="#global">Global</a>
+            %li <a href="#modules" data-hash="#modules">Modules</a>
+            %li.is-developing States
+            %li <a href="#styleguide" data-hash="#styleguide">Styleguide</a>
+            %li <a href="#library" data-hash="#library">Library</a>
+            %li <a href="#contribute" data-hash="#contribute">Contribute</a>
+            %li <a href="#creators" data-hash="#creators">Creators</a>
+        .grid-box.grid-box--4of5
+          / About
+          .contentSection#about
+            %h2 About
+            %p As front-end devs at <a href="http://envylabs.com">Envy Labs</a>, we work primarily in medium-to-large-sized Rails applications. Each of these projects has a sizable amount of CSS undergoing normal maintenance and iteration. Depending on complexity and setup, changes to existing style can be difficult or done poorly if the <em>right way</em> is too convoluted.
+            %p <strong>MVCSS</strong> is our method for creating predictable and maintainable application style.
+            .card
+              %h3 What? Another Way to Write CSS?
+              %p We're big fans (and often employ tenets of) well-documented methods like <a href="https://github.com/stubbornella/oocss/wiki">OOCSS</a>, <a href="http://bem.github.com/bem-method/pages/beginning/beginning.en.html">BEM</a>, and <a href="http://smacss.com/">SMACSS</a>. These setups tend to get us ~90% through a build flawlessly before taking an unwanted turn - usually as a result of organization issues in the face of placement-dependent alterations.
+            .card
+              %h3 All This for CSS?
+              %p CSS in and of itself is simple to pick up, but difficult to apply maintainably to large applications - hence the popularity of the methods listed above. <strong>MVCSS</strong> is one such manner to organize styles, and the one that we've had the most success in employing.
+            .card
+              %h3 Do I Have to Use Sass?
+              %p Sass is definitely not required to employ this paradigm, but we're big fans (hence the default project files being in Sass - blame Rails). Most of the Sass-only stuff is found in Settings.
+            .card
+              %h3 Organizational Overview
+              %p <strong>MVCSS</strong> is broken down into three primary sections - Global (Resets, Settings, and Defaults), Modules (self-contained, reusable chunks), and States.
+          / Global
+          .contentSection#global
+            %h2 Global
+            .card
+              %h3 Reset / Normalize
+              %p As long as the project size warrants it, we always get things started with a style reset. <a href="http://meyerweb.com/eric/tools/css/reset">Eric Meyer's Reset CSS</a> is still our favorite, but alternatives like <a href="http://necolas.github.com/normalize.css">Normalize.css</a> are easily interchangeable.
+            .card
+              %h3 Settings
+              %p The settings partial centers on reusable utilities - @font-face declarations, variables, mixins, classes to be used with placeholder selectors, and keyframe animations. Grouping everything into one file allows newcomers to the project the means to find out what's available to them quickly.
+            .card
+              %h3 A Note About Variables
+              %p We won't be delving too far into our CSS style guides for now, but we definitely recommend two things when making use of Sass variables: prefix the variable with what it represents ($color-base, $color-highlight, $font-base) and make use of semantic names ($color-base rather than $color-blue).
+            .card
+              %h3 Base
+              %p Base contains declarations for block-level text items, inline tags, and any commonly occurring content containers. Text styles set here reflect the most common appearance of that tag in the design.
+            .card
+              %h3 Inbox
+              %p Adding an inbox section to the bottom of your application file allows developers, and those not actively working on the CSS, to quickly add styles that are easily seen by the maintainer of the file.
+            .card
+              %h3 Compass
+              %p <a href="http://compass-style.org/">Compass</a> provides utilities and niceties to make your life easier. We use it, and we recommend that you give it a try. There's even a placeholder comment at the top of the application file that shows you where to put your imports for Compass.
+          / Modules
+          .contentSection#modules
+            %h2 Modules
+            %p Modules in this context refer to any unit of style that can be found across multiple pages. <strong>Most of your style should be found here.</strong> This draws from the <a href="https://github.com/stubbornella/oocss/wiki">OOCSS</a> idea of separating everything into usable chunks, making it second-nature if you're familiar with that method.
+            .card
+              %h2 Examples of Modules
+              %p Here are some commonly occurring examples of modules:
+              %ul.contentSection-list
+                %li Modals
+                %li Buttons
+                %li Tooltips
+                %li Navigation
+                %li Re-appearing chunks of content, like a user info card or sidebar
+          / States
+          .contentSection#states
+            %h2 States
+          / Styleguide
+          .contentSection#styleguide
+            %h2 Styleguide
+            %p Please refer to the <a href="http://mvcss.github.com/styleguide/">styleguide</a> about naming your modules, sub-modules, modifiers, and states. There is also a comment full of examples in application.sass.
+          / Library
+          .contentSection#library
+            %h2 Library
+            %p The <a href="http://mvcss.github.com/library/">library</a> is a built-out version of <strong>MVCSS</strong>, complete with several modules and base styles for rapid prototyping. If you want more than just the skeleton, <a href="http://mvcss.github.com/library/">take a look at the library</a>.
+          / Code
+          .contentSection#contribute
+            %h2 Contributing
+            %p Our <a href="https://github.com/mvcss/MVCSS">base project setup</a> is available on GitHub.
+            %p Want to contribute? We love pull requests and comments.
+          / About
+          .contentSection#creators
+            %h2 The Creators
+            .card
+              %p
+                %img(src='assets/images/drew.png' alt='Drew Barontini' width='200px' height='200px')
+                %img(src='assets/images/nick.png' alt='Nick Walsh' width='200px' height='200px')
+              %p <a href="http://twitter.com/drewbarontini">Drew Barontini</a> and <a href="http://twitter.com/nickawalsh">Nick Walsh</a> are front-end devs at <a href="http://envylabs.com">Envy Labs</a>, both adamant about alphabetizing properties, keeping personal effects at right angles, and unfortunately don't rock (or attempt to) the above facial hair.
+  :javascript
+    var _gauges = _gauges || [];
+    (function() {
+      var t   = document.createElement('script');
+      t.type  = 'text/javascript';
+      t.async = true;
+      t.id    = 'gauges-tracker';
+      t.setAttribute('data-site-id', '4fe1bcaa613f5d1bfe000020');
+      t.src = '//secure.gaug.es/track.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(t, s);
+    })();
+  %script(type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js")
+  %script(type="text/javascript" src="assets/javascripts/components/hash-urls.js")
+  %script(type="text/javascript" src="assets/javascripts/application.js")
+
+  :javascript
+    $(function() {
+      $.hashURLs({
+        list: $('.sectionList a'),
+        content: $('.contentSection')
+      });
+    });
 </html>
