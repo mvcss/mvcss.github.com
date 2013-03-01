@@ -6,6 +6,8 @@
 //  * https://github.com/csswizardry/csswizardry-grids
 //------------------------------------------------------
 
+// ----- Grid Default Variables ----- //
+
 $grid-columns: 12 !default
 $grid-defaults: "lap" 480px, "desk" 800px !default
 $grid-gutter: 20px !default
@@ -18,32 +20,25 @@ $grid-selector: if($grid-silent, unquote("%"), unquote("."))
 // ----- Base ----- //
 
 #{$grid-selector}grid
+  @extend %group
   display: block
-  letter-spacing: -0.31em
   margin-left: -$grid-gutter / 2
   margin-right: -$grid-gutter / 2
-  text-rendering: optimizespeed
-  word-spacing: -0.43em
 
 #{$grid-selector}grid-box
   -moz-box-sizing: border-box
   box-sizing: border-box
-  display: inline-block
-  letter-spacing: normal
+  float: left
   margin: 0
   padding-left: $grid-gutter / 2
   padding-right: $grid-gutter / 2
-  text-rendering: auto
-  vertical-align: top
-  word-spacing: normal
+  width: 100%
 
 // ----- Modifiers ----- //
 
-#{$grid-selector}grid--center
-  text-align: center
-
 #{$grid-selector}grid-box--center
   display: block
+  float: none
   margin: 0 auto
 
 // ----- Grid ----- //
