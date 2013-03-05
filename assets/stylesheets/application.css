@@ -61,16 +61,11 @@ table {
   font-weight: bold;
   font-style: normal; }
 
-/* line 107, core/_settings.sass */
-.grid, .tabs {
-  zoom: 1; }
-  /* line 109, core/_settings.sass */
-  .grid:before, .tabs:before, .grid:after, .tabs:after {
-    content: "";
-    display: table; }
-  /* line 113, core/_settings.sass */
-  .grid:after, .tabs:after {
-    clear: both; }
+/* line 105, core/_settings.sass */
+.grid:after, .tabs:after {
+  clear: both;
+  content: "";
+  display: table; }
 
 /* line 5, core/_base.sass */
 html {
