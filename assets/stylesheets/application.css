@@ -62,7 +62,7 @@ table {
   font-style: normal; }
 
 /* line 105, core/_settings.sass */
-.grid:after, .tabs:after {
+.grid:after {
   clear: both;
   content: "";
   display: table; }
@@ -245,81 +245,6 @@ code {
 /* line 80, modules/_containers.sass */
 .card--b {
   background: #cdcecf; }
-
-/* line 14, modules/_forms.sass */
-.form {
-  margin: 1.25em 0; }
-
-/* line 19, modules/_forms.sass */
-input::-webkit-input-placeholder {
-  color: #8b8e91; }
-
-/* line 21, modules/_forms.sass */
-input:-moz-placeholder {
-  color: #8b8e91; }
-
-/* line 23, modules/_forms.sass */
-input::-moz-placeholder {
-  color: #8b8e91; }
-
-/* line 25, modules/_forms.sass */
-input:-ms-input-placeholder {
-  color: #8b8e91; }
-
-/* line 30, modules/_forms.sass */
-.form-header {
-  margin-bottom: 0.625em; }
-
-/* line 35, modules/_forms.sass */
-.form-field {
-  margin-bottom: 1.25em; }
-
-/* line 40, modules/_forms.sass */
-.form-field--submit {
-  margin-top: 1.25em; }
-
-/* line 45, modules/_forms.sass */
-.form-label {
-  display: block;
-  font-size: 0.875em;
-  font-weight: bold;
-  margin-bottom: 0.3125em; }
-  /* line 50, modules/_forms.sass */
-  .form-label em {
-    color: #d43322; }
-
-/* line 55, modules/_forms.sass */
-.form-label--radio,
-.form-label--check {
-  font-size: 0.875em;
-  font-weight: normal; }
-
-/* line 62, modules/_forms.sass */
-.form-note {
-  color: #8b8e91;
-  font-size: 0.875em;
-  margin-top: 0.35714em; }
-
-/* line 69, modules/_forms.sass */
-.form-input {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: white;
-  border: 1px solid #a5a8aa;
-  border-radius: 0.1875em;
-  font-family: "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 0.875em;
-  padding: 0.71429em 0.57143em;
-  width: 100%; }
-  /* line 78, modules/_forms.sass */
-  .form-input:focus {
-    border-color: #545d61;
-    outline: none; }
-
-/* line 84, modules/_forms.sass */
-.form-select {
-  width: 30%; }
 
 /* line 22, modules/_grids.sass */
 .grid {
@@ -666,66 +591,6 @@ input:-ms-input-placeholder {
     color: #272829;
     font-weight: bold;
     text-decoration: none; }
-
-/* line 13, modules/_tables.sass */
-.table {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  border-collapse: collapse;
-  border-spacing: 0;
-  font-size: 0.875em;
-  margin: 1.42857em 0;
-  width: 100%; }
-
-/* line 24, modules/_tables.sass */
-.table--striped .table-body tr:nth-child(odd) {
-  background: #f4f4f4; }
-
-/* line 29, modules/_tables.sass */
-.table-row {
-  border-bottom: 1px solid #a5a8aa; }
-  /* line 34, modules/_tables.sass */
-  .table-row th, .table-row td {
-    padding: 0.57143em; }
-  /* line 37, modules/_tables.sass */
-  .table-row th {
-    font-weight: bold;
-    text-align: left; }
-  /* line 43, modules/_tables.sass */
-  .table-row td .btn {
-    font-size: 0.875em;
-    padding-bottom: 0.35714em;
-    padding-top: 0.35714em; }
-
-/* line 13, modules/_tabs.sass */
-.tabs {
-  margin: 1.25em 0 0; }
-
-/* line 19, modules/_tabs.sass */
-.tab {
-  float: left;
-  font-size: 1em; }
-  /* line 22, modules/_tabs.sass */
-  .tab a {
-    border-radius: 0.1875em 0.1875em 0 0;
-    background: #dadbdb;
-    color: #272829;
-    display: block;
-    margin-right: 0.625em;
-    padding: 0.5em 1.5625em; }
-    /* line 32, modules/_tabs.sass */
-    .tab a.is-active {
-      background: white; }
-
-/* line 37, modules/_tabs.sass */
-.tabs-content {
-  border-radius: 0 0 0.1875em 0.1875em;
-  display: none;
-  margin-top: 0; }
-  /* line 44, modules/_tabs.sass */
-  .tabs-content.is-visible {
-    display: block; }
 
 /* line 7, _docs.sass */
 .siteHeader {
