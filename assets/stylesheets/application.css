@@ -556,41 +556,55 @@ code {
   /* line 165, modules/_grids.sass */
   .grid-box--desk--11of12 {
     width: 91.666%; } }
-/* line 15, modules/_lists.sass */
+/* line 30, modules/_lists.sass */
 .list {
   margin: 0.9375em 0 1.25em; }
-  /* line 17, modules/_lists.sass */
+  /* line 32, modules/_lists.sass */
   .list li {
     font-size: 16px;
     margin-bottom: 0.625em; }
 
-/* line 23, modules/_lists.sass */
+/* line 38, modules/_lists.sass */
 .list--bulleted {
   padding-left: 1.25em; }
-  /* line 25, modules/_lists.sass */
+  /* line 40, modules/_lists.sass */
   .list--bulleted li {
     list-style-type: square; }
 
-/* line 30, modules/_lists.sass */
+/* line 45, modules/_lists.sass */
 .list--numbered {
   padding-left: 1.25em; }
-  /* line 32, modules/_lists.sass */
+  /* line 47, modules/_lists.sass */
   .list--numbered li {
     list-style-type: decimal; }
 
-/* line 38, modules/_lists.sass */
+/* line 53, modules/_lists.sass */
 .list--nav li {
   display: inline;
   margin-right: 1.5625em; }
-  /* line 41, modules/_lists.sass */
+  /* line 56, modules/_lists.sass */
   .list--nav li:last-child {
     margin-right: 0; }
-  /* line 46, modules/_lists.sass */
+  /* line 61, modules/_lists.sass */
   .list--nav li.is-active a {
     border-bottom: 2px solid #a5a8aa;
     color: #272829;
     font-weight: bold;
     text-decoration: none; }
+
+/* line 70, modules/_lists.sass */
+.list--block li {
+  margin-bottom: 0.3125em; }
+/* line 72, modules/_lists.sass */
+.list--block a {
+  background: #8b8e91;
+  border-radius: 3px;
+  color: white;
+  display: block;
+  padding: 0.5em 1.25em; }
+/* line 81, modules/_lists.sass */
+.list--block .is-active a {
+  background: #272829; }
 
 /* line 7, _docs.sass */
 .siteHeader {
@@ -622,19 +636,10 @@ code {
   padding: 0.14286em 0.5em; }
 
 /* line 35, _docs.sass */
-.contentSection-list {
-  margin-bottom: 0.625em;
-  padding-left: 1.25em; }
-  /* line 38, _docs.sass */
-  .contentSection-list li {
-    list-style-type: square;
-    margin-bottom: 0.3125em; }
-
-/* line 44, _docs.sass */
 .example h4 {
   margin-bottom: 0.4em; }
 
-/* line 49, _docs.sass */
+/* line 40, _docs.sass */
 .example-label {
   background: #bfc1c3;
   font-family: Monaco, monospace;
@@ -645,7 +650,7 @@ code {
   right: -5px;
   top: -5px; }
 
-/* line 61, _docs.sass */
+/* line 52, _docs.sass */
 .example-markup {
   background: #e7e7e8;
   font-family: Monaco, monospace;
@@ -654,24 +659,24 @@ code {
   overflow-x: auto;
   padding: 0.76923em 1.84615em; }
 
-/* line 71, _docs.sass */
+/* line 62, _docs.sass */
 .example-markup--b {
   background: white; }
 
-/* line 76, _docs.sass */
+/* line 67, _docs.sass */
 .sectionList li {
   font-size: 1em;
   margin-top: 0.625em; }
-  /* line 79, _docs.sass */
+  /* line 70, _docs.sass */
   .sectionList li.is-developing {
     color: #a5a8aa; }
-  /* line 81, _docs.sass */
+  /* line 72, _docs.sass */
   .sectionList li a {
     color: #272829;
     display: block;
     margin-bottom: 0.625em;
     padding: 0.3125em 0; }
-    /* line 86, _docs.sass */
+    /* line 77, _docs.sass */
     .sectionList li a.is-active {
       background: #545d61;
       border-radius: 3px;
@@ -679,19 +684,19 @@ code {
       padding-left: 1.25em;
       margin-left: -1.25em; }
 
-/* line 95, _docs.sass */
+/* line 86, _docs.sass */
 .example-output--grids {
   margin: 0 0.9375em; }
-  /* line 97, _docs.sass */
+  /* line 88, _docs.sass */
   .example-output--grids .grid-box {
     background: #bfc1c3;
     border-right: 2px solid #a5a8aa;
     height: 50px;
     margin-bottom: 10px; }
-    /* line 102, _docs.sass */
+    /* line 93, _docs.sass */
     .example-output--grids .grid-box:last-child {
       border-right: 0; }
-    /* line 104, _docs.sass */
+    /* line 95, _docs.sass */
     .example-output--grids .grid-box p {
       line-height: 3.125em;
       text-align: center; }

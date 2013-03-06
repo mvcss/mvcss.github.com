@@ -5,10 +5,25 @@
 // ----- List Default Variables ----- //
 
 $list-font-size: $base-font-size !default
-$list--bulleted-style-type: square !default
-$list--numbered-style-type: decimal !default
 $list-item-margin-bottom: 10px !default
+
+// Bulleted List
+
+$list--bulleted-style-type: square !default
+
+// Numbered List
+
+$list--numbered-style-type: decimal !default
+
+// Nav List
+
 $list--nav-item-margin-right: 25px !default
+
+// Block List
+
+$list--block-bg: lighten($color-base, 40%) !default
+$list--block-bg-active: $color-base !default
+$list--block-color: #FFF !default
 
 // ----- List ----- //
 
@@ -32,7 +47,7 @@ $list--nav-item-margin-right: 25px !default
   li
     list-style-type: $list--numbered-style-type
 
-// ----- Numbered List ----- //
+// ----- Nav List ----- //
 
 .list--nav
   li
@@ -48,3 +63,20 @@ $list--nav-item-margin-right: 25px !default
       color: $color-base
       font-weight: bold
       text-decoration: none
+
+// ----- Block List ----- //
+
+.list--block
+  li
+    margin-bottom: em($list-item-margin-bottom / 2)
+  a
+    background: $list--block-bg
+    border-radius: $border-radius
+    color: $list--block-color
+    display: block
+    padding: em(8px) em(20px)
+
+  // Active State
+
+  .is-active a
+    background: $list--block-bg-active
