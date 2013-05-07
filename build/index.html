@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en'></html>
+<head>
+  <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+  <meta charset='utf-8'>
+  <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+  <title>MVCSS</title>
+  <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="assets/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <a class='btn' href='https://github.com/mvcss/mvcss'>View Code &rarr;</a>
+  <div class='l-sidebar'>
+    <header class='l-header'>
+      <div class='c-logo'>
+        <img width="100" height="110" src="assets/images/logo.svg" />
+        <b>MVCSS</b>
+      </div>
+      <p class='c-tagline'>A Sass-based CSS Architecture</p>
+    </header>
+    <nav class='l-nav'>
+      <a class="is-active" href="/">About</a>
+      <a href="/core/">Core</a>
+      <a href="/modules/">Modules</a>
+      <a href="/styleguide/">Style Guide</a>
+      <a href="/library/">Library</a>
+      <a href="/contribute/">Contribute</a>
+      <a href="/creators/">Creators</a>
+    </nav>
+  </div>
+  <div class='l-cell'>
+    <h1>About</h1>
+    
+    <p>As front-end devs at <a href="http://envylabs.com">Envy Labs</a>, we work primarily in medium-to-large-sized Rails applications. Each of these projects has a sizable amount of CSS undergoing normal maintenance and iteration. Depending on complexity and setup, changes to existing style can be difficult or done poorly if the right way is too convoluted.</p>
+    
+    <p><strong>MVCSS</strong> is our method for creating predictable and maintainable application style.</p>
+    
+    <h2>What? Another Way to Write CSS?</h2>
+    
+    <p>We&#39;re big fans (and often employ tenets of) well-documented methods like <a href="https://github.com/stubbornella/oocss/wiki">OOCSS</a>, <a href="http://bem.info/method/">BEM</a>, and <a href="http://smacss.com/">SMACSS</a>. This bit of architecture and accompanying <a href="http://mvcss.github.io/styleguide/">Style Guide</a>/<a href="http://mvcss.github.io/library/">Library</a> meshes all of our preferred practices into one place.</p>
+    
+    <h2>All This for CSS?</h2>
+    
+    <p>CSS in and of itself is simple to pick up, but difficult to apply maintainably to large applications - hence the popularity of the methods listed above. <strong>MVCSS</strong> is one such manner to organize styles, and the one that we&#39;ve had the most success in employing.</p>
+    
+    <h2>Do I Have to Use Sass?</h2>
+    
+    <p>Sass is definitely not required to employ this paradigm, but we&#39;re big fans (hence the default project files being in Sass - blame Rails). Most of the Sass-only stuff is found in Settings.</p>
+    
+    <h2>Organizational Overview</h2>
+    
+    <p><strong>MVCSS</strong> is broken down into three primary sections - <a href="/core/">Core</a> (Resets, Settings, and Base), <a href="/modules/">Modules</a> (self-contained, reusable chunks), and States.</p>
+  </div>
+</body>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en'></html>
+<head>
+  <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+  <meta charset='utf-8'>
+  <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+  <title>Core - MVCSS</title>
+  <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="../assets/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <a class='btn' href='https://github.com/mvcss/mvcss'>View Code &rarr;</a>
+  <div class='l-sidebar'>
+    <header class='l-header'>
+      <div class='c-logo'>
+        <img width="100" height="110" src="../assets/images/logo.svg" />
+        <b>MVCSS</b>
+      </div>
+      <p class='c-tagline'>A Sass-based CSS Architecture</p>
+    </header>
+    <nav class='l-nav'>
+      <a href="/">About</a>
+      <a class="is-active" href="/core/">Core</a>
+      <a href="/modules/">Modules</a>
+      <a href="/styleguide/">Style Guide</a>
+      <a href="/library/">Library</a>
+      <a href="/contribute/">Contribute</a>
+      <a href="/creators/">Creators</a>
+    </nav>
+  </div>
+  <div class='l-cell'>
+    <h1>Core</h1>
+    
+    <h2>Reset / Normalize</h2>
+    
+    <p>As long as the project size warrants it, we always get things started with a style reset. <a href="http://meyerweb.com/eric/tools/css/reset/">Eric Meyer&#39;s Reset CSS</a> is still our favorite, but alternatives like <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> are easily interchangeable.</p>
+    
+    <h2>Settings</h2>
+    
+    <p>The settings partial centers on reusable utilities - @font-face declarations, variables, mixins, classes to be used with placeholder selectors, and keyframe animations. Grouping everything into one file allows newcomers to the project the means to find out what&#39;s available to them quickly.</p>
+    
+    <h2>Base</h2>
+    
+    <p>This section sets any base-level styles for tags, such as <code>p</code> or <code>h1</code>, beyond what&#39;s included in the reset or nomalize. Text styles set here reflect the most common appearance of that tag in the design.</p>
+    
+    <h2>Inbox</h2>
+    
+    <p>Adding an inbox section to the bottom of your application file allows developers, and those not actively working on the CSS, to quickly add styles that are easily seen by the maintainer of the file.</p>
+    
+    <h2>Compass</h2>
+    
+    <p><a href="http://compass-style.org/">Compass</a> provides utilities and niceties to make your life easier. We use it, and we recommend that you give it a try. There&#39;s even a placeholder comment at the top of the application file that shows you where to put your imports for Compass.</p>
+  </div>
+</body>

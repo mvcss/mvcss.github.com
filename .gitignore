@@ -15,6 +15,3 @@
 
 # I loath thee, .DS_Store
 .DS_Store
-
-# Ignore the legacy files
-legacy/codekit-config.json

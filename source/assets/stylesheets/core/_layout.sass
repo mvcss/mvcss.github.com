@@ -1,0 +1,69 @@
+//-------------------------------------
+//  Layout
+//-------------------------------------
+
+// ----- Cells ----- //
+
+%l-cell, .l-cell
+  margin: rem($base-whitespace * 3) auto
+  max-width: rem($l-maxWidth)
+  padding: 0 rem($base-whitespace * 3)
+
+// ----- Cards ----- //
+
+%l-card, .l-card
+  background: #FFF
+  border: $base-border
+  border-radius: $base-borderRadius
+
+// ----- Utilities ----- //
+
+%l-block, .l-block
+  display: block
+
+%l-pullLeft, .l-pullLeft
+  float: left
+
+%l-pullRight, .l-pullRight
+  float: right
+
+// ----- Submodules ----- //
+
+// Sidebar
+
+.l-sidebar
+  +stretch(0, auto, 0, 0)
+  background: $l-sidebar-background
+  box-shadow: $base-boxShadow
+  position: fixed
+  width: rem($l-sidebar-width)
+
+// Header
+
+.l-header
+  background: darken($l-sidebar-background, 10%)
+  color: $base-background
+  padding-top: rem($base-whitespace)
+  text-align: center
+  p
+    background: darken($l-sidebar-background, 13%)
+    margin-bottom: 0
+    padding: rem($base-whitespace / 2) 0
+
+// Nav
+
+.l-nav a
+  +transition(all 0.2s ease-in-out)
+  border: 0
+  color: #fff
+  display: block
+  font-size: 110%
+  padding: rem($base-whitespace / 2) rem($base-whitespace)
+  &:hover,
+  &:focus
+    background: darken($l-sidebar-background, 10%)
+  &.is-active
+    background: $base-background
+    box-shadow: -2px 2px 1px rgba(darken($base-link-color, 20%), 0.15)
+    color: $base-color
+    margin-right: rem(-4px)

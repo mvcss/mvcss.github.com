@@ -1,0 +1,34 @@
+!!! 5
+%html(lang="en")
+%head
+  %meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+  %meta(charset="utf-8")
+  %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+  %title= (title = data.page.title) ? "#{title} - MVCSS" : 'MVCSS'
+
+  = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Roboto+Slab:400,700'
+  = stylesheet_link_tag 'application'
+
+%body
+
+  %a{ :href => 'https://github.com/mvcss/mvcss', class: 'btn' } View Code &rarr;
+
+  .l-sidebar
+
+    %header.l-header
+      .c-logo
+        = image_tag 'logo.svg', width: '100', height: '110'
+        %b MVCSS
+      %p.c-tagline A Sass-based CSS Architecture
+
+    %nav.l-nav
+      = link_to 'About', '/', is_page_active('/')
+      = link_to 'Core', '/core/', is_page_active('/core/')
+      = link_to 'Modules', '/modules/', is_page_active('/modules/')
+      = link_to 'Style Guide', '/styleguide/', is_page_active('/styleguide/')
+      = link_to 'Library', '/library/', is_page_active('/library/')
+      = link_to 'Contribute', '/contribute/', is_page_active('/contribute/')
+      = link_to 'Creators', '/creators/', is_page_active('/creators/')
+
+  .l-cell= yield

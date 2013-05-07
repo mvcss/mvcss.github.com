@@ -1,0 +1,48 @@
+//-------------------------------------
+//  Application
+//  MVCSS v3.0.0
+//-------------------------------------
+
+// ----- Compass ----- //
+
+@import "compass"
+@import "compass/layout"
+
+// ----- Core ----- //
+
+@import "core/reset"
+@import "core/settings"
+@import "core/helpers"
+@import "core/base"
+@import "core/content"
+@import "core/layout"
+
+//-------------------------------------
+//  Modules
+//-------------------------------------
+
+.btn
+  +transition(background 0.2s ease-in-out)
+  background: $l-sidebar-background
+  border-radius: $base-borderRadius
+  border: 0
+  box-shadow: 0 6px 0 darken($l-sidebar-background, 10%)
+  color: #fff
+  display: block
+  padding: rem(5px) rem(10px)
+  position: absolute
+  right: 20px
+  text-align: center
+  top: 20px
+  width: rem(200px)
+  &:hover,
+  &:focus
+    background: darken($l-sidebar-background, 5%)
+    box-shadow: 0 6px 0 darken($l-sidebar-background, 15%)
+    color: #fff
+  &:active
+    +transform(translateY(2px))
+
+//-------------------------------------
+//  Inbox
+//-------------------------------------

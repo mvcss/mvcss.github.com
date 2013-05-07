@@ -1,0 +1,72 @@
+//-------------------------------------
+//  Base
+//-------------------------------------
+
+html
+  font-size: $base-fontSize
+
+body
+  background: $base-background
+  color: $base-color
+  font-family: $base-fontFamily
+  font-size: 100%
+  line-height: $base-lineHeight
+  padding-left: rem($l-sidebar-width)
+
+// ----- Block Content ----- //
+
+p
+  font-size: em($base-fontSize)
+  margin: 0 0 rem($base-whitespace)
+
+pre,
+code,
+blockquote
+  @extend %l-card
+  font-size: 90%
+pre
+  margin: 0 0 rem($base-whitespace)
+  padding: rem(10px)
+  code
+    border: 0
+    box-shadow: none
+blockquote
+  font-size: 100%
+  font-style: italic
+  color: lighten($base-color, 25%)
+  margin: 0 0 rem($base-whitespace)
+  padding: rem(10px) rem(15px)
+  p
+    margin: 0
+
+ul,
+ol
+  margin: 0 0 rem($base-whitespace)
+  ul, ol
+    margin-bottom: 0
+  li
+    padding-bottom: rem($base-whitespace / 2)
+    &:last-child
+      padding-bottom: 0
+ul li
+  list-style-type: square
+
+// ----- Inline Content ----- //
+
+a
+  +transition(color 0.2s ease-in-out)
+  border-bottom: 1px solid lighten($base-link-color, 20%)
+  color: $base-link-color
+  text-decoration: none
+  &:hover,
+  &:focus
+    color: darken($base-link-color, 15%)
+
+code
+  padding: rem(2px) rem(5px)
+
+img
+  +box-sizing(border-box)
+  border-radius: $base-borderRadius
+  height: auto
+  max-width: 100%
