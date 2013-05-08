@@ -8,7 +8,7 @@ The core consists of six components:
 
 ## 1. [Reset](/core/reset)
 
-Standard Normalize.css reset.
+Standard [Normalize.css](http://necolas.github.io/normalize.css/) reset.
 
 ## 2. [Settings](/core/settings/)
 
