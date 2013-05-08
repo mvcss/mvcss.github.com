@@ -35,7 +35,123 @@
     <div class='l-cell'>
       <h1>Style Guide</h1>
       
-      <p>Everyone has a favorite way to write CSS and determine how to name modules. Realizing that everyone includes us, we compiled our standards for stylesheet authoring and module naming, all available in the <a href="http://mvcss.github.io/styleguide/">style guide</a>.</p>
+      <p>Everyone has a favorite way to write CSS and determine how to name modules. Realizing that everyone includes us, here are our compiled standards for stylesheet authoring and module naming.</p>
+      
+      <h2>Basics</h2>
+      
+      <ul>
+      <li>Alphabetize properties</li>
+      <li>Use soft-tabs with two-space indent</li>
+      <li><strong>Do not</strong> use ids (only classes)</li>
+      <li>Put spaces after <code>:</code></li>
+      <li>Put spaces after the <code>//</code> for comments</li>
+      <li><strong>Do not</strong> put a space between rule declarations</li>
+      </ul>
+      
+      <pre><code>
+      // This is an example!
+      .example
+        background: #FFF
+        color: #000
+        font-size: 1.6em
+      
+      .example-alt
+        background: #000
+        color: #FFF
+        font-size: 2em
+      
+      </code></pre>
+      
+      <h2>Sass-specific (.sass)</h2>
+      
+      <ul>
+      <li>Follow the same rules listed in the Basics section</li>
+      <li><strong>Do not</strong> nest deeper than 3 levels (with the exception of pseudo/hover states)</li>
+      <li>Place mixin(<code>+</code>) and <code>@extend</code> calls at the top of the properties list</li>
+      </ul>
+      
+      <h3>Comments</h3>
+      
+      <p>There are three levels of comments:</p>
+      
+      <pre><code>
+      //-------------------------------------
+      //  First Level
+      //-------------------------------------
+      
+      // ----- Second Level ----- //
+      
+      // Third Level
+      
+      </code></pre>
+      
+      <h2>Naming Conventions</h2>
+      
+      <h3>Sass Variables</h3>
+      
+      <h3>Hierarchy</h3>
+      
+      <ul>
+      <li><strong>Do not</strong> use <code>.block--left</code> or <code>.block--right</code></li>
+      <li><strong>Do</strong> use <code>.block--a</code> and <code>.block--b</code> to semantically establish hierarchy</li>
+      </ul>
+      
+      <h3>Modules</h3>
+      
+      <p>Modules, sub-modules, module/sub-module modifiers, and module/sub-module states.</p>
+      
+      <pre><code>
+      // ----- Module ----- //
+      
+      // Examples:
+      // ------------------
+      // .module
+      // .moduleName
+      // ------------------
+      
+      // ----- Sub-module ----- //
+      
+      // Examples:
+      // ------------------
+      // .module-sub
+      // .moduleName-sub
+      // .moduleName-subName
+      // ------------------
+      
+      // ----- Modifiers ----- //
+      
+      // Examples:
+      // ------------------
+      // .module--modifier
+      // .moduleName--modifier
+      // .module-sub--modifier
+      // .moduleName-sub--modifier
+      // .moduleName-subName--modifer
+      // ------------------
+      
+      // ----- State Modifiers ----- //
+      
+      // Examples:
+      // ------------------
+      // .is-module-action
+      // .is-moduleName-action
+      // .is-module-sub-action
+      // .is-moduleName-subName-action
+      // ------------------
+      
+      </code></pre>
+      
+      <h3>Images</h3>
+      
+      <p>A section about naming images? I know. Let&#39;s just get through it.</p>
+      
+      <ul>
+      <li><code>bg-*</code> for backgrounds</li>
+      <li><code>icn-*</code> for icons</li>
+      <li><code>logo-*</code> for logos</li>
+      <li><code>img-*</code> for generic images</li>
+      <li>Sub-folders for larger groups</li>
+      </ul>
     </div>
   </body>
 </html>
