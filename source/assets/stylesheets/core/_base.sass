@@ -55,12 +55,12 @@ ul li
 
 a
   +transition(color 0.2s ease-in-out)
-  border-bottom: 1px solid lighten($base-link-color, 20%)
-  color: $base-link-color
+  border-bottom: 1px solid lighten(saturate($base-theme-color, 20%), 20%)
+  color: lighten(saturate($base-theme-color, 20%), 20%)
   text-decoration: none
   &:hover,
   &:focus
-    color: darken($base-link-color, 15%)
+    color: darken($base-theme-color, 15%)
 
 code
   padding: rem(2px) rem(5px)
