@@ -14,21 +14,8 @@ CSS in and of itself is simple to pick up, but difficult to apply maintainably t
 
 ## Do I Have to Use Sass?
 
-Sass is definitely not required to employ this paradigm, but we're big fans (hence the default project files being in Sass - blame Rails).
+Sass is definitely not required to employ this paradigm, but we're big fans (hence the default project files being in Sass &mdash; blame Rails).
 
 ## Organizational Overview
 
-**MVCSS** is broken down into two primary sections:
-
-### 1. [Core](/core/)
-
-- [Reset](/core/reset/)
-- [Settings](/core/settings/)
-- [Helpers](/core/helpers/)
-- [Base](/core/base/)
-- [Content](/core/content/)
-- [Layout](/core/layout/)
-
-### 2. [Modules](/modules/)
-
-- Self-contained, reusable chunks.
+**MVCSS** is broken down into two primary sections &mdash; [**Core**](/core/) and [**Modules**](/modules/).
