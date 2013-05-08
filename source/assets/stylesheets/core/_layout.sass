@@ -37,10 +37,10 @@
   top: 20px
   .btn
     +transition(background 0.2s ease-in-out)
-    background: $l-sidebar-background
+    background: $base-theme-color
     border-radius: $base-borderRadius
     border: 0
-    box-shadow: 0 6px 0 darken($l-sidebar-background, 10%)
+    box-shadow: 0 6px 0 darken($base-theme-color, 10%)
     color: #fff
     display: block
     padding: rem(5px) rem(10px)
@@ -48,8 +48,8 @@
     width: rem(200px)
     &:hover,
     &:focus
-      background: darken($l-sidebar-background, 5%)
-      box-shadow: 0 6px 0 darken($l-sidebar-background, 15%)
+      background: darken($base-theme-color, 5%)
+      box-shadow: 0 6px 0 darken($base-theme-color, 15%)
       color: #fff
     &:active
       +transform(translateY(2px))
@@ -58,13 +58,13 @@
     margin: rem(15px) 0 0
     text-align: center
     a
-      color: lighten($l-sidebar-background, 10%)
+      color: lighten($base-theme-color, 10%)
 
 // Sidebar
 
 .l-sidebar
   +stretch(0, auto, 0, 0)
-  background: $l-sidebar-background
+  background: $base-theme-color
   box-shadow: $base-boxShadow
   position: fixed
   width: rem($l-sidebar-width)
@@ -72,12 +72,12 @@
 // Header
 
 .l-header
-  background: darken($l-sidebar-background, 10%)
+  background: darken($base-theme-color, 10%)
   color: $base-background
   padding-top: rem($base-whitespace)
   text-align: center
   p
-    background: darken($l-sidebar-background, 13%)
+    background: darken($base-theme-color, 13%)
     margin-bottom: 0
     padding: rem($base-whitespace / 2) 0
 
@@ -92,7 +92,7 @@
   padding: rem($base-whitespace / 2) rem($base-whitespace)
   &:hover,
   &:focus
-    background: darken($l-sidebar-background, 10%)
+    background: darken($base-theme-color, 10%)
   &.is-active
     background: $base-background
     box-shadow: -2px 2px 1px rgba(darken($base-link-color, 20%), 0.15)
