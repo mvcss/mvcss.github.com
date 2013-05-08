@@ -1,5 +1,5 @@
 ---
-title: Styleguide / Naming
+title: Styleguide / Naming Conventions
 ---
 
 ## Naming Conventions
