@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <meta charset='utf-8'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <title>MVCSS</title>
+    <meta content='MVCSS - A Sass-based CSS Architecture by Nick Walsh &amp; Drew Barontini.' name='description'>
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../../assets/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+  <body class='styleguide styleguide_naming styleguide_naming_index'>
+    <div class='l-controls'>
+      <a class='btn' href='https://github.com/mvcss/mvcss'>View Code &rarr;</a>
+      <p><a href="/status/">Changelog (v3.0.0)</a></p>
+    </div>
+    <div class='l-sidebar'>
+      <header class='l-header'>
+        <div class='c-logo'>
+          <a href='/'><img width="100" height="110" src="../../assets/images/logo.svg" /></a>
+          <b>MVCSS <span>Version 3.0.0</span></b>
+        </div>
+        <p class='c-tagline'>A Sass-based CSS Architecture</p>
+      </header>
+      <nav class='l-nav'>
+        <ul>
+          <li><a href="/">About</a></li>
+          <li><a href="/core/">Core</a></li>
+          <li><a href="/modules/">Modules</a></li>
+          <li>
+            <a href="/styleguide/">Style Guide</a>
+            <ul>
+              <li><a href="/styleguide/basics/">Basics</a></li>
+              <li><a href="/styleguide/sass-specific/">Sass-specific</a></li>
+              <li><a class="is-active" href="/styleguide/naming/">Naming Conventions</a></li>
+            </ul>
+          </li>
+          <li><a href="/library/">Library</a></li>
+          <li><a href="/contribute/">Contribute</a></li>
+          <li><a href="/creators/">Creators</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class='l-cell'>
+      <h2>Naming Conventions</h2>
+      
+      <h3>Sass Variables</h3>
+      
+      <h3>Hierarchy</h3>
+      
+      <ul>
+      <li><strong>Do not</strong> use <code>.block--left</code> or <code>.block--right</code></li>
+      <li><strong>Do</strong> use <code>.block--a</code> and <code>.block--b</code> to semantically establish hierarchy</li>
+      </ul>
+      
+      <h3>Modules</h3>
+      
+      <p>Modules, sub-modules, module/sub-module modifiers, and module/sub-module states.</p>
+      
+      <pre><code>
+      // ----- Module ----- //
+      
+      // Examples:
+      // ------------------
+      // .module
+      // .moduleName
+      // ------------------
+      
+      // ----- Sub-module ----- //
+      
+      // Examples:
+      // ------------------
+      // .module-sub
+      // .moduleName-sub
+      // .moduleName-subName
+      // ------------------
+      
+      // ----- Modifiers ----- //
+      
+      // Examples:
+      // ------------------
+      // .module--modifier
+      // .moduleName--modifier
+      // .module-sub--modifier
+      // .moduleName-sub--modifier
+      // .moduleName-subName--modifer
+      // ------------------
+      
+      // ----- State Modifiers ----- //
+      
+      // Examples:
+      // ------------------
+      // .is-module-action
+      // .is-moduleName-action
+      // .is-module-sub-action
+      // .is-moduleName-subName-action
+      // ------------------
+      
+      </code></pre>
+      
+      <h3>Images</h3>
+      
+      <p>A section about naming images? I know. Let&#39;s just get through it.</p>
+      
+      <ul>
+      <li><code>bg-*</code> for backgrounds</li>
+      <li><code>icn-*</code> for icons</li>
+      <li><code>logo-*</code> for logos</li>
+      <li><code>img-*</code> for generic images</li>
+      <li>Sub-folders for larger groups</li>
+      </ul>
+    </div>
+  </body>
+</html>

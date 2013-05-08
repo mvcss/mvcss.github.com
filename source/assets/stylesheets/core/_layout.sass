@@ -82,18 +82,34 @@
 
 // Nav
 
-.l-nav a
-  +transition(all 0.2s ease-in-out)
-  border: 0
-  color: #fff
-  display: block
-  font-size: 110%
-  padding: rem($base-whitespace / 2) rem($base-whitespace)
-  &:hover,
-  &:focus
-    background: darken($base-theme-color, 10%)
-  &.is-active
-    background: $base-background
-    box-shadow: -2px 2px 1px rgba(darken($base-theme-color, 20%), 0.35)
-    color: $base-color
-    margin-right: rem(-4px)
+.l-nav
+  ul, li
+    list-style-type: none
+    padding: 0
+  a
+    +transition(all 0.2s ease-in-out)
+    border: 0
+    color: #fff
+    display: block
+    font-size: 110%
+    padding: rem($base-whitespace / 2) rem($base-whitespace)
+    &:hover,
+    &:focus
+      background: darken($base-theme-color, 10%)
+    &.is-active
+      background: $base-background
+      box-shadow: -2px 2px 1px rgba(darken($base-theme-color, 20%), 0.35)
+      color: $base-color
+      margin-right: rem(-4px)
+  ul li ul a
+    background: darken($base-theme-color, 5%)
+    font-size: 90%
+    padding: rem($base-whitespace / 2)
+    padding-left: rem($base-whitespace * 2)
+
+// Nav States
+
+.l-nav ul li ul
+  display: none
+  .styleguide &
+    display: block

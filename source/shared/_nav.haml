@@ -1,0 +1,14 @@
+%nav.l-nav
+  %ul
+    %li= link_to 'About', '/', is_page_active('/')
+    %li= link_to 'Core', '/core/', is_page_active('/core/')
+    %li= link_to 'Modules', '/modules/', is_page_active('/modules/')
+    %li
+      = link_to 'Style Guide', '/styleguide/', is_page_active('/styleguide/')
+      %ul
+        %li= link_to 'Basics', '/styleguide/basics/', is_page_active('/styleguide/basics/')
+        %li= link_to 'Sass-specific', '/styleguide/sass-specific/', is_page_active('/styleguide/sass-specific/')
+        %li= link_to 'Naming Conventions', '/styleguide/naming/', is_page_active('/styleguide/naming/')
+    %li= link_to 'Library', '/library/', is_page_active('/library/')
+    %li= link_to 'Contribute', '/contribute/', is_page_active('/contribute/')
+    %li= link_to 'Creators', '/creators/', is_page_active('/creators/')
