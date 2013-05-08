@@ -1,4 +1,4 @@
-# Change Log
+# Changelog
 
 ## v3.0.0
 **May, 2013**
