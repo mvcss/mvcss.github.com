@@ -11,4 +11,4 @@ The settings partial centers on two things:
 
 Grouping all the app-wide settings into one file allows newcomers to the project the means to find out what's available to them quickly.
 
-**Continue to**: [Core / Helpers &rarr;](/core/helpers/)
+<a class="btn--b" href="/core/helpers/">Next &rarr;</a>

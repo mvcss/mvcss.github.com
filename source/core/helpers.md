@@ -11,4 +11,4 @@ The helpers partial consists of:
 3. Mixins
 4. Keyframe Animations
 
-**Continue to**: [Core / Base &rarr;](/core/base/)
+<a class="btn--b" href="/core/base/">Next &rarr;</a>

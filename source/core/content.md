@@ -4,4 +4,4 @@ title: Core / Content
 
 ## Content
 
-**Continue to**: [Core / Layout &rarr;](/core/layout/)
+<a class="btn--b" href="/core/layout/">Next &rarr;</a>

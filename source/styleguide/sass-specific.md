@@ -24,4 +24,4 @@ There are three levels of comments:
 
 ```
 
-**Continue to**: [Styleguide / Naming Conventions &rarr;](/styleguide/naming/)
+<a class="btn--b" href="/styleguide/naming/">Next &rarr;</a>
