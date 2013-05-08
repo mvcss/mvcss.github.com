@@ -17,6 +17,10 @@ helpers do
   def is_page_active(page)
     current_page.url == page ? {:class => 'is-active'} : {}
   end
+
+  def is_section_active(section)
+    current_page.url.match(section) ? {:class => 'is-section-active'} : {}
+  end
 end
 
 # Build-specific configuration

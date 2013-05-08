@@ -25,10 +25,21 @@
       <nav class='l-nav'>
         <ul>
           <li><a class="is-active" href="/">About</a></li>
-          <li><a href="/core/">Core</a></li>
+          <li>
+            <a href="/core/">Core</a>
+            <ul>
+              <li><a href="/core/reset/">Reset</a></li>
+              <li><a href="/core/settings/">Settings</a></li>
+              <li><a href="/core/helpers/">Helpers</a></li>
+              <li><a href="/core/base/">Base</a></li>
+              <li><a href="/core/content/">Content</a></li>
+              <li><a href="/core/layout/">Layout</a></li>
+              <li><a href="/core/extras/">Extras</a></li>
+            </ul>
+          </li>
           <li><a href="/modules/">Modules</a></li>
           <li>
-            <a href="/styleguide/">Style Guide</a>
+            <a href="/styleguide/">Styleguide</a>
             <ul>
               <li><a href="/styleguide/basics/">Basics</a></li>
               <li><a href="/styleguide/sass-specific/">Sass-specific</a></li>
@@ -58,11 +69,28 @@
       
       <h2>Do I Have to Use Sass?</h2>
       
-      <p>Sass is definitely not required to employ this paradigm, but we&#39;re big fans (hence the default project files being in Sass - blame Rails). Most of the Sass-only stuff is found in Settings.</p>
+      <p>Sass is definitely not required to employ this paradigm, but we&#39;re big fans (hence the default project files being in Sass - blame Rails).</p>
       
       <h2>Organizational Overview</h2>
       
-      <p><strong>MVCSS</strong> is broken down into three primary sections - <a href="/core/">Core</a> (Resets, Settings, and Base), <a href="/modules/">Modules</a> (self-contained, reusable chunks), and States.</p>
+      <p><strong>MVCSS</strong> is broken down into two primary sections:</p>
+      
+      <h3>1. <a href="/core/">Core</a></h3>
+      
+      <ul>
+      <li><a href="/core/reset/">Reset</a></li>
+      <li><a href="/core/settings/">Settings</a></li>
+      <li><a href="/core/helpers/">Helpers</a></li>
+      <li><a href="/core/base/">Base</a></li>
+      <li><a href="/core/content/">Content</a></li>
+      <li><a href="/core/layout/">Layout</a></li>
+      </ul>
+      
+      <h3>2. <a href="/modules/">Modules</a></h3>
+      
+      <ul>
+      <li>Self-contained, reusable chunks.</li>
+      </ul>
     </div>
   </body>
 </html>

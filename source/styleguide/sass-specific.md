@@ -1,3 +1,7 @@
+---
+title: Styleguide / Sass
+---
+
 ## Sass-specific (.sass)
 
 - Follow the same rules listed in the Basics section
@@ -19,3 +23,5 @@ There are three levels of comments:
 // Third Level
 
 ```
+
+**Continue to**: [Styleguide / Naming Conventions &rarr;](/styleguide/naming/)

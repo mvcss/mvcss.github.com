@@ -4,22 +4,28 @@ title: Core
 
 # Core
 
-## Reset / Normalize
+The core consists of six components:
 
-As long as the project size warrants it, we always get things started with a style reset. [Eric Meyer's Reset CSS](http://meyerweb.com/eric/tools/css/reset/) is still our favorite, but alternatives like [Normalize.css](http://necolas.github.io/normalize.css/) are easily interchangeable.
+## 1. [Reset](/core/reset)
 
-## Settings
+Standard Normalize.css reset.
 
-The settings partial centers on reusable utilities - @font-face declarations, variables, mixins, classes to be used with placeholder selectors, and keyframe animations. Grouping everything into one file allows newcomers to the project the means to find out what's available to them quickly.
+## 2. [Settings](/core/settings/)
 
-## Base
+`@font-face` and global variables.
 
-This section sets any base-level styles for tags, such as `p` or `h1`, beyond what's included in the reset or nomalize. Text styles set here reflect the most common appearance of that tag in the design.
+## 3. [Helpers](/core/helpers/)
 
-## Inbox
+Extends, functions, mixins, keyframe animations.
 
-Adding an inbox section to the bottom of your application file allows developers, and those not actively working on the CSS, to quickly add styles that are easily seen by the maintainer of the file.
+## 4. [Base](/core/base/)
 
-## Compass
+Base-level tags.
 
-[Compass](http://compass-style.org/) provides utilities and niceties to make your life easier. We use it, and we recommend that you give it a try. There's even a placeholder comment at the top of the application file that shows you where to put your imports for Compass.
+## 5. [Content](/core/content/)
+
+Base-level typography (colors, fonts).
+
+## 6. [Layout](/core/layout/)
+
+Base-level layout (margin, padding, sizing).

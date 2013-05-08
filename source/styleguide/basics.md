@@ -1,3 +1,7 @@
+---
+title: Styleguide / Basics
+---
+
 ## Basics
 
 - Alphabetize properties
@@ -21,3 +25,5 @@
   font-size: 2em
 
 ```
+
+**Continue to**: [Styleguide / Sass-specific &rarr;](/styleguide/sass-specific/)

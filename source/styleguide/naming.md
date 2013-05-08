@@ -1,3 +1,7 @@
+---
+title: Styleguide / Naming
+---
+
 ## Naming Conventions
 
 ### Sass Variables
