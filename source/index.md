@@ -14,7 +14,7 @@ CSS in and of itself is simple to pick up, but difficult to apply maintainably t
 
 ## Do I Have to Use Sass?
 
-Sass is definitely not required to employ this paradigm, but we're big fans (hence the default project files being in Sass &mdash; blame Rails).
+Sass is not required to employ this paradigm, but all the project files are written in it, so it's definitely recommended.
 
 ## Organizational Overview
 
