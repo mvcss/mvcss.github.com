@@ -46,8 +46,10 @@ h5, .c-h5, %c-h5
 .c-logo
   @extend %group
   font-size: rem(30px)
-  margin-bottom: rem($base-whitespace)
-  padding: 0 rem($base-whitespace / 2)
+  padding: 0 rem($base-whitespace / 2) rem($base-whitespace)
+  +respond-to($l-breakpoint-height, min-height)
+    margin-bottom: rem($base-whitespace)
+    padding-bottom: 0
   img
     float: left
   b
@@ -65,17 +67,22 @@ h5, .c-h5, %c-h5
 // Tagline
 
 .c-tagline
+  display: none
   font-weight: 300
+  +respond-to($l-breakpoint-height, min-height)
+    display: block
 
-// Copyright
+// Creators
 
-.c-copyright
+.c-creators
   +stretch(auto, 0, 0, 0)
   background: darken($base-theme-color, 5%)
   color: lighten($base-theme-color, 40%)
   margin: 0
-  padding: rem($base-whitespace * 2) 0
+  padding: rem($base-whitespace) 0
   text-align: center
+  +respond-to($l-breakpoint-height, min-height)
+    padding: rem($base-whitespace * 2) 0
   b
     font-weight: 300
     display: block

@@ -73,7 +73,7 @@
     border: 0
     color: #fff
     display: block
-    font-size: 110%
+    font-size: 90%
     padding: rem($base-whitespace / 2) rem($base-whitespace)
     &:hover,
     &:focus
@@ -83,6 +83,9 @@
       box-shadow: -2px 2px 1px rgba(darken($base-theme-color, 20%), 0.35)
       color: $base-color
       margin-right: rem(-4px)
+    +respond-to($l-breakpoint-height, min-height)
+      font-size: 110%
+      padding: rem($base-whitespace / 2) rem($base-whitespace)
   ul li ul a
     background: darken($base-theme-color, 5%)
     font-size: 90%
