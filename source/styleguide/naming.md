@@ -37,7 +37,7 @@ You may also create module-specific variables, like so:
 
 ### Modules
 
-**Note**: Module files should be named in the singular. For example:
+**Note**: Module files should be named in the singular, unless your module's name is plural. For example:
 
 - `modules/_button.sass`
 - `modules/_grid.sass`
