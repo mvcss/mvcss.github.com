@@ -6,7 +6,7 @@ As front-end devs at [Envy Labs](http://envylabs.com), we work primarily in medi
 
 ## What? Another Way to Write CSS?
 
-We're big fans (and often employ tenets of) well-documented methods like [OOCSS](https://github.com/stubbornella/oocss/wiki), [BEM](http://bem.info/method/), and [SMACSS](http://smacss.com/). This bit of architecture and accompanying [Style Guide](http://mvcss.github.io/styleguide/)/[Library](http://mvcss.github.io/library/) meshes all of our preferred practices into one place.
+We're big fans (and often employ tenets of) well-documented methods like [OOCSS](https://github.com/stubbornella/oocss/wiki), [BEM](http://bem.info/method/), and [SMACSS](http://smacss.com/). This bit of architecture and accompanying [Styleguide](http://mvcss.github.io/styleguide/)/[Library](http://mvcss.github.io/library/) meshes all of our preferred practices into one place.
 
 ## All This for CSS?
 

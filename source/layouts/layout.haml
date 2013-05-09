@@ -22,7 +22,9 @@
       = partial 'shared/nav'
 
       %p.c-copyright
-        %b Crafted, with care, by
-        <a href="http://twitter.com/nickawalsh">Nick Walsh</a> &amp; <a href="http://twitter.com/drewbarontini">Drew Barontini</a>
+        %b Crafted with care by
+        = link_to 'Nick Walsh', 'http://twitter.com/nickawalsh'
+        &amp;
+        = link_to 'Drew Barontini', 'http://twitter.com/drewbarontini'
 
     .l-cell= yield

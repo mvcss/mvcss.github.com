@@ -50,14 +50,46 @@
         </ul>
       </nav>
       <p class='c-copyright'>
-        <b>Crafted, with care, by</b>
-        <a href="http://twitter.com/nickawalsh">Nick Walsh</a> &amp; <a href="http://twitter.com/drewbarontini">Drew Barontini</a>
+        <b>Crafted with care by</b>
+        <a href="http://twitter.com/nickawalsh">Nick Walsh</a>
+        &amp;
+        <a href="http://twitter.com/drewbarontini">Drew Barontini</a>
       </p>
     </div>
     <div class='l-cell'>
       <h2>Naming Conventions</h2>
       
       <h3>Sass Variables</h3>
+      
+      <p>Variables, as documented in <a href="/core/settings/">Core / Settings</a>, should follow the same naming conventions as your modules, referenced below. The most global variables (used in multiple places, multiple contexts) are prefixed with <code>$base-</code>. Let&#39;s look at some examples:</p>
+      
+      <ul>
+      <li><code>$base-background: #eee</code></li>
+      <li><code>$base-color: #444</code></li>
+      <li><code>$base-borderRadius: 3px</code></li>
+      <li><code>$base-fontSize: 16px</code></li>
+      <li><code>$base-lineHeight: 1.6</code></li>
+      <li><code>$base-whitespace: 20px</code></li>
+      </ul>
+      
+      <p>Content and layout variables are prefixed with <code>$c-</code> and <code>$l-</code>, respectively.</p>
+      
+      <ul>
+      <li><code>$c-header-color: #999</code></li>
+      <li><code>$c-header-fontFamily: sans-serif</code></li>
+      <li><code>$l-maxWidth: 960px</code></li>
+      <li><code>$l-sidebar-width: 200px</code></li>
+      </ul>
+      
+      <p>You may also create module-specific variables, like so:</p>
+      
+      <ul>
+      <li><code>$grid-breakpoint-lap: 480px</code></li>
+      <li><code>$grid-breakpoint-desk: 800px</code></li>
+      <li><code>$grid-gutter: 20px</code></li>
+      <li><code>$form-fontSize: 12px</code></li>
+      <li><code>$form-input-background: #ddd</code></li>
+      </ul>
       
       <h3>Hierarchy</h3>
       

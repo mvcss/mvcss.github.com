@@ -6,6 +6,30 @@ title: Styleguide / Naming Conventions
 
 ### Sass Variables
 
+Variables, as documented in [Core / Settings](/core/settings/), should follow the same naming conventions as your modules, referenced below. The most global variables (used in multiple places, multiple contexts) are prefixed with `$base-`. Let's look at some examples:
+
+- `$base-background: #eee`
+- `$base-color: #444`
+- `$base-borderRadius: 3px`
+- `$base-fontSize: 16px`
+- `$base-lineHeight: 1.6`
+- `$base-whitespace: 20px`
+
+Content and layout variables are prefixed with `$c-` and `$l-`, respectively.
+
+- `$c-header-color: #999`
+- `$c-header-fontFamily: sans-serif`
+- `$l-maxWidth: 960px`
+- `$l-sidebar-width: 200px`
+
+You may also create module-specific variables, like so:
+
+- `$grid-breakpoint-lap: 480px`
+- `$grid-breakpoint-desk: 800px`
+- `$grid-gutter: 20px`
+- `$form-fontSize: 12px`
+- `$form-input-background: #ddd`
+
 ### Hierarchy
 
 - **Do not** use `.block--left` or `.block--right`
