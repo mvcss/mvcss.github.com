@@ -43,49 +43,29 @@ You may also create module-specific variables, like so:
 - `modules/_grid.sass`
 - `modules/_form.sass`
 
-Modules, sub-modules, module/sub-module modifiers, and module/sub-module states.
+Modules are broken down into the base module, submodules, modifiers, and states. If your module or submodule name is two words, use camelCase. For example, `.moduleName`.
+
+### Modifiers
+
+Use `--` for a modifier on a module or submodule. For example:
+
+- `.module--modifier`
+- `.module-submodule--modifier`.
+
+**Note**: Module and submodule modifier variables contain the same convention. For example:
 
 ```
 
-// ----- Module ----- //
-
-// Examples:
-// ------------------
-// .module
-// .moduleName
-// ------------------
-
-// ----- Sub-module ----- //
-
-// Examples:
-// ------------------
-// .module-sub
-// .moduleName-sub
-// .moduleName-subName
-// ------------------
-
-// ----- Modifiers ----- //
-
-// Examples:
-// ------------------
-// .module--modifier
-// .moduleName--modifier
-// .module-sub--modifier
-// .moduleName-sub--modifier
-// .moduleName-subName--modifer
-// ------------------
-
-// ----- State Modifiers ----- //
-
-// Examples:
-// ------------------
-// .is-module-action
-// .is-moduleName-action
-// .is-module-sub-action
-// .is-moduleName-subName-action
-// ------------------
-
+$module--modifier-background: #000
 ```
+
+### States
+
+Use the `is-state`, `is-module-state`, `is-module-submodule-state` pattern for your states. For example:
+
+- `.is-active`
+- `.is-sidebar-toggled`
+- `.is-nav--item-active`
 
 ### Images
 
