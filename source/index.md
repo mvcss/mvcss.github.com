@@ -18,4 +18,8 @@ Sass is not required to employ this paradigm, but all the project files are writ
 
 ## Organizational Overview
 
-**MVCSS** is broken down into two primary sections &mdash; [**Core**](/core/) and [**Modules**](/modules/).
+**MVCSS** is broken down into three primary sections:
+
+1. [**Application**](/application/)
+2. [**Core**](/core/)
+3. [**Modules**](/modules/)

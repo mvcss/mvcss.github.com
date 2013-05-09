@@ -4,12 +4,12 @@
     <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
     <meta charset='utf-8'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-    <title>Library - MVCSS</title>
+    <title>MVCSS</title>
     <meta content='MVCSS - A Sass-based CSS Architecture by Nick Walsh &amp; Drew Barontini.' name='description'>
     <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300" media="screen" rel="stylesheet" type="text/css" />
     <link href="../assets/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
-  <body class='library library_index'>
+  <body class='application application_index'>
     <div class='l-controls'>
       <a class='btn--a' href='https://github.com/mvcss/mvcss'>View Code &rarr;</a>
       <p><a href="/changelog/">Changelog (v3.0.0)</a></p>
@@ -25,7 +25,7 @@
       <nav class='l-nav'>
         <ul>
           <li><a href="/">About</a></li>
-          <li><a href="/application/">Application</a></li>
+          <li><a class="is-active" href="/application/">Application</a></li>
           <li>
             <a href="/core/">Core</a>
             <ul>
@@ -46,7 +46,7 @@
               <li><a href="/styleguide/naming/">Naming Conventions</a></li>
             </ul>
           </li>
-          <li><a class="is-active" href="/library/">Library</a></li>
+          <li><a href="/library/">Library</a></li>
         </ul>
       </nav>
       <p class='c-copyright'>
@@ -57,9 +57,23 @@
       </p>
     </div>
     <div class='l-cell'>
-      <h1>Library</h1>
+      <h1>Application</h1>
       
-      <p>The <a href="http://github.com/mvcss/library/">library</a> is a collection of Sass modules and JavaScript (CoffeeScript) components we commonly use. If you&#39;re seeking a framework moreso than a methodology, this is your jumping off point for items like grids, tabs, buttons, and forms. You can just plug the modules/components into your base MVCSS project.</p>
+      <p>The application consists of one file, <code>application.sass</code>, and it acts as the loader file for <strong>MVCSS</strong>. The file consists of imports and the inbox.</p>
+      
+      <h2>Imports</h2>
+      
+      <ul>
+      <li><a href="http://compass-style.org/">Compass</a> (optional, see bottom section)</li>
+      <li><a href="/core/">Core</a></li>
+      <li><a href="/modules/">Modules</a></li>
+      </ul>
+      
+      <p><strong>Note</strong>: <a href="http://compass-style.org/">Compass</a> provides utilities and niceties to make your life easier. We use it, and we recommend that you give it a try.</p>
+      
+      <h2>Inbox</h2>
+      
+      <p>The inbox allows developers, and those not actively working on the CSS, to quickly add styles that are easily seen by the maintainer of the file. This section of the Application has worked wonders for us.</p>
     </div>
   </body>
 </html>
