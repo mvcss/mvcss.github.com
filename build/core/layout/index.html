@@ -14,6 +14,7 @@
       <a class='btn--a' href='https://github.com/mvcss/mvcss'>View Code &rarr;</a>
       <p><a href="/changelog/">Changelog (v3.0.0)</a></p>
     </div>
+    <a class='l-sidebar-toggle' href='#'>Navigation</a>
     <div class='l-sidebar'>
       <header class='l-header'>
         <div class='c-logo'>
@@ -76,5 +77,19 @@
       
       <p>Just like <a href="/core/content/">Core - Content</a>, there are default utilities provided to you, and you can create your own custom submodules as well. Be sure to read through the <strong>MVCSS</strong> project files to get familiarized.</p>
     </div>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script>
+      (function() {
+      
+        $(function() {
+          return $('.l-sidebar-toggle').on('click', function(e) {
+            e.preventDefault();
+            $(this).toggleClass('is-active');
+            return $('body').toggleClass('is-sidebar-toggled');
+          });
+        });
+      
+      }).call(this);
+    </script>
   </body>
 </html>

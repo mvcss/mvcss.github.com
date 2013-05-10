@@ -11,7 +11,8 @@ body
   font-family: $base-fontFamily
   font-size: 100%
   line-height: $base-lineHeight
-  padding-left: rem($l-sidebar-width)
+  +respond-to(768px)
+    padding-left: rem($l-sidebar-width)
 
 // ----- Block Content ----- //
 

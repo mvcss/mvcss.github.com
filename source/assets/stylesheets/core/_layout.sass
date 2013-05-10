@@ -5,9 +5,12 @@
 // ----- Cell ----- //
 
 %l-cell, .l-cell
-  margin: rem($base-whitespace * 3) auto
+  margin: rem($base-whitespace) auto
   max-width: rem($l-maxWidth)
-  padding: 0 rem($base-whitespace * 3)
+  padding: 0 rem($base-whitespace)
+  +respond-to(920px)
+    margin: rem($base-whitespace * 3) auto
+    padding: 0 rem($base-whitespace * 3)
 
 // ----- Card ----- //
 
@@ -29,9 +32,11 @@
 // ----- Controls ----- //
 
 .l-controls
-  position: absolute
-  right: 20px
-  top: 20px
+  padding: rem($base-whitespace)
+  +respond-to(900px)
+    position: absolute
+    right: 0
+    top: 0
   p
     font-size: 85%
     margin: rem(15px) 0 0
@@ -42,19 +47,39 @@
 // ----- Sidebar ----- //
 
 .l-sidebar
-  +stretch(0, auto, 0, 0)
+  display: none
   background: $base-theme-color
-  box-shadow: $base-boxShadow
-  position: fixed
-  width: rem($l-sidebar-width)
+  .is-sidebar-toggled &
+    display: block
+  +respond-to(768px)
+    +stretch(0, auto, 0, 0)
+    box-shadow: $base-boxShadow
+    display: block
+    position: fixed
+    width: rem($l-sidebar-width)
+
+// Toggle
+
+.l-sidebar-toggle
+  background: darken($base-background, 10%)
+  border: 0
+  display: block
+  margin-top: rem(10px)
+  padding: rem(10px)
+  text-align: center
+  +respond-to(768px)
+    display: none
 
 // ----- Header ----- //
 
 .l-header
   background: darken($base-theme-color, 10%)
   color: $base-background
+  display: none
   padding-top: rem($base-whitespace)
   text-align: center
+  +respond-to(768px)
+    display: block
   p
     background: darken($base-theme-color, 13%)
     margin-bottom: 0
@@ -103,9 +128,12 @@
   +stretch(auto, 0, 0, 0)
   background: darken($base-theme-color, 5%)
   color: lighten($base-theme-color, 40%)
+  display: none
   margin: 0
   padding: rem($base-whitespace) 0
   text-align: center
+  +respond-to(768px)
+    display: block
   +respond-to($l-breakpoint-height, min-height)
     padding: rem($base-whitespace * 2) 0
   b

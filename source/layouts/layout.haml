@@ -17,6 +17,7 @@
       %a.btn--a(href='https://github.com/mvcss/mvcss') View Code &rarr;
       %p= link_to 'Changelog (v3.0.0)', '/changelog/'
 
+    %a.l-sidebar-toggle(href="#") Navigation
     .l-sidebar
       = partial 'shared/header'
       = partial 'shared/nav'
@@ -28,3 +29,11 @@
         = link_to 'Drew Barontini', 'http://twitter.com/drewbarontini'
 
     .l-cell= yield
+
+    = javascript_include_tag 'http://code.jquery.com/jquery-1.9.1.min.js'
+    :coffeescript
+      $ ->
+        $('.l-sidebar-toggle').on 'click', (e) ->
+          e.preventDefault()
+          $(@).toggleClass('is-active')
+          $('body').toggleClass('is-sidebar-toggled')

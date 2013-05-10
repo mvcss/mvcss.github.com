@@ -31,7 +31,8 @@
   display: block
   padding: rem(5px) rem(10px)
   text-align: center
-  width: rem(200px)
+  +respond-to(900px)
+    width: rem(200px)
   &:active
     +transform(translateY(2px))
 
