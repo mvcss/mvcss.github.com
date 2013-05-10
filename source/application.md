@@ -1,3 +1,7 @@
+---
+title: Application
+---
+
 # Application
 
 The application consists of one file, `application.sass`, and it acts as the loader file for **MVCSS**. The file consists of imports and the inbox.

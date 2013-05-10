@@ -1,10 +1,10 @@
 ---
-title: Core / Settings
+title: Core - Settings
 ---
 
 # Settings
 
-The settings partial centers on two things:
+**Core - Settings** centers on two things:
 
 1. `@font-face` declarations
 2. Variables

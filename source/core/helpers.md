@@ -1,10 +1,10 @@
 ---
-title: Core / Helpers
+title: Core - Helpers
 ---
 
 # Helpers
 
-The helpers partial consists of:
+**Core - Helpers** consists of:
 
 1. Extends
 2. Functions

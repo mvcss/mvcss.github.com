@@ -1,5 +1,5 @@
 ---
-title: Styleguide / Sass-specific
+title: Styleguide - Sass-specific
 ---
 
 ## Sass-specific (.sass)

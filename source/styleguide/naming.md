@@ -1,12 +1,12 @@
 ---
-title: Styleguide / Naming Conventions
+title: Styleguide - Naming Conventions
 ---
 
 ## Naming Conventions
 
 ### Sass Variables
 
-Variables, as documented in [Core / Settings](/core/settings/), should follow the same naming conventions as your modules, referenced below. The most global variables (used in multiple places, multiple contexts) are prefixed with `$base-`. Let's look at some examples:
+Variables, as documented in [Core - Settings](/core/settings/), should follow the same naming conventions as your modules, referenced below. The most global variables (used in multiple places, multiple contexts) are prefixed with `$base-`. Let's look at some examples:
 
 - `$base-background: #eee`
 - `$base-color: #444`

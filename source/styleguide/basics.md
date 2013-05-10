@@ -1,5 +1,5 @@
 ---
-title: Styleguide / Basics
+title: Styleguide - Basics
 ---
 
 ## Basics

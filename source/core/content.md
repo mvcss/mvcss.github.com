@@ -1,10 +1,10 @@
 ---
-title: Core / Content
+title: Core - Content
 ---
 
 # Content
 
-The content section, along with the layout section, is the bridge between base-level tags and modules. It gives you the ability to set up content submodule abstractions that make contextual tweaks easier.
+**Core - Content** and [Core - Layout](/core/layout/) are the bridge between base-level tags and modules. It gives you the ability to set up content submodule abstractions that make contextual tweaks easier.
 
 The difference between the content and layout modules is that the content applies mainly to typography (fonts, colors), while the layout section applies to just that, layout (margin, padding, sizing, positioning).
 
@@ -12,7 +12,7 @@ The difference between the content and layout modules is that the content applie
 
 ## Headings
 
-We set the headings in the content module rather than [base](/core/base/), because we want the ability to share heading styles.
+We set the headings in the **Core - Content** rather than [Core - Base](/core/base/), because we want the ability to share heading styles.
 
 ```
 
@@ -40,7 +40,7 @@ Or, using the placeholder selector:
 
 ## Utilities
 
-We set default content utilities. Let's look at an example to show how this works. Here are a couple of the default utilities available to you:
+We set default **Core - Content** utilities. Let's look at an example to show how this works. Here are a couple of the default utilities available to you:
 
 ```
 
