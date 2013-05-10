@@ -26,9 +26,7 @@
 %l-pullRight, .l-pullRight
   float: right
 
-// ----- Submodules ----- //
-
-// Controls
+// ----- Controls ----- //
 
 .l-controls
   position: absolute
@@ -41,7 +39,7 @@
     a
       color: lighten($base-theme-color, 10%)
 
-// Sidebar
+// ----- Sidebar ----- //
 
 .l-sidebar
   +stretch(0, auto, 0, 0)
@@ -50,7 +48,7 @@
   position: fixed
   width: rem($l-sidebar-width)
 
-// Header
+// ----- Header ----- //
 
 .l-header
   background: darken($base-theme-color, 10%)
@@ -62,7 +60,7 @@
     margin-bottom: 0
     padding: rem($base-whitespace / 2) 0
 
-// Nav
+// ----- Nav ----- //
 
 .l-nav
   ul, li
@@ -92,9 +90,29 @@
     padding: rem($base-whitespace / 2)
     padding-left: rem($base-whitespace * 2)
 
-// Nav States
+// States
 
 .l-nav ul li ul
   display: none
   &.is-section-active
     display: block
+
+// ----- About ----- //
+
+.l-about
+  +stretch(auto, 0, 0, 0)
+  background: darken($base-theme-color, 5%)
+  color: lighten($base-theme-color, 40%)
+  margin: 0
+  padding: rem($base-whitespace) 0
+  text-align: center
+  +respond-to($l-breakpoint-height, min-height)
+    padding: rem($base-whitespace * 2) 0
+  b
+    font-weight: 300
+    display: block
+  a
+    color: lighten($base-theme-color, 50%)
+    &:hover
+      background: none
+      color: #FFF

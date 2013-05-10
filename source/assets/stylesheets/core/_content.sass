@@ -69,23 +69,3 @@ h5, .c-h5, %c-h5
   font-weight: 300
   +respond-to($l-breakpoint-height, min-height)
     display: block
-
-// ----- Creators ----- //
-
-.c-creators
-  +stretch(auto, 0, 0, 0)
-  background: darken($base-theme-color, 5%)
-  color: lighten($base-theme-color, 40%)
-  margin: 0
-  padding: rem($base-whitespace) 0
-  text-align: center
-  +respond-to($l-breakpoint-height, min-height)
-    padding: rem($base-whitespace * 2) 0
-  b
-    font-weight: 300
-    display: block
-  a
-    color: lighten($base-theme-color, 50%)
-    &:hover
-      background: none
-      color: #FFF
