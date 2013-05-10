@@ -65,14 +65,7 @@
       <p><strong>Note</strong>: The <code>l-</code> prefix is an implicit module. There is no <code>l</code> base module; it&#39;s only used as a prefix for the layout modules.</p>
       
       <p>A good example of a <strong>Core - Layout</strong> submodule is what we call the <code>cell</code> module (<code>l-cell</code>), which gives your site a <code>max-width</code>, centers it, and applies horizontal padding. Let&#39;s take a look:</p>
-      
-      <pre><code>
-      %l-cell, .l-cell
-        margin: 0 auto
-        max-width: 900px
-        padding: 0 60px
-      </code></pre>
-      
+      <div class="highlight"><pre><span class="err">%</span><span class="nt">l-cell</span><span class="o">,</span> <span class="nc">.l-cell</span>&#x000A;  <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span> <span class="no">auto</span>&#x000A;  <span class="na">max-width</span><span class="o">:</span> <span class="mi">900</span><span class="kt">px</span>&#x000A;  <span class="na">padding</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">60</span><span class="kt">px</span></pre></div>
       <h2>Utilities &amp; Custom Submodules</h2>
       
       <p>Just like <a href="/core/content/">Core - Content</a>, there are default utilities provided to you, and you can create your own custom submodules as well. Be sure to read through the <strong>MVCSS</strong> project files to get familiarized.</p>

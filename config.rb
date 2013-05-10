@@ -1,13 +1,10 @@
 activate :livereload
 activate :relative_assets
 activate :directory_indexes
+activate :syntax
 
-set :markdown,
-    :tables => true,
-    :autolink => true,
-    :gh_blockcode => true,
-    :fenced_code_blocks => true
 set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
 
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'

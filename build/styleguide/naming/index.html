@@ -82,11 +82,7 @@
       </ul>
       
       <p><strong>Note</strong>: Module and submodule modifier variables contain the same convention. For example:</p>
-      
-      <pre><code>
-      $module--modifier-background: #000
-      </code></pre>
-      
+      <div class="highlight"><pre><span class="na">$module--modifier-background</span><span class="o">:</span> <span class="mh">#000</span></pre></div>
       <h3>States</h3>
       
       <p>Use the <code>is-state</code>, <code>is-module-state</code>, <code>is-module-submodule-state</code> pattern for your states. For example:</p>
@@ -100,35 +96,11 @@
       <h3>Sass Variables</h3>
       
       <p>Variables, as documented in <a href="/core/settings/">Core - Settings</a>, should follow the same naming conventions as your modules, referenced above. The most global variables (used in multiple places, multiple contexts) are prefixed with <code>$base-</code>. Let&#39;s look at some examples:</p>
-      
-      <ul>
-      <li><code>$base-background: #eee</code></li>
-      <li><code>$base-color: #444</code></li>
-      <li><code>$base-borderRadius: 3px</code></li>
-      <li><code>$base-fontSize: 16px</code></li>
-      <li><code>$base-lineHeight: 1.6</code></li>
-      <li><code>$base-whitespace: 20px</code></li>
-      </ul>
-      
+      <div class="highlight"><pre><span class="na">$base-background</span><span class="o">:</span> <span class="mh">#eee</span>&#x000A;<span class="na">$base-color</span><span class="o">:</span> <span class="mh">#444</span>&#x000A;<span class="na">$base-borderRadius</span><span class="o">:</span> <span class="mi">3</span><span class="kt">px</span>&#x000A;<span class="na">$base-fontSize</span><span class="o">:</span> <span class="mi">16</span><span class="kt">px</span>&#x000A;<span class="na">$base-lineHeight</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.6</span>&#x000A;<span class="na">$base-whitespace</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span></pre></div>
       <p>Content and layout variables are prefixed with <code>$c-</code> and <code>$l-</code>, respectively.</p>
-      
-      <ul>
-      <li><code>$c-header-color: #999</code></li>
-      <li><code>$c-header-fontFamily: sans-serif</code></li>
-      <li><code>$l-maxWidth: 960px</code></li>
-      <li><code>$l-sidebar-width: 200px</code></li>
-      </ul>
-      
+      <div class="highlight"><pre><span class="na">$c-header-color</span><span class="o">:</span> <span class="mh">#999</span>&#x000A;<span class="na">$c-header-fontFamily</span><span class="o">:</span> <span class="no">sans-serif</span>&#x000A;<span class="na">$l-maxWidth</span><span class="o">:</span> <span class="mi">960</span><span class="kt">px</span>&#x000A;<span class="na">$l-sidebar-width</span><span class="o">:</span> <span class="mi">200</span><span class="kt">px</span></pre></div>
       <p>You may also create module-specific variables, like so:</p>
-      
-      <ul>
-      <li><code>$grid-breakpoint-lap: 480px</code></li>
-      <li><code>$grid-breakpoint-desk: 800px</code></li>
-      <li><code>$grid-gutter: 20px</code></li>
-      <li><code>$form-fontSize: 12px</code></li>
-      <li><code>$form-input-background: #ddd</code></li>
-      </ul>
-      
+      <div class="highlight"><pre><span class="na">$grid-breakpoint-lap</span><span class="o">:</span> <span class="mi">480</span><span class="kt">px</span>&#x000A;<span class="na">$grid-breakpoint-desk</span><span class="o">:</span> <span class="mi">800</span><span class="kt">px</span>&#x000A;<span class="na">$grid-gutter</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span>&#x000A;<span class="na">$form-fontSize</span><span class="o">:</span> <span class="mi">12</span><span class="kt">px</span>&#x000A;<span class="na">$form-input-background</span><span class="o">:</span> <span class="mh">#ddd</span></pre></div>
       <h3>Hierarchy</h3>
       
       <ul>

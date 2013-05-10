@@ -28,7 +28,9 @@
         &amp;
         = link_to 'Drew Barontini', 'http://twitter.com/drewbarontini'
 
-    .l-cell= yield
+    .l-cell
+      = find_and_preserve do
+        = yield
 
     = javascript_include_tag 'http://code.jquery.com/jquery-1.9.1.min.js'
     :coffeescript

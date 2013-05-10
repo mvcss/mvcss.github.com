@@ -12,8 +12,7 @@ title: Styleguide - Basics
 - Choose a hexidecimal format and stick to it (e.g. `#FFF` or `#fff`)
 - **Do not** use ids (only classes)
 
-```
-
+```sass
 // This is an example!
 .module
   background: #fff

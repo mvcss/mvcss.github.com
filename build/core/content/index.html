@@ -69,73 +69,25 @@
       <h2>Headings</h2>
       
       <p>We set the headings in the <strong>Core - Content</strong> rather than <a href="/core/base/">Core - Base</a>, because we want the ability to share heading styles.</p>
-      
-      <pre><code>
-      h1, .c-h1, %c-h1
-        font-size: 40px
-        margin-bottom: 20px
-      </code></pre>
-      
+      <div class="highlight"><pre><span class="nt">h1</span><span class="o">,</span> <span class="nc">.c-h1</span><span class="o">,</span> <span class="err">%</span><span class="nt">c-h1</span>&#x000A;  <span class="na">font-size</span><span class="o">:</span> <span class="mi">40</span><span class="kt">px</span>&#x000A;  <span class="na">margin-bottom</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span></pre></div>
       <p>Borrowed from OOCSS, sometimes we want an <code>h2</code> on a page to look like an <code>h3</code>. This gives us the ability to do that:</p>
-      
-      <pre><code>
-      %h2.c-h3 Heading
-      </code></pre>
-      
+      <div class="highlight"><pre><span class="nt">%h2</span><span class="nc">.c-h3</span> Heading</pre></div>
       <p>Or, using the placeholder selector:</p>
-      
-      <pre><code>
-      .tagline
-        @extend %c-h3
-      
-      %h2.tagline This is a tagline for my site.
-      </code></pre>
-      
+      <div class="highlight"><pre><span class="nc">.tagline</span>&#x000A;  <span class="k">@extend</span> <span class="err">%</span><span class="nt">c-h3</span>&#x000A;&#x000A;<span class="err">%</span><span class="nt">h2</span><span class="nc">.tagline</span> <span class="nt">This</span> <span class="nt">is</span> <span class="nt">a</span> <span class="nt">tagline</span> <span class="nt">for</span> <span class="nt">my</span> <span class="nt">site</span><span class="nc">.</span></pre></div>
       <h2>Utilities</h2>
       
       <p>We set default <strong>Core - Content</strong> utilities. Let&#39;s look at an example to show how this works. Here are a couple of the default utilities available to you:</p>
-      
-      <pre><code>
-      %c-center, .c-center
-        text-align: center
-      
-      %c-condensed, .c-condensed
-        font-size: 85%
-      </code></pre>
-      
+      <div class="highlight"><pre><span class="err">%</span><span class="nt">c-center</span><span class="o">,</span> <span class="nc">.c-center</span>&#x000A;  <span class="na">text-align</span><span class="o">:</span> <span class="no">center</span>&#x000A;&#x000A;<span class="err">%</span><span class="nt">c-condensed</span><span class="o">,</span> <span class="nc">.c-condensed</span>&#x000A;  <span class="na">font-size</span><span class="o">:</span> <span class="mi">85</span><span class="kt">%</span></pre></div>
       <p>And in your markup:</p>
-      
-      <pre><code>
-      %form.form-field
-        %input(type=&quot;text&quot;)
-        %p.c-condensed This is a note.
-      </code></pre>
-      
+      <div class="highlight"><pre><span class="nt">%form</span><span class="nc">.form-field</span>&#x000A;  <span class="nt">%input</span>(<span class="na">type=</span><span class="s">&quot;text&quot;</span>)&#x000A;  <span class="nt">%p</span><span class="nc">.c-condensed</span> This is a note.</pre></div>
       <p>Or, if you prefer to use <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#placeholder_selectors_">Sass placeholder selectors</a> as silent classes:</p>
-      
-      <pre><code>
-      // example.haml
-      %form.form-field
-        %input(type=&quot;text&quot;)
-        %p.form-field-desc This is a note.
-      
-      // _content.sass
-      .form-field-desc
-        @extend %c-condensed
-      </code></pre>
-      
+      <div class="highlight"><pre><span class="nt">%form</span><span class="nc">.form-field</span>&#x000A;  <span class="nt">%input</span>(<span class="na">type=</span><span class="s">&quot;text&quot;</span>)&#x000A;  <span class="nt">%p</span><span class="nc">.form-field-desc</span> This is a note.</pre></div><div class="highlight"><pre><span class="nc">.form-field-desc</span>&#x000A;  <span class="k">@extend</span> <span class="err">%</span><span class="nt">c-condensed</span></pre></div>
       <p><strong>Note</strong>: You can set your own custom content utility modules for your project.</p>
       
       <h2>Custom Submodules</h2>
       
       <p>You can extend multiple content utilities, or even form another content submodule:</p>
-      
-      <pre><code>
-      .c-tagline
-        @extend %c-center
-        @extend %c-condensed
-      </code></pre>
-      
+      <div class="highlight"><pre><span class="nc">.c-tagline</span>&#x000A;  <span class="k">@extend</span> <span class="err">%</span><span class="nt">c-center</span>&#x000A;  <span class="k">@extend</span> <span class="err">%</span><span class="nt">c-condensed</span></pre></div>
       <p><a class="btn--b" href="/core/layout/">Next &rarr;</a></p>
     </div>
     <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>

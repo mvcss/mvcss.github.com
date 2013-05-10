@@ -23,8 +23,7 @@ Use `--` for a modifier on a module or submodule. For example:
 
 **Note**: Module and submodule modifier variables contain the same convention. For example:
 
-```
-
+```sass
 $module--modifier-background: #000
 ```
 
@@ -40,27 +39,33 @@ Use the `is-state`, `is-module-state`, `is-module-submodule-state` pattern for y
 
 Variables, as documented in [Core - Settings](/core/settings/), should follow the same naming conventions as your modules, referenced above. The most global variables (used in multiple places, multiple contexts) are prefixed with `$base-`. Let's look at some examples:
 
-- `$base-background: #eee`
-- `$base-color: #444`
-- `$base-borderRadius: 3px`
-- `$base-fontSize: 16px`
-- `$base-lineHeight: 1.6`
-- `$base-whitespace: 20px`
+```sass
+$base-background: #eee
+$base-color: #444
+$base-borderRadius: 3px
+$base-fontSize: 16px
+$base-lineHeight: 1.6
+$base-whitespace: 20px
+```
 
 Content and layout variables are prefixed with `$c-` and `$l-`, respectively.
 
-- `$c-header-color: #999`
-- `$c-header-fontFamily: sans-serif`
-- `$l-maxWidth: 960px`
-- `$l-sidebar-width: 200px`
+```sass
+$c-header-color: #999
+$c-header-fontFamily: sans-serif
+$l-maxWidth: 960px
+$l-sidebar-width: 200px
+```
 
 You may also create module-specific variables, like so:
 
-- `$grid-breakpoint-lap: 480px`
-- `$grid-breakpoint-desk: 800px`
-- `$grid-gutter: 20px`
-- `$form-fontSize: 12px`
-- `$form-input-background: #ddd`
+```sass
+$grid-breakpoint-lap: 480px
+$grid-breakpoint-desk: 800px
+$grid-gutter: 20px
+$form-fontSize: 12px
+$form-input-background: #ddd
+```
 
 ### Hierarchy
 

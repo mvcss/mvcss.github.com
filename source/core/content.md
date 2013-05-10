@@ -14,8 +14,7 @@ The difference between **Core - Content** and [Core - Layout](/core/layout/) is 
 
 We set the headings in the **Core - Content** rather than [Core - Base](/core/base/), because we want the ability to share heading styles.
 
-```
-
+```sass
 h1, .c-h1, %c-h1
   font-size: 40px
   margin-bottom: 20px
@@ -23,15 +22,13 @@ h1, .c-h1, %c-h1
 
 Borrowed from OOCSS, sometimes we want an `h2` on a page to look like an `h3`. This gives us the ability to do that:
 
-```
-
+```haml
 %h2.c-h3 Heading
 ```
 
 Or, using the placeholder selector:
 
-```
-
+```sass
 .tagline
   @extend %c-h3
 
@@ -42,8 +39,7 @@ Or, using the placeholder selector:
 
 We set default **Core - Content** utilities. Let's look at an example to show how this works. Here are a couple of the default utilities available to you:
 
-```
-
+```sass
 %c-center, .c-center
   text-align: center
 
@@ -53,8 +49,7 @@ We set default **Core - Content** utilities. Let's look at an example to show ho
 
 And in your markup:
 
-```
-
+```haml
 %form.form-field
   %input(type="text")
   %p.c-condensed This is a note.
@@ -62,14 +57,13 @@ And in your markup:
 
 Or, if you prefer to use [Sass placeholder selectors](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#placeholder_selectors_) as silent classes:
 
-```
-
-// example.haml
+```haml
 %form.form-field
   %input(type="text")
   %p.form-field-desc This is a note.
+```
 
-// _content.sass
+```sass
 .form-field-desc
   @extend %c-condensed
 ```
@@ -80,8 +74,7 @@ Or, if you prefer to use [Sass placeholder selectors](http://sass-lang.com/docs/
 
 You can extend multiple content utilities, or even form another content submodule:
 
-```
-
+```sass
 .c-tagline
   @extend %c-center
   @extend %c-condensed

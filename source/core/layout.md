@@ -10,8 +10,7 @@ Just like [Core - Content](/core/content/), the **Core - Layout** gives you a hi
 
 A good example of a **Core - Layout** submodule is what we call the `cell` module (`l-cell`), which gives your site a `max-width`, centers it, and applies horizontal padding. Let's take a look:
 
-```
-
+```sass
 %l-cell, .l-cell
   margin: 0 auto
   max-width: 900px

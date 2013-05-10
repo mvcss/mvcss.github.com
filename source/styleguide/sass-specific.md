@@ -12,8 +12,7 @@ title: Styleguide - Sass-specific
 
 There are three levels of comments:
 
-```
-
+```sass
 //-------------------------------------
 //  First Level
 //-------------------------------------
@@ -21,7 +20,6 @@ There are three levels of comments:
 // ----- Second Level ----- //
 
 // Third Level
-
 ```
 
 <a class="btn--b" href="/styleguide/naming/">Next &rarr;</a>
