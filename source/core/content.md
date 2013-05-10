@@ -8,7 +8,7 @@ The content section, along with the layout section, is the bridge between base-l
 
 The difference between the content and layout modules is that the content applies mainly to typography (fonts, colors), while the layout section applies to just that, layout (margin, padding, sizing, positioning).
 
-**Note**: The `c-` prefix is an implicit module. There is no `c` base module, but it's only used as a prefix for the content modules.
+**Note**: The `c-` prefix is an implicit module. There is no `c` base module; it's only used as a prefix for the content modules.
 
 ## Headings
 

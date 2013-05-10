@@ -6,7 +6,7 @@ title: Core / Layout
 
 Just like the [content](/core/content/) module, the layout module gives you a higher level of abstraction for your modules.
 
-**Note**: The `l-` prefix is an implicit module. There is no `l` base module, but it's only used as a prefix for the content modules.
+**Note**: The `l-` prefix is an implicit module. There is no `l` base module; it's only used as a prefix for the content modules.
 
 A good example of a layout submodule is what we call the `cell` module (`l-cell`), which gives your site a `max-width`, centers it, and applies horizontal padding. Let's take a look:
 
