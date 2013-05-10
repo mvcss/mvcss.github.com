@@ -4,7 +4,7 @@ The application consists of one file, `application.sass`, and it acts as the loa
 
 ## Imports
 
-- [Compass](http://compass-style.org/) (optional, see bottom section)
+- [Compass](http://compass-style.org/) (optional, see below)
 - [Core](/core/)
 - [Modules](/modules/)
 
