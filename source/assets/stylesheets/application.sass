@@ -35,10 +35,16 @@
   display: block
   padding: rem(5px) rem(10px)
   text-align: center
-  +respond-to(920px)
-    width: rem(200px)
+
+  // States
+
   &:active
     +transform(translateY(2px))
+
+  // Media Queries
+
+  +respond-to(920px)
+    width: rem(200px)
 
 // Modifiers
 
@@ -46,6 +52,9 @@
   @extend %btn
   background: $base-theme-color
   box-shadow: 0 6px 0 darken($base-theme-color, 10%)
+
+  // States
+
   &:hover,
   &:focus
     background: darken($base-theme-color, 5%)
@@ -56,6 +65,9 @@
   background: darken($base-background, 40%)
   box-shadow: 0 6px 0 darken($base-background, 50%)
   margin-top: rem($base-whitespace * 2)
+
+  // States
+
   &:hover,
   &:focus
     background: darken($base-background, 45%)
