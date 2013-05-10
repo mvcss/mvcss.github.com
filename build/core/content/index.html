@@ -57,7 +57,83 @@
       </p>
     </div>
     <div class='l-cell'>
-      <h2>Content</h2>
+      <h1>Content</h1>
+      
+      <p>The content section, along with the layout section, is the bridge between base-level tags and modules. It gives you the ability to set up content submodule abstractions that make contextual tweaks easier.</p>
+      
+      <p>The difference between the content and layout modules is that the content applies mainly to typography (fonts, colors), while the layout section applies to just that, layout (margin, padding, sizing, positioning).</p>
+      
+      <p><strong>Note</strong>: The <code>c-</code> prefix is an implicit module. There is no <code>c</code> base module, but it&#39;s only used as a prefix for the content modules.</p>
+      
+      <h2>Headings</h2>
+      
+      <p>We set the headings in the content module rather than <a href="/core/base/">base</a>, because we want the ability to share heading styles.</p>
+      
+      <pre><code>
+      h1, .c-h1, %c-h1
+        font-size: 40px
+        margin-bottom: 20px
+      </code></pre>
+      
+      <p>Borrowed from OOCSS, sometimes we want an <code>h2</code> on a page to look like an <code>h3</code>. This gives us the ability to do that:</p>
+      
+      <pre><code>
+      %h2.c-h3 Heading
+      </code></pre>
+      
+      <p>Or, using the placeholder selector:</p>
+      
+      <pre><code>
+      .tagline
+        @extend %c-h3
+      
+      %h2.tagline This is a tagline for my site.
+      </code></pre>
+      
+      <h2>Utilities</h2>
+      
+      <p>We set default content utilities. Let&#39;s look at an example to show how this works. Here are a couple of the default utilities available to you:</p>
+      
+      <pre><code>
+      %c-center, .c-center
+        text-align: center
+      
+      %c-condensed, .c-condensed
+        font-size: 85%
+      </code></pre>
+      
+      <p>And in your markup:</p>
+      
+      <pre><code>
+      %form.form-field
+        %input(type=&quot;text&quot;)
+        %p.c-condensed This is a note.
+      </code></pre>
+      
+      <p>Or, if you prefer to use <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#placeholder_selectors_">Sass placeholder selectors</a> as silent classes:</p>
+      
+      <pre><code>
+      // example.haml
+      %form.form-field
+        %input(type=&quot;text&quot;)
+        %p.form-field-desc This is a note.
+      
+      // _content.sass
+      .form-field-desc
+        @extend %c-condensed
+      </code></pre>
+      
+      <p><strong>Note</strong>: You can set your own custom content utility modules for your project.</p>
+      
+      <h2>Custom Submodules</h2>
+      
+      <p>You can extend multiple content utilities, or even form another content submodule:</p>
+      
+      <pre><code>
+      .c-tagline
+        @extend %c-center
+        @extend %c-condensed
+      </code></pre>
       
       <p><a class="btn--b" href="/core/layout/">Next &rarr;</a></p>
     </div>

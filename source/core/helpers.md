@@ -2,7 +2,7 @@
 title: Core / Helpers
 ---
 
-## Helpers
+# Helpers
 
 The helpers partial consists of:
 

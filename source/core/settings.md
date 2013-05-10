@@ -2,7 +2,7 @@
 title: Core / Settings
 ---
 
-## Settings
+# Settings
 
 The settings partial centers on two things:
 
