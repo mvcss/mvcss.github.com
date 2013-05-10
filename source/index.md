@@ -1,8 +1,8 @@
 # About
 
-As front-end devs at [Envy Labs](http://envylabs.com), we work primarily in medium-to-large-sized Rails applications. Each of these projects has a sizable amount of CSS undergoing normal maintenance and iteration. Depending on complexity and setup, changes to existing style can be difficult or done poorly if the right way is too convoluted.
+<p class="c-lead"><strong>MVCSS</strong> is a Sass-based CSS architecture for creating predictable and maintainable application style.</p>
 
-**MVCSS** is our method for creating predictable and maintainable application style.
+As front-end devs at [Envy Labs](http://envylabs.com), we work primarily in medium-to-large-sized Rails applications. Each of these projects has a sizable amount of CSS undergoing normal maintenance and iteration. Depending on complexity and setup, changes to existing style can be difficult or done poorly if the right way is too convoluted.
 
 ## What? Another Way to Write CSS?
 
