@@ -6,7 +6,7 @@ title: Core - Content
 
 **Core - Content** and [Core - Layout](/core/layout/) are the bridge between base-level tags and modules. It gives you the ability to set up content submodule abstractions that make contextual tweaks easier.
 
-The difference between the content and layout modules is that the content applies mainly to typography (fonts, colors), while the layout section applies to just that, layout (margin, padding, sizing, positioning).
+The difference between the content and layout modules is that the content applies mainly to typography (fonts, colors), while layout applies to just that, layout (margin, padding, sizing, positioning).
 
 **Note**: The `c-` prefix is an implicit module. There is no `c` base module; it's only used as a prefix for the content modules.
 
