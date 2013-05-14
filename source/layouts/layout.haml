@@ -11,6 +11,8 @@
     = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300'
     = stylesheet_link_tag 'application'
 
+    = partial 'shared/google_analytics' if build?
+
   %body{ class: page_classes }
 
     .l-controls
@@ -31,6 +33,8 @@
     .l-cell
       = find_and_preserve do
         = yield
+
+    = partial 'shared/gauges' if build?
 
     = javascript_include_tag 'http://code.jquery.com/jquery-1.9.1.min.js'
     :coffeescript
