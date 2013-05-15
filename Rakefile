@@ -1,6 +1,7 @@
 desc "Generate flat files with Middleman"
 task :generate do
   puts "## Generating site with Middleman"
+  system "rm -rf build"
   system "./bin/middleman build --clean"
   cd "build" do
     system "git init"
