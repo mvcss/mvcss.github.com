@@ -4,7 +4,7 @@ task :generate do
   system "./bin/middleman build --clean"
   cd "build" do
     system "git init"
-    system "git remote add origin git@github.com:mvcss/mvcss.git"
+    system "git remote add origin git@github.com:mvcss/mvcss.github.com.git"
   end
 end
 
