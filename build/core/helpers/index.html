@@ -80,6 +80,18 @@
       <li>Keyframe Animations</li>
       </ol>
       
+      <h2>A Note About Sizing</h2>
+      
+      <p>By default, <strong>MVCSS</strong> sizes all elements (<code>font-size</code>, <code>margin</code>, <code>padding</code>) with <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">rems</a>. We do this through the <code>rem()</code> function, that simply divides the target pixel value by the <code>$base-fontSize</code>. Here&#39;s an example:</p>
+      <div class="highlight"><pre><span class="nt">h4</span>&#x000A;  <span class="na">font-size</span><span class="o">:</span> <span class="nf">rem</span><span class="p">(</span><span class="mi">20</span><span class="kt">px</span><span class="p">)</span></pre></div>
+      <p><strong>Note</strong>: Be sure to look at your site&#39;s browser support to determine if rems are the right option. <a href="http://caniuse.com/#feat=rem">Take a look at the current browser support for rem</a>.</p>
+      
+      <p>If you&#39;d like to use ems, there is an <code>em()</code> function available as well:</p>
+      <div class="highlight"><pre><span class="nt">h4</span>&#x000A;  <span class="na">font-size</span><span class="o">:</span> <span class="nf">em</span><span class="p">(</span><span class="mi">20</span><span class="kt">px</span><span class="p">)</span></pre></div>
+      <p>However, with ems, if you were to alter the context from the default <code>$base-fontSize</code>, you would need to pass the new context in as the second argument:</p>
+      <div class="highlight"><pre><span class="nt">h4</span>&#x000A;  <span class="na">font-size</span><span class="o">:</span> <span class="nf">em</span><span class="p">(</span><span class="mi">20</span><span class="kt">px</span><span class="p">)</span>&#x000A;  <span class="na">padding-bottom</span><span class="o">:</span> <span class="nf">em</span><span class="p">(</span><span class="mi">10</span><span class="kt">px</span><span class="o">,</span> <span class="mi">20</span><span class="kt">px</span><span class="p">)</span></pre></div>
+      <p>To make adjustments easier, create a local <code>$context</code> variable for the size:</p>
+      <div class="highlight"><pre><span class="nt">h4</span>&#x000A;  <span class="nv">$context</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span>&#x000A;  <span class="na">font-size</span><span class="o">:</span> <span class="nf">em</span><span class="p">(</span><span class="nv">$context</span><span class="p">)</span>&#x000A;  <span class="na">padding-bottom</span><span class="o">:</span> <span class="nf">em</span><span class="p">(</span><span class="mi">10</span><span class="kt">px</span><span class="o">,</span> <span class="nv">$context</span><span class="p">)</span></pre></div>
       <p><a class="btn--b" href="/core/base/">Next &rarr;</a></p>
     </div>
     <script>
