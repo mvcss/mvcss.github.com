@@ -43,7 +43,7 @@ We set default **Core - Content** utilities. Let's look at an example to show ho
 %c-center, .c-center
   text-align: center
 
-%c-condensed, .c-condensed
+%c-condense, .c-condense
   font-size: 85%
 ```
 
@@ -52,7 +52,7 @@ And in your markup:
 ```haml
 %form.form-field
   %input(type="text")
-  %p.c-condensed This is a note.
+  %p.c-condense This is a note.
 ```
 
 Or, if you prefer to use [Sass placeholder selectors](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#placeholder_selectors_) as silent classes:
@@ -65,7 +65,7 @@ Or, if you prefer to use [Sass placeholder selectors](http://sass-lang.com/docs/
 
 ```sass
 .form-field-desc
-  @extend %c-condensed
+  @extend %c-condense
 ```
 
 **Note**: You can set your own custom content utility modules for your project.
@@ -77,7 +77,7 @@ You can extend multiple content utilities, or even form another content submodul
 ```sass
 .c-tagline
   @extend %c-center
-  @extend %c-condensed
+  @extend %c-condense
 ```
 
 <a class="btn--b" href="/core/layout/">Next &rarr;</a>

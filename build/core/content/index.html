@@ -88,17 +88,17 @@
       <h2>Utilities</h2>
       
       <p>We set default <strong>Core - Content</strong> utilities. Let&#39;s look at an example to show how this works. Here are a couple of the default utilities available to you:</p>
-      <div class="highlight"><pre><span class="err">%</span><span class="nt">c-center</span><span class="o">,</span> <span class="nc">.c-center</span>&#x000A;  <span class="na">text-align</span><span class="o">:</span> <span class="no">center</span>&#x000A;&#x000A;<span class="err">%</span><span class="nt">c-condensed</span><span class="o">,</span> <span class="nc">.c-condensed</span>&#x000A;  <span class="na">font-size</span><span class="o">:</span> <span class="mi">85</span><span class="kt">%</span></pre></div>
+      <div class="highlight"><pre><span class="err">%</span><span class="nt">c-center</span><span class="o">,</span> <span class="nc">.c-center</span>&#x000A;  <span class="na">text-align</span><span class="o">:</span> <span class="no">center</span>&#x000A;&#x000A;<span class="err">%</span><span class="nt">c-condense</span><span class="o">,</span> <span class="nc">.c-condense</span>&#x000A;  <span class="na">font-size</span><span class="o">:</span> <span class="mi">85</span><span class="kt">%</span></pre></div>
       <p>And in your markup:</p>
-      <div class="highlight"><pre><span class="nt">%form</span><span class="nc">.form-field</span>&#x000A;  <span class="nt">%input</span>(<span class="na">type=</span><span class="s">&quot;text&quot;</span>)&#x000A;  <span class="nt">%p</span><span class="nc">.c-condensed</span> This is a note.</pre></div>
+      <div class="highlight"><pre><span class="nt">%form</span><span class="nc">.form-field</span>&#x000A;  <span class="nt">%input</span>(<span class="na">type=</span><span class="s">&quot;text&quot;</span>)&#x000A;  <span class="nt">%p</span><span class="nc">.c-condense</span> This is a note.</pre></div>
       <p>Or, if you prefer to use <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#placeholder_selectors_">Sass placeholder selectors</a> as silent classes:</p>
-      <div class="highlight"><pre><span class="nt">%form</span><span class="nc">.form-field</span>&#x000A;  <span class="nt">%input</span>(<span class="na">type=</span><span class="s">&quot;text&quot;</span>)&#x000A;  <span class="nt">%p</span><span class="nc">.form-field-desc</span> This is a note.</pre></div><div class="highlight"><pre><span class="nc">.form-field-desc</span>&#x000A;  <span class="k">@extend</span> <span class="err">%</span><span class="nt">c-condensed</span></pre></div>
+      <div class="highlight"><pre><span class="nt">%form</span><span class="nc">.form-field</span>&#x000A;  <span class="nt">%input</span>(<span class="na">type=</span><span class="s">&quot;text&quot;</span>)&#x000A;  <span class="nt">%p</span><span class="nc">.form-field-desc</span> This is a note.</pre></div><div class="highlight"><pre><span class="nc">.form-field-desc</span>&#x000A;  <span class="k">@extend</span> <span class="err">%</span><span class="nt">c-condense</span></pre></div>
       <p><strong>Note</strong>: You can set your own custom content utility modules for your project.</p>
       
       <h2>Custom Submodules</h2>
       
       <p>You can extend multiple content utilities, or even form another content submodule:</p>
-      <div class="highlight"><pre><span class="nc">.c-tagline</span>&#x000A;  <span class="k">@extend</span> <span class="err">%</span><span class="nt">c-center</span>&#x000A;  <span class="k">@extend</span> <span class="err">%</span><span class="nt">c-condensed</span></pre></div>
+      <div class="highlight"><pre><span class="nc">.c-tagline</span>&#x000A;  <span class="k">@extend</span> <span class="err">%</span><span class="nt">c-center</span>&#x000A;  <span class="k">@extend</span> <span class="err">%</span><span class="nt">c-condense</span></pre></div>
       <p><a class="btn--b" href="/core/layout/">Next &rarr;</a></p>
     </div>
     <script>
