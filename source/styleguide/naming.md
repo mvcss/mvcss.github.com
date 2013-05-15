@@ -14,6 +14,10 @@ title: Styleguide - Naming Conventions
 
 Modules are broken down into the base module, submodules, modifiers, and states. If your module or submodule name is two words, use camelCase. For example, `.moduleName`.
 
+### Submodules
+
+Submodules use the hyphen `-` separator to denote that it is a submodule to another module. For example, `module-submodule`.
+
 ### Modifiers
 
 Use `--` for a modifier on a module or submodule. For example:
