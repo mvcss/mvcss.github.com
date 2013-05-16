@@ -9,5 +9,5 @@ Everyone has a favorite way to write CSS and determine how to name modules. Real
 The styleguide is broken down into:
 
 - [Basics](/styleguide/basics/)
-- [Sass (Sass-specific)](/styleguide/sass/)
+- [Sass (Sass-specific)](/styleguide/sass-specific/)
 - [Naming Conventions](/styleguide/naming/)
