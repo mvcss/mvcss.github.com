@@ -18,6 +18,8 @@ Modules are broken down into the base module, submodules, modifiers, and states.
 
 Submodules use the hyphen `-` separator to denote that it is a submodule to another module. For example, `module-submodule`.
 
+**Note**: If you have a plural module (e.g. `.tabs`), you can name your submodule `.tab` as an exception to this rule. The assumption is made that `.tab` is a submodule of `.tabs`.
+
 ### Modifiers
 
 Use `--` for a modifier on a module or submodule. For example:
