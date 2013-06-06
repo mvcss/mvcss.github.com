@@ -41,6 +41,23 @@ Use the `is-state`, `is-module-state`, `is-module-submodule-state` pattern for y
 - `.is-sidebar-toggled`
 - `.is-nav--item-active`
 
+Use `has-` for adding a state with specific styles on a module or submodule. For example:
+
+```html
+<div class="nav has-dropdown">
+  <!-- ... -->
+</div>
+```
+
+```sass
+.has-dropdown
+  position: relative
+```
+
+**Note**: This idea is borrowed from [suitcss](https://github.com/suitcss).
+
+**Note**: This is different than a **Modifier**, which sets custom, alternate styles on the base module.
+
 ### Sass Variables
 
 Variables, as documented in [Core - Settings](/core/settings/), should follow the same naming conventions as your modules, referenced above. The most global variables (used in multiple places, multiple contexts) are prefixed with `$base-`. Let's look at some examples:

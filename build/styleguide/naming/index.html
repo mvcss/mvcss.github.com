@@ -110,6 +110,12 @@
       <li><code>.is-nav--item-active</code></li>
       </ul>
       
+      <p>Use <code>has-</code> for adding a state with specific styles on a module or submodule. For example:</p>
+      <div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;nav has-dropdown&quot;</span><span class="nt">&gt;</span>&#x000A;  <span class="c">&lt;!-- ... --&gt;</span>&#x000A;<span class="nt">&lt;/div&gt;</span></pre></div><div class="highlight"><pre><span class="nc">.has-dropdown</span>&#x000A;  <span class="na">position</span><span class="o">:</span> <span class="no">relative</span></pre></div>
+      <p><strong>Note</strong>: This idea is borrowed from <a href="https://github.com/suitcss">suitcss</a>.</p>
+      
+      <p><strong>Note</strong>: This is different than a <strong>Modifier</strong>, which sets custom, alternate styles on the base module.</p>
+      
       <h3>Sass Variables</h3>
       
       <p>Variables, as documented in <a href="/core/settings/">Core - Settings</a>, should follow the same naming conventions as your modules, referenced above. The most global variables (used in multiple places, multiple contexts) are prefixed with <code>$base-</code>. Let&#39;s look at some examples:</p>
