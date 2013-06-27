@@ -10,7 +10,7 @@ title: Styleguide - Sass-specific
 
 ### Comments
 
-There are three levels of comments:
+There are four levels of comments:
 
 ```sass
 
