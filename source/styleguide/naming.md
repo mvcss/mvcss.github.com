@@ -39,9 +39,11 @@ Use the `is-state`, `is-module-state`, `is-module-submodule-state` pattern for y
 
 - `.is-active`
 - `.is-sidebar-toggled`
-- `.is-nav--item-active`
+- `.is-nav-item-active`
 
-Use `has-` for adding a state with specific styles on a module or submodule. For example:
+### Context
+
+Use `has-` for adding a context with specific styles on a module or submodule. For example:
 
 ```html
 <div class="nav has-dropdown">
