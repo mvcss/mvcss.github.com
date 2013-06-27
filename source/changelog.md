@@ -1,7 +1,12 @@
 # Changelog
 
+## v3.0.1
+**June 27, 2013**
+
+- New comment hierarchy
+
 ## v3.0.0
-**May, 2013**
+**May 15, 2013**
 
 - Add new **Core - Helper** file
 - Add new **Core - Content** file (replaces **Containers** Module file)
