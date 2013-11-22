@@ -4,7 +4,7 @@ title: Structures
 
 # Structures
 
-Structures (or Modules) in this context refer to any unit of style that can be found across multiple pages. **Most of your styles should be found here**. This draws from the OOCSS idea of separating everything into reusable chunks, making it second-nature if you're familiar with that method.
+Structures (or Modules) are reusable chunks of styles built from the Foundation and Components. **Most of your styles should be found here**.
 
 ## Examples of Structures
 
