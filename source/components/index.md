@@ -4,7 +4,7 @@ title: Components
 
 # Components
 
-Components are common assemblies of the tools in Foundation. Sometimes, these are all we need to achieve the styling required.
+Components are common assemblies of the tools in Foundation. Sometimes, these are all we need to achieve the styling required. You will frequently use Components to build your Structures.
 
 We included five common Components by default:
 
