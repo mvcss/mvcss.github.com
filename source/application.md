@@ -9,8 +9,9 @@ The application consists of one file, `application.sass`, and it acts as the loa
 ## Imports
 
 - [Compass](http://compass-style.org/) (optional, see below)
-- [Core](/core/)
-- [Modules](/modules/)
+- [Foundation](/foundation/)
+- [Components](/components/)
+- [Structures](/structures/)
 
 **Note**: [Compass](http://compass-style.org/) provides utilities and niceties to make your life easier. We use it, and we recommend that you give it a try.
 

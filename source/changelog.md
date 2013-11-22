@@ -1,5 +1,17 @@
 # Changelog
 
+## v4.0.0
+
+- **Core** becomes **Foundation** (same files)
+- Add a new layer called **Components**
+- Modules become **Structures**
+- Add initial **Components**
+
+## v3.0.2
+**November 13, 2013**
+
+- Update Normalize to v2.1.3
+
 ## v3.0.1
 **June 27, 2013**
 

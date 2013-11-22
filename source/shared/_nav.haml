@@ -3,15 +3,22 @@
     %li= link_to 'About', '/', is_page_active('/')
     %li= link_to 'Application', '/application/', is_page_active('/application/')
     %li
-      = link_to 'Core', '/core/', is_page_active('/core/')
-      %ul{ is_section_active('/core/')  }
-        %li= link_to 'Reset', '/core/reset/', is_page_active('/core/reset/')
-        %li= link_to 'Settings', '/core/settings/', is_page_active('/core/settings/')
-        %li= link_to 'Helpers', '/core/helpers/', is_page_active('/core/helpers/')
-        %li= link_to 'Base', '/core/base/', is_page_active('/core/base/')
-        %li= link_to 'Content', '/core/content/', is_page_active('/core/content/')
-        %li= link_to 'Layout', '/core/layout/', is_page_active('/core/layout/')
-    %li= link_to 'Modules', '/modules/', is_page_active('/modules/')
+      = link_to 'Foundation', '/foundation/', is_page_active('/foundation/')
+      %ul{ is_section_active('/foundation/')  }
+        %li= link_to 'Reset', '/foundation/reset/', is_page_active('/foundation/reset/')
+        %li= link_to 'Settings', '/foundation/settings/', is_page_active('/foundation/settings/')
+        %li= link_to 'Helpers', '/foundation/helpers/', is_page_active('/foundation/helpers/')
+        %li= link_to 'Utilities', '/foundation/utilities/', is_page_active('/foundation/utilities/')
+        %li= link_to 'Base', '/foundation/base/', is_page_active('/foundation/base/')
+    %li
+      = link_to 'Components', '/components/', is_page_active('/components/')
+      %ul{ is_section_active('/components/')  }
+        %li= link_to 'Bucket', '/components/bucket/', is_page_active('/components/bucket/')
+        %li= link_to 'Card', '/components/card/', is_page_active('/components/card/')
+        %li= link_to 'Cell', '/components/cell/', is_page_active('/components/cell/')
+        %li= link_to 'Grid', '/components/grid/', is_page_active('/components/grid/')
+        %li= link_to 'Row', '/components/row/', is_page_active('/components/row/')
+    %li= link_to 'Structures', '/structures/', is_page_active('/structures/')
     %li
       = link_to 'Styleguide', '/styleguide/', is_page_active('/styleguide/')
       %ul{ is_section_active('/styleguide/')  }

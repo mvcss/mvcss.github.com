@@ -12,7 +12,7 @@ title: Styleguide - Naming Conventions
 - `modules/_grid.sass`
 - `modules/_form.sass`
 
-Modules are broken down into the base module, submodules, modifiers, and states. If your module or submodule name is two words, use camelCase. For example, `.moduleName`.
+Modules are broken down into the base module, submodules, modifiers, states, and context. If your module or submodule name is two words, use camelCase. For example, `.moduleName`.
 
 ### Submodules
 
@@ -35,11 +35,11 @@ $module--modifier-background: #000
 
 ### States
 
-Use the `is-state`, `is-module-state`, `is-module-submodule-state` pattern for your states. For example:
+Use the `is-` pattern for your states. For example:
 
 - `.is-active`
-- `.is-sidebar-toggled`
-- `.is-nav-item-active`
+- `.is-toggled`
+- `.is-hidden`
 
 ### Context
 
@@ -62,24 +62,30 @@ Use `has-` for adding a context with specific styles on a module or submodule. F
 
 ### Sass Variables
 
-Variables, as documented in [Core - Settings](/core/settings/), should follow the same naming conventions as your modules, referenced above. The most global variables (used in multiple places, multiple contexts) are prefixed with `$base-`. Let's look at some examples:
+Variables, as documented in [Foundation - Settings](/foundation/settings/), should follow the same naming conventions as your modules, referenced above. The most global variables (used in multiple places, multiple contexts) are prefixed with `$base-`. Let's look at some examples:
 
 ```sass
-$base-background: #eee
-$base-color: #444
 $base-borderRadius: 3px
 $base-fontSize: 16px
 $base-lineHeight: 1.6
 $base-whitespace: 20px
 ```
 
-Content and layout variables are prefixed with `$c-` and `$l-`, respectively.
+Colors are prefixed with `$color-`:
 
 ```sass
-$c-header-color: #999
-$c-header-fontFamily: sans-serif
-$l-maxWidth: 960px
-$l-sidebar-width: 200px
+$color-background: #fff
+$color-base: #222
+$color-highlight: #0053c9
+$color-invert: #fff
+$color-subdue: #ccc
+```
+
+Fonts are prefixed with `$font-`:
+
+```sass
+$font-base: sans-serif
+$font-header: sans-serif
 ```
 
 You may also create module-specific variables, like so:
