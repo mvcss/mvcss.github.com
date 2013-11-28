@@ -1,6 +1,0 @@
----
-title: Components - Card
----
-
-# Card
-

@@ -1,6 +1,0 @@
----
-title: Components - Bucket
----
-
-# Bucket
-

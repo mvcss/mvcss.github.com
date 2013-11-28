@@ -11,4 +11,4 @@ title: Foundation - Settings
 
 Grouping all the app-wide settings into one file allows newcomers to the project the means to find out what's available to them quickly.
 
-<a class="btn--b" href="/foundation/helpers/">Next &rarr;</a>
+<a class="btn btn--b" href="/foundation/helpers/">Next &rarr;</a>

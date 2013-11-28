@@ -1,28 +1,22 @@
-%nav.l-nav
-  %ul
-    %li= link_to 'About', '/', is_page_active('/')
-    %li= link_to 'Application', '/application/', is_page_active('/application/')
-    %li
-      = link_to 'Foundation', '/foundation/', is_page_active('/foundation/')
-      %ul{ is_section_active('/foundation/')  }
-        %li= link_to 'Reset', '/foundation/reset/', is_page_active('/foundation/reset/')
-        %li= link_to 'Settings', '/foundation/settings/', is_page_active('/foundation/settings/')
-        %li= link_to 'Helpers', '/foundation/helpers/', is_page_active('/foundation/helpers/')
-        %li= link_to 'Utilities', '/foundation/utilities/', is_page_active('/foundation/utilities/')
-        %li= link_to 'Base', '/foundation/base/', is_page_active('/foundation/base/')
-    %li
-      = link_to 'Components', '/components/', is_page_active('/components/')
-      %ul{ is_section_active('/components/')  }
-        %li= link_to 'Bucket', '/components/bucket/', is_page_active('/components/bucket/')
-        %li= link_to 'Card', '/components/card/', is_page_active('/components/card/')
-        %li= link_to 'Cell', '/components/cell/', is_page_active('/components/cell/')
-        %li= link_to 'Grid', '/components/grid/', is_page_active('/components/grid/')
-        %li= link_to 'Row', '/components/row/', is_page_active('/components/row/')
-    %li= link_to 'Structures', '/structures/', is_page_active('/structures/')
-    %li
-      = link_to 'Styleguide', '/styleguide/', is_page_active('/styleguide/')
-      %ul{ is_section_active('/styleguide/')  }
-        %li= link_to 'Basics', '/styleguide/basics/', is_page_active('/styleguide/basics/')
-        %li= link_to 'Sass-specific', '/styleguide/sass-specific/', is_page_active('/styleguide/sass-specific/')
-        %li= link_to 'Naming Conventions', '/styleguide/naming/', is_page_active('/styleguide/naming/')
-    %li= link_to 'Library', '/library/', is_page_active('/library/')
+%nav.nav
+  %ul.nav-list
+    %li.nav-item{ is_page_active('/') }= link_to 'About', '/', class: 'nav-link'
+    %li.nav-item{ is_page_active('/application/') }= link_to 'Application', '/application/', class: 'nav-link'
+    %li.nav-item{ is_page_active('/foundation/') }
+      = link_to 'Foundation', '/foundation/', class: 'nav-link'
+      %ul.nav-list--sub{ is_section_active('/foundation/')  }
+        %li.nav-item{ is_page_active('/foundation/reset/') }= link_to 'Reset', '/foundation/reset/', class: 'nav-link'
+        %li.nav-item{ is_page_active('/foundation/settings/') }= link_to 'Settings', '/foundation/settings/', class: 'nav-link'
+        %li.nav-item{ is_page_active('/foundation/helpers/') }= link_to 'Helpers', '/foundation/helpers/', class: 'nav-link'
+        %li.nav-item{ is_page_active('/foundation/utilities/') }= link_to 'Utilities', '/foundation/utilities/', class: 'nav-link'
+        %li.nav-item{ is_page_active('/foundation/base/') }= link_to 'Base', '/foundation/base/', class: 'nav-link'
+    %li.nav-item{ is_page_active('/components/') }
+      = link_to 'Components', '/components/', class: 'nav-link'
+    %li.nav-item{ is_page_active('/structures/') }= link_to 'Structures', '/structures/', class: 'nav-link'
+    %li.nav-item{ is_page_active('/styleguide/') }
+      = link_to 'Styleguide', '/styleguide/', class: 'nav-link'
+      %ul.nav-list--sub{ is_section_active('/styleguide/')  }
+        %li.nav-item{ is_page_active('/styleguide/basics/') }= link_to 'Basics', '/styleguide/basics/', class: 'nav-link'
+        %li.nav-item{ is_page_active('/styleguide/sass-specific/') }= link_to 'Sass-specific', '/styleguide/sass-specific/', class: 'nav-link'
+        %li.nav-item{ is_page_active('/styleguide/naming') }= link_to 'Naming Conventions', '/styleguide/naming/', class: 'nav-link'
+    %li.nav-item{ is_page_active('/library/') }= link_to 'Library', '/library/', class: 'nav-link'

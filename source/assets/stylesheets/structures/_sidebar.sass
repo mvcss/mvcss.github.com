@@ -1,0 +1,42 @@
+// *************************************
+//
+//   Sidebar
+//
+// *************************************
+
+.sidebar
+  @extend .bch
+  @extend .dn
+
+  +respond-to(768px)
+    +stretch(0, auto, 0, 0)
+    box-shadow: $base-boxShadow
+    display: block
+    position: fixed
+    width: $sidebar-width
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+.sidebar.is-toggled
+  @extend .db
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+// Toggle
+
+.sidebar-toggle
+  @extend .db
+  @extend .mtm
+  @extend .tac
+  background: darken($color-background, 10%)
+  border: 0
+  padding: 0.5 * $base-whitespace
+
+  // Media Queries
+
+  +respond-to(768px)
+    display: none

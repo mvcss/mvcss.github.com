@@ -16,7 +16,7 @@ helpers do
   end
 
   def is_section_active(section)
-    current_page.url.match(section) ? {:class => 'is-section-active'} : {}
+    current_page.url.match(section) ? {:class => 'is-active'} : {}
   end
 end
 

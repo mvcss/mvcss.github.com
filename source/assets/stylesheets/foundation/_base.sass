@@ -1,0 +1,95 @@
+// *************************************
+//
+//   Base
+//   -> Tag-level settings
+//
+// *************************************
+
+html
+  @extend .tfb
+  @extend .tcb
+  background: $color-background
+  font-size: $base-fontSize
+  line-height: $base-lineHeight
+
+body
+  font-size: 100%
+  +respond-to(768px)
+    padding-left: $sidebar-width
+
+// -------------------------------------
+//   Block Content
+// -------------------------------------
+
+pre,
+code,
+blockquote
+  @extend .card
+  font-size: 90%
+
+pre
+  @extend .mbm
+  padding: 0.5 * $base-whitespace
+  code
+    border: 0
+    box-shadow: none
+    font-size: 100%
+
+code
+  font-size: 95%
+
+blockquote
+  @extend .mbm
+  @extend .pbs
+  @extend .plm
+  @extend .prm
+  @extend .pts
+  @extend .tsi
+  font-size: 100%
+  color: lighten($color-base, 25%)
+  p
+    margin: 0
+
+ul, p
+  @extend .mbm
+  @extend .mtf
+
+li
+  @extend .mbs
+  @extend .mtf
+
+ul li
+  list-style-type: square
+
+// ----- Headers ----- //
+
+h1, .h1,
+h2, .h2
+  @extend .mbs
+  @extend .mtf
+  @extend .twb
+  line-height: 1.2
+
+h1, .h1
+  font-size: 250%
+
+h2, .h2
+  font-size: 200%
+
+// -------------------------------------
+//   Inline Content
+// -------------------------------------
+
+a
+  @extend .tch
+  +transition(all 0.2s ease-in-out)
+  border-bottom: $base-border
+  text-decoration: none
+  &:hover,
+  &:focus
+    background: lighten($color-base, 60%)
+    border-color: $color-highlight
+
+code
+  padding: 0.125em 0.3125em
+

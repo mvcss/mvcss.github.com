@@ -8,22 +8,22 @@ Components are common assemblies of the tools in Foundation. Sometimes, these ar
 
 We included five common Components by default:
 
-## 1. [Bucket](/foundation/bucket)
+## 1. Bucket
 
 Media element next to a piece of content.
 
-## 2. [Card](/foundation/card/)
+## 2. Card
 
 Individual style containers.
 
-## 3. [Cell](/foundation/cell/)
+## 3. Cell
 
 Width-limiting blocks.
 
-## 4. [Grid](/foundation/grid/)
+## 4. Grid
 
 Full, responsive grid.
 
-## 5. [Row](/foundation/row/)
+## 5. Row
 
 Width-spanning blocks.

@@ -1,0 +1,34 @@
+// *************************************
+//
+//   About
+//
+// *************************************
+
+.about
+  @extend .pbm
+  @extend .ptm
+  @extend .tac
+  +stretch(auto, 0, 0, 0)
+  background: darken($color-highlight, 5%)
+  color: lighten($color-highlight, 40%)
+  margin: 0
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+// ----- Link ----- //
+
+.about-link
+  color: lighten($color-highlight, 50%)
+  &:hover,
+  &:focus
+    @extend .tci
+    background: none
+
+// ----- Title ----- //
+
+.about-title
+  @extend .db
+  font-weight: 300
+

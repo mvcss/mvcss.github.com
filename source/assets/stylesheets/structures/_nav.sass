@@ -1,0 +1,63 @@
+// *************************************
+//
+//   Navigation
+//   -> Site-wide navigation
+//
+// *************************************
+
+.nav ul,
+.nav li
+  @extend .lr
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Sub ----- //
+
+.nav-list--sub
+  @extend .dn
+
+  .nav-link
+    background: darken($color-highlight, 5%)
+    font-size: 90%
+    padding: 0.5 * $base-whitespace
+    padding-left: 2 * $base-whitespace
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// ----- Actve ----- //
+
+.nav-list--sub.is-active
+  @extend .db
+  background: darken($color-highlight, 5%)
+
+.nav-item.is-active
+  > .nav-link
+    @extend .bcbg
+    @extend .tcb
+    box-shadow: -2px 2px 1px rgba(darken($color-highlight, 20%), 0.35)
+    margin-right: -4px
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+// ----- Link ----- //
+
+.nav-link
+  @extend .db
+  @extend .pbs
+  @extend .plm
+  @extend .prm
+  @extend .pts
+  @extend .tci
+  +transition(all 0.2s ease-in-out)
+  border: 0
+  font-size: 110%
+  &:hover,
+  &:focus
+    background: darken($color-highlight, 10%)
+

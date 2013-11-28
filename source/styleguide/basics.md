@@ -26,4 +26,4 @@ title: Styleguide - Basics
 
 ```
 
-<a class="btn--b" href="/styleguide/sass-specific/">Next &rarr;</a>
+<a class="btn btn--b" href="/styleguide/sass-specific/">Next &rarr;</a>

@@ -8,4 +8,4 @@ As long as the project size warrants it, we always get things started with a sty
 
 With **Normalize.css**, we recommend that you alter it on a per-project basis, and make the proper overrides in [**Foundation - Base**](/foundation/base/).
 
-<a class="btn--b" href="/foundation/settings/">Next &rarr;</a>
+<a class="btn btn--b" href="/foundation/settings/">Next &rarr;</a>

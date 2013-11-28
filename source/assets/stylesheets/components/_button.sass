@@ -1,0 +1,47 @@
+// *************************************
+//
+//   Button
+//   -> Clickable things
+//
+// *************************************
+
+.btn
+  @extend .db
+  @extend .ram
+  @extend .tac
+  @extend .tci
+  +transition(background 0.2s ease-in-out, box-shadow 0.2s ease-in-out)
+  border: 0
+  line-height: 2.5
+  padding: 0 $base-whitespace
+  &:hover,
+  &:focus
+    @extend .tci
+  &:active
+    +transform(translateY(2px))
+  +respond-to(920px)
+    width: 12.5em
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Types ----- //
+
+.btn--a
+  background: $color-highlight
+  box-shadow: 0 6px 0 darken($color-highlight, 10%)
+  &:hover,
+  &:focus
+    background: darken($color-highlight, 5%)
+    box-shadow: 0 6px 0 darken($color-highlight, 15%)
+
+.btn--b
+  @extend .mtl
+  background: darken($color-background, 40%)
+  box-shadow: 0 6px 0 darken($color-background, 50%)
+  &:hover,
+  &:focus
+    background: darken($color-background, 45%)
+    box-shadow: 0 6px 0 darken($color-background, 55%)
+

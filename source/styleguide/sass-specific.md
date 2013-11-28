@@ -30,4 +30,4 @@ There are four levels of comments:
 // Fourth Level
 ```
 
-<a class="btn--b" href="/styleguide/naming/">Next &rarr;</a>
+<a class="btn btn--b" href="/styleguide/naming/">Next &rarr;</a>

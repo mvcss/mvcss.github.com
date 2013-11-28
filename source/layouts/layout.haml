@@ -15,22 +15,22 @@
 
   %body{ class: page_classes }
 
-    .l-controls
-      %a.btn--a(href='https://github.com/mvcss/mvcss') View Code &rarr;
-      %p= link_to 'Changelog (v4.0.0)', '/changelog/'
+    .action
+      %a.action-btn(href='https://github.com/mvcss/mvcss') View Code &rarr;
+      %p.action-link= link_to 'Changelog (v4.0.0)', '/changelog/'
 
-    %a.l-sidebar-toggle(href="#") Navigation
-    %aside.l-sidebar
+    %a.sidebar-toggle(href="#") Navigation
+    %aside.sidebar
       = partial 'shared/header'
       = partial 'shared/nav'
 
-      %footer.l-about
-        %b Crafted with care by
-        = link_to 'Nick Walsh', 'http://twitter.com/nickawalsh'
+      %footer.about
+        %b.about-title Crafted with care by
+        = link_to 'Nick Walsh', 'http://twitter.com/nickawalsh', class: 'about-link'
         &amp;
-        = link_to 'Drew Barontini', 'http://twitter.com/drewbarontini'
+        = link_to 'Drew Barontini', 'http://twitter.com/drewbarontini', class: 'about-link'
 
-    %main.l-cell
+    %main.cell
       = find_and_preserve do
         = yield
 
@@ -39,7 +39,7 @@
     = javascript_include_tag 'http://code.jquery.com/jquery-1.9.1.min.js'
     :coffeescript
       $ ->
-        $('.l-sidebar-toggle').on 'click', (e) ->
+        $('.sidebar-toggle').on 'click', (e) ->
           e.preventDefault()
           $(@).toggleClass('is-active')
-          $('body').toggleClass('is-sidebar-toggled')
+          $('body').toggleClass('is-toggled')

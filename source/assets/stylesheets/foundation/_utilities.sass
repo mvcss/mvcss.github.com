@@ -1,0 +1,242 @@
+// *************************************
+//
+//   Utilities
+//   -> Global utilities
+//
+// *************************************
+
+// ----- Clearfix ----- //
+
+.group::after
+  clear: both
+  content: ''
+  display: table
+
+// ----- Debug ----- //
+
+.debug
+  background-color: pink !important
+
+// ----- Ellipsis ----- //
+
+.ellipsis
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+// ----- Image Replacement ----- //
+
+.ir
+  background-color: transparent
+  border: 0
+  overflow: hidden
+  &:before
+    content: ''
+    display: block
+    width: 0
+    height: 150%
+
+// -------------------------------------
+//   Background
+// -------------------------------------
+
+.bcbg
+  background: $color-background
+.bcb
+  background: $color-base
+.bch
+  background: $color-highlight
+.bci
+  background: $color-invert
+.bcs
+  background: $color-subdue
+
+// -------------------------------------
+//   Display
+// -------------------------------------
+
+.db
+  display: block
+.di
+  display: inline
+.dib
+  display: inline-block
+.dn
+  display: none
+
+// -------------------------------------
+//   List
+// -------------------------------------
+
+.lr
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+// -------------------------------------
+//   Margins
+// -------------------------------------
+
+// ----- Bottom ----- //
+
+.mbf
+  margin-bottom: 0
+.mbxs
+  margin-bottom: 0.25 * $base-whitespace
+.mbs
+  margin-bottom: 0.5 * $base-whitespace
+.mbm
+  margin-bottom: $base-whitespace
+.mbl
+  margin-bottom: 2 * $base-whitespace
+
+// ----- Horizontal ----- //
+
+.mhc
+  margin-left: auto
+  margin-right: auto
+
+// ----- Left ----- //
+
+.mlf
+  margin-left: 0
+.mls
+  margin-left: 0.5 $base-whitespace
+.mlm
+  margin-left: $base-whitespace
+
+// ----- Right ----- //
+
+.mrf
+  margin-right: 0
+.mrs
+  margin-right: 0.5 $base-whitespace
+.mrm
+  margin-right: $base-whitespace
+
+// ----- Top ----- //
+
+.mtf
+  margin-top: 0
+.mts
+  margin-top: 0.5 $base-whitespace
+.mtm
+  margin-top: $base-whitespace
+.mtl
+  margin-top: 2 * $base-whitespace
+.mtxl
+  margin-top: 4 * $base-whitespace
+
+// -------------------------------------
+//   Padding
+// -------------------------------------
+
+// ----- Bottom ----- //
+
+.pbs
+  padding-bottom: 0.5 * $base-whitespace
+.pbm
+  padding-bottom: $base-whitespace
+
+// ----- Left ----- //
+
+.plm
+  padding-left: $base-whitespace
+.pll
+  padding-left: 2 * $base-whitespace
+
+// ----- Right ----- //
+
+.prm
+  padding-right: $base-whitespace
+.prl
+  padding-right: 2 * $base-whitespace
+
+// ----- Top ----- //
+
+.pts
+  padding-top: 0.5 * $base-whitespace
+.ptm
+  padding-top: $base-whitespace
+
+// -------------------------------------
+//   Positioning
+// -------------------------------------
+
+.fl
+  float: left
+.fr
+  float: right
+
+.poa
+  position: absolute
+.pof
+  position: fixed
+.por
+  position: relative
+.pos
+  position: static
+
+// -------------------------------------
+//   Rounding
+// -------------------------------------
+
+.ra
+  border-radius: 50%
+.ram
+  border-radius: $base-borderRadius
+
+// -------------------------------------
+//   Text
+// -------------------------------------
+
+// ----- Alignment ----- //
+
+.tac
+  text-align: center
+
+// ----- Color ----- //
+
+.tcb
+  color: $color-base
+.tch
+  color: $color-highlight
+.tci
+  color: $color-invert
+.tcs
+  color: $color-subdue
+
+// ----- Family ----- //
+
+.tfb
+  font-family: $font-base
+
+// ----- Size ----- //
+
+.tsxs
+  font-size: 60%
+.tss
+  font-size: 75%
+.tsm
+  font-size: 85%
+.tsl
+  font-size: 105%
+.tsxl
+  font-size: 115%
+
+// ----- Style ----- //
+
+.tsi
+  font-style: italic
+
+// ----- Transform ----- //
+
+.ttu
+  text-transform: uppercase
+
+// ----- Weight ----- //
+
+.twn
+  font-weight: normal
+.twb
+  font-weight: bold
