@@ -19,10 +19,10 @@
   @extend .dn
 
   .nav-link
-    background: darken($color-highlight, 5%)
+    background: darken($c-highlight, 5%)
     font-size: 90%
-    padding: 0.5 * $base-whitespace
-    padding-left: 2 * $base-whitespace
+    padding: 0.5 * $b-whitespace
+    padding-left: 2 * $b-whitespace
 
 // -------------------------------------
 //   States
@@ -32,13 +32,13 @@
 
 .nav-list--sub.is-active
   @extend .db
-  background: darken($color-highlight, 5%)
+  background: darken($c-highlight, 5%)
 
 .nav-item.is-active
   > .nav-link
     @extend .bcbg
     @extend .tcb
-    box-shadow: -2px 2px 1px rgba(darken($color-highlight, 20%), 0.35)
+    box-shadow: -2px 2px 1px rgba(darken($c-highlight, 20%), 0.35)
     margin-right: -4px
 
 // -------------------------------------
@@ -54,10 +54,11 @@
   @extend .prm
   @extend .pts
   @extend .tci
-  +transition(all 0.2s ease-in-out)
   border: 0
   font-size: 110%
+  -webkit-transition: all 0.2s ease-in-out
+  transition: all 0.2s ease-in-out
   &:hover,
   &:focus
-    background: darken($color-highlight, 10%)
+    background: darken($c-highlight, 10%)
 

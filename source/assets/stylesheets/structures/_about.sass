@@ -8,10 +8,14 @@
   @extend .pbm
   @extend .ptm
   @extend .tac
-  +stretch(auto, 0, 0, 0)
-  background: darken($color-highlight, 5%)
-  color: lighten($color-highlight, 40%)
+  background: darken($c-highlight, 5%)
+  bottom: 0
+  color: lighten($c-highlight, 40%)
+  left: 0
   margin: 0
+  position: absolute
+  right: 0
+  top: auto
 
 // -------------------------------------
 //   Submodules
@@ -20,7 +24,7 @@
 // ----- Link ----- //
 
 .about-link
-  color: lighten($color-highlight, 50%)
+  color: lighten($c-highlight, 50%)
   &:hover,
   &:focus
     @extend .tci

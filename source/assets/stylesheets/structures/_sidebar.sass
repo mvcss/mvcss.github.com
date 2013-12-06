@@ -9,10 +9,13 @@
   @extend .dn
 
   +respond-to(768px)
-    +stretch(0, auto, 0, 0)
-    box-shadow: $base-boxShadow
+    box-shadow: $b-boxShadow
+    bottom: 0
     display: block
+    left: 0
     position: fixed
+    right: auto
+    top: 0
     width: $sidebar-width
 
 // -------------------------------------
@@ -32,9 +35,9 @@
   @extend .db
   @extend .mtm
   @extend .tac
-  background: darken($color-background, 10%)
+  background: darken($c-background, 10%)
   border: 0
-  padding: 0.5 * $base-whitespace
+  padding: 0.5 * $b-whitespace
 
   // Media Queries
 

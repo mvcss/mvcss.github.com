@@ -8,9 +8,9 @@
 html
   @extend .tfb
   @extend .tcb
-  background: $color-background
-  font-size: $base-fontSize
-  line-height: $base-lineHeight
+  background: $c-background
+  font-size: $b-fontSize
+  line-height: $b-lineHeight
 
 body
   font-size: 100%
@@ -29,7 +29,7 @@ blockquote
 
 pre
   @extend .mbm
-  padding: 0.5 * $base-whitespace
+  padding: 0.5 * $b-whitespace
   code
     border: 0
     box-shadow: none
@@ -46,7 +46,7 @@ blockquote
   @extend .pts
   @extend .tsi
   font-size: 100%
-  color: lighten($color-base, 25%)
+  color: lighten($c-base, 25%)
   p
     margin: 0
 
@@ -82,13 +82,14 @@ h2, .h2
 
 a
   @extend .tch
-  +transition(all 0.2s ease-in-out)
-  border-bottom: $base-border
+  border-bottom: $b-border
   text-decoration: none
+  -webkit-transition: all 0.2s ease-in-out
+  transition: all 0.2s ease-in-out
   &:hover,
   &:focus
-    background: lighten($color-base, 60%)
-    border-color: $color-highlight
+    background: lighten($c-base, 60%)
+    border-color: $c-highlight
 
 code
   padding: 0.125em 0.3125em
