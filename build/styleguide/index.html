@@ -21,65 +21,70 @@
     </script>
   </head>
   <body class='styleguide styleguide_index'>
-    <div class='l-controls'>
-      <a class='btn--a' href='https://github.com/mvcss/mvcss'>View Code &rarr;</a>
-      <p><a href="/changelog/">Changelog (v3.0.1)</a></p>
+    <div class='action'>
+      <a class='action-btn' href='https://github.com/mvcss/mvcss'>View Code &rarr;</a>
+      <p class='action-link'><a href="/changelog/">Changelog (v4.0.0)</a></p>
     </div>
-    <a class='l-sidebar-toggle' href='#'>Navigation</a>
-    <aside class='l-sidebar'>
-      <header class='l-header'>
-        <div class='c-logo'>
-          <a href='/'><img width="100" height="110" alt="MVCSS" src="../assets/images/logo.svg" /></a>
-          <b>MVCSS <span>Version 3.0.1</span></b>
+    <a class='sidebar-toggle' href='#'>Navigation</a>
+    <aside class='sidebar'>
+      <header class='header'>
+        <div class='header-mast bucket bucket--flag'>
+          <div class='bucket-media'>
+            <a class='header-logo' href='/'><img width="100" height="110" alt="MVCSS" src="../assets/images/logo.svg" /></a>
+          </div>
+          <div class='bucket-content'>
+            <b class='header-title'>
+              MVCSS
+              <span class='header-sub'>Version 4.0.0</span>
+            </b>
+          </div>
         </div>
-        <p class='c-tagline'>A Sass-based CSS Architecture</p>
+        <p class='header-tagline'>A Sass-based CSS Architecture</p>
       </header>
-      <nav class='l-nav'>
-        <ul>
-          <li><a href="/">About</a></li>
-          <li><a href="/application/">Application</a></li>
-          <li>
-            <a href="/core/">Core</a>
-            <ul>
-              <li><a href="/core/reset/">Reset</a></li>
-              <li><a href="/core/settings/">Settings</a></li>
-              <li><a href="/core/helpers/">Helpers</a></li>
-              <li><a href="/core/base/">Base</a></li>
-              <li><a href="/core/content/">Content</a></li>
-              <li><a href="/core/layout/">Layout</a></li>
+      <nav class='nav'>
+        <ul class='nav-list'>
+          <li class='nav-item'><a class="nav-link" href="/">About</a></li>
+          <li class='is-active nav-item'>
+            <a class="nav-link" href="/styleguide/">Styleguide</a>
+            <ul class='is-active nav-list--sub'>
+              <li class='nav-item'><a class="nav-link" href="/styleguide/basics/">Basics</a></li>
+              <li class='nav-item'><a class="nav-link" href="/styleguide/numbers-game/">The Numbers Game</a></li>
+              <li class='nav-item'><a class="nav-link" href="/styleguide/comments/">Comments</a></li>
+              <li class='nav-item'><a class="nav-link" href="/styleguide/naming/">Naming Conventions</a></li>
             </ul>
           </li>
-          <li><a href="/modules/">Modules</a></li>
-          <li>
-            <a class="is-active" href="/styleguide/">Styleguide</a>
-            <ul class='is-section-active'>
-              <li><a href="/styleguide/basics/">Basics</a></li>
-              <li><a href="/styleguide/sass-specific/">Sass-specific</a></li>
-              <li><a href="/styleguide/naming/">Naming Conventions</a></li>
+          <li class='nav-item'><a class="nav-link" href="/manifest/">Manifest</a></li>
+          <li class='nav-item'>
+            <a class="nav-link" href="/foundation/">Foundation</a>
+            <ul class='nav-list--sub'>
+              <li class='nav-item'><a class="nav-link" href="/foundation/reset/">Reset</a></li>
+              <li class='nav-item'><a class="nav-link" href="/foundation/settings/">Settings</a></li>
+              <li class='nav-item'><a class="nav-link" href="/foundation/helpers/">Helpers</a></li>
+              <li class='nav-item'><a class="nav-link" href="/foundation/utilities/">Utilities</a></li>
+              <li class='nav-item'><a class="nav-link" href="/foundation/base/">Base</a></li>
             </ul>
           </li>
-          <li><a href="/library/">Library</a></li>
+          <li class='nav-item'><a class="nav-link" href="/components/">Components</a></li>
+          <li class='nav-item'><a class="nav-link" href="/structures/">Structures</a></li>
+          <li class='nav-item'><a class="nav-link" href="/vendor/">Vendor</a></li>
+          <li class='nav-item'><a class="nav-link" href="/usage/">Usage</a></li>
+          <li class='nav-item'><a class="nav-link" href="/inspiration/">Inspiration</a></li>
         </ul>
       </nav>
-      <footer class='l-about'>
-        <b>Crafted with care by</b>
-        <a href="http://twitter.com/nickawalsh">Nick Walsh</a>
-        &amp;
-        <a href="http://twitter.com/drewbarontini">Drew Barontini</a>
+      <footer class='about'>
+        <a class='about-link' href='http://envylabs.com'>
+          <img alt="Made with Envy" width="162" height="80" class="about-logo" src="../assets/images/logo-envy.svg" />
+        </a>
       </footer>
     </aside>
-    <main class='l-cell'>
+    <main class='cell'>
       <h1>Styleguide</h1>
       
-      <p>Everyone has a favorite way to write CSS and determine how to name modules. Realizing that everyone includes us, here are our compiled standards for stylesheet authoring and module naming.</p>
+      <p>Before diving in, we’ll start with a bit of housekeeping. This section outlines our internal standards for writing CSS (and more specifically, Sass). While you’re certainly welcome to switch it up, these guidelines will help in moving through our examples and base files.</p>
       
-      <p>The styleguide is broken down into:</p>
+      <p>We’re big proponents of the Sass indented syntax (<code>.sass</code>), so things may look slightly different if you’re a Sassy CSS (<code>.scss</code>) fan.</p>
       
-      <ul>
-      <li><a href="/styleguide/basics/">Basics</a></li>
-      <li><a href="/styleguide/sass-specific/">Sass (Sass-specific)</a></li>
-      <li><a href="/styleguide/naming/">Naming Conventions</a></li>
-      </ul>
+      <p><strong>Word of warning:</strong> some of the sections herein will be a bit confusing, like Naming Conventions, until seen in context later—an unfortunate chicken/egg situation.</p>
     </main>
     <script>
       var _gauges = _gauges || [];
@@ -99,10 +104,10 @@
       (function() {
       
         $(function() {
-          return $('.l-sidebar-toggle').on('click', function(e) {
+          return $('.sidebar-toggle').on('click', function(e) {
             e.preventDefault();
             $(this).toggleClass('is-active');
-            return $('body').toggleClass('is-sidebar-toggled');
+            return $('body').toggleClass('is-toggled');
           });
         });
       

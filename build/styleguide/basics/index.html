@@ -21,67 +21,77 @@
     </script>
   </head>
   <body class='styleguide styleguide_basics styleguide_basics_index'>
-    <div class='l-controls'>
-      <a class='btn--a' href='https://github.com/mvcss/mvcss'>View Code &rarr;</a>
-      <p><a href="/changelog/">Changelog (v3.0.1)</a></p>
+    <div class='action'>
+      <a class='action-btn' href='https://github.com/mvcss/mvcss'>View Code &rarr;</a>
+      <p class='action-link'><a href="/changelog/">Changelog (v4.0.0)</a></p>
     </div>
-    <a class='l-sidebar-toggle' href='#'>Navigation</a>
-    <aside class='l-sidebar'>
-      <header class='l-header'>
-        <div class='c-logo'>
-          <a href='/'><img width="100" height="110" alt="MVCSS" src="../../assets/images/logo.svg" /></a>
-          <b>MVCSS <span>Version 3.0.1</span></b>
+    <a class='sidebar-toggle' href='#'>Navigation</a>
+    <aside class='sidebar'>
+      <header class='header'>
+        <div class='header-mast bucket bucket--flag'>
+          <div class='bucket-media'>
+            <a class='header-logo' href='/'><img width="100" height="110" alt="MVCSS" src="../../assets/images/logo.svg" /></a>
+          </div>
+          <div class='bucket-content'>
+            <b class='header-title'>
+              MVCSS
+              <span class='header-sub'>Version 4.0.0</span>
+            </b>
+          </div>
         </div>
-        <p class='c-tagline'>A Sass-based CSS Architecture</p>
+        <p class='header-tagline'>A Sass-based CSS Architecture</p>
       </header>
-      <nav class='l-nav'>
-        <ul>
-          <li><a href="/">About</a></li>
-          <li><a href="/application/">Application</a></li>
-          <li>
-            <a href="/core/">Core</a>
-            <ul>
-              <li><a href="/core/reset/">Reset</a></li>
-              <li><a href="/core/settings/">Settings</a></li>
-              <li><a href="/core/helpers/">Helpers</a></li>
-              <li><a href="/core/base/">Base</a></li>
-              <li><a href="/core/content/">Content</a></li>
-              <li><a href="/core/layout/">Layout</a></li>
+      <nav class='nav'>
+        <ul class='nav-list'>
+          <li class='nav-item'><a class="nav-link" href="/">About</a></li>
+          <li class='nav-item'>
+            <a class="nav-link" href="/styleguide/">Styleguide</a>
+            <ul class='is-active nav-list--sub'>
+              <li class='is-active nav-item'><a class="nav-link" href="/styleguide/basics/">Basics</a></li>
+              <li class='nav-item'><a class="nav-link" href="/styleguide/numbers-game/">The Numbers Game</a></li>
+              <li class='nav-item'><a class="nav-link" href="/styleguide/comments/">Comments</a></li>
+              <li class='nav-item'><a class="nav-link" href="/styleguide/naming/">Naming Conventions</a></li>
             </ul>
           </li>
-          <li><a href="/modules/">Modules</a></li>
-          <li>
-            <a href="/styleguide/">Styleguide</a>
-            <ul class='is-section-active'>
-              <li><a class="is-active" href="/styleguide/basics/">Basics</a></li>
-              <li><a href="/styleguide/sass-specific/">Sass-specific</a></li>
-              <li><a href="/styleguide/naming/">Naming Conventions</a></li>
+          <li class='nav-item'><a class="nav-link" href="/manifest/">Manifest</a></li>
+          <li class='nav-item'>
+            <a class="nav-link" href="/foundation/">Foundation</a>
+            <ul class='nav-list--sub'>
+              <li class='nav-item'><a class="nav-link" href="/foundation/reset/">Reset</a></li>
+              <li class='nav-item'><a class="nav-link" href="/foundation/settings/">Settings</a></li>
+              <li class='nav-item'><a class="nav-link" href="/foundation/helpers/">Helpers</a></li>
+              <li class='nav-item'><a class="nav-link" href="/foundation/utilities/">Utilities</a></li>
+              <li class='nav-item'><a class="nav-link" href="/foundation/base/">Base</a></li>
             </ul>
           </li>
-          <li><a href="/library/">Library</a></li>
+          <li class='nav-item'><a class="nav-link" href="/components/">Components</a></li>
+          <li class='nav-item'><a class="nav-link" href="/structures/">Structures</a></li>
+          <li class='nav-item'><a class="nav-link" href="/vendor/">Vendor</a></li>
+          <li class='nav-item'><a class="nav-link" href="/usage/">Usage</a></li>
+          <li class='nav-item'><a class="nav-link" href="/inspiration/">Inspiration</a></li>
         </ul>
       </nav>
-      <footer class='l-about'>
-        <b>Crafted with care by</b>
-        <a href="http://twitter.com/nickawalsh">Nick Walsh</a>
-        &amp;
-        <a href="http://twitter.com/drewbarontini">Drew Barontini</a>
+      <footer class='about'>
+        <a class='about-link' href='http://envylabs.com'>
+          <img alt="Made with Envy" width="162" height="80" class="about-logo" src="../../assets/images/logo-envy.svg" />
+        </a>
       </footer>
     </aside>
-    <main class='l-cell'>
+    <main class='cell'>
       <h2>Basics</h2>
       
       <ul>
       <li>Alphabetize properties</li>
-      <li>Use soft-tabs with two-space indent</li>
-      <li>Put a space after <code>:</code></li>
-      <li>Put a space after the <code>//</code> for comments</li>
-      <li>Put a space after commas (e.g. <code>rgba(#000, 0.5)</code>)</li>
-      <li>Choose a hexidecimal format and stick to it (e.g. <code>#FFF</code> or <code>#fff</code>)</li>
-      <li><strong>Do not</strong> use ids (only classes)</li>
+      <li>Extends and Mixins should be placed before standard properties</li>
+      <li>Use soft tabs with a two space indention</li>
+      <li>Add a space after <code>:</code></li>
+      <li>Add a space after <code>//</code> comments</li>
+      <li>Add a space after commas in values (e.g. <code>rgba(#000, 0.5)</code>)</li>
+      <li>Stick with classes instead of IDs for styling</li>
+      <li>Limit nesting as much as possible</li>
       </ul>
-      <div class="highlight"><pre><span class="c1">// This is an example!</span>&#x000A;&#x000A;<span class="nc">.module</span>&#x000A;  <span class="na">background</span><span class="o">:</span> <span class="mh">#fff</span>&#x000A;  <span class="na">color</span><span class="o">:</span> <span class="mh">#000</span>&#x000A;  <span class="na">font-size</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.6</span><span class="kt">em</span>&#x000A;&#x000A;<span class="nc">.module-submodule</span>&#x000A;  <span class="na">font-size</span><span class="o">:</span> <span class="mi">2</span><span class="kt">em</span>&#x000A;  <span class="na">margin-bottom</span><span class="o">:</span> <span class="mi">1</span><span class="kt">em</span></pre></div>
-      <p><a class="btn--b" href="/styleguide/sass-specific/">Next &rarr;</a></p>
+      <div class="highlight"><pre><span class="c1">// Example</span>&#x000A;&#x000A;<span class="nc">.component</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.bci</span>&#x000A;  <span class="nd">+transition</span><span class="p">(</span><span class="no">opacity</span> <span class="mi">0</span><span class="mf">.2</span><span class="kt">s</span> <span class="n">ease-in-out</span><span class="p">)</span>&#x000A;  <span class="na">border-radius</span><span class="o">:</span> <span class="mi">5</span><span class="kt">px</span>&#x000A;  <span class="na">box-shadow</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">2</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span> <span class="nf">rgba</span><span class="p">(</span><span class="mh">#000</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.5</span><span class="p">)</span>&#x000A;  <span class="na">font-style</span><span class="o">:</span> <span class="no">italic</span></pre></div>
+      <p><a class="btn btn--b" href="/styleguide/sass-specific/">Next &rarr;</a></p>
     </main>
     <script>
       var _gauges = _gauges || [];
@@ -101,10 +111,10 @@
       (function() {
       
         $(function() {
-          return $('.l-sidebar-toggle').on('click', function(e) {
+          return $('.sidebar-toggle').on('click', function(e) {
             e.preventDefault();
             $(this).toggleClass('is-active');
-            return $('body').toggleClass('is-sidebar-toggled');
+            return $('body').toggleClass('is-toggled');
           });
         });
       

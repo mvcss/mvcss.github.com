@@ -1,26 +1,46 @@
 # About
 
-<p class="c-lead"><strong>MVCSS</strong> is a Sass-based CSS architecture for creating predictable and maintainable application style.</p>
+<p class="c-lead"><strong>MVCSS</strong> [Modular View CSS] is a Sass-based CSS architecture for creating predictable and maintainable application style.</p>
 
-As front-end devs at [Envy Labs](http://envylabs.com), we work primarily in medium-to-large-sized Rails applications. Each of these projects has a sizable amount of CSS undergoing normal maintenance and iteration. Depending on complexity and setup, changes to existing style can be difficult or done poorly if the right way is too convoluted.
+CSS, for all its simplicity, is a difficult language to manage in large-scale implementations. Naming, paths to abstraction, structure, and methodologies are all free-form; MVCSS seeks to provide order for these sorts of projects.
 
-## What? Another Way to Write CSS?
+Keeping with the architecture motif, applications are split into three major categories: *Foundation*, *Components*, and *Structures*. If Foundation represents tools, materials, and the ground level, Components are akin to creating a window from those materials, and Structures would be a number of windows and doors creating a wall.
 
-We're big fans (and often employ tenets of) well-documented methods like [OOCSS](https://github.com/stubbornella/oocss/wiki), [BEM](http://bem.info/method/), and [SMACSS](http://smacss.com/). This bit of architecture and accompanying [Styleguide](http://mvcss.github.io/styleguide/)/[Library](http://mvcss.github.io/library/) meshes all of our preferred practices into one place.
+For a very early taste, here’s what a simple Component might consist of:
 
-## All This for CSS?
+```sass
+// *************************************
+//
+//   Card
+//   -> Base containers
+//
+// *************************************
 
-CSS in and of itself is simple to pick up, but difficult to apply maintainably to large applications - hence the popularity of the methods listed above. **MVCSS** is one such manner to organize styles, and the one that we've had the most success in employing.
+.card
+  @extend .mbs
+  @extend .pas
+  border-radius: 5px
 
-## Do I Have to Use Sass?
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
 
-Sass is not required to employ this paradigm, but all the project files are written in it, so it's definitely recommended.
+.card--a
+  @extend .bci
 
-## Organizational Overview
+.card--b
+  @extend .bca
 
-**MVCSS** is broken down into four primary sections:
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
 
-1. [**Application**](/application/)
-2. [**Foundation**](/foundation/)
-3. [**Components**](/components/)
-4. [**Structures**](/structures/)
+.card-label
+  @extend .tcs
+  @extend .ttu
+  @extend .twb
+```
+
+Don’t worry about the odd class names quite yet, we’ll cover the thinking behind those in Foundation.
+
+There’s no shortage of wonderful frameworks, ideas, and methods for tackling CSS across the web, and MVCSS wouldn’t exist without a few of these. Take a look at the Inspiration(link) section to find out more about our architectural roots.

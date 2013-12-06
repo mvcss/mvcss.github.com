@@ -4,7 +4,7 @@
     <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
     <meta charset='utf-8'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-    <title>MVCSS</title>
+    <title>Manifest / MVCSS</title>
     <meta content='MVCSS - A Sass-based CSS architecture for creating predictable and maintainable application style.' name='description'>
     <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300" media="screen" rel="stylesheet" type="text/css" />
     <link href="../assets/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
@@ -20,7 +20,7 @@
       })();
     </script>
   </head>
-  <body class='changelog changelog_index'>
+  <body class='manifest manifest_index'>
     <div class='action'>
       <a class='action-btn' href='https://github.com/mvcss/mvcss'>View Code &rarr;</a>
       <p class='action-link'><a href="/changelog/">Changelog (v4.0.0)</a></p>
@@ -53,7 +53,7 @@
               <li class='nav-item'><a class="nav-link" href="/styleguide/naming/">Naming Conventions</a></li>
             </ul>
           </li>
-          <li class='nav-item'><a class="nav-link" href="/manifest/">Manifest</a></li>
+          <li class='is-active nav-item'><a class="nav-link" href="/manifest/">Manifest</a></li>
           <li class='nav-item'>
             <a class="nav-link" href="/foundation/">Foundation</a>
             <ul class='nav-list--sub'>
@@ -78,76 +78,19 @@
       </footer>
     </aside>
     <main class='cell'>
-      <h1>Changelog</h1>
+      <h1>Manifest</h1>
       
-      <h2>v4.0.0</h2>
+      <p>Now that we’ve touched on naming and piecemeal ideas, lets put it all together. MVCSS expects the following setup wherever your styles are found:</p>
+      <div class="highlight"><pre>application.sass&#x000A;foundation/&#x000A;  _reset.sass&#x000A;  _settings.sass&#x000A;  _helpers.sass&#x000A;  _utilities.sass&#x000A;  _base.sass&#x000A;components/&#x000A;structures/&#x000A;vendor/</pre></div>
+      <p><code>application.sass</code> is used as the manifest and inbox (more on that later). Application as a name is derived from the Rails asset pipeline, and all other files are Sass partials imported in.</p>
       
-      <ul>
-      <li><strong>Core</strong> becomes <strong>Foundation</strong> (same files)</li>
-      <li>Add a new layer called <strong>Components</strong></li>
-      <li>Modules become <strong>Structures</strong></li>
-      <li>Add initial <strong>Components</strong></li>
-      </ul>
+      <p>Post compile, <code>application.css</code> is included on each site page and various settings can be employed for compression.</p>
       
-      <h2>v3.0.2</h2>
+      <h2>Imports</h2>
       
-      <p><strong>November 13, 2013</strong></p>
-      
-      <ul>
-      <li>Update Normalize to v2.1.3</li>
-      </ul>
-      
-      <h2>v3.0.1</h2>
-      
-      <p><strong>June 27, 2013</strong></p>
-      
-      <ul>
-      <li>New comment hierarchy</li>
-      </ul>
-      
-      <h2>v3.0.0</h2>
-      
-      <p><strong>May 15, 2013</strong></p>
-      
-      <ul>
-      <li>Add new <strong>Core - Helper</strong> file</li>
-      <li>Add new <strong>Core - Content</strong> file (replaces <strong>Containers</strong> Module file)</li>
-      <li>Add new <strong>Core - Layout</strong> file</li>
-      <li>Move extends, mixins, animations to new <strong>Core - Helper</strong> file</li>
-      <li>Change <strong>Core - Reset</strong> to <strong>Normalize v2.1.0</strong></li>
-      <li>Add better variable naming conventions</li>
-      <li>Add more base variables</li>
-      <li>Add <code>em()</code> function</li>
-      <li>Add <code>rem()</code> function</li>
-      <li>Use <code>rems</code> as the default typographic unit</li>
-      <li>Add better documentation for <strong>Core - Helper</strong> file elements</li>
-      <li>Add better documentation for <strong>Application</strong> file imports</li>
-      <li>Add better documentation for variables</li>
-      </ul>
-      
-      <h2>v2.1.0</h2>
-      
-      <p><strong>March 6, 2013</strong></p>
-      
-      <ul>
-      <li>Remove <strong>States</strong> as part of <strong>Core</strong></li>
-      </ul>
-      
-      <h2>v2.0.1</h2>
-      
-      <p><strong>March 5, 2013</strong></p>
-      
-      <ul>
-      <li>Modify the <code>ellipsis</code>, <code>group</code>, and <code>ir</code> extends (<a href="https://github.com/mvcss/mvcss/commit/9df1c51b6a386be3b9e91ef67ebf653a2d726664">commit</a>)</li>
-      </ul>
-      
-      <h2>v2.0.0</h2>
-      
-      <p><strong>February 22, 2013</strong></p>
-      
-      <ul>
-      <li>Initial version applied</li>
-      </ul>
+      <p>Files found in Foundation are imported into the manifest in a particular order, while Components and Structures are typically included alphabetically:</p>
+      <div class="highlight"><pre><span class="c1">// *************************************</span>&#x000A;<span class="c1">//</span>&#x000A;<span class="c1">//   Project Name</span>&#x000A;<span class="c1">//   -&gt; Manifest</span>&#x000A;<span class="c1">//</span>&#x000A;<span class="c1">// *************************************</span>&#x000A;&#x000A;<span class="c1">// -------------------------------------</span>&#x000A;<span class="c1">//   Foundation</span>&#x000A;<span class="c1">// -------------------------------------</span>&#x000A;&#x000A;<span class="k">@import</span> <span class="s">&quot;foundation/reset&quot;</span>&#x000A;<span class="k">@import</span> <span class="s">&quot;foundation/settings&quot;</span>&#x000A;<span class="k">@import</span> <span class="s">&quot;foundation/helpers&quot;</span>&#x000A;<span class="k">@import</span> <span class="s">&quot;foundation/utilities&quot;</span>&#x000A;<span class="k">@import</span> <span class="s">&quot;foundation/base&quot;</span>&#x000A;&#x000A;<span class="c1">// -------------------------------------</span>&#x000A;<span class="c1">//   Components</span>&#x000A;<span class="c1">// -------------------------------------</span>&#x000A;&#x000A;<span class="c1">// Component imports</span>&#x000A;&#x000A;<span class="c1">// -------------------------------------</span>&#x000A;<span class="c1">//   Structures</span>&#x000A;<span class="c1">// -------------------------------------</span>&#x000A;&#x000A;<span class="c1">// Structure imports</span>&#x000A;&#x000A;<span class="c1">// -------------------------------------</span>&#x000A;<span class="c1">//   Vendor</span>&#x000A;<span class="c1">// -------------------------------------</span>&#x000A;&#x000A;<span class="c1">// Third-party style imports</span>&#x000A;&#x000A;<span class="c1">// -------------------------------------</span>&#x000A;<span class="c1">//   Inbox</span>&#x000A;<span class="c1">// -------------------------------------</span></pre></div>
+      <h2>Inbox</h2>
     </main>
     <script>
       var _gauges = _gauges || [];

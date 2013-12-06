@@ -4,111 +4,193 @@ title: Styleguide - Naming Conventions
 
 ## Naming Conventions
 
-### Modules
+Following ideas pioneered in [BEM](http://bem.info/method/definitions) and [SUIT](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md), MVCSS has a strict series of naming conventions that provide context at a glance.
 
-**Note**: Module files should be named in the singular, unless your module's name is plural. For example:
+### Utilities
 
-- `modules/_button.sass`
-- `modules/_grid.sass`
-- `modules/_form.sass`
+As you likely noticed in the Component example to kick off MVCSS, many of the extended classes looked pretty acronym-y. We’ll get into the gains inherent with defining utilities shortly, but for now just assume two- or three-letter classes fall under this notion.
 
-Modules are broken down into the base module, submodules, modifiers, states, and context. If your module or submodule name is two words, use camelCase. For example, `.moduleName`.
+A class such as `.mbm` is a shorthand way to define a basic unit of bottom margin: **m**argin **b**ottom **m**edium. Similarly, `.mbl` would be the large variety of bottom margin.
 
-### Submodules
+### Components/Structures
 
-Submodules use the hyphen `-` separator to denote that it is a submodule to another module. For example, `module-submodule`.
+Structures and Components exist as Sass partials in their respective directories, and are always singular. Examples include `icon`, `button`, `grid`, `form`, and `modal`.
 
-**Note**: If you have a plural module (e.g. `.tabs`), you can name your submodule `.tab` as an exception to this rule. The assumption is made that `.tab` is a submodule of `.tabs`.
+If the name comprises two words, utilize `camelCase`—for instance, `taskList`.
 
 ### Modifiers
 
-Use `--` for a modifier on a module or submodule. For example:
-
-- `.module--modifier`
-- `.module-submodule--modifier`.
-
-**Note**: Module and submodule modifier variables contain the same convention. For example:
+After defining the base properties of a Component or Structure, modifiers exist to allow stylistic tweaks that build on the initial definition.  These tweaks are denoted with two hyphens `--`. A button, for instance, might have a number of different colors and sizes:
 
 ```sass
-$module--modifier-background: #000
+// *************************************
+//
+//   Button
+//   -> Action points
+//
+// *************************************
+
+.btn
+  border: 0
+  display: inline-block
+  line-height: 2.5
+  padding: 0 1em
+  text-weight: bold
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Appearance ----- //
+
+.btn--a
+  background: $c-base
+
+.btn--b
+  background: $c-action
+
+// ----- Size ----- //
+
+.btn--s
+  font-size: 75%
+
+.btn--l
+  font-size: 150%
 ```
+
+After creation, elements that need a modifier will use the root class (`.btn`) and any number of modifiers deemed necessary:
+
+```html
+<button class="btn btn--a btn--l">A Button</button>
+```
+
+**Note:** appearance modifiers typically work best when defined in sequence (`a`, `b`) or via function (`cancel`, `submit`) as opposed to look (`red`, `blue`).
 
 ### States
 
-Use the `is-` pattern for your states. For example:
+Generally added via JavaScript, states are similar to modifiers but carry conditional context. `is-` denotes a state, such as `is-active`, and they’re utilized as such:
 
-- `.is-active`
-- `.is-toggled`
-- `.is-hidden`
+```sass
+// *************************************
+//
+//   Button
+//   -> Action points
+//
+// *************************************
+
+.btn
+  border: 0
+  display: inline-block
+  line-height: 2.5
+  padding: 0 1em
+  text-weight: bold
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+.btn--a
+  background: $c-base
+
+.btn--b
+  background: $c-action
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+.btn.is-active
+  background: $c-highlight
+```
 
 ### Context
 
-Use `has-` for adding a context with specific styles on a module or submodule. For example:
+Also borrowed from [SUIT](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md) is the concept of context. Modularizing styles into self-contained units works well *most* of the time, but you’ll occasionally need a parent element to fall in line.
 
-```html
-<div class="nav has-dropdown">
-  <!-- ... -->
-</div>
-```
+The most common case tends to be positioning context. If you have a dropdown structure that’s being positioned absolutely, the parent element should be (at least) positioned relatively:
 
 ```sass
+// *************************************
+//
+//   Dropdown
+//   -> Revealed information
+//
+// *************************************
+
+.dropdown
+  // Styles
+
+// Modifiers, States
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
 .has-dropdown
   position: relative
 ```
 
-**Note**: This idea is borrowed from [suitcss](https://github.com/suitcss).
+Similar to `is-` with states, `has-` denotes a context selector.
 
-**Note**: This is different than a **Modifier**, which sets custom, alternate styles on the base module.
+### Scaffolding
 
-### Sass Variables
-
-Variables, as documented in [Foundation - Settings](/foundation/settings/), should follow the same naming conventions as your modules, referenced above. The most global variables (used in multiple places, multiple contexts) are prefixed with `$base-`. Let's look at some examples:
+Elements nested within a Component or Structure that need styling *based on being there* can be added to the scaffolding. Keeping with the dropdown Structure, the scaffold section falls last:
 
 ```sass
-$base-borderRadius: 3px
-$base-fontSize: 16px
-$base-lineHeight: 1.6
-$base-whitespace: 20px
+// *************************************
+//
+//   Dropdown
+//   -> Revealed information
+//
+// *************************************
+
+.dropdown
+  // Styles
+
+// Modifiers, States, Context
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.dropdown-media
+  border: 4px solid $c-invert
 ```
 
-Colors are prefixed with `$color-`:
+For items in scaffolding, the Component/Structure name comes first, followed by a single hyphen and the subcomponent/substructure name (also in camelCase, if necessary). Where applicable, they can have their own modifiers, states, and subcomponents/substructures—more than two levels, though, typically means it’s time to refactor.
+
+### Variables
+
+Found in Settings, variables differ widely from project to projects. It’s pretty standard to find a few constants, though:
 
 ```sass
-$color-background: #fff
-$color-base: #222
-$color-highlight: #0053c9
-$color-invert: #fff
-$color-subdue: #ccc
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+// ----- Base ----- //
+
+$b-fontSize: 18px
+$b-lineHeight: 1.5
+$b-whitespace: 1em
+
+// ----- Color ----- //
+
+$c-action: #0000ff
+$c-base: #333
+$c-invert: #fff
+
+// ----- Font ----- //
+
+$f-base: Georgia, "Times New Roman", serif
+$f-mono: "Source Sans Pro", Courier, monospace
 ```
-
-Fonts are prefixed with `$font-`:
-
-```sass
-$font-base: sans-serif
-$font-header: sans-serif
-```
-
-You may also create module-specific variables, like so:
-
-```sass
-$grid-breakpoint-lap: 480px
-$grid-breakpoint-desk: 800px
-$grid-gutter: 20px
-$form-fontSize: 12px
-$form-input-background: #ddd
-```
-
-### Hierarchy
-
-- **Do not** use `.block--left` or `.block--right`
-- **Do** use `.block--a` and `.block--b` to semantically establish hierarchy
 
 ### Images
 
 A section about naming images? I know. Let's just get through it.
 
-- `bg-*` for backgrounds
-- `icn-*` for icons
-- `logo-*` for logos
-- `img-*` for generic images
-- Sub-folders for larger groups
+* `bg-*` for background images
+* `logo-*` for logos
+* `img-*` for content images
+* Sub-folders for larger groups
