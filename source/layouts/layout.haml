@@ -25,10 +25,8 @@
       = partial 'shared/nav'
 
       %footer.about
-        %b.about-title Crafted with care by
-        = link_to 'Nick Walsh', 'http://twitter.com/nickawalsh', class: 'about-link'
-        &amp;
-        = link_to 'Drew Barontini', 'http://twitter.com/drewbarontini', class: 'about-link'
+        %a.about-link(href='http://envylabs.com')
+          = image_tag 'logo-envy.svg', alt: 'Made with Envy', width: '162', height: '80', class: 'about-logo'
 
     %main.cell
       = find_and_preserve do

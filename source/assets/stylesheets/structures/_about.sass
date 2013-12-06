@@ -5,12 +5,11 @@
 // *************************************
 
 .about
-  @extend .pbm
+  @extend .bch
+  @extend .pbs
   @extend .ptm
   @extend .tac
-  background: darken($c-highlight, 5%)
   bottom: 0
-  color: lighten($c-highlight, 40%)
   left: 0
   margin: 0
   position: absolute
@@ -24,15 +23,10 @@
 // ----- Link ----- //
 
 .about-link
-  color: lighten($c-highlight, 50%)
+  border: 0
+  display: block
   &:hover,
   &:focus
-    @extend .tci
     background: none
-
-// ----- Title ----- //
-
-.about-title
-  @extend .db
-  font-weight: 300
+    opacity: 0.75
 
