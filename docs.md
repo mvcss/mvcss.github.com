@@ -162,7 +162,7 @@ After defining the base properties of a Component or Structure, modifiers exist 
 After creation, elements that need a modifier will use the root class (`.btn`) and any number of modifiers deemed necessary:
 
 ```
-&lt;button class="btn btn--a btn--l"&gt;A Button&lt;/button&gt;
+<button class="btn btn--a btn--l">A Button</button>
 ```
 
 **Note:** appearance modifiers typically work best when defined in sequence (`a`, `b`) or via function (`cancel`, `submit`) as opposed to look (`red`, `blue`).
