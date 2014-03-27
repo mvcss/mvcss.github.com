@@ -9,7 +9,7 @@ Keeping with the architecture motif, applications are split into three major cat
 
 For a very early taste, here’s what a simple Component might consist of:
 
-```
+```sass
 // *************************************
 //
 //   Card
@@ -63,7 +63,7 @@ We’re big proponents of the Sass indented syntax (.sass), so things may look s
 * Stick with classes instead of IDs for styling
 * Limit nesting as much as possible
 
-```
+```sass
 // Example
 
 .component
@@ -90,7 +90,7 @@ This setup should be a easier to grasp once we reach the Settings, Utilities, an
 ### Comments
 There are four levels of comments, in order of decreasing importance:
 
-```
+```sass
 // *************************************
 //
 //   First Level
@@ -123,7 +123,7 @@ If the name comprises two words, utilize camelCase—for instance, taskList.
 #### Modifiers
 After defining the base properties of a Component or Structure, modifiers exist to allow stylistic tweaks that build on the initial definition.  These tweaks are denoted with two hyphens `--`. A button, for instance, might have a number of different colors and sizes:
 
-```
+```sass
 // *************************************
 //
 //   Button
@@ -161,7 +161,7 @@ After defining the base properties of a Component or Structure, modifiers exist 
 
 After creation, elements that need a modifier will use the root class (`.btn`) and any number of modifiers deemed necessary:
 
-```
+```html
 <button class="btn btn--a btn--l">A Button</button>
 ```
 
@@ -170,7 +170,7 @@ After creation, elements that need a modifier will use the root class (`.btn`) a
 #### States
 Generally added via JavaScript, states are similar to modifiers but carry conditional context. `is-` denotes a state, such as `is-active`, and they’re utilized as such:
 
-```
+```sass
 // *************************************
 //
 //   Button
@@ -208,7 +208,7 @@ Also borrowed from [SUIT](https://github.com/suitcss/suit/blob/master/doc/naming
 
 The most common case tends to be positioning context. If you have a dropdown structure that’s being positioned absolutely, the parent element should be (at least) positioned relatively:
 
-```
+```sass
 // *************************************
 //
 //   Dropdown
@@ -234,7 +234,7 @@ Similar to `is-` with states, `has-` denotes a context selector.
 #### Scaffolding
 Elements nested within a Component or Structure that need styling *based on being there* can be added to the scaffolding. Keeping with the dropdown Structure, the scaffold section falls last:
 
-```
+```sass
 // *************************************
 //
 //   Dropdown
@@ -260,7 +260,7 @@ For items in scaffolding, the Component/Structure name comes first, followed by 
 #### Variables
 Found in Settings, variables differ widely from project to projects. It’s pretty standard to find a few constants, though:
 
-```
+```sass
 // -------------------------------------
 //   Variables
 // -------------------------------------
@@ -294,7 +294,7 @@ A section about naming images? I know. Let's just get through it.
 ## Manifest
 Now that we’ve touched on naming and piecemeal ideas, lets put it all together. MVCSS expects the following setup wherever your styles are found:
 
-```
+```sass
 application.sass
 foundation/
   _reset.sass
@@ -314,7 +314,7 @@ Post compile, `application.css` is included on each site page and various settin
 ### Imports
 Files found in Foundation are imported into the manifest in a particular order, while Components and Structures are typically included alphabetically:
 
-```
+```sass
 // *************************************
 //
 //   Project Name
