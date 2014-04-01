@@ -367,13 +367,28 @@ Collaboration with developers can sometimes be difficult, but we've found a way 
 You can add any temporary styles to this section, which will allow the maintainer of the CSS to rewrite or sort the styles appropriately. We've found that developers respect, and even enjoy, this system, as they don't have to fuss with any of the existing organization.
 
 ## Foundation
-As a building paradigm: tools, materials, ground
+As mentioned earlier, the Foundation represents the tools and materials at the ground level. This is the initial setup for your application. The Foundation is made up of:
+
+- Reset
+- Settings
+- Helpers
+- Utilities
+- Base
 
 ### Reset
-Normalize or reset
+As long as the project size warrants it, we always get things started with a style reset. [Normalize.css](http://necolas.github.io/normalize.css/) is what we use (and it is what's included by default), but alternatives like the [Eric Meyer Reset CSS](http://meyerweb.com/eric/tools/css/reset/reset.css) are easily interchangeable.
 
 ### Settings
-Fonts and variables
+The Settings hold your `@font-face` font setup (if applicable), and all of your application-wide variables. We include a set by default, which is broken down into Base, Colors, and Fonts.
+
+#### Base
+Base variables
+
+#### Colors
+Color variables
+
+#### Fonts
+Font variables
 
 ### Helpers
 Functions and mixins
