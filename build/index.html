@@ -6,8 +6,8 @@
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <title>MVCSS</title>
     <meta content='MVCSS - A Sass-based CSS architecture for creating predictable and maintainable application style.' name='description'>
-    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300" media="screen" rel="stylesheet" type="text/css" />
-    <link href="assets/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300" rel="stylesheet" type="text/css" />
+    <link href="assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
     <script>
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-32794837-1']);
@@ -87,7 +87,8 @@
       <p>Keeping with the architecture motif, applications are split into three major categories: <em>Foundation</em>, <em>Components</em>, and <em>Structures</em>. If Foundation represents tools, materials, and the ground level, Components are akin to creating a window from those materials, and Structures would be a number of windows and doors creating a wall.</p>
       
       <p>For a very early taste, here’s what a simple Component might consist of:</p>
-      <div class="highlight"><pre><span class="c1">// *************************************</span>&#x000A;<span class="c1">//</span>&#x000A;<span class="c1">//   Card</span>&#x000A;<span class="c1">//   -&gt; Base containers</span>&#x000A;<span class="c1">//</span>&#x000A;<span class="c1">// *************************************</span>&#x000A;&#x000A;<span class="nc">.card</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.mbs</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.pas</span>&#x000A;  <span class="na">border-radius</span><span class="o">:</span> <span class="mi">5</span><span class="kt">px</span>&#x000A;&#x000A;<span class="c1">// -------------------------------------</span>&#x000A;<span class="c1">//   Modifiers</span>&#x000A;<span class="c1">// -------------------------------------</span>&#x000A;&#x000A;<span class="nc">.card--a</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.bci</span>&#x000A;&#x000A;<span class="nc">.card--b</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.bca</span>&#x000A;&#x000A;<span class="c1">// -------------------------------------</span>&#x000A;<span class="c1">//   Scaffolding</span>&#x000A;<span class="c1">// -------------------------------------</span>&#x000A;&#x000A;<span class="nc">.card-label</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.tcs</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.ttu</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.twb</span></pre></div>
+      <pre class="highlight sass"><span class="c1">// *************************************&#x000A;//&#x000A;//   Card&#x000A;//   -&gt; Base containers&#x000A;//&#x000A;// *************************************&#x000A;</span>&#x000A;<span class="nc">.card</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.mbs</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.pas</span>&#x000A;  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">5px</span>&#x000A;&#x000A;<span class="c1">// -------------------------------------&#x000A;//   Modifiers&#x000A;// -------------------------------------&#x000A;</span>&#x000A;<span class="nc">.card--a</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.bci</span>&#x000A;&#x000A;<span class="nc">.card--b</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.bca</span>&#x000A;&#x000A;<span class="c1">// -------------------------------------&#x000A;//   Scaffolding&#x000A;// -------------------------------------&#x000A;</span>&#x000A;<span class="nc">.card-label</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.tcs</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.ttu</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.twb</span></pre>
+      
       <p>Don’t worry about the odd class names quite yet, we’ll cover the thinking behind those in Foundation.</p>
       
       <p>There’s no shortage of wonderful frameworks, ideas, and methods for tackling CSS across the web, and MVCSS wouldn’t exist without a few of these. Take a look at the Inspiration(link) section to find out more about our architectural roots.</p>
@@ -108,7 +109,6 @@
     <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script>
       (function() {
-      
         $(function() {
           return $('.sidebar-toggle').on('click', function(e) {
             e.preventDefault();

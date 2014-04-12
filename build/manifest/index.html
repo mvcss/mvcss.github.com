@@ -6,8 +6,8 @@
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <title>Manifest / MVCSS</title>
     <meta content='MVCSS - A Sass-based CSS architecture for creating predictable and maintainable application style.' name='description'>
-    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300" media="screen" rel="stylesheet" type="text/css" />
-    <link href="../assets/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300" rel="stylesheet" type="text/css" />
+    <link href="../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
     <script>
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-32794837-1']);
@@ -81,7 +81,8 @@
       <h1>Manifest</h1>
       
       <p>Now that we’ve touched on naming and piecemeal ideas, lets put it all together. MVCSS expects the following setup wherever your styles are found:</p>
-      <div class="highlight"><pre>application.sass&#x000A;foundation/&#x000A;  _reset.sass&#x000A;  _settings.sass&#x000A;  _helpers.sass&#x000A;  _utilities.sass&#x000A;  _base.sass&#x000A;components/&#x000A;structures/&#x000A;vendor/</pre></div>
+      <pre class="highlight plaintext">application.sass&#x000A;foundation/&#x000A;  _reset.sass&#x000A;  _settings.sass&#x000A;  _helpers.sass&#x000A;  _utilities.sass&#x000A;  _base.sass&#x000A;components/&#x000A;structures/&#x000A;vendor/</pre>
+      
       <p><code>application.sass</code> is used as the manifest and inbox (more on that later). Application as a name is derived from the Rails asset pipeline, and all other files are Sass partials imported in.</p>
       
       <p>Post compile, <code>application.css</code> is included on each site page and various settings can be employed for compression.</p>
@@ -89,7 +90,8 @@
       <h2>Imports</h2>
       
       <p>Files found in Foundation are imported into the manifest in a particular order, while Components and Structures are typically included alphabetically:</p>
-      <div class="highlight"><pre><span class="c1">// *************************************</span>&#x000A;<span class="c1">//</span>&#x000A;<span class="c1">//   Project Name</span>&#x000A;<span class="c1">//   -&gt; Manifest</span>&#x000A;<span class="c1">//</span>&#x000A;<span class="c1">// *************************************</span>&#x000A;&#x000A;<span class="c1">// -------------------------------------</span>&#x000A;<span class="c1">//   Foundation</span>&#x000A;<span class="c1">// -------------------------------------</span>&#x000A;&#x000A;<span class="k">@import</span> <span class="s">&quot;foundation/reset&quot;</span>&#x000A;<span class="k">@import</span> <span class="s">&quot;foundation/settings&quot;</span>&#x000A;<span class="k">@import</span> <span class="s">&quot;foundation/helpers&quot;</span>&#x000A;<span class="k">@import</span> <span class="s">&quot;foundation/utilities&quot;</span>&#x000A;<span class="k">@import</span> <span class="s">&quot;foundation/base&quot;</span>&#x000A;&#x000A;<span class="c1">// -------------------------------------</span>&#x000A;<span class="c1">//   Components</span>&#x000A;<span class="c1">// -------------------------------------</span>&#x000A;&#x000A;<span class="c1">// Component imports</span>&#x000A;&#x000A;<span class="c1">// -------------------------------------</span>&#x000A;<span class="c1">//   Structures</span>&#x000A;<span class="c1">// -------------------------------------</span>&#x000A;&#x000A;<span class="c1">// Structure imports</span>&#x000A;&#x000A;<span class="c1">// -------------------------------------</span>&#x000A;<span class="c1">//   Vendor</span>&#x000A;<span class="c1">// -------------------------------------</span>&#x000A;&#x000A;<span class="c1">// Third-party style imports</span>&#x000A;&#x000A;<span class="c1">// -------------------------------------</span>&#x000A;<span class="c1">//   Inbox</span>&#x000A;<span class="c1">// -------------------------------------</span></pre></div>
+      <pre class="highlight sass"><span class="c1">// *************************************&#x000A;//&#x000A;//   Project Name&#x000A;//   -&gt; Manifest&#x000A;//&#x000A;// *************************************&#x000A;</span>&#x000A;<span class="c1">// -------------------------------------&#x000A;//   Foundation&#x000A;// -------------------------------------&#x000A;</span>&#x000A;<span class="k">@import</span> <span class="s">"foundation/reset"</span>&#x000A;<span class="k">@import</span> <span class="s">"foundation/settings"</span>&#x000A;<span class="k">@import</span> <span class="s">"foundation/helpers"</span>&#x000A;<span class="k">@import</span> <span class="s">"foundation/utilities"</span>&#x000A;<span class="k">@import</span> <span class="s">"foundation/base"</span>&#x000A;&#x000A;<span class="c1">// -------------------------------------&#x000A;//   Components&#x000A;// -------------------------------------&#x000A;</span>&#x000A;<span class="c1">// Component imports&#x000A;</span>&#x000A;<span class="c1">// -------------------------------------&#x000A;//   Structures&#x000A;// -------------------------------------&#x000A;</span>&#x000A;<span class="c1">// Structure imports&#x000A;</span>&#x000A;<span class="c1">// -------------------------------------&#x000A;//   Vendor&#x000A;// -------------------------------------&#x000A;</span>&#x000A;<span class="c1">// Third-party style imports&#x000A;</span>&#x000A;<span class="c1">// -------------------------------------&#x000A;//   Inbox&#x000A;// -------------------------------------&#x000A;</span></pre>
+      
       <h2>Inbox</h2>
     </main>
     <script>
@@ -108,7 +110,6 @@
     <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script>
       (function() {
-      
         $(function() {
           return $('.sidebar-toggle').on('click', function(e) {
             e.preventDefault();

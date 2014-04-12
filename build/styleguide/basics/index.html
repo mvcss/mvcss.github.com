@@ -6,8 +6,8 @@
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <title>Styleguide - Basics / MVCSS</title>
     <meta content='MVCSS - A Sass-based CSS architecture for creating predictable and maintainable application style.' name='description'>
-    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300" media="screen" rel="stylesheet" type="text/css" />
-    <link href="../../assets/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300" rel="stylesheet" type="text/css" />
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
     <script>
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-32794837-1']);
@@ -90,7 +90,8 @@
       <li>Stick with classes instead of IDs for styling</li>
       <li>Limit nesting as much as possible</li>
       </ul>
-      <div class="highlight"><pre><span class="c1">// Example</span>&#x000A;&#x000A;<span class="nc">.component</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.bci</span>&#x000A;  <span class="nd">+transition</span><span class="p">(</span><span class="no">opacity</span> <span class="mi">0</span><span class="mf">.2</span><span class="kt">s</span> <span class="n">ease-in-out</span><span class="p">)</span>&#x000A;  <span class="na">border-radius</span><span class="o">:</span> <span class="mi">5</span><span class="kt">px</span>&#x000A;  <span class="na">box-shadow</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">2</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span> <span class="nf">rgba</span><span class="p">(</span><span class="mh">#000</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.5</span><span class="p">)</span>&#x000A;  <span class="na">font-style</span><span class="o">:</span> <span class="no">italic</span></pre></div>
+      <pre class="highlight sass"><span class="c1">// Example&#x000A;</span>&#x000A;<span class="nc">.component</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.bci</span>&#x000A;  <span class="nd">+transition</span><span class="p">(</span><span class="n">opacity</span> <span class="m">0</span><span class="mi">.2s</span> <span class="n">ease-in-out</span><span class="p">)</span>&#x000A;  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">5px</span>&#x000A;  <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">2px</span> <span class="m">5px</span> <span class="nf">rgba</span><span class="p">(</span><span class="mh">#000</span><span class="o">,</span> <span class="m">0</span><span class="mi">.5</span><span class="p">)</span>&#x000A;  <span class="nl">font-style</span><span class="p">:</span> <span class="nb">italic</span></pre>
+      
       <p><a class="btn btn--b" href="/styleguide/sass-specific/">Next &rarr;</a></p>
     </main>
     <script>
@@ -109,7 +110,6 @@
     <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script>
       (function() {
-      
         $(function() {
           return $('.sidebar-toggle').on('click', function(e) {
             e.preventDefault();
