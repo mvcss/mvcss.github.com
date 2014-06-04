@@ -1,6 +1,6 @@
 ## Setup
 
-- `gem install middleman`
+- `gem install bundler`
 - `bundle`
 - `middleman s` (`./bin/middleman s`, if using rbenv/binstubs)
 
