@@ -388,13 +388,31 @@ The Settings hold your `@font-face` font setup (if applicable), and all of your 
   - @import when using Google Fonts, etc.
 -->
 
-If serving font files from a known path (e.g. your server), we include a `+font-face` mixin that simplifies the daunting syntax and also lists fallback files needed for browser compatibility.
+If serving font files from a known path (e.g. your server), we include Bourbon's `+font-face` [mixin](https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-face.scss) that simplifies the daunting syntax and also lists fallback files needed for browser compatibility.
 
 <!-- via Bourbon -->
 
-When using webfonts from Google Fonts or similar service, you can paste their generated `@import` link into this section.
+```sass
+// -------------------------------------
+//   @font-face
+// -------------------------------------
 
-Many other webfont providers offer fonts exclusively via a JavaScript snippet. If you're using one of these providers, then you can expect to leave the `@font-face` section empty.
+// +font-face('OpenSans', 'OpenSans')
+// +font-face('OpenSans', 'OpenSansBold', bold)
+// +font-face('OpenSans', 'OpenSansItalic', normal, italic)
+```
+
+When using web fonts from Google Fonts or a similar service, you can paste their generated `@import` link into this section.
+
+```sass
+// -------------------------------------
+//   @font-face
+// -------------------------------------
+
+// @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700)
+```
+
+Many other web font providers offer fonts exclusively via a JavaScript snippet. If you're using one of these providers, then you can expect to leave the `@font-face` section empty.
 
 #### Base
 <!--
