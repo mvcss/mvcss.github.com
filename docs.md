@@ -381,23 +381,82 @@ As long as the project size warrants it, we always get things started with a sty
 ### Settings
 The Settings hold your `@font-face` font setup (if applicable), and all of your application-wide variables. We include a set by default, which is broken down into Base, Colors, and Fonts.
 
+#### Font-face Declarations
+<!--
+- Font-face declarations
+  - Mixin when serving fonts from a known path
+  - @import when using Google Fonts, etc.
+-->
+
 #### Base
-Base variables
+<!--
+- Not to be confused with `_base.sass`
+- Base variables
+  - Namespaced with `$b-` by convention
+-->
 
 #### Colors
 Color variables
 
+<!--
+- Namespaced with `$c-` by convention
+- Palette variables
+  - Avoid using common color names to reduce confusion with CSS color value keywords
+- Semantic variables reference palette variables
+-->
+
 #### Fonts
-Font variables
+<!--
+- Font variables
+  - Namespaced with `$f-` by convention
+-->
+
+#### Components and Structures
+<!--
+- All variables throughout the application are declared in config.sass, including those used exclusively by components and strucutures.
+- Component and Structure variables
+  - Namespaced with module name by convention
+-->
 
 ### Helpers
-Functions and mixins
+<!--
+- Functions
+  -
+- Mixins
+  - Font-face mixin
+  - Respond-to mixin
+  - Vendor prefixes
+- Animations
+  - Vendor prefixed?
+  - Common, reusable UI animations that aren't specific content or component
+-->
 
-### Utilities
+### Tools
 Benchmark properties for ease of use / lack of repetition
+
+<!--
+- Utility classes to use directly in markup
+- Affect
+  - Clearfix groups
+  - Image replacement
+  - Margins
+  - Padding
+  - Border Radii
+  - Text size
+  - Etc.
+- Useful when a style is needed on a generic element
+  - Ease of use
+  - Allieviates the need to name every potential "module"
+-->
 
 ### Base
 Tag-level settings
+
+<!--
+-
+- Remove margin-top values from block content (as needed in project)
+- Include defualt style and pseudo-class style for `<a>` elements
+-->
 
 ## Components
 Taking materials and building a window
@@ -408,6 +467,7 @@ Examples
 
 ### Sample
 Button
+<!-- Bucket/grid might be a better example. -->
 
 ## Structures
 Components like windows, walls, and doors into a structure
@@ -429,6 +489,14 @@ Common problem areas
 
 ### Extending Utilities
 Dealing with specificity and extending utilities
+
+<!--
+- Remove @extend explanation
+- Specificty of tools is slight, so applying them in the markup may not cause intended effect.
+  - Code smell
+    - Write components and structures to declare fewer default styles
+  - Or add !important
+-->
 
 ### States
 Same thing with states
