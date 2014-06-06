@@ -381,12 +381,20 @@ As long as the project size warrants it, we always get things started with a sty
 ### Settings
 The Settings hold your `@font-face` font setup (if applicable), and all of your application-wide variables. We include a set by default, which is broken down into Base, Colors, and Fonts.
 
-#### Font-face Declarations
+#### @Font-face
 <!--
 - Font-face declarations
   - Mixin when serving fonts from a known path
   - @import when using Google Fonts, etc.
 -->
+
+If serving font files from a known path (e.g. your server), we include a `+font-face` mixin that simplifies the daunting syntax and also lists fallback files needed for browser compatibility.
+
+<!-- via Bourbon -->
+
+When using webfonts from Google Fonts or similar service, you can paste their generated `@import` link into this section.
+
+Many other webfont providers offer fonts exclusively via a JavaScript snippet. If you're using one of these providers, then you can expect to leave the `@font-face` section empty.
 
 #### Base
 <!--
