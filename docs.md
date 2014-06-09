@@ -382,20 +382,14 @@ As long as the project size warrants it, we always get things started with a sty
 The Settings hold your `@font-face` font setup (if applicable), and all of your application-wide variables. We include a set by default, which is broken down into Base, Colors, and Fonts.
 
 #### @Font-face
-<!--
-- Font-face declarations
-  - Mixin when serving fonts from a known path
-  - @import when using Google Fonts, etc.
--->
-
 If serving font files from a known path (e.g. your server), we include Bourbon's `+font-face` [mixin](https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-face.scss) that simplifies the daunting syntax and also lists fallback files needed for browser compatibility.
-
-<!-- via Bourbon -->
 
 ```sass
 // -------------------------------------
 //   @font-face
 // -------------------------------------
+
+// ----- Open Sans ----- //
 
 // +font-face('OpenSans', 'OpenSans')
 // +font-face('OpenSans', 'OpenSansBold', bold)
@@ -409,13 +403,14 @@ When using web fonts from Google Fonts or a similar service, you can paste their
 //   @font-face
 // -------------------------------------
 
+// ----- Open Sans ----- //
+
 // @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700)
 ```
 
 Many other web font providers offer fonts exclusively via a JavaScript snippet. If you're using one of these providers, then you can expect to leave the `@font-face` section empty.
 
 #### Naming Variables
-
 All variables in MVCSS are defined in Config and are prefixed by their role or respective component/structure.
 
 *   `$b-*` for base variables
