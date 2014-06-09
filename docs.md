@@ -508,17 +508,15 @@ $grid-silent: false
 ```
 
 ### Helpers
-<!--
-- Functions
-  -
-- Mixins
-  - Font-face mixin
-  - Respond-to mixin
-  - Vendor prefixes
-- Animations
-  - Vendor prefixed?
-  - Common, reusable UI animations that aren't specific content or component
--->
+Helpers are the functions, mixins, and animations used throughout an MVCSS application.
+
+#### Common Use Cases
+*   Unit conversions
+*   Vendor prefix mixins with included fallbacks
+*   Shorthands for verbose syntaxes (e.g., media queries)
+*   Reusable keyframe animations
+
+***Note:*** Animations unique to specific structures are defined at the bottom of their respective style sheets.
 
 ### Tools
 Benchmark properties for ease of use / lack of repetition
