@@ -414,35 +414,103 @@ When using web fonts from Google Fonts or a similar service, you can paste their
 
 Many other web font providers offer fonts exclusively via a JavaScript snippet. If you're using one of these providers, then you can expect to leave the `@font-face` section empty.
 
-#### Base
-<!--
-- Not to be confused with `_base.sass`
-- Base variables
-  - Namespaced with `$b-` by convention
--->
+#### Naming Variables
 
-#### Colors
-Color variables
+All variables in MVCSS are defined in Config and are prefixed by their role or respective component/structure.
 
-<!--
-- Namespaced with `$c-` by convention
-- Palette variables
-  - Avoid using common color names to reduce confusion with CSS color value keywords
-- Semantic variables reference palette variables
--->
+*   `$b-*` for base variables
+*   `$c-*` for colors
+*   `$f-*` for fonts
+*   `$breakpoint-*` for breakpoints
+*   `$componentName-*` for components
+*   `$structureName-*` for structures
 
-#### Fonts
-<!--
-- Font variables
-  - Namespaced with `$f-` by convention
--->
+Colors are a somewhat complicated issue, but we've had the most success defining an initial palette and then referencing those colors within other varibles. In projects with a limited set of colors, you may not need a palette section, so we encourage you to choose the approach you prefer.
 
-#### Components and Structures
-<!--
-- All variables throughout the application are declared in config.sass, including those used exclusively by components and strucutures.
-- Component and Structure variables
-  - Namespaced with module name by convention
--->
+```sass
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+// ----- Palette ----- //
+
+// Blue
+
+$cerulean: #017ba7
+
+// Green
+
+$forest: #7ba05b
+
+// Grey
+
+$jet: #343434
+$gainsboro: #ecf0f1
+
+// Red
+
+$scarlet: #ff3f00
+
+// Yellow
+
+$gold: #ffd700
+
+// White
+
+$white: #fff
+
+// ----- Base ----- //
+
+$b-borderColor: lighten($jet, 30%)
+$b-borderStyle: solid
+$b-borderWidth: 2px
+$b-border: $b-borderWidth $b-borderStyle $b-borderColor
+$b-borderRadius: 3px
+$b-boxShadow: 0 2px 0 rgba($jet, 0.25)
+$b-fontSize: 16px
+$b-fontSize-xs: 60%
+$b-fontSize-s: 75%
+$b-fontSize-m: 90%
+$b-fontSize-l: 115%
+$b-fontSize-xl: 150%
+$b-lineHeight: 1.5
+$b-maxWidth: 62.5em // ~1000px
+$b-maxWidth-s: 43.75em // ~700px
+$b-whitespace: 1.25em // ~20px
+$b-whitespace-xs: 0.25 * $b-whitespace
+$b-whitespace-s: 0.5 * $b-whitespace
+$b-whitespace-l: 2 * $b-whitespace
+$b-whitespace-xl: 4 * $b-whitespace
+
+// ----- Colors ----- //
+
+$c-background: $gainsboro
+$c-base: $jet
+$c-error: $scarlet
+$c-highlight: $cerulean
+$c-invert: $white
+$c-subdue: lighten($cerulean, 40%)
+$c-success: $forest
+$c-warning: $gold
+
+// ----- Fonts ----- //
+
+$f-base: 'OpenSans', sans-serif
+$f-header: 'OpenSans', sans-serif
+
+// ----- Breakpoints ----- //
+
+$breakpoint-s: 30em // ~480px
+$breakpoint-m: 43.75em // ~768px
+$breakpoint-l: 64em // ~1024px
+
+// ----- Grid ----- //
+
+$grid-columns: 12
+$grid-defaults: "s" $breakpoint-s, "m" $breakpoint-m, "l" $breakpoint-l
+$grid-gutter: 20px
+$grid-silent: false
+```
 
 ### Helpers
 <!--
