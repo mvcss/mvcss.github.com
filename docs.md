@@ -554,8 +554,8 @@ In the example above, we're trying to create a large button by using only Tools.
 ```
 
 ```html
-<a class="btn btn--large" href="file.zip" >Download v3.0.0</a>
-<a class="btn btn--large" href="file.zip" >Download v2.4.1</a>
+<a class="btn btn--large" href="v3.zip" >Download v3.0.0</a>
+<a class="btn btn--large" href="v2.zip" >Download v2.4.1</a>
 ```
 
 ### Base
