@@ -34,28 +34,30 @@ After defining the base properties of a Component or Structure, modifiers exist 
   border: 0
   display: inline-block
   line-height: 2.5
-  padding: 0 1em
-  text-weight: bold
+  padding: 0 $b-whitespace
+  font-weight: bold
 
 // -------------------------------------
 //   Modifiers
 // -------------------------------------
 
-// ----- Appearance ----- //
-
-.btn--a
-  background: $c-base
-
-.btn--b
-  background: $c-action
-
-// ----- Size ----- //
+// ----- Sizes ----- //
 
 .btn--s
   font-size: 75%
 
 .btn--l
   font-size: 150%
+
+// ----- Theme ----- //
+
+// Hierarchy
+
+.btn--a
+  background: $c-base
+
+.btn--b
+  background: $c-action
 ```
 
 After creation, elements that need a modifier will use the root class (`.btn`) and any number of modifiers deemed necessary:

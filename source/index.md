@@ -12,33 +12,49 @@ For a very early taste, here’s what a simple Component might consist of:
 // *************************************
 //
 //   Card
-//   -> Base containers
+//   -> Individual style containers
 //
 // *************************************
 
 .card
-  @extend .mbs
-  @extend .pas
-  border-radius: 5px
+  background: $c-invert
+  border-radius: $b-borderRadius
+  box-shadow: $b-boxShadow
+  padding: $b-whitespace
+  position: relative
 
 // -------------------------------------
 //   Modifiers
 // -------------------------------------
 
-.card--a
-  @extend .bci
+// ----- Sizes ----- //
+
+.card--s
+  padding: $b-whitespace-s
+
+// ----- Theme ----- //
+
+// Hierarchy
 
 .card--b
-  @extend .bca
+  background: $c-highlight
+
+// Error
+
+.card--error
+  border: 2px $b-borderStyle $c-error
+  box-shadow: none
 
 // -------------------------------------
 //   Scaffolding
 // -------------------------------------
 
+// ----- Label ----- //
+
 .card-label
-  @extend .tcs
-  @extend .ttu
-  @extend .twb
+  font-size: $fontSize-s
+  font-weight: bold
+  text-transform: uppercase
 ```
 
 Don’t worry about the odd class names quite yet, we’ll cover the thinking behind those in Foundation.

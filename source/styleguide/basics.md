@@ -17,7 +17,7 @@ title: Styleguide - Basics
 // Example
 
 .component
-  @extend .bci
+  @extend .group
   +transition(opacity 0.2s ease-in-out)
   border-radius: 5px
   box-shadow: 0 2px 5px rgba(#000, 0.5)

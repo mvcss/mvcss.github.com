@@ -13,36 +13,50 @@ For a very early taste, here’s what a simple Component might consist of:
 // *************************************
 //
 //   Card
-//   -> Base containers
+//   -> Individual style containers
 //
 // *************************************
 
 .card
-  @extend .mbs
-  @extend .pas
-  border-radius: 5px
+  background: $c-invert
+  border-radius: $b-borderRadius
+  box-shadow: $b-boxShadow
+  padding: $b-whitespace
+  position: relative
 
 // -------------------------------------
 //   Modifiers
 // -------------------------------------
 
-.card--a
-  @extend .bci
+// ----- Sizes ----- //
+
+.card--s
+  padding: $b-whitespace-s
+
+// ----- Theme ----- //
+
+// Hierarchy
 
 .card--b
-  @extend .bca
+  background: $c-highlight
+
+// Error
+
+.card--error
+  border: 2px $b-borderStyle $c-error
+  box-shadow: none
 
 // -------------------------------------
 //   Scaffolding
 // -------------------------------------
 
-.card-label
-  @extend .tcs
-  @extend .ttu
-  @extend .twb
-```
+// ----- Label ----- //
 
-Don’t worry about the odd class names quite yet, we’ll cover the thinking behind those in Foundation.
+.card-label
+  font-size: $fontSize-s
+  font-weight: bold
+  text-transform: uppercase
+```
 
 There’s no shortage of wonderful frameworks, ideas, and methods for tackling CSS across the web, and MVCSS wouldn’t exist without a few of these. Take a look at the Inspiration(link) section to find out more about our architectural roots.
 
@@ -67,7 +81,7 @@ We’re big proponents of the Sass indented syntax (.sass), so things may look s
 // Example
 
 .component
-  @extend .bci
+  @extend .group
   +transition(opacity 0.2s ease-in-out)
   border-radius: 5px
   box-shadow: 0 2px 5px rgba(#000, 0.5)
@@ -135,28 +149,30 @@ After defining the base properties of a Component or Structure, modifiers exist 
   border: 0
   display: inline-block
   line-height: 2.5
-  padding: 0 1em
-  text-weight: bold
+  padding: 0 $b-whitespace
+  font-weight: bold
 
 // -------------------------------------
 //   Modifiers
 // -------------------------------------
 
-// ----- Appearance ----- //
-
-.btn--a
-  background: $c-base
-
-.btn--b
-  background: $c-action
-
-// ----- Size ----- //
+// ----- Sizes ----- //
 
 .btn--s
   font-size: 75%
 
 .btn--l
   font-size: 150%
+
+// ----- Theme ----- //
+
+// Hierarchy
+
+.btn--a
+  background: $c-base
+
+.btn--b
+  background: $c-action
 ```
 
 After creation, elements that need a modifier will use the root class (`.btn`) and any number of modifiers deemed necessary:
