@@ -532,9 +532,9 @@ Tools are typically as limited in responsibility as possible, allowing you to mi
 Some Tools like `group` and `ir` may be more verbose in terms of CSS, but still adhere to the single responsibility principle.
 
 ```html
-<footer class="group">
-  <p class="fl tci tss">&copy; 2014</p>
-  <p class="fr tci tss">Made with Envy</p>
+<footer class="group tci tss">
+  <p class="fl">&copy; 2014</p>
+  <p class="fr">Made with Envy</p>
 </footer>
 ```
 
