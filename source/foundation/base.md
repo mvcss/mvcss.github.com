@@ -2,6 +2,8 @@
 title: Foundation - Base
 ---
 
+[csswizardry-margins]: http://csswizardry.com/2012/06/single-direction-margin-declarations/
+
 ## Base
 
 Base contains all of the tag-level settings for default HTML elements. These are things like anchors, headings, paragraphs, lists, and everything else that doesn't have a class name attached. Because there are so many possible HTML elements to cover, we typically only style the ones relevant to a project as we need them.
@@ -30,7 +32,7 @@ body
 ### Block Content
 Block content is made up of all the block-level elements needed in an MVCSS project. Typically, this section includes the aforementioned headings, paragraphs, lists, as well as figures, blockquotes, and more.
 
-Collapsing margins, while an intentional feature of CSS, only add complexity when authoring style sheets, so we limit vertical margins on block-level elements to a [single-direction](http://csswizardry.com/2012/06/single-direction-margin-declarations/).
+Collapsing margins, while an intentional feature of CSS, only add complexity when authoring style sheets, so we limit vertical margins on block-level elements to a [single-direction][csswizardry-margins].
 
 ```sass
 // -------------------------------------

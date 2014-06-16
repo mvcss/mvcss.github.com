@@ -2,9 +2,12 @@
 title: Styleguide - Naming Conventions
 ---
 
+[bem-definitions]: http://bem.info/method/definitions
+[suit-naming-conventions]: https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md
+
 ## Naming Conventions
 
-Following ideas pioneered in [BEM](http://bem.info/method/definitions) and [SUIT](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md), MVCSS has a strict series of naming conventions that provide context at a glance.
+Following ideas pioneered in [BEM][bem-definitions] and [SUIT][suit-naming-conventions], MVCSS has a strict series of naming conventions that provide context at a glance.
 
 ### Utilities
 
@@ -107,7 +110,7 @@ Generally added via JavaScript, states are similar to modifiers but carry condit
 
 ### Context
 
-Also borrowed from [SUIT](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md) is the concept of context. Modularizing styles into self-contained units works well *most* of the time, but you’ll occasionally need a parent element to fall in line.
+We also borrow the idea of context from SUIT. Modularizing styles into self-contained units works well *most* of the time, but you’ll occasionally need a parent element to fall in line.
 
 The most common case tends to be positioning context. If you have a dropdown structure that’s being positioned absolutely, the parent element should be (at least) positioned relatively:
 
