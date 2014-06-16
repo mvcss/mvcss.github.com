@@ -1,6 +1,6 @@
 # About
 
-<p class="c-lead"><strong>MVCSS</strong> [Modular View CSS] is a Sass-based CSS architecture for creating predictable and maintainable application style.</p>
+**MVCSS** [Modular View CSS] is a Sass-based CSS architecture for creating predictable and maintainable application style.
 
 CSS, for all its simplicity, is a difficult language to manage in large-scale implementations. Naming, paths to abstraction, structure, and methodologies are all free-form; MVCSS seeks to provide order for these sorts of projects.
 
@@ -56,7 +56,5 @@ For a very early taste, here’s what a simple Component might consist of:
   font-weight: bold
   text-transform: uppercase
 ```
-
-Don’t worry about the odd class names quite yet, we’ll cover the thinking behind those in Foundation.
 
 There’s no shortage of wonderful frameworks, ideas, and methods for tackling CSS across the web, and MVCSS wouldn’t exist without a few of these. Take a look at the Inspiration(link) section to find out more about our architectural roots.
