@@ -4,10 +4,11 @@ title: Foundation - Helpers
 
 ## Helpers
 
-Helpers are the functions, mixins, and animations used throughout an MVCSS application.
+Helpers are the extendable classes, functions, mixins, and animations used throughout an MVCSS application.
 
 ### Common Use Cases
 
+*   Clearfixes
 *   Unit conversions
 *   Vendor prefix mixins with included fallbacks
 *   Shorthands for verbose syntaxes (e.g., media queries)

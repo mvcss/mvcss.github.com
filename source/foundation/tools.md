@@ -12,16 +12,11 @@ Since the last version of MVCSS, we've embraced the idea of presentational class
 </div>
 ```
 
+### Single Responsibility
+
 Tools are typically as limited in responsibility as possible, allowing you to mix and match various classes to quickly produce many different styles. Every Tool does one thing and one thing well, ensuring that the elements they affect stay both predictable and extensible.
 
-Some Tools like `group` and `ir` may be more verbose in terms of CSS, but still adhere to the single responsibility principle.
-
-```html
-<footer class="group tci tss">
-  <p class="fl">&copy; 2014</p>
-  <p class="fr">Made with Envy</p>
-</footer>
-```
+### Going Too Far
 
 If you find yourself using multiple Tools to acheive a reusable group of styles, it may be a sign that you should define those properties in their own module or modifier.
 
@@ -35,7 +30,7 @@ In the example above, we're trying to create a large button by using only Tools.
 ```sass
 .btn--large
   font-size: $b-fontSize-l
-  padding: $b-whitespce $b-whitespace-l
+  padding: $b-whitespace $b-whitespace-l
 ```
 
 ```html
