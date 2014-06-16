@@ -2,13 +2,15 @@
 title: Foundation - Settings
 ---
 
+[bourbon-mixin-fontface]: https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-face.scss
+
 ## Config
 
 Config holds your `@font-face` font setup (if applicable), and all of your application-wide variables. We include a set by default, which is broken down into Base, Colors, and Fonts.
 
 ### @Font-face
 
-If serving font files from a known path (e.g. your server), we include Bourbon's `+font-face` [mixin](https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-face.scss) that simplifies the daunting syntax and also lists fallback files needed for browser compatibility.
+If serving font files from a known path (e.g. your server), we include Bourbon's `+font-face` [mixin][bourbon-mixin-fontface] that simplifies the daunting syntax and also lists fallback files needed for browser compatibility.
 
 ```sass
 // -------------------------------------
