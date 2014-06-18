@@ -20,7 +20,7 @@
       })();
     </script>
   </head>
-  <body class='foundation foundation_utilities foundation_utilities_index'>
+  <body class='foundation foundation_tools foundation_tools_index'>
     <div class='action'>
       <a class='action-btn' href='https://github.com/mvcss/mvcss'>View Code &rarr;</a>
       <p class='action-link'><a href="/changelog/">Changelog (v4.0.0)</a></p>
@@ -58,10 +58,10 @@
             <a class="nav-link" href="/foundation/">Foundation</a>
             <ul class='is-active nav-list--sub'>
               <li class='nav-item'><a class="nav-link" href="/foundation/reset/">Reset</a></li>
-              <li class='nav-item'><a class="nav-link" href="/foundation/settings/">Settings</a></li>
               <li class='nav-item'><a class="nav-link" href="/foundation/helpers/">Helpers</a></li>
-              <li class='is-active nav-item'><a class="nav-link" href="/foundation/utilities/">Utilities</a></li>
+              <li class='nav-item'><a class="nav-link" href="/foundation/config/">Config</a></li>
               <li class='nav-item'><a class="nav-link" href="/foundation/base/">Base</a></li>
+              <li class='is-active nav-item'><a class="nav-link" href="/foundation/tools/">Tools</a></li>
             </ul>
           </li>
           <li class='nav-item'><a class="nav-link" href="/components/">Components</a></li>
@@ -78,7 +78,23 @@
       </footer>
     </aside>
     <main class='cell'>
-      <h1>Utilities</h1>
+      <h2>Tools</h2>
+      
+      <p>Since the last version of MVCSS, we&rsquo;ve embraced the idea of presentational class names and have included them as Tools in MVCSS v4. Simply put, Tools are presentational utility classes for usage within HTML itself. They&rsquo;re helpful when you need a specific style in a unique context, but can&rsquo;t justify creating (and naming) a new module or modifier to achieve the desired effect.</p>
+      <pre class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>&#x000A;  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mbf"</span><span class="nt">&gt;</span>This paragraph element needs its `margin-bottom` flattened, so we're adding a class of `mbf`.<span class="nt">&lt;/p&gt;</span>&#x000A;<span class="nt">&lt;/div&gt;</span></pre>
+      
+      <h3>Single Responsibility</h3>
+      
+      <p>Tools are typically as limited in responsibility as possible, allowing you to mix and match various classes to quickly produce many different styles. Every Tool does one thing and one thing well, ensuring that the elements they affect stay both predictable and extensible.</p>
+      
+      <h3>Going Too Far</h3>
+      
+      <p>If you find yourself using multiple Tools to acheive a reusable group of styles, it may be a sign that you should define those properties in their own module or modifier.</p>
+      <pre class="highlight html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn pbm pll prl ptm tsl"</span> <span class="na">href=</span><span class="s">"v3.zip"</span> <span class="nt">&gt;</span>Download v3.0.0<span class="nt">&lt;/a&gt;</span>&#x000A;<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn pbm pll prl ptm tsl"</span> <span class="na">href=</span><span class="s">"v2.zip"</span> <span class="nt">&gt;</span>Download v2.4.1<span class="nt">&lt;/a&gt;</span></pre>
+      
+      <p>In the example above, we&rsquo;re trying to create a large button by using only Tools. Though it achieves the intended effect, we&rsquo;re much better off defining those common styles in a <code>.btn--large</code> class, and then applying it in the markup.</p>
+      <pre class="highlight sass"><span class="nc">.btn--large</span>&#x000A;  <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$b-fontSize-l</span>&#x000A;  <span class="nl">padding</span><span class="p">:</span> <span class="nv">$b-whitespace</span> <span class="nv">$b-whitespace-l</span></pre>
+      <pre class="highlight html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--large"</span> <span class="na">href=</span><span class="s">"v3.zip"</span> <span class="nt">&gt;</span>Download v3.0.0<span class="nt">&lt;/a&gt;</span>&#x000A;<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--large"</span> <span class="na">href=</span><span class="s">"v2.zip"</span> <span class="nt">&gt;</span>Download v2.4.1<span class="nt">&lt;/a&gt;</span></pre>
     </main>
     <script>
       var _gauges = _gauges || [];

@@ -58,10 +58,10 @@
             <a class="nav-link" href="/foundation/">Foundation</a>
             <ul class='nav-list--sub'>
               <li class='nav-item'><a class="nav-link" href="/foundation/reset/">Reset</a></li>
-              <li class='nav-item'><a class="nav-link" href="/foundation/settings/">Settings</a></li>
               <li class='nav-item'><a class="nav-link" href="/foundation/helpers/">Helpers</a></li>
-              <li class='nav-item'><a class="nav-link" href="/foundation/utilities/">Utilities</a></li>
+              <li class='nav-item'><a class="nav-link" href="/foundation/config/">Config</a></li>
               <li class='nav-item'><a class="nav-link" href="/foundation/base/">Base</a></li>
+              <li class='nav-item'><a class="nav-link" href="/foundation/tools/">Tools</a></li>
             </ul>
           </li>
           <li class='nav-item'><a class="nav-link" href="/components/">Components</a></li>
@@ -93,6 +93,11 @@
       <pre class="highlight sass"><span class="c1">// *************************************&#x000A;//&#x000A;//   Project Name&#x000A;//   -&gt; Manifest&#x000A;//&#x000A;// *************************************&#x000A;</span>&#x000A;<span class="c1">// -------------------------------------&#x000A;//   Foundation&#x000A;// -------------------------------------&#x000A;</span>&#x000A;<span class="k">@import</span> <span class="s">"foundation/reset"</span>&#x000A;<span class="k">@import</span> <span class="s">"foundation/settings"</span>&#x000A;<span class="k">@import</span> <span class="s">"foundation/helpers"</span>&#x000A;<span class="k">@import</span> <span class="s">"foundation/utilities"</span>&#x000A;<span class="k">@import</span> <span class="s">"foundation/base"</span>&#x000A;&#x000A;<span class="c1">// -------------------------------------&#x000A;//   Components&#x000A;// -------------------------------------&#x000A;</span>&#x000A;<span class="c1">// Component imports&#x000A;</span>&#x000A;<span class="c1">// -------------------------------------&#x000A;//   Structures&#x000A;// -------------------------------------&#x000A;</span>&#x000A;<span class="c1">// Structure imports&#x000A;</span>&#x000A;<span class="c1">// -------------------------------------&#x000A;//   Vendor&#x000A;// -------------------------------------&#x000A;</span>&#x000A;<span class="c1">// Third-party style imports&#x000A;</span>&#x000A;<span class="c1">// -------------------------------------&#x000A;//   Inbox&#x000A;// -------------------------------------&#x000A;</span></pre>
       
       <h2>Inbox</h2>
+      
+      <p>Collaboration with developers can sometimes be difficult, but we&rsquo;ve found a way to help mitigate that (at least as it relates to CSS). At the bottom of the <code>application.sass</code> file, there&rsquo;s a comment block that looks like this:</p>
+      <pre class="highlight sass"><span class="c1">// -------------------------------------&#x000A;//   Inbox&#x000A;// -------------------------------------&#x000A;</span></pre>
+      
+      <p>You can add any temporary styles to this section, which will allow the maintainer of the CSS to rewrite or sort the styles appropriately. We&rsquo;ve found that developers respect, and even enjoy, this system, as they don&rsquo;t have to fuss with any of the existing organization.</p>
     </main>
     <script>
       var _gauges = _gauges || [];

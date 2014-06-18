@@ -58,10 +58,10 @@
             <a class="nav-link" href="/foundation/">Foundation</a>
             <ul class='nav-list--sub'>
               <li class='nav-item'><a class="nav-link" href="/foundation/reset/">Reset</a></li>
-              <li class='nav-item'><a class="nav-link" href="/foundation/settings/">Settings</a></li>
               <li class='nav-item'><a class="nav-link" href="/foundation/helpers/">Helpers</a></li>
-              <li class='nav-item'><a class="nav-link" href="/foundation/utilities/">Utilities</a></li>
+              <li class='nav-item'><a class="nav-link" href="/foundation/config/">Config</a></li>
               <li class='nav-item'><a class="nav-link" href="/foundation/base/">Base</a></li>
+              <li class='nav-item'><a class="nav-link" href="/foundation/tools/">Tools</a></li>
             </ul>
           </li>
           <li class='nav-item'><a class="nav-link" href="/components/">Components</a></li>
@@ -80,16 +80,14 @@
     <main class='cell'>
       <h1>About</h1>
       
-      <p class="c-lead"><strong>MVCSS</strong> [Modular View CSS] is a Sass-based CSS architecture for creating predictable and maintainable application style.</p>
+      <p><strong>MVCSS</strong> [Modular View CSS] is a Sass-based CSS architecture for creating predictable and maintainable application style.</p>
       
       <p>CSS, for all its simplicity, is a difficult language to manage in large-scale implementations. Naming, paths to abstraction, structure, and methodologies are all free-form; MVCSS seeks to provide order for these sorts of projects.</p>
       
       <p>Keeping with the architecture motif, applications are split into three major categories: <em>Foundation</em>, <em>Components</em>, and <em>Structures</em>. If Foundation represents tools, materials, and the ground level, Components are akin to creating a window from those materials, and Structures would be a number of windows and doors creating a wall.</p>
       
       <p>For a very early taste, here’s what a simple Component might consist of:</p>
-      <pre class="highlight sass"><span class="c1">// *************************************&#x000A;//&#x000A;//   Card&#x000A;//   -&gt; Base containers&#x000A;//&#x000A;// *************************************&#x000A;</span>&#x000A;<span class="nc">.card</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.mbs</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.pas</span>&#x000A;  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">5px</span>&#x000A;&#x000A;<span class="c1">// -------------------------------------&#x000A;//   Modifiers&#x000A;// -------------------------------------&#x000A;</span>&#x000A;<span class="nc">.card--a</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.bci</span>&#x000A;&#x000A;<span class="nc">.card--b</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.bca</span>&#x000A;&#x000A;<span class="c1">// -------------------------------------&#x000A;//   Scaffolding&#x000A;// -------------------------------------&#x000A;</span>&#x000A;<span class="nc">.card-label</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.tcs</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.ttu</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.twb</span></pre>
-      
-      <p>Don’t worry about the odd class names quite yet, we’ll cover the thinking behind those in Foundation.</p>
+      <pre class="highlight sass"><span class="c1">// *************************************&#x000A;//&#x000A;//   Card&#x000A;//   -&gt; Individual style containers&#x000A;//&#x000A;// *************************************&#x000A;</span>&#x000A;<span class="nc">.card</span>&#x000A;  <span class="nl">background</span><span class="p">:</span> <span class="nv">$c-invert</span>&#x000A;  <span class="nl">border-radius</span><span class="p">:</span> <span class="nv">$b-borderRadius</span>&#x000A;  <span class="nl">box-shadow</span><span class="p">:</span> <span class="nv">$b-boxShadow</span>&#x000A;  <span class="nl">padding</span><span class="p">:</span> <span class="nv">$b-whitespace</span>&#x000A;  <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span>&#x000A;&#x000A;<span class="c1">// -------------------------------------&#x000A;//   Modifiers&#x000A;// -------------------------------------&#x000A;</span>&#x000A;<span class="c1">// ----- Sizes ----- //&#x000A;</span>&#x000A;<span class="nc">.card--s</span>&#x000A;  <span class="nl">padding</span><span class="p">:</span> <span class="nv">$b-whitespace-s</span>&#x000A;&#x000A;<span class="c1">// ----- Theme ----- //&#x000A;</span>&#x000A;<span class="c1">// Hierarchy&#x000A;</span>&#x000A;<span class="nc">.card--b</span>&#x000A;  <span class="nl">background</span><span class="p">:</span> <span class="nv">$c-highlight</span>&#x000A;&#x000A;<span class="c1">// Error&#x000A;</span>&#x000A;<span class="nc">.card--error</span>&#x000A;  <span class="nl">border</span><span class="p">:</span> <span class="m">2px</span> <span class="nv">$b-borderStyle</span> <span class="nv">$c-error</span>&#x000A;  <span class="nl">box-shadow</span><span class="p">:</span> <span class="nb">none</span>&#x000A;&#x000A;<span class="c1">// -------------------------------------&#x000A;//   Scaffolding&#x000A;// -------------------------------------&#x000A;</span>&#x000A;<span class="c1">// ----- Label ----- //&#x000A;</span>&#x000A;<span class="nc">.card-label</span>&#x000A;  <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$fontSize-s</span>&#x000A;  <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span>&#x000A;  <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span></pre>
       
       <p>There’s no shortage of wonderful frameworks, ideas, and methods for tackling CSS across the web, and MVCSS wouldn’t exist without a few of these. Take a look at the Inspiration(link) section to find out more about our architectural roots.</p>
     </main>

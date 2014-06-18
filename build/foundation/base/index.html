@@ -58,10 +58,10 @@
             <a class="nav-link" href="/foundation/">Foundation</a>
             <ul class='is-active nav-list--sub'>
               <li class='nav-item'><a class="nav-link" href="/foundation/reset/">Reset</a></li>
-              <li class='nav-item'><a class="nav-link" href="/foundation/settings/">Settings</a></li>
               <li class='nav-item'><a class="nav-link" href="/foundation/helpers/">Helpers</a></li>
-              <li class='nav-item'><a class="nav-link" href="/foundation/utilities/">Utilities</a></li>
+              <li class='nav-item'><a class="nav-link" href="/foundation/config/">Config</a></li>
               <li class='is-active nav-item'><a class="nav-link" href="/foundation/base/">Base</a></li>
+              <li class='nav-item'><a class="nav-link" href="/foundation/tools/">Tools</a></li>
             </ul>
           </li>
           <li class='nav-item'><a class="nav-link" href="/components/">Components</a></li>
@@ -78,7 +78,24 @@
       </footer>
     </aside>
     <main class='cell'>
-      <h1>Base</h1>
+      <h2>Base</h2>
+      
+      <p>Base contains all of the tag-level settings for default HTML elements. These are things like anchors, headings, paragraphs, lists, and everything else that doesn&rsquo;t have a class name attached. Because there are so many possible HTML elements to cover, we typically only style the ones relevant to a project as we need them.</p>
+      
+      <p>We define <code>html</code> and <code>body</code> styles at the top, and then divide the remaining content into Block and Inline sections.</p>
+      <pre class="highlight sass"><span class="c1">// *************************************&#x000A;//&#x000A;//   Base&#x000A;//   -&gt; Tag-level settings&#x000A;//&#x000A;// *************************************&#x000A;</span>&#x000A;<span class="nt">html</span>&#x000A;  <span class="nl">background</span><span class="p">:</span> <span class="nv">$c-background</span>&#x000A;  <span class="nl">color</span><span class="p">:</span> <span class="nv">$c-base</span>&#x000A;  <span class="nl">font-family</span><span class="p">:</span> <span class="nv">$f-base</span>&#x000A;  <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$b-fontSize</span>&#x000A;  <span class="nl">line-height</span><span class="p">:</span> <span class="nv">$b-lineHeight</span>&#x000A;&#x000A;<span class="nt">body</span>&#x000A;  <span class="nl">font-size</span><span class="p">:</span> <span class="m">100%</span></pre>
+      
+      <h3>Block Content</h3>
+      
+      <p>Block content is made up of all the block-level elements needed in an MVCSS project. Typically, this section includes the aforementioned headings, paragraphs, lists, as well as figures, blockquotes, and more.</p>
+      
+      <p>Collapsing margins, while an intentional feature of CSS, only add complexity when authoring style sheets, so we limit vertical margins on block-level elements to a <a href="http://csswizardry.com/2012/06/single-direction-margin-declarations/">single-direction</a>.</p>
+      <pre class="highlight sass"><span class="c1">// -------------------------------------&#x000A;//   Block Content&#x000A;// -------------------------------------&#x000A;</span>&#x000A;<span class="nt">ul</span><span class="o">,</span> <span class="nt">p</span>&#x000A;  <span class="nl">margin-bottom</span><span class="p">:</span> <span class="nv">$b-whitespace</span>&#x000A;  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">0</span>&#x000A;&#x000A;<span class="nt">li</span>&#x000A;  <span class="nl">margin-bottom</span><span class="p">:</span> <span class="nv">$b-whitespace-s</span>&#x000A;  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">0</span>&#x000A;&#x000A;<span class="c1">// ----- Headers ----- //&#x000A;</span>&#x000A;<span class="nt">h1</span><span class="o">,</span> <span class="nc">.h1</span><span class="o">,</span>&#x000A;<span class="nt">h2</span><span class="o">,</span> <span class="nc">.h2</span><span class="o">,</span>&#x000A;<span class="nt">h3</span><span class="o">,</span> <span class="nc">.h3</span><span class="o">,</span>&#x000A;<span class="nt">h4</span><span class="o">,</span> <span class="nc">.h4</span>&#x000A;  <span class="nl">font-family</span><span class="p">:</span> <span class="nv">$f-header</span>&#x000A;  <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span>&#x000A;  <span class="nl">line-height</span><span class="p">:</span> <span class="m">1</span><span class="mi">.2</span>&#x000A;  <span class="nl">margin-bottom</span><span class="p">:</span> <span class="nv">$b-whitespace-xs</span>&#x000A;  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">0</span></pre>
+      
+      <h3>Inline Content</h3>
+      
+      <p>Inline content is made up of—you guessed it—inline elements. These include tags like <code>a</code>, <code>strong</code>, <code>em</code>, <code>code</code>, and any others that don&rsquo;t force a line break before and after themselves by default.</p>
+      <pre class="highlight sass"><span class="c1">// -------------------------------------&#x000A;//   Inline Content&#x000A;// -------------------------------------&#x000A;</span>&#x000A;<span class="nt">a</span>&#x000A;  <span class="nl">border-bottom</span><span class="p">:</span> <span class="nv">$b-border</span>&#x000A;  <span class="nl">color</span><span class="p">:</span> <span class="nv">$c-highlight</span>&#x000A;  <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span>&#x000A;  <span class="k">&amp;</span><span class="nd">:hover</span><span class="o">,</span>&#x000A;  <span class="k">&amp;</span><span class="nd">:focus</span>&#x000A;    <span class="nl">border-bottom-color</span><span class="p">:</span> <span class="nv">$c-highlight</span>&#x000A;    <span class="nl">color</span><span class="p">:</span> <span class="nv">$c-subdue</span></pre>
     </main>
     <script>
       var _gauges = _gauges || [];

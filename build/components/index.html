@@ -58,10 +58,10 @@
             <a class="nav-link" href="/foundation/">Foundation</a>
             <ul class='nav-list--sub'>
               <li class='nav-item'><a class="nav-link" href="/foundation/reset/">Reset</a></li>
-              <li class='nav-item'><a class="nav-link" href="/foundation/settings/">Settings</a></li>
               <li class='nav-item'><a class="nav-link" href="/foundation/helpers/">Helpers</a></li>
-              <li class='nav-item'><a class="nav-link" href="/foundation/utilities/">Utilities</a></li>
+              <li class='nav-item'><a class="nav-link" href="/foundation/config/">Config</a></li>
               <li class='nav-item'><a class="nav-link" href="/foundation/base/">Base</a></li>
+              <li class='nav-item'><a class="nav-link" href="/foundation/tools/">Tools</a></li>
             </ul>
           </li>
           <li class='is-active nav-item'><a class="nav-link" href="/components/">Components</a></li>
@@ -79,6 +79,26 @@
     </aside>
     <main class='cell'>
       <h1>Components</h1>
+      
+      <p>The Components folder is where we start building the recognizable pieces of a user interface. These are abstract, reasonably portable modules that can be swapped in and out of different projects with relative ease.</p>
+      
+      <p>Some Components, like <code>grid</code> and <code>card</code>, are used for layout and containers, and can encompass many other modules.</p>
+      <pre class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid"</span><span class="nt">&gt;</span>&#x000A;  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-box grid-box--1of2"</span><span class="nt">&gt;</span>&#x000A;    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>&#x000A;      <span class="c">&lt;!-- Content --&gt;</span>&#x000A;    <span class="nt">&lt;/div&gt;</span>&#x000A;  <span class="nt">&lt;/div&gt;</span>&#x000A;  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-box grid-box--1of2"</span><span class="nt">&gt;</span>&#x000A;    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>&#x000A;      <span class="c">&lt;!-- Content --&gt;</span>&#x000A;    <span class="nt">&lt;/div&gt;</span>&#x000A;  <span class="nt">&lt;/div&gt;</span>&#x000A;<span class="nt">&lt;/div&gt;</span></pre>
+      
+      <p>Other Components, like <code>thumb</code>, affect only a single element and can resemble Tools at first glance. In these situations, both the Component and Tool have a single responsibility. The <em>Component</em>, however, may be declared alongside its modifier classes, while the Tool applies more definitive styles.</p>
+      <pre class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bucket"</span><span class="nt">&gt;</span>&#x000A;  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bucket-media"</span><span class="nt">&gt;</span>&#x000A;    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"thumb thumb--m"</span> <span class="na">src=</span><span class="s">"avatar-nick.jpg"</span> <span class="na">alt=</span><span class="s">"Nick Walsh"</span><span class="nt">&gt;</span>&#x000A;  <span class="nt">&lt;/div&gt;</span>&#x000A;  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bucket-content"</span><span class="nt">&gt;</span>&#x000A;    <span class="nt">&lt;p&gt;</span>Nick Walsh<span class="nt">&lt;/p&gt;</span>&#x000A;  <span class="nt">&lt;/div&gt;</span>&#x000A;<span class="nt">&lt;/div&gt;</span></pre>
+      
+      <h2>Characteristics</h2>
+      
+      <p>When determing whether a module is a Component or Structure, we find it helpful to ask ourselves the following questions:</p>
+      
+      <ul>
+      <li>Does this module have a single responsibility?</li>
+      <li>Does this module depend on or extend other Components?</li>
+      <li>Is this module abstract enough to use in other projects without making significant changes?</li>
+      </ul>
+      
+      <p>If you answer &ldquo;no&rdquo; to any of these questions, the module in question is more than likely a Structure.</p>
     </main>
     <script>
       var _gauges = _gauges || [];
