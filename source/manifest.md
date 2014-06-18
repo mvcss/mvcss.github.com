@@ -6,6 +6,8 @@ title: Manifest
 
 Now that we’ve touched on naming and piecemeal ideas, lets put it all together. MVCSS expects the following setup wherever your styles are found:
 
+<!-- DREWVIEW: Update the manifest `foundation` files to be the new ones. -->
+
 ```text
 application.sass
 foundation/
@@ -26,6 +28,8 @@ Post compile, `application.css` is included on each site page and various settin
 ## Imports
 
 Files found in Foundation are imported into the manifest in a particular order, while Components and Structures are typically included alphabetically:
+
+<!-- DREWVIEW: We need to rename Foundation/Settings and Foundation/Utilities appropriately, and move the Foundation/Tools section to the bottom about the Inbox. -->
 
 ```sass
 // *************************************

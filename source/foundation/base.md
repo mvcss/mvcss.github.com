@@ -61,7 +61,7 @@ h4, .h4
 ```
 
 ### Inline Content
-Inline content is made up of—you guessed it—inline elements. These include tags like `a`, `strong`, `em`, `code`, and any others that don't force a line break before and after themselves by default.
+Inline content is made up of&mdash;you guessed it&mdash;inline elements. These include tags like `a`, `strong`, `em`, `code`, and any others that don't force a line break before and after themselves by default.
 
 ```sass
 // -------------------------------------

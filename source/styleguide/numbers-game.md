@@ -4,7 +4,7 @@ title: Styleguide - Sass-specific
 
 ## The Numbers Game
 
-As much as possible, we prefer sticking to relative units in a predictable scale. Base values are typically stored in Settings (which we’ll cover in Foundation) and derived from that point on. For purposes of efficiency and standardization, you’ll defining number values less often than usual in MVCSS.
+As much as possible, we prefer sticking to relative units in a predictable scale. Base values are typically stored in Settings (which we’ll cover in Foundation) and derived from that point on. For purposes of efficiency and standardization, you’ll define number values less often than usual in MVCSS.
 
 ### Approach
 
@@ -13,6 +13,6 @@ As much as possible, we prefer sticking to relative units in a predictable scale
 * Spacing (padding, margin, etc.) is a multiple of a stored base whitespace value, set in ems
 * Font sizes (aside from the `html` element) are defined with percentage values, scaling the other relative properties on the element simultaneously
 
-This setup should be a easier to grasp once we reach the Settings, Utilities, and Base segments of Foundation.
+This setup should be a easier to grasp once we reach the Config, Tools, and Base segments of Foundation.
 
 **Note:** pixel values will occasionally be required to meet design requirements, especially with things like offsets. Try to use them as sparingly as possible.

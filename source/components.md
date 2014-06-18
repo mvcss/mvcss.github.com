@@ -23,7 +23,7 @@ Some Components, like `grid` and `card`, are used for layout and containers, and
 </div>
 ```
 
-Other Components, like `thumb`, affect only a single element and can resemble Tools at first glance. In these situations, both the Component and Tool have a single responsibility. The *Component*, however, may be declared alongside its modifier classes, while the Tool applies more definitive styles.
+Other Components, like `thumb`, affect only a single element, and can resemble Tools at first glance. In these situations, both the Component and Tool have a single responsibility. The *Component*, however, may be declared alongside its modifier classes, while the Tool applies more definitive styles.
 
 ```html
 <div class="bucket">

@@ -6,7 +6,7 @@ title: Styleguide - Comments
 
 There are four levels of comments, in order of decreasing importance:
 
-```
+```sass
 // *************************************
 //
 //   First Level

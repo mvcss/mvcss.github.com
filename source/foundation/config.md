@@ -10,7 +10,7 @@ Config holds your `@font-face` font setup (if applicable), and all of your appli
 
 ### @Font-face
 
-If serving font files from a known path (e.g. your server), we include Bourbon's `+font-face` [mixin][bourbon-mixin-fontface] that simplifies the daunting syntax and also lists fallback files needed for browser compatibility.
+If serving font files from a known path (e.g. your server), we include Bourbon's `+font-face` [mixin][bourbon-mixin-fontface] to simply the daunting syntax, and also lists fallback files needed for browser compatibility.
 
 ```sass
 // -------------------------------------
@@ -24,7 +24,7 @@ If serving font files from a known path (e.g. your server), we include Bourbon's
 // +font-face('OpenSans', 'OpenSansItalic', normal, italic)
 ```
 
-When using web fonts from Google Fonts or a similar service, you can paste their generated `@import` link into this section.
+When using web fonts from Google Fonts, or a similar service, you can paste their generated `@import` link into this section.
 
 ```sass
 // -------------------------------------
@@ -40,16 +40,16 @@ Many other web font providers offer fonts exclusively via a JavaScript snippet. 
 
 ### Variables
 
-All variables in MVCSS are defined in Config and are prefixed by their role or respective component/structure.
+All variables in MVCSS are defined in Config and are prefixed by their role or respective Component/Structure.
 
 *   `$b-*` for base variables
 *   `$c-*` for colors
 *   `$f-*` for fonts
 *   `$breakpoint-*` for breakpoints
-*   `$componentName-*` for components
-*   `$structureName-*` for structures
+*   `$componentName-*` for Components
+*   `$structureName-*` for Structures
 
-Colors are a somewhat complicated issue, but we've had the most success defining an initial palette and then referencing those colors within other varibles. In projects with a limited set of colors, you may not need a palette section, so we encourage you to choose the approach you prefer.
+Colors are a somewhat complicated issue, but we've had the most success defining an initial palette, and then referencing those colors within other varibles. In projects with a limited set of colors, you may not need a palette section, so we encourage you to choose the approach you prefer.
 
 ```sass
 // -------------------------------------

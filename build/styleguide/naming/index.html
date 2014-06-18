@@ -84,6 +84,8 @@
       
       <h3>Utilities</h3>
       
+      <!-- DREWVIEW: We removed the extended classes in the example, so the mention here doesn't make much sense. -->
+      
       <p>As you likely noticed in the Component example to kick off MVCSS, many of the extended classes looked pretty acronym-y. We’ll get into the gains inherent with defining utilities shortly, but for now just assume two- or three-letter classes fall under this notion.</p>
       
       <p>A class such as <code>.mbm</code> is a shorthand way to define a basic unit of bottom margin: <strong>m</strong>argin <strong>b</strong>ottom <strong>m</strong>edium. Similarly, <code>.mbl</code> would be the large variety of bottom margin.</p>
@@ -92,7 +94,7 @@
       
       <p>Structures and Components exist as Sass partials in their respective directories, and are always singular. Examples include <code>icon</code>, <code>button</code>, <code>grid</code>, <code>form</code>, and <code>modal</code>.</p>
       
-      <p>If the name comprises two words, utilize <code>camelCase</code>—for instance, <code>taskList</code>.</p>
+      <p>If the name comprises two words, utilize <code>camelCase</code> &mdash; for instance, <code>taskList</code>.</p>
       
       <h3>Modifiers</h3>
       
@@ -128,6 +130,8 @@
       <h3>Variables</h3>
       
       <p>Found in Settings, variables differ widely from project to projects. It’s pretty standard to find a few constants, though:</p>
+      
+      <!-- DREWVIEW: We use `$c-highlight` instead of `$c-action` in the base project build, so we should probably change it in the example below. -->
       <pre class="highlight sass"><span class="c1">// -------------------------------------&#x000A;//   Variables&#x000A;// -------------------------------------&#x000A;</span>&#x000A;<span class="c1">// ----- Base ----- //&#x000A;</span>&#x000A;<span class="nv">$b-fontSize</span><span class="p">:</span> <span class="m">18px</span>&#x000A;<span class="nv">$b-lineHeight</span><span class="p">:</span> <span class="m">1</span><span class="mi">.5</span>&#x000A;<span class="nv">$b-whitespace</span><span class="p">:</span> <span class="m">1em</span>&#x000A;&#x000A;<span class="c1">// ----- Color ----- //&#x000A;</span>&#x000A;<span class="nv">$c-action</span><span class="p">:</span> <span class="mh">#0000ff</span>&#x000A;<span class="nv">$c-base</span><span class="p">:</span> <span class="mh">#333</span>&#x000A;<span class="nv">$c-invert</span><span class="p">:</span> <span class="mh">#fff</span>&#x000A;&#x000A;<span class="c1">// ----- Font ----- //&#x000A;</span>&#x000A;<span class="nv">$f-base</span><span class="p">:</span> <span class="n">Georgia</span><span class="o">,</span> <span class="s2">"Times New Roman"</span><span class="o">,</span> <span class="nb">serif</span>&#x000A;<span class="nv">$f-mono</span><span class="p">:</span> <span class="s2">"Source Sans Pro"</span><span class="o">,</span> <span class="n">Courier</span><span class="o">,</span> <span class="nb">monospace</span></pre>
       
       <h3>Images</h3>
