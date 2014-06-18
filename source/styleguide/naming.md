@@ -9,11 +9,9 @@ title: Styleguide - Naming Conventions
 
 Following ideas pioneered in [BEM][bem-definitions] and [SUIT][suit-naming-conventions], MVCSS has a strict series of naming conventions that provide context at a glance.
 
-### Utilities
+### Tools
 
-<!-- DREWVIEW: We removed the extended classes in the example, so the mention here doesn't make much sense. -->
-
-As you likely noticed in the Component example to kick off MVCSS, many of the extended classes looked pretty acronym-y. We’ll get into the gains inherent with defining utilities shortly, but for now just assume two- or three-letter classes fall under this notion.
+As may notice in `_tools.sass`, many of the Tool classes look pretty acronym-y. We’ll get into the gains inherent with defining Tools shortly, but for now just assume two- or three-letter classes fall under this notion.
 
 A class such as `.mbm` is a shorthand way to define a basic unit of bottom margin: **m**argin **b**ottom **m**edium. Similarly, `.mbl` would be the large variety of bottom margin.
 
@@ -168,7 +166,7 @@ For items in scaffolding, the Component/Structure name comes first, followed by 
 
 ### Variables
 
-Found in Settings, variables differ widely from project to projects. It’s pretty standard to find a few constants, though:
+Found in Config, variables differ widely from project to projects. It’s pretty standard to find a few constants, though:
 
 <!-- DREWVIEW: We use `$c-highlight` instead of `$c-action` in the base project build, so we should probably change it in the example below. -->
 

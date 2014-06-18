@@ -1,5 +1,5 @@
 ---
-title: Foundation - Settings
+title: Foundation - Config
 ---
 
 [bourbon-mixin-fontface]: https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-face.scss
