@@ -166,32 +166,7 @@ For items in scaffolding, the Component/Structure name comes first, followed by 
 
 ### Variables
 
-Found in Config, variables differ widely from project to projects. It’s pretty standard to find a few constants, though:
-
-<!-- DREWVIEW: We use `$c-highlight` instead of `$c-action` in the base project build, so we should probably change it in the example below. -->
-
-```sass
-// -------------------------------------
-//   Variables
-// -------------------------------------
-
-// ----- Base ----- //
-
-$b-fontSize: 18px
-$b-lineHeight: 1.5
-$b-whitespace: 1em
-
-// ----- Color ----- //
-
-$c-action: #0000ff
-$c-base: #333
-$c-invert: #fff
-
-// ----- Font ----- //
-
-$f-base: Georgia, "Times New Roman", serif
-$f-mono: "Source Sans Pro", Courier, monospace
-```
+Variables are a big enough consideration that we dedicate an entire file to keeping them organized. You can find all the information regarding variables in Config.
 
 ### Images
 
