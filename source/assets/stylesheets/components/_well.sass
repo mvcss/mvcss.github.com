@@ -12,8 +12,9 @@
 // *************************************
 
 .well
-  margin-bottom: $b-whitespace
-  margin-top: $b-whitespace
+  +respond-to($breakpoint-tablet)
+    margin-bottom: $b-whitespace
+    margin-top: $b-whitespace
 
 // -------------------------------------
 //   Modifiers

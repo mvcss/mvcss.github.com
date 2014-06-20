@@ -1,7 +1,16 @@
-Leo = {}
+# -------------------------------------
+#   Setup
+#   -> Namespace setup
+# -------------------------------------
+
+@Leo = {}
+@Leo.Pager = {}
 
 # -------------------------------------
 #   Heading Links
+#   -> Adds an anchor link next to each heading
+#
+#   options.els - the heading elements
 # -------------------------------------
 
 Leo.headingLinks = (options) ->
@@ -13,6 +22,11 @@ Leo.headingLinks = (options) ->
 
 # -------------------------------------
 #   Read Time
+#   -> Adds an estimated reading time to each page
+#
+#   options.text - the text of the page
+#   options.element - the element to append the reading time to
+#   options.wordsPerMinute - the words-per-minute to calculate against
 # -------------------------------------
 
 Leo.readTime = (options) ->
@@ -20,7 +34,59 @@ Leo.readTime = (options) ->
   options.element.append("<b>#{time} minute read</b>")
 
 # -------------------------------------
+#   Pager
+#   -> Adds keyboard navigation for pages
+#
+#   id - the page id
+# -------------------------------------
+
+Leo.Pager = do ->
+
+  pageIndex = 0
+
+  pages = []
+
+  shortcuts =
+    'next': 39
+    'prev': 37
+
+  init = (id) ->
+    pageIndex = id
+    getPages()
+    setEventHandlers()
+
+  getPages = ->
+    <% get_pages.each do |p| %>
+    pages.push("<%= p.url %>")
+    <% end %>
+
+  setEventHandlers = ->
+    $(document).on 'keydown', (e) ->
+      switch getKeyCode(e)
+        when shortcuts.next then gotoPage('next')
+        when shortcuts.prev then gotoPage('prev')
+
+  getKeyCode = (e) ->
+    e = e || window.event
+    charCode = e.keyCode || e.which
+    charCode
+
+  gotoPage = (dir) ->
+    switch dir
+      when 'next'
+        unless pageIndex == pages.length
+          window.location = pages[pageIndex]
+      when 'prev'
+        unless pageIndex == 1
+          window.location = pages[pageIndex - 2]
+
+  init: init
+
+# -------------------------------------
 #   Slugify
+#   -> Converts a string into a title slug
+#
+#   text - the text to convert
 # -------------------------------------
 
 Leo.slugify = (text) ->
@@ -43,6 +109,8 @@ jQuery ($) ->
     element: $('.content h1')
   })
   <% end %>
+
+  Leo.Pager.init( $('body').data('id') )
 
   $('.toggle').on 'click', (e) ->
     e.preventDefault()

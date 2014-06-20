@@ -14,16 +14,29 @@ html
 
 body
   font-size: 100%
-  overflow-x: hidden
+  &.is-sidebar-open
+    overflow-y: hidden
+    position: fixed
+    +respond-to($breakpoint-tablet)
+      position: static
 
 .content
+  +transform(translateX(0))
+  +transition-transform(0.3s ease-in-out)
   margin-bottom: $b-whitespace-xl
   padding-top: $b-whitespace-xs
   @if $sidebar-collapsible
     .is-sidebar-open &
-      margin-left: $sidebar-width
+      +transform(translateX($sidebar-width))
+      margin-left: 0
+      +respond-to($breakpoint-tablet)
+        +transform(translateX(0))
+        margin-left: $sidebar-width
   @else
-    margin-left: $sidebar-width
+    .is-sidebar-open &
+      +transform(translateX($sidebar-width))
+    +respond-to($breakpoint-tablet)
+      margin-left: $sidebar-width
 
 // -------------------------------------
 //   Block Content
@@ -82,8 +95,9 @@ h4, .h4,
 h5, .h5,
 h6, .h6
   position: relative
-  &:hover > a
-    display: block
+  +respond-to($breakpoint-desk)
+    &:hover > a
+      display: block
 
 h1, .h1
   font-size: 200%
