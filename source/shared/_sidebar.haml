@@ -8,6 +8,8 @@
         %p.h1.header-title= link_to data.leo.title, '/index.html'
         %p.header-version Version 4.0.0
 
+  = link_to 'View on GitHub', 'http://github.com/mvcss/mvcss', class: 'sidebar-btn'
+
   %nav.sidebar-nav
     - get_pages().each do |page|
       - unless page.data.nested? or page.data.children?
@@ -19,5 +21,4 @@
             - get_nested_pages(page.data.title).each do |nested_page|
               = link_to nested_page.data.title, "/#{nested_page.path}", class: (is_page_active(nested_page.url) ? 'sidebar-link sidebar-link--sub is-active' : 'sidebar-link sidebar-link--sub')
 
-  = link_to 'View on GitHub', 'http://github.com/mvcss/mvcss', class: 'sidebar-btn'
 
