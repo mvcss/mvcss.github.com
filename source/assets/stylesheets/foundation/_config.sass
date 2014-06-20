@@ -1,0 +1,90 @@
+// *************************************
+//
+//   Config
+//   -> Fonts, Variables
+//
+// *************************************
+
+// -------------------------------------
+//   @font-face
+// -------------------------------------
+
+// ----- Variables ----- //
+
+$f-base-src: 'http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic' !default
+$f-header-src: 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' !default
+
+// ----- Imports ----- //
+
+@if $f-base-src == $f-header-src
+  @import url($f-base-src)
+@else
+  @import url($f-base-src)
+  @import url($f-header-src)
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+// ----- Base ----- //
+
+$b-borderColor: lighten(#95a5a6, 20%) !default
+$b-borderStyle: solid !default
+$b-borderWidth: 2px !default
+$b-border: $b-borderWidth $b-borderStyle $b-borderColor !default
+$b-borderRadius: 3px !default
+$b-boxShadow: 0 2px 0 rgba(#333, 0.25) !default
+$b-fontSize: 16px !default
+$b-fontSize-xs: 60% !default
+$b-fontSize-s: 75% !default
+$b-fontSize-m: 90% !default
+$b-fontSize-l: 115% !default
+$b-fontSize-xl: 150% !default
+$b-lineHeight: 1.6 !default
+$b-maxWidth: 36.5em !default
+$b-whitespace: 1.25em !default
+$b-whitespace-xs: 0.25 * $b-whitespace !default
+$b-whitespace-s: 0.5 * $b-whitespace !default
+$b-whitespace-l: 2 * $b-whitespace !default
+$b-whitespace-xl: 4 * $b-whitespace !default
+
+// ----- Colors ----- //
+
+$c-background: #ecf0f1 !default
+$c-base: #333 !default
+$c-highlight: #2c3e50 !default
+$c-invert: #fff !default
+$c-secondary: #666 !default
+$c-subdue: #95a5a6 !default
+
+// ----- Fonts ----- //
+
+$f-base: 'Merriweather', serif !default
+$f-header: 'Open Sans', serif !default
+$f-mono: Courier, monospace !default
+
+// ----- Header ----- //
+
+$header-background: $c-invert !default
+$header-height: 45px !default
+$header-title-align: left !default
+$header-title-link-color: $c-subdue !default
+$header-title-link-hover-color: $c-base !default
+
+// ----- Sidebar ----- //
+
+$sidebar-background: darken($c-background, 10%) !default
+$sidebar-collapsible: true !default
+$sidebar-link-color: $c-secondary !default
+$sidebar-link-active-background: $c-highlight !default
+$sidebar-link-active-color: $c-invert !default
+$sidebar-link-hover-background: darken($c-background, 20%) !default
+$sidebar-link-hover-color: $c-base !default
+$sidebar-width: 15.625em !default
+
+// ----- Toggle ----- //
+
+$toggle-color: $c-subdue !default
+$toggle-height: 3px !default
+$toggle-width: 24px !default
+

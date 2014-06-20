@@ -1,17 +1,22 @@
 ---
-title: Styleguide - Basics
+title: Basics
+type: page
+priority: 3
+parent: Styleguide
+nested: true
 ---
 
-## Basics
+Styleguide - Basics
+===================
 
-* Alphabetize properties
-* Extends and Mixins should be placed before standard properties
-* Use soft tabs with a two space indention
-* Add a space after `:`
-* Add a space after `//` comments
-* Add a space after commas in values (e.g. `rgba(#000, 0.5)`)
-* Stick with classes instead of IDs for styling
-* Limit nesting as much as possible
+- Alphabetize properties
+- Extends and Mixins should be placed before standard properties
+- Use soft tabs with a two space indention
+- Add a space after `:`
+- Add a space after `//` comments
+- Add a space after commas in values (e.g. `rgba(#000, 0.5)`)
+- Stick with classes instead of IDs for styling
+- Limit nesting as much as possible
 
 ```sass
 // Example
@@ -24,4 +29,3 @@ title: Styleguide - Basics
   font-style: italic
 ```
 
-<a class="btn btn--b" href="/styleguide/sass-specific/">Next &rarr;</a>

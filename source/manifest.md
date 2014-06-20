@@ -1,8 +1,11 @@
 ---
 title: Manifest
+type: page
+priority: 7
 ---
 
-# Manifest
+Manifest
+========
 
 Now that we’ve touched on naming and piecemeal ideas, lets put it all together. MVCSS expects the following setup wherever your styles are found:
 
@@ -23,7 +26,8 @@ vendor/
 
 Post compile, `application.css` is included on each site page and various settings can be employed for compression.
 
-## Imports
+Imports
+-------
 
 Files found in Foundation are imported into the manifest in a particular order, while Components and Structures are typically included alphabetically:
 
@@ -73,7 +77,8 @@ Files found in Foundation are imported into the manifest in a particular order, 
 // -------------------------------------
 ```
 
-## Inbox
+Inbox
+-----
 
 Collaboration with developers can sometimes be difficult, but we've found a way to help mitigate that (at least as it relates to CSS). At the bottom of the `application.sass` file, there's a comment block that looks like this:
 

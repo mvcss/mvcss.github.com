@@ -1,4 +1,10 @@
-# About
+---
+title: Overview
+type: page
+priority: 1
+---
+
+# Overview
 
 **MVCSS** [Modular View CSS] is a Sass-based CSS architecture for creating predictable and maintainable application style.
 

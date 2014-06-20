@@ -1,27 +1,32 @@
 ---
-title: Styleguide - Naming Conventions
+title: Naming Conventions
+type: page
+priority: 6
+parent: Styleguide
+nested: true
 ---
 
-[bem-definitions]: http://bem.info/method/definitions
-[suit-naming-conventions]: https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md
-
-## Naming Conventions
+Styleguide - Naming Conventions
+===============================
 
 Following ideas pioneered in [BEM][bem-definitions] and [SUIT][suit-naming-conventions], MVCSS has a strict series of naming conventions that provide context at a glance.
 
-### Tools
+Tools
+-----
 
 As may notice in `_tools.sass`, many of the Tool classes look pretty acronym-y. We’ll get into the gains inherent with defining Tools shortly, but for now just assume two- or three-letter classes fall under this notion.
 
 A class such as `.mbm` is a shorthand way to define a basic unit of bottom margin: **m**argin **b**ottom **m**edium. Similarly, `.mbl` would be the large variety of bottom margin.
 
-### Components/Structures
+Components/Structures
+---------------------
 
 Structures and Components exist as Sass partials in their respective directories, and are always singular. Examples include `icon`, `button`, `grid`, `form`, and `modal`.
 
 If the name comprises two words, utilize `camelCase` &mdash; for instance, `taskList`.
 
-### Modifiers
+Modifiers
+---------
 
 After defining the base properties of a Component or Structure, modifiers exist to allow stylistic tweaks that build on the initial definition.  These tweaks are denoted with two hyphens `--`. A button, for instance, might have a number of different colors and sizes:
 
@@ -71,7 +76,8 @@ After creation, elements that need a modifier will use the root class (`.btn`) a
 
 **Note:** appearance modifiers typically work best when defined in sequence (`a`, `b`) or via function (`cancel`, `submit`) as opposed to look (`red`, `blue`).
 
-### States
+States
+------
 
 Generally added via JavaScript, states are similar to modifiers but carry conditional context. `is-` denotes a state, such as `is-active`, and they’re utilized as such:
 
@@ -108,7 +114,8 @@ Generally added via JavaScript, states are similar to modifiers but carry condit
   background: $c-highlight
 ```
 
-### Context
+Context
+-------
 
 We also borrow the idea of context from SUIT. Modularizing styles into self-contained units works well *most* of the time, but you’ll occasionally need a parent element to fall in line.
 
@@ -137,7 +144,8 @@ The most common case tends to be positioning context. If you have a dropdown str
 
 Similar to `is-` with states, `has-` denotes a context selector.
 
-### Scaffolding
+Scaffolding
+-----------
 
 Elements nested within a Component or Structure that need styling *based on being there* can be added to the scaffolding. Keeping with the dropdown Structure, the scaffold section falls last:
 
@@ -164,15 +172,21 @@ Elements nested within a Component or Structure that need styling *based on bein
 
 For items in scaffolding, the Component/Structure name comes first, followed by a single hyphen and the subcomponent/substructure name (also in camelCase, if necessary). Where applicable, they can have their own modifiers, states, and subcomponents/substructures—more than two levels, though, typically means it’s time to refactor.
 
-### Variables
+Variables
+---------
 
 Variables are a big enough consideration that we dedicate an entire file to keeping them organized. You can find all the information regarding variables in Config.
 
-### Images
+Images
+------
 
 A section about naming images? I know. Let's just get through it.
 
-* `bg-*` for background images
-* `logo-*` for logos
-* `img-*` for content images
-* Sub-folders for larger groups
+- `bg-*` for background images
+- `logo-*` for logos
+- `img-*` for content images
+- Sub-folders for larger groups
+
+[bem-definitions]: http://bem.info/method/definitions
+[suit-naming-conventions]: https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md
+

@@ -1,45 +1,75 @@
 // *************************************
 //
 //   Sidebar
+//   -> Page listing
+//
+// *************************************
+// -------------------------------------
+//   Template (Haml)
+// -------------------------------------
+//
+// %aside.sidebar
+//   %a.sidebar-link{ href: '#' } Link
 //
 // *************************************
 
 .sidebar
-  @extend .bch
-  @extend .dn
-
-  +respond-to(768px)
-    box-shadow: $b-boxShadow
-    bottom: 0
-    display: block
-    left: 0
-    position: fixed
-    right: auto
-    top: 0
-    width: $sidebar-width
+  @extend .boxSizing
+  @if $sidebar-collapsible
+    +transition-transform(0.3s ease-in-out)
+    +transform(translateX(-100%))
+  background: $sidebar-background
+  bottom: 0
+  left: 0
+  position: fixed
+  top: 0
+  width: $sidebar-width
+  z-index: 10
 
 // -------------------------------------
 //   States
 // -------------------------------------
 
-.sidebar.is-toggled
-  @extend .db
+@if $sidebar-collapsible
+  .sidebar.is-open
+    +transform(translateX(0))
 
 // -------------------------------------
 //   Scaffolding
 // -------------------------------------
 
-// ----- Toggle ----- //
+// ----- Link ----- //
 
-.sidebar-toggle
-  @extend .db
-  @extend .mtm
-  @extend .tac
-  background: darken($c-background, 10%)
+.sidebar-link
   border: 0
-  padding: 0.5 * $b-whitespace
+  color: $sidebar-link-color
+  display: block
+  font-family: $f-header
+  font-size: 80%
+  padding: $b-whitespace-s $b-whitespace
+  &:hover,
+  &:focus
+    background: $sidebar-link-hover-background
+    color: $sidebar-link-hover-color
 
-  // Media Queries
+// Sub
 
-  +respond-to(768px)
-    display: none
+.sidebar-link--sub
+  padding-left: $b-whitespace-l
+
+// Active
+
+.sidebar-link.is-active
+  background: $sidebar-link-active-background
+  color: $sidebar-link-active-color
+
+// ----- Navigation ----- //
+
+// Sub
+
+.sidebar-nav-sub
+  display: none
+
+.sidebar-nav-sub.is-active
+  display: block
+

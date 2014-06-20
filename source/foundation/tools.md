@@ -1,8 +1,13 @@
 ---
-title: Foundation - Tools
+title: Tools
+type: page
+priority: 13
+parent: Foundation
+nested: true
 ---
 
-## Tools
+Foundation - Tools
+==================
 
 Since the last version of MVCSS, we've embraced the idea of presentational class names, and have included them as Tools in MVCSS v4. Simply put, Tools are presentational utility classes for usage within HTML itself. They're helpful when you need a specific style in a unique context, but can't justify creating (and naming) a new module or modifier to achieve the desired effect.
 
@@ -12,11 +17,13 @@ Since the last version of MVCSS, we've embraced the idea of presentational class
 </div>
 ```
 
-### Single Responsibility
+Single Responsibility
+---------------------
 
 Tools are typically as limited in responsibility as possible, allowing you to mix and match various classes to quickly produce many different styles. Every Tool does one thing and one thing well, ensuring that the elements they affect stay both predictable and extensible.
 
-### Going Too Far
+Going Too Far
+-------------
 
 If you find yourself using multiple Tools to acheive a reusable group of styles, it may be a sign that you should define those properties in their own module or modifier.
 

@@ -1,8 +1,13 @@
 ---
-title: Styleguide - Comments
+title: Comments
+type: page
+priority: 5
+parent: Styleguide
+nested: true
 ---
 
-## Comments
+Styleguide - Comments
+=====================
 
 There are four levels of comments, in order of decreasing importance:
 

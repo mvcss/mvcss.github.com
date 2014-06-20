@@ -1,16 +1,23 @@
 ---
-title: Foundation - Helpers
+title: Helpers
+type: page
+priority: 10
+parent: Foundation
+nested: true
 ---
 
-## Helpers
+Foundation - Helpers
+====================
 
 Helpers are the functions, mixins, extends, and animations used throughout an MVCSS application.
 
-### Functions
+Functions
+---------
 
 Because of the many useful functions that come pre-installed with Sass, we rarely need to define any of our own. Still, there may be occasions where you need to define some other functions (e.g., `em`, `rem`, `strip-units`). For these cases, we've dedicated the Functions section within Helpers to housing all additional functions.
 
-### Mixins
+Mixins
+------
 
 We use mixins to reduce the amount of repeated code when authoring style sheets. Usually, this involves simplifying lengthy syntaxes, as well as providing fallbacks and vendor prefixes for unsupported CSS properties.
 
@@ -41,13 +48,14 @@ By now using the `respond-to` mixin throughout a project, you can write less cod
 +respond-to($breakpoint-m)
 ```
 
-### Extends
+Extends
+-------
 
 Extends are collections of rules to use either directly in the markup or to *extend* within modules. These are generally more verbose than Tools, but still adhere to the single responsibility principle.
 
 Even though we frequently extend these classes within modules, we don't use the percent sign syntax (`%className`) to create placeholder selectors in Sass. By never modifying Extends based on context, you don't need to worry about the potential [selector bloat][csswizardry-extends] associated with extending classes.
 
-#### Inside Markup
+### Inside Markup
 
 The `group` class applies multiple rules to a single element, and in the following example, we're using it directly in the markup.
 
@@ -67,7 +75,7 @@ The `group` class applies multiple rules to a single element, and in the followi
 </footer>
 ```
 
-#### Inside Modules
+### Inside Modules
 
 In the following `grid` Component, we extend the `group` class within the module itself.
 
@@ -79,7 +87,8 @@ In the following `grid` Component, we extend the `group` class within the module
   margin-right: -$grid-gutter / 2
 ```
 
-### Animations
+Animations
+----------
 
 Within Helpers, Animations are the general-use `@keyframes` definitions that can be called across various modules.
 
@@ -98,6 +107,5 @@ For example, in the case of `fadeIn`, we're likely to use this animation across 
 ```
 
 ***Note:*** Animations unique to specific modules are defined at the bottom of their respective style sheets.
-
 
 [csswizardry-extends]: http://csswizardry.com/2014/01/extending-silent-classes-in-sass/

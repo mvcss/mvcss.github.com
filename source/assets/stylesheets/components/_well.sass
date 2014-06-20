@@ -1,27 +1,27 @@
 // *************************************
 //
-//   Row
-//   -> Width-spanning blocks
+//   Well
+//   -> Vertical spacing
 //
 // -------------------------------------
 //   Template (Haml)
 // -------------------------------------
 //
-// .row[.row--a]
-//   / ...
+// .well[.well--l]
 //
 // *************************************
 
-.row
-  overflow: hidden
-  padding: 0 $b-whitespace
+.well
+  margin-bottom: $b-whitespace
+  margin-top: $b-whitespace
 
 // -------------------------------------
 //   Modifiers
 // -------------------------------------
 
-// ----- Color Variants ----- //
+// ----- Sizes ----- //
 
-.row--a
-  background: $c-invert
+.well--l
+  margin-bottom: $b-whitespace-l
+  margin-top: $b-whitespace-l
 

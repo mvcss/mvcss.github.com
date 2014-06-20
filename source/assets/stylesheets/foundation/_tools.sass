@@ -1,9 +1,15 @@
 // *************************************
 //
-//   Utilities
+//   Tools
 //   -> Global utilities
 //
 // *************************************
+
+// ----- Box Sizing ----- //
+
+.boxSizing
+  -moz-box-sizing: border-box
+  box-sizing: border-box
 
 // ----- Clearfix ----- //
 
@@ -30,18 +36,28 @@
   background-color: transparent
   border: 0
   overflow: hidden
-  &:before
+  &::before
     content: ''
     display: block
     width: 0
     height: 150%
 
+// ----- Semantic Hide ----- //
+
+.srt
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+
 // -------------------------------------
 //   Background
 // -------------------------------------
 
-.bcbg
-  background: $c-background
 .bcb
   background: $c-base
 .bch
@@ -65,30 +81,36 @@
   display: none
 
 // -------------------------------------
-//   List
-// -------------------------------------
-
-.lr
-  list-style-type: none
-  margin: 0
-  padding: 0
-
-// -------------------------------------
 //   Margins
 // -------------------------------------
+
+// ----- All ----- //
+
+.maxs
+  margin: $b-whitespace-xs
+.mas
+  margin: $b-whitespace-s
+.mam
+  margin: $b-whitespace
+.mal
+  margin: $b-whitespace-l
+.maxl
+  margin: $b-whitespace-xl
 
 // ----- Bottom ----- //
 
 .mbf
   margin-bottom: 0
 .mbxs
-  margin-bottom: 0.25 * $b-whitespace
+  margin-bottom: $b-whitespace-xs
 .mbs
-  margin-bottom: 0.5 * $b-whitespace
+  margin-bottom: $b-whitespace-s
 .mbm
   margin-bottom: $b-whitespace
 .mbl
-  margin-bottom: 2 * $b-whitespace
+  margin-bottom: $b-whitespace-l
+.mbxl
+  margin-bottom: $b-whitespace-xl
 
 // ----- Horizontal ----- //
 
@@ -100,64 +122,115 @@
 
 .mlf
   margin-left: 0
+.mlxs
+  margin-left: $b-whitespace-xs
 .mls
-  margin-left: 0.5 $b-whitespace
+  margin-left: $b-whitespace-s
 .mlm
   margin-left: $b-whitespace
+.mll
+  margin-left: $b-whitespace-l
 
 // ----- Right ----- //
 
 .mrf
   margin-right: 0
+.mrxs
+  margin-right: $b-whitespace-xs
 .mrs
-  margin-right: 0.5 $b-whitespace
+  margin-right: $b-whitespace-s
 .mrm
   margin-right: $b-whitespace
+.mrl
+  margin-right: $b-whitespace-l
 
 // ----- Top ----- //
 
 .mtf
   margin-top: 0
+.mtxs
+  margin-top: $b-whitespace-xs
 .mts
-  margin-top: 0.5 $b-whitespace
+  margin-top: $b-whitespace-s
 .mtm
   margin-top: $b-whitespace
 .mtl
-  margin-top: 2 * $b-whitespace
+  margin-top: $b-whitespace-l
 .mtxl
-  margin-top: 4 * $b-whitespace
+  margin-top: $b-whitespace-xl
 
 // -------------------------------------
 //   Padding
 // -------------------------------------
 
+// ----- All ----- //
+
+.paxs
+  padding: $b-whitespace-xs
+.pas
+  padding: $b-whitespace-s
+.pam
+  padding: $b-whitespace
+.pal
+  padding: $b-whitespace-l
+.paxl
+  padding: $b-whitespace-xl
+
 // ----- Bottom ----- //
 
+.pbf
+  padding-bottom: 0
+.pbxs
+  padding-bottom: $b-whitespace-xs
 .pbs
-  padding-bottom: 0.5 * $b-whitespace
+  padding-bottom: $b-whitespace-s
 .pbm
   padding-bottom: $b-whitespace
+.pbl
+  padding-bottom: $b-whitespace-l
+.pbxl
+  padding-bottom: $b-whitespace-xl
 
 // ----- Left ----- //
 
+.plf
+  padding-left: 0
+.plxs
+  padding-left: $b-whitespace-xs
+.pls
+  padding-left: $b-whitespace-s
 .plm
   padding-left: $b-whitespace
 .pll
-  padding-left: 2 * $b-whitespace
+  padding-left: $b-whitespace-l
 
 // ----- Right ----- //
 
+.prf
+  padding-right: 0
+.prxs
+  padding-right: $b-whitespace-xs
+.prs
+  padding-right: $b-whitespace-s
 .prm
   padding-right: $b-whitespace
 .prl
-  padding-right: 2 * $b-whitespace
+  padding-right: $b-whitespace-l
 
 // ----- Top ----- //
 
+.ptf
+  padding-top: 0
+.ptxs
+  padding-top: $b-whitespace-xs
 .pts
-  padding-top: 0.5 * $b-whitespace
+  padding-top: $b-whitespace-s
 .ptm
   padding-top: $b-whitespace
+.ptl
+  padding-top: $b-whitespace-l
+.ptxl
+  padding-top: $b-whitespace-xl
 
 // -------------------------------------
 //   Positioning
@@ -185,6 +258,8 @@
   border-radius: 50%
 .ram
   border-radius: $b-borderRadius
+.ran
+  border-radius: 0
 
 // -------------------------------------
 //   Text
@@ -210,19 +285,21 @@
 
 .tfb
   font-family: $f-base
+.tfh
+  font-family: $f-header
 
 // ----- Size ----- //
 
 .tsxs
-  font-size: 60%
+  font-size: $b-fontSize-xs
 .tss
-  font-size: 75%
+  font-size: $b-fontSize-s
 .tsm
-  font-size: 85%
+  font-size: $b-fontSize-m
 .tsl
-  font-size: 105%
+  font-size: $b-fontSize-l
 .tsxl
-  font-size: 115%
+  font-size: $b-fontSize-xl
 
 // ----- Style ----- //
 
@@ -236,9 +313,7 @@
 
 // ----- Weight ----- //
 
-.twl
-  font-weight: 300
 .twn
-  font-weight: 400
+  font-weight: normal
 .twb
-  font-weight: 700
+  font-weight: bold

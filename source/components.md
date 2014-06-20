@@ -1,8 +1,11 @@
 ---
 title: Components
+type: page
+priority: 14
 ---
 
-# Components
+Components
+==========
 
 The Components folder is where we start building the recognizable pieces of a user interface. These are abstract, reasonably portable modules that can be swapped in and out of different projects with relative ease.
 
@@ -36,12 +39,13 @@ Other Components, like `thumb`, affect only a single element, and can resemble T
 </div>
 ```
 
-## Characteristics
+Characteristics
+---------------
 
 When determing whether a module is a Component or Structure, we find it helpful to ask ourselves the following questions:
 
-* Does this module have a single responsibility?
-* Does this module depend on or extend other Components?
-* Is this module abstract enough to use in other projects without making significant changes?
+- Does this module have a single responsibility?
+- Does this module depend on or extend other Components?
+- Is this module abstract enough to use in other projects without making significant changes?
 
 If you answer "no" to any of these questions, the module in question is more than likely a Structure.

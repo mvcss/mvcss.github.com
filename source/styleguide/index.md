@@ -1,8 +1,12 @@
 ---
 title: Styleguide
+type: page
+priority: 2
+children: true
 ---
 
-# Styleguide
+Styleguide
+==========
 
 Before diving in, we’ll start with a bit of housekeeping. This section outlines our internal standards for writing CSS (and more specifically, Sass). While you’re certainly welcome to switch it up, these guidelines will help in moving through our examples and base files.
 

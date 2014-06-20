@@ -1,55 +1,40 @@
 // *************************************
 //
 //   Header
-//   -> Site header
+//   -> Top bar
+//
+// -------------------------------------
+//   Template (Haml)
+// -------------------------------------
+//
+// %header.header
+//   %h1.header-title Title
 //
 // *************************************
 
 .header
-  @extend .dn
-  @extend .tac
-  @extend .tci
-  background: darken($c-highlight, 10%)
-  p
-    @extend .mbf
-    @extend .pbs
-    @extend .pts
-    background: darken($c-highlight, 13%)
-
-  +respond-to(768px)
-    display: block
+  @extend .boxSizing
+  background: $header-background
+  height: $header-height
+  position: relative
 
 // -------------------------------------
 //   Scaffolding
 // -------------------------------------
 
-// ----- Logo ----- //
-
-.header-logo
-  border: 0
-
-// ----- Mast ----- //
-
-.header-mast
-  padding: $b-whitespace
-
-// ----- Sub ----- //
-
-.header-sub
-  @extend .db
-  @extend .tcs
-  @extend .tfb
-  font-size: 45%
-  font-weight: 300
-
-// ----- Tagline ----- //
-
-.header-tagline
-  @extend .twl
-  padding: 0.5 * $b-whitespace
-
 // ----- Title ----- //
 
 .header-title
-  font-size: 240%
-  line-height: 1.2
+  font-size: $b-fontSize-m
+  font-weight: normal
+  line-height: $header-height
+  margin-top: 0
+  padding-left: $b-whitespace - 0.2 // FIXME: Magic number!
+  text-transform: uppercase
+  > a
+    border: 0
+    color: $header-title-link-color
+    &:hover,
+    &:focus
+      color: $header-title-link-hover-color
+

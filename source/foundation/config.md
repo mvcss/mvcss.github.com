@@ -1,14 +1,18 @@
 ---
-title: Foundation - Config
+title: Config
+type: page
+priority: 11
+parent: Foundation
+nested: true
 ---
 
-[bourbon-mixin-fontface]: https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-face.scss
-
-## Config
+Foundation - Config
+===================
 
 Config holds your `@font-face` font setup (if applicable), and all of your application-wide variables. We include a set by default, which is broken down into Base, Colors, and Fonts.
 
-### @Font-face
+@Font-face
+----------
 
 If serving font files from a known path (e.g. your server), we include Bourbon's `+font-face` [mixin][bourbon-mixin-fontface] to simply the daunting syntax, and also lists fallback files needed for browser compatibility.
 
@@ -38,7 +42,8 @@ When using web fonts from Google Fonts, or a similar service, you can paste thei
 
 Many other web font providers offer fonts exclusively via a JavaScript snippet. If you're using one of these providers, then you can expect to leave the `@font-face` section empty.
 
-### Variables
+Variables
+---------
 
 All variables in MVCSS are defined in Config and are prefixed by their role or respective Component/Structure.
 
@@ -135,3 +140,6 @@ $grid-defaults: "s" $breakpoint-s, "m" $breakpoint-m, "l" $breakpoint-l
 $grid-gutter: 20px
 $grid-silent: false
 ```
+
+[bourbon-mixin-fontface]: https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-face.scss
+

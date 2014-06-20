@@ -1,12 +1,18 @@
 ---
 title: Usage
+type: page
+priority: 17
 ---
 
-# Usage
+Usage
+=====
 
-## States
+States
+------
 
-## Avoiding Bedlam
+Avoiding Bedlam
+---------------
 
-## Responsiveness
+Responsiveness
+--------------
 

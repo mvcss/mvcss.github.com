@@ -2,8 +2,9 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
-gem 'redcarpet'
-gem 'json'
+gem "redcarpet"
+
 gem 'middleman'
-gem 'middleman-syntax'
 gem 'middleman-livereload'
+gem 'middleman-minify-html'
+gem 'middleman-syntax'

@@ -5,6 +5,16 @@
 //      * https://github.com/necolas/suit-grid
 //      * https://github.com/csswizardry/csswizardry-grids
 //
+// -------------------------------------
+//   Template (Haml)
+// -------------------------------------
+//
+// .grid
+//   .grid-box[.grid-box--center|1of2|1of3|...]
+//   .grid-box[.grid-box--center|1of2|1of3|...]
+//   .grid-box[.grid-box--center|1of2|1of3|...]
+//   .grid-box[.grid-box--center|1of2|1of3|...]
+//
 // *************************************
 
 // -------------------------------------
@@ -28,14 +38,14 @@ $grid-selector: if($grid-silent, unquote("%"), unquote("."))
 
 #{$grid-selector}grid
   @extend .group
-  @extend .db
+  display: block
   margin-left: -$grid-gutter / 2
   margin-right: -$grid-gutter / 2
 
 #{$grid-selector}grid-box
-  @extend .fl
   -moz-box-sizing: border-box
   box-sizing: border-box
+  float: left
   margin: 0
   padding-left: $grid-gutter / 2
   padding-right: $grid-gutter / 2
@@ -46,9 +56,9 @@ $grid-selector: if($grid-silent, unquote("%"), unquote("."))
 // -------------------------------------
 
 #{$grid-selector}grid-box--center
-  @extend .db
-  @extend .mhc
+  display: block
   float: none
+  margin: 0 auto
 
 // -------------------------------------
 //   Setup
