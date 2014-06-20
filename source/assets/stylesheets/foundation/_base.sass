@@ -88,6 +88,11 @@ h6, .h6
   line-height: 1.2
   margin-bottom: $b-whitespace-s
   margin-top: $b-whitespace
+  @if $sidebar-collapsible == false
+    +respond-to($breakpoint-tablet)
+      margin-top: 0
+  +respond-to($breakpoint-desk)
+    margin-top: $b-whitespace
 
 h2, .h2,
 h3, .h3,
