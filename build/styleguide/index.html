@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
-    <meta charset='utf-8'>
-    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-    <title>Styleguide / MVCSS</title>
-    <meta content='MVCSS - A Sass-based CSS architecture for creating predictable and maintainable application style.' name='description'>
-    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300" rel="stylesheet" type="text/css" />
-    <link href="../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
-    <script>
+<!DOCTYPE html> <html lang=en> <head> <meta charset=utf-8> <meta content='IE=edge,chrome=1' http-equiv=X-UA-Compatible> <title>Styleguide / MVCSS</title> <meta content='MVCSS - A Sass-based CSS architecture for creating predictable and maintainable application style.' name=description> <link href="../assets/stylesheets/application.css" rel=stylesheet /> <script>
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-32794837-1']);
       _gaq.push(['_trackPageview']);
@@ -18,75 +8,7 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-    </script>
-  </head>
-  <body class='styleguide styleguide_index'>
-    <div class='action'>
-      <a class='action-btn' href='https://github.com/mvcss/mvcss'>View Code &rarr;</a>
-      <p class='action-link'><a href="/changelog/">Changelog (v4.0.0)</a></p>
-    </div>
-    <a class='sidebar-toggle' href='#'>Navigation</a>
-    <aside class='sidebar'>
-      <header class='header'>
-        <div class='header-mast bucket bucket--flag'>
-          <div class='bucket-media'>
-            <a class='header-logo' href='/'><img width="100" height="110" alt="MVCSS" src="../assets/images/logo.svg" /></a>
-          </div>
-          <div class='bucket-content'>
-            <b class='header-title'>
-              MVCSS
-              <span class='header-sub'>Version 4.0.0</span>
-            </b>
-          </div>
-        </div>
-        <p class='header-tagline'>A Sass-based CSS Architecture</p>
-      </header>
-      <nav class='nav'>
-        <ul class='nav-list'>
-          <li class='nav-item'><a class="nav-link" href="/">About</a></li>
-          <li class='is-active nav-item'>
-            <a class="nav-link" href="/styleguide/">Styleguide</a>
-            <ul class='is-active nav-list--sub'>
-              <li class='nav-item'><a class="nav-link" href="/styleguide/basics/">Basics</a></li>
-              <li class='nav-item'><a class="nav-link" href="/styleguide/numbers-game/">The Numbers Game</a></li>
-              <li class='nav-item'><a class="nav-link" href="/styleguide/comments/">Comments</a></li>
-              <li class='nav-item'><a class="nav-link" href="/styleguide/naming/">Naming Conventions</a></li>
-            </ul>
-          </li>
-          <li class='nav-item'><a class="nav-link" href="/manifest/">Manifest</a></li>
-          <li class='nav-item'>
-            <a class="nav-link" href="/foundation/">Foundation</a>
-            <ul class='nav-list--sub'>
-              <li class='nav-item'><a class="nav-link" href="/foundation/reset/">Reset</a></li>
-              <li class='nav-item'><a class="nav-link" href="/foundation/helpers/">Helpers</a></li>
-              <li class='nav-item'><a class="nav-link" href="/foundation/config/">Config</a></li>
-              <li class='nav-item'><a class="nav-link" href="/foundation/base/">Base</a></li>
-              <li class='nav-item'><a class="nav-link" href="/foundation/tools/">Tools</a></li>
-            </ul>
-          </li>
-          <li class='nav-item'><a class="nav-link" href="/components/">Components</a></li>
-          <li class='nav-item'><a class="nav-link" href="/structures/">Structures</a></li>
-          <li class='nav-item'><a class="nav-link" href="/vendor/">Vendor</a></li>
-          <li class='nav-item'><a class="nav-link" href="/usage/">Usage</a></li>
-          <li class='nav-item'><a class="nav-link" href="/inspiration/">Inspiration</a></li>
-        </ul>
-      </nav>
-      <footer class='about'>
-        <a class='about-link' href='http://envylabs.com'>
-          <img alt="Made with Envy" width="162" height="80" class="about-logo" src="../assets/images/logo-envy.svg" />
-        </a>
-      </footer>
-    </aside>
-    <main class='cell'>
-      <h1>Styleguide</h1>
-      
-      <p>Before diving in, we’ll start with a bit of housekeeping. This section outlines our internal standards for writing CSS (and more specifically, Sass). While you’re certainly welcome to switch it up, these guidelines will help in moving through our examples and base files.</p>
-      
-      <p>We’re big proponents of the Sass indented syntax (<code>.sass</code>), so things may look slightly different if you’re a Sassy CSS (<code>.scss</code>) fan.</p>
-      
-      <p><strong>Word of warning:</strong> some of the sections herein will be a bit confusing, like Naming Conventions, until seen in context later—an unfortunate chicken/egg situation.</p>
-    </main>
-    <script>
+    </script> </head> <body class='styleguide styleguide_index'> <a class=toggle href="#"><div class=toggle-icn> <div class=toggle-icn-stack> <b class=srt>Toggle</b> </div> </div> </a> <aside class=sidebar> <header class=header> <div class='bucket bucket--flag'> <div class=bucket-media> <img alt=MVCSS class=header-logo width=100 height=110 src="../assets/images/logo.svg"/> </div> <div class=bucket-content> <p class='h1 header-title'><a href="../">MVCSS</a></p> <p class=header-version>Version 4.0.0</p> </div> </div> </header> <nav class=sidebar-nav> <a class=sidebar-link href="../">Overview</a> <a class="sidebar-link sidebar-link--parent is-active" href="./">Styleguide</a> <div class='is-active sidebar-nav-sub'> <a class="sidebar-link sidebar-link--sub" href="basics/">Basics</a> <a class="sidebar-link sidebar-link--sub" href="numbers-game/">The Numbers Game</a> <a class="sidebar-link sidebar-link--sub" href="comments/">Comments</a> <a class="sidebar-link sidebar-link--sub" href="naming/">Naming Conventions</a> </div> <a class=sidebar-link href="../manifest/">Manifest</a> <a class=sidebar-link href="../foundation/">Foundation</a> <div class=sidebar-nav-sub> <a class="sidebar-link sidebar-link--sub" href="../foundation/reset/">Reset</a> <a class="sidebar-link sidebar-link--sub" href="../foundation/helpers/">Helpers</a> <a class="sidebar-link sidebar-link--sub" href="../foundation/config/">Config</a> <a class="sidebar-link sidebar-link--sub" href="../foundation/base/">Base</a> <a class="sidebar-link sidebar-link--sub" href="../foundation/tools/">Tools</a> </div> <a class=sidebar-link href="../components/">Components</a> <a class=sidebar-link href="../structures/">Structures</a> <a class=sidebar-link href="../vendor/">Vendor</a> <a class=sidebar-link href="../usage/">Usage</a> <a class=sidebar-link href="../about/">About</a> <a class=sidebar-link href="../inspiration/">Inspiration</a> </nav> </aside> <div class=row> <div class='cell well'> <main class=content> <article> <h1>Styleguide</h1> <p>Before diving in, we’ll start with a bit of housekeeping. This section outlines our internal standards for writing CSS (and more specifically, Sass). While you’re certainly welcome to switch it up, these guidelines will help in moving through our examples and base files.</p> <p>We’re big proponents of the Sass indented syntax (<code>.sass</code>), so things may look slightly different if you’re a Sassy CSS (<code>.scss</code>) fan.</p> <p><strong>Word of warning:</strong> some of the sections herein will be a bit confusing, like Naming Conventions, until seen in context later—an unfortunate chicken/egg situation.</p> </article> <ul class=pager> <li class=pager-item> <a href="../">&larr; Previous page </a> </li> <li class=pager-item> <a href="basics/">Next page &rarr; </a> </li> </ul> </main> </div> </div> <script>
       var _gauges = _gauges || [];
       (function() {
         var t   = document.createElement('script');
@@ -98,19 +20,4 @@
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(t, s);
       })();
-    </script>
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script>
-      (function() {
-        $(function() {
-          return $('.sidebar-toggle').on('click', function(e) {
-            e.preventDefault();
-            $(this).toggleClass('is-active');
-            return $('body').toggleClass('is-toggled');
-          });
-        });
-      
-      }).call(this);
-    </script>
-  </body>
-</html>
+    </script> <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> <script src="../assets/javascripts/application.js"></script> </body> </html>
