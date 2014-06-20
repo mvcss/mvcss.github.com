@@ -16,20 +16,30 @@
   @extend .boxSizing
   background: $header-background
   height: $header-height
+  padding: $b-whitespace
   position: relative
+  text-align: center
 
 // -------------------------------------
 //   Scaffolding
 // -------------------------------------
 
+// ----- Logo ----- //
+
+.header-logo
+  background: none
+  border-radius: 0
+  box-shadow: none
+  display: block
+  padding: 0
+  position: static
+
 // ----- Title ----- //
 
 .header-title
-  font-size: $b-fontSize-m
-  font-weight: normal
-  line-height: $header-height
-  margin-top: 0
-  padding-left: $b-whitespace - 0.2 // FIXME: Magic number!
+  font-size: $b-fontSize-xl
+  font-weight: bold
+  margin: 0
   text-transform: uppercase
   > a
     border: 0
@@ -37,4 +47,11 @@
     &:hover,
     &:focus
       color: $header-title-link-hover-color
+
+// ----- Version ----- //
+
+.header-version
+  color: $c-subdue
+  font-weight: 300
+  margin-bottom: 0
 

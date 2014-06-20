@@ -1,7 +1,12 @@
 %aside.sidebar
 
   %header.header
-    %h1.header-title= link_to data.leo.title, '/index.html'
+    .bucket.bucket--flag
+      .bucket-media
+        = image_tag 'logo.svg', alt: 'MVCSS', class: 'header-logo', width: '100', height: '110'
+      .bucket-content
+        %p.header-title= link_to data.leo.title, '/index.html'
+        %p.header-version Version 4.0.0
 
   %nav.sidebar-nav
     - get_pages().each do |page|

@@ -26,8 +26,9 @@
       .cell.well
 
         %main.content
-          = find_and_preserve do
-            = yield
+          %article
+            = find_and_preserve do
+              = yield
 
           = partial 'shared/pager'
 
