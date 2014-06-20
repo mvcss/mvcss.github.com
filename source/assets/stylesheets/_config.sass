@@ -9,11 +9,41 @@
 //   @font-face
 // -------------------------------------
 
-// Place your overrides from stylesheets/foundation/_config.sass here...
+$f-base-src: 'http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700'
 
 // -------------------------------------
 //   Variables
 // -------------------------------------
 
+// ----- Base ----- //
+
+$b-maxWidth: 46.875em
+
+// ----- Colors ----- //
+
+$c-background: #ecf0f1
+$c-base: #444
+$c-highlight: #4e4e5b
+$c-invert: #fff
+$c-secondary: lighten(#4e4e5b, 40%)
+$c-subdue: lighten(#4e4e5b, 40%)
+
+// ----- Fonts ----- //
+
+$f-base: 'Roboto Slab', serif
+$f-header: 'Roboto Slab', serif
+
+// ----- Header ----- //
+
+$header-background: darken($c-highlight, 10%)
+
+// ----- Sidebar ----- //
+
+$sidebar-background: $c-highlight
 $sidebar-collapsible: false
+$sidebar-link-active-background: $c-background
+$sidebar-link-active-color: $c-base
+$sidebar-link-hover-background: darken($c-highlight, 10%)
+$sidebar-link-hover-color: $c-invert
+$sidebar-nav-sub-background: darken($c-highlight, 5%)
 
