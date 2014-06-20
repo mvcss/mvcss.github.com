@@ -36,11 +36,13 @@ jQuery ($) ->
     els: $('h2, h3, h4, h5, h6')
   })
 
+  <% if data.leo.reading_time %>
   Leo.readTime({
     wordsPerMinute: 200
     text: $('.content').text()
     element: $('.content h1')
   })
+  <% end %>
 
   $('.toggle').on 'click', (e) ->
     e.preventDefault()
