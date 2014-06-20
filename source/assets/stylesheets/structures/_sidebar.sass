@@ -38,6 +38,28 @@
 //   Scaffolding
 // -------------------------------------
 
+// ----- Button ----- //
+
+.sidebar-btn
+  background: lighten($c-highlight, 10%)
+  border-color: darken($c-highlight, 10%)
+  border-radius: $b-borderRadius
+  bottom: $b-whitespace-s
+  color: $c-invert
+  display: block
+  left: $b-whitespace-s
+  line-height: 2.5
+  padding: 0 $b-whitespace
+  position: absolute
+  right: $b-whitespace-s
+  text-align: center
+  &:hover,
+  &:focus
+    background: lighten($c-highlight, 15%)
+    color: $c-invert
+  &:active
+    border: 0
+
 // ----- Link ----- //
 
 .sidebar-link
