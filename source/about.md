@@ -1,10 +1,9 @@
 ---
 title: About
 type: page
-priority: 18
+priority: 17
 secondary: true
 ---
 
 About
 =====
-

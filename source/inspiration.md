@@ -1,7 +1,7 @@
 ---
 title: Inspiration
 type: page
-priority: 19
+priority: 18
 secondary: true
 ---
 

@@ -6,4 +6,3 @@ priority: 16
 
 Vendor
 ======
-
