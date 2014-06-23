@@ -44,6 +44,8 @@ Characteristics
 
 When determing whether a module is a Component or Structure, we find it helpful to ask ourselves the following questions:
 
+<!-- Every "module" you write should have a single responsibility, so this shouldn't be a determining factor to decide between a Component or Structure. The two other questions should suffice, though. -->
+
 - Does this module have a single responsibility?
 - Does this module depend on or extend other Components?
 - Is this module abstract enough to use in other projects without making significant changes?
