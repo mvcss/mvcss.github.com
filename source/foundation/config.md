@@ -23,9 +23,9 @@ If serving font files from a known path (e.g. your server), we include Bourbon's
 
 // ----- Open Sans ----- //
 
-// +font-face('OpenSans', 'OpenSans')
-// +font-face('OpenSans', 'OpenSansBold', bold)
-// +font-face('OpenSans', 'OpenSansItalic', normal, italic)
++font-face('OpenSans', 'OpenSans')
++font-face('OpenSans', 'OpenSansBold', bold)
++font-face('OpenSans', 'OpenSansItalic', normal, italic)
 ```
 
 When using web fonts from Google Fonts, or a similar service, you can paste their generated `@import` link into this section.
@@ -37,7 +37,7 @@ When using web fonts from Google Fonts, or a similar service, you can paste thei
 
 // ----- Open Sans ----- //
 
-// @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700)
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700)
 ```
 
 Many other web font providers offer fonts exclusively via a JavaScript snippet. If you're using one of these providers, then you can expect to leave the `@font-face` section empty.
