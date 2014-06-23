@@ -2,6 +2,7 @@
 title: Inspiration
 type: page
 priority: 19
+secondary: true
 ---
 
 Inspiration

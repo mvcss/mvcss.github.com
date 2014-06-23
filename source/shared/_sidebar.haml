@@ -12,7 +12,7 @@
 
   %nav.sidebar-nav
     - get_pages().each do |page|
-      - unless page.data.nested? or page.data.children?
+      - unless is_excluded_page(page)
         = link_to page.data.title, "/#{page.path}", class: (is_page_active(page.url) ? 'sidebar-link is-active' : 'sidebar-link')
       - else
         - if page.data.children?
@@ -20,5 +20,8 @@
           .sidebar-nav-sub{ class: ('is-active' if is_parent_page_active(page.url))}
             - get_nested_pages(page.data.title).each do |nested_page|
               = link_to nested_page.data.title, "/#{nested_page.path}", class: (is_page_active(nested_page.url) ? 'sidebar-link sidebar-link--sub is-active' : 'sidebar-link sidebar-link--sub')
-
+    .sidebar-nav-secondary
+      %h3.sidebar-label.mtl Meta
+      - get_secondary_pages().each do |page|
+        = link_to page.data.title, "/#{page.path}", class: (is_page_active(page.url) ? 'sidebar-link is-active' : 'sidebar-link')
 

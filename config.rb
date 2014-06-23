@@ -15,6 +15,11 @@ helpers do
       .sort_by { |r| r.data.priority.to_i }
   end
 
+  def get_secondary_pages
+    sitemap.resources.select { |resource| resource.data.type == 'page' and resource.data.secondary? }
+      .sort_by { |r| r.data.priority.to_i }
+  end
+
   def get_page(priority)
     sitemap.resources.select { |resource| resource.data.type == 'page' and resource.data.priority == priority }
   end
@@ -22,6 +27,10 @@ helpers do
   def get_nested_pages(title)
     sitemap.resources.select { |resource| resource.data.type == 'page' and resource.data.nested == true and resource.data.parent == title }
       .sort_by { |r| r.data.priority.to_i }
+  end
+
+  def is_excluded_page(page)
+    page.data.nested? or page.data.children? or page.data.secondary?
   end
 
   def is_page_active(page)
