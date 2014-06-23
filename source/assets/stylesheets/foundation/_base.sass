@@ -35,6 +35,8 @@ body
   @else
     .is-sidebar-open &
       +transform(translateX($sidebar-width))
+      +respond-to($breakpoint-tablet)
+        +transform(translateX(0))
     +respond-to($breakpoint-tablet)
       margin-left: $sidebar-width
 
