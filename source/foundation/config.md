@@ -14,7 +14,7 @@ Config holds your `@font-face` font setup (if applicable), and all of your appli
 @Font-face
 ----------
 
-If serving font files from a known path (e.g. your server), we include Bourbon's `+font-face` [mixin][bourbon-mixin-fontface] to simplify the daunting syntax, and also lists fallback files needed for browser compatibility.
+If serving font files from a known path (e.g. your server), we include Bourbon's `+font-face` [mixin][bourbon-mixin-fontface] to simplify the daunting syntax, and also list fallback files needed for browser compatibility.
 
 ```sass
 // -------------------------------------
