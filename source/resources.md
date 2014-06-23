@@ -1,12 +1,12 @@
 ---
-title: Inspiration
+title: Resources
 type: page
 priority: 18
 secondary: true
 ---
 
-Inspiration
-===========
+Resources
+=========
 
 We’re always on the lookout for new approaches and better means of abstraction. Here are some great resources and examples for writing better CSS that we’ve worked to incorporate into our thinking.
 
