@@ -74,6 +74,8 @@ After creation, elements that need a modifier will use the root class (`.btn`) a
 <button class="btn btn--a btn--l">A Button</button>
 ```
 
+<!-- Nicktique: using `--a`, `--b`, etc. in the examples is dangerous since we've moved away from that. This next sentence is definitely off. -->
+
 **Note:** appearance modifiers typically work best when defined in sequence (`a`, `b`) or via function (`cancel`, `submit`) as opposed to look (`red`, `blue`).
 
 States
@@ -118,6 +120,8 @@ Context
 -------
 
 We also borrow the idea of context from SUIT. Modularizing styles into self-contained units works well *most* of the time, but you’ll occasionally need a parent element to fall in line.
+
+<!-- Nicktique: we've been using this a lot more in the context of list items, that might be a better example to drop in. -->
 
 The most common case tends to be positioning context. If you have a dropdown structure that’s being positioned absolutely, the parent element should be (at least) positioned relatively:
 
@@ -171,6 +175,8 @@ Elements nested within a Component or Structure that need styling *based on bein
 ```
 
 For items in scaffolding, the Component/Structure name comes first, followed by a single hyphen and the subcomponent/substructure name (also in camelCase, if necessary). Where applicable, they can have their own modifiers, states, and subcomponents/substructures—more than two levels, though, typically means it’s time to refactor.
+
+<!-- Nicktique: a common misunderstanding with folks new to MVCSS is creating states / modifiers / etc. under a scaffolding item. An example of that might be helpful. -->
 
 Variables
 ---------

@@ -9,6 +9,8 @@ nested: true
 Foundation - Tools
 ==================
 
+<!-- Nicktique: this reads too much like a changelog; documentation should sound a little more 'sure of itself' - chiseled in stone, as it were, -->
+
 Since the last version of MVCSS, we've embraced the idea of presentational class names, and have included them as Tools in MVCSS v4. Simply put, Tools are presentational utility classes for usage within HTML itself. They're helpful when you need a specific style in a unique context, but can't justify creating (and naming) a new module or modifier to achieve the desired effect.
 
 ```html

@@ -18,6 +18,8 @@ Styleguide - Basics
 - Stick with classes instead of IDs for styling
 - Limit nesting as much as possible
 
+<!-- Nicktique: prefixed properties are alphabetized by their non-prefixed equivalent. -webkit-transition, -moz-transition, then transition, based on the `T`. -->
+
 ```sass
 // Example
 

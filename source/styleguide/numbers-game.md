@@ -22,3 +22,5 @@ Approach
 This setup should be a easier to grasp once we reach the Config, Tools, and Base segments of Foundation.
 
 **Note:** pixel values will occasionally be required to meet design requirements, especially with things like offsets. Try to use them as sparingly as possible.
+
+<!-- Nicktique: might help to weave magic numbers in here: http://csswizardry.com/2012/11/code-smells-in-css/ -->

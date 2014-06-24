@@ -48,4 +48,6 @@ When determing whether a module is a Component or Structure, we find it helpful 
 - Does this module depend on or extend other Components?
 - Is this module abstract enough to use in other projects without making significant changes?
 
+<!-- Nicktique: second line ('Does this depend on / extend other Components') sounds like a Structure -->
+
 If you answer "no" to any of these questions, the module in question is more than likely a Structure.
