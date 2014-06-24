@@ -8,12 +8,12 @@ children: true
 Foundation
 ==========
 
-<!-- Nicktique: `the` appears too many times in this first paragraph -->
+Foundation represents the tools and materials required at the ground level of an MVCSS project. In other words, it provides the initial setup for your application.
 
-As mentioned earlier, the Foundation represents the tools and materials at the ground level. This is the initial setup for your application. The Foundation is made up of:
+Foundation is made up of:
 
-- Reset
-- Helpers
-- Config
-- Base
-- Tools
+- [Reset](/foundation/reset/)
+- [Helpers](/foundation/helpers/)
+- [Config](/foundation/config/)
+- [Base](/foundation/base/)
+- [Tools](/foundation/tools/)
