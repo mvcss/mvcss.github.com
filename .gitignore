@@ -15,3 +15,7 @@
 
 # I loath thee, .DS_Store
 .DS_Store
+
+# Legacynick
+.ruby-version
+.ruby-gemset
