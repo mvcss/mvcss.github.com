@@ -28,6 +28,15 @@ Libraries
 Articles
 --------
 
+- [CSS Architecture](http://philipwalton.com/articles/css-architecture/)
 - [Code Smells](http://csswizardry.com/2012/11/code-smells-in-css)
 - [Selector Intent](http://csswizardry.com/2012/07/shoot-to-kill-css-selector-intent)
 - [Atomic CSS](http://coding.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach)
+- [Single Responsibility](http://drewbarontini.com/articles/single-responsibility/)
+
+Videos
+------
+
+- [Architecting Scalable CSS](https://vimeo.com/70041549)
+- [Rationalising Designs for Better Quality Code](https://vimeo.com/78899870)
+- [Your CSS Is a Mess](https://vimeo.com/61755493)
