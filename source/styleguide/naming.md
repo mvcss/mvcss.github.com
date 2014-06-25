@@ -23,7 +23,7 @@ Components/Structures
 
 Structures and Components exist as Sass partials in their respective directories, and are always singular. Examples include `icon`, `button`, `grid`, `form`, and `modal`.
 
-If the name comprises two words, utilize `camelCase` &mdash; for instance, `taskList`.
+If the name comprises two words, utilize `camelCase`&mdash;for instance, `taskList`.
 
 Modifiers
 ---------
@@ -74,9 +74,7 @@ After creation, elements that need a modifier will use the root class (`.btn`) a
 <button class="btn btn--a btn--l">A Button</button>
 ```
 
-<!-- Nicktique: using `--a`, `--b`, etc. in the examples is dangerous since we've moved away from that. This next sentence is definitely off. -->
-
-**Note:** appearance modifiers typically work best when defined in sequence (`a`, `b`) or via function (`cancel`, `submit`) as opposed to look (`red`, `blue`).
+**Note:** modifiers typically work best when defined in hierarchical sequence (`a`, `b`) or via function (`cancel`, `submit`) as opposed to look (`red`, `blue`).
 
 States
 ------
@@ -92,21 +90,9 @@ Generally added via JavaScript, states are similar to modifiers but carry condit
 // *************************************
 
 .btn
-  border: 0
-  display: inline-block
-  line-height: 2.5
-  padding: 0 1em
-  text-weight: bold
+  // Styles
 
-// -------------------------------------
-//   Modifiers
-// -------------------------------------
-
-.btn--a
-  background: $c-base
-
-.btn--b
-  background: $c-action
+// Modifiers
 
 // -------------------------------------
 //   States
@@ -120,8 +106,6 @@ Context
 -------
 
 We also borrow the idea of context from SUIT. Modularizing styles into self-contained units works well *most* of the time, but you’ll occasionally need a parent element to fall in line.
-
-<!-- Nicktique: we've been using this a lot more in the context of list items, that might be a better example to drop in. -->
 
 The most common case tends to be positioning context. If you have a dropdown structure that’s being positioned absolutely, the parent element should be (at least) positioned relatively:
 
@@ -146,7 +130,7 @@ The most common case tends to be positioning context. If you have a dropdown str
   position: relative
 ```
 
-Similar to `is-` with states, `has-` denotes a context selector.
+Similar to `is-` with states, classes beginning with `has-` denote a context selector.
 
 Scaffolding
 -----------
@@ -174,9 +158,46 @@ Elements nested within a Component or Structure that need styling *based on bein
   border: 4px solid $c-invert
 ```
 
-For items in scaffolding, the Component/Structure name comes first, followed by a single hyphen and the subcomponent/substructure name (also in camelCase, if necessary). Where applicable, they can have their own modifiers, states, and subcomponents/substructures—more than two levels, though, typically means it’s time to refactor.
+For items in scaffolding, the Component/Structure name comes first, followed by a single hyphen and the subcomponent/substructure name (also in camelCase, if necessary). Where applicable, they can have their own modifiers, states, and subcomponents/substructures&mdash;more than two levels, though, typically means it’s time to refactor.
 
-<!-- Nicktique: a common misunderstanding with folks new to MVCSS is creating states / modifiers / etc. under a scaffolding item. An example of that might be helpful. -->
+```sass
+// *************************************
+//
+//   Card
+//   -> Individual style containers
+//
+// *************************************
+
+.card
+  background: $c-invert
+  border-radius: $b-borderRadius
+  box-shadow: $b-boxShadow
+  padding: $b-whitespace
+  position: relative
+
+// Modifiers, States, Context
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Header ----- //
+
+.card-header
+  border-bottom: $b-border
+  margin-bottom: $b-whitespace-s
+  margin-left: -$b-whitespace
+  margin-right: -$b-whitespace
+  padding-left: $b-whitespace
+  padding-right: $b-whitespace
+
+// Push
+
+.card-header--push
+  margin-bottom: $b-whitespace-l
+```
+
+In the `card` example above, we've defined a modifier class that affects the `card-header` scaffolding item. Applying the class directly to the element descendent of `card` helps us insert additional whitespace when needed, while also keeping CSS specificity low.
 
 Variables
 ---------
