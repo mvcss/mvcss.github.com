@@ -9,7 +9,7 @@ Structures
 
 Structures are a project's modules and user interface elements that are too specialized for use across multiple sites. In some cases, they might assume a certain context or content type, and in other cases, they might include thematic styles or responsive layout.
 
-When explaining what characterizes a [Component][component] versus a Structure, we outlined a few considerations that help us determine between the two:
+When explaining what characterizes a Component versus a Structure, we outlined a few considerations that help us determine between the two:
 
 - Size of scope
 - Dependencies on other modules
@@ -141,6 +141,3 @@ Portability
 -----------
 
 In the end, limiting scope and minimizing dependencies both affect *portability*, which is usually our biggest concern when classifying modules. If you can easily tweak a few lines of CSS inside a module and use it between projects, that means it's reasonably portable, and you have solid grounds for classifying it as a Component. On the other hand, if try to port a module and find yourself rewriting a significant amount of code, then the module is likely better classified as a Structure.
-
-
-[component]: /components

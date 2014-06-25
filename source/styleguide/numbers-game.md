@@ -9,7 +9,7 @@ nested: true
 Styleguide - The Numbers Game
 =============================
 
-As much as possible, we prefer sticking to relative units in a predictable scale. Base values are typically stored in Config (which we’ll cover in Foundation) and derived from that point on. For purposes of efficiency and standardization, you’ll define number values less often than usual in MVCSS.
+As much as possible, we prefer sticking to relative units in a predictable scale. Base values are typically stored in Config (which we’ll cover in [Foundation][foundation]) and derived from that point on. For purposes of efficiency and standardization, you’ll define number values less often than usual in MVCSS.
 
 Approach
 --------
@@ -24,3 +24,6 @@ This setup should be a easier to grasp once we reach the Config, Tools, and Base
 **Note:** pixel values will occasionally be required to meet design requirements, especially with things like offsets. Try to use them as sparingly as possible.
 
 <!-- Nicktique: might help to weave magic numbers in here: http://csswizardry.com/2012/11/code-smells-in-css/ -->
+
+
+[foundation]: /foundation

@@ -181,7 +181,7 @@ For items in scaffolding, the Component/Structure name comes first, followed by 
 Variables
 ---------
 
-Variables are a big enough consideration that we dedicate an entire file to keeping them organized. You can find all the information regarding variables in Config.
+Variables are a big enough consideration that we dedicate an entire file to keeping them organized. You can find all the information regarding variables in [Config][config].
 
 Images
 ------
@@ -193,6 +193,8 @@ A section about naming images? I know. Let's just get through it.
 - `img-*` for content images
 - Sub-folders for larger groups
 
+
+[config]: /config
+
 [bem-definitions]: http://bem.info/method/definitions
 [suit-naming-conventions]: https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md
-

@@ -11,7 +11,7 @@ Overview
 
 CSS, for all its simplicity, is a difficult language to manage in large-scale implementations. Naming, paths to abstraction, structure, and methodologies are all free-form; MVCSS seeks to provide order for these sorts of projects.
 
-Keeping with the architecture motif, applications are split into three major categories: *Foundation*, *Components*, and *Structures*. If Foundation represents tools, materials, and the ground level, Components are akin to creating a window from those materials, and Structures would be a number of windows and doors creating a wall.
+Keeping with the architecture motif, applications are split into three major categories: [*Foundation*][foundation], [*Components*][components], and [*Structures*][structures]. If Foundation represents tools, materials, and the ground level, Components are akin to creating a window from those materials, and Structures would be a number of windows and doors creating a wall.
 
 <!-- Nicktique: not something we need for the initial launch of v4, but something visual here would really help drive the main structure point home. An illustrated diagram of the foundation -> component -> structure setup, perhaps. -->
 
@@ -68,4 +68,10 @@ For a very early taste, here’s what a simple Component might consist of:
   text-transform: uppercase
 ```
 
-There’s no shortage of wonderful frameworks, ideas, and methods for tackling CSS across the web, and MVCSS wouldn’t exist without a few of these. Take a look at the Inspiration(link) section to find out more about our architectural roots.
+There’s no shortage of wonderful frameworks, ideas, and methods for tackling CSS across the web, and MVCSS wouldn’t exist without a few of these. Take a look at the [Resources][resources] section to find out more about our architectural roots.
+
+
+[components]: /components
+[foundation]: /foundation
+[resources]: /resources
+[structures]: /structures
