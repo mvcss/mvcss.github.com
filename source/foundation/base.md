@@ -13,8 +13,6 @@ Base contains all of the tag-level settings for default HTML elements. These are
 
 We define `html` and `body` styles at the top, and then divide the remaining content into Block and Inline sections.
 
-<!-- Nicktique: font-family, font-size, and line-height can all be combined into one fun line. -->
-
 ```sass
 // *************************************
 //

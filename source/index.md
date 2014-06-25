@@ -13,11 +13,7 @@ CSS, for all its simplicity, is a difficult language to manage in large-scale im
 
 Keeping with the architecture motif, applications are split into three major categories: [*Foundation*][foundation], [*Components*][components], and [*Structures*][structures]. If Foundation represents tools, materials, and the ground level, Components are akin to creating a window from those materials, and Structures would be a number of windows and doors creating a wall.
 
-<!-- Nicktique: not something we need for the initial launch of v4, but something visual here would really help drive the main structure point home. An illustrated diagram of the foundation -> component -> structure setup, perhaps. -->
-
 For a very early taste, here’s what a simple Component might consist of:
-
-<!-- Nicktique: we should pare this example down a bit, and perhaps even remove the variables. The structure is the most important part, so we want as few surprises as possible. -->
 
 ```sass
 // *************************************
