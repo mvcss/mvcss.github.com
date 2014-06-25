@@ -28,21 +28,7 @@ If serving font files from a known path (e.g. your server), we include Bourbon's
 +font-face('OpenSans', 'OpenSansItalic', normal, italic)
 ```
 
-<!-- Nicktique: this might not be the best method for importing Google Fonts - I've been doing it in dev because of the simplicity, but there might be a better way. This type of import isn't a Sass import, so it's probably creating another HTTP request. -->
-
-When using web fonts from Google Fonts, or a similar service, you can paste their generated `@import` link into this section.
-
-```sass
-// -------------------------------------
-//   @font-face
-// -------------------------------------
-
-// ----- Open Sans ----- //
-
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700)
-```
-
-Many other web font providers offer fonts exclusively via a JavaScript snippet. If you're using one of these providers, then you can expect to leave the `@font-face` section empty.
+**Note:** if you use a web font provider that offers fonts exclusively via a JavaScript snippet, you can expect to leave the `@font-face` section empty.
 
 Variables
 ---------
