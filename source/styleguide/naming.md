@@ -81,6 +81,8 @@ States
 
 Generally added via JavaScript, states are similar to modifiers but carry conditional context. `is-` denotes a state, such as `is-active`, and they’re utilized as such:
 
+<!-- Nicktique: should probably explain that compound selectors are used here so that states can be used elsewhere (is-active might apply to a bunch of items differently). -->
+
 ```sass
 // *************************************
 //
@@ -159,6 +161,21 @@ Elements nested within a Component or Structure that need styling *based on bein
 ```
 
 For items in scaffolding, the Component/Structure name comes first, followed by a single hyphen and the subcomponent/substructure name (also in camelCase, if necessary). Where applicable, they can have their own modifiers, states, and subcomponents/substructures&mdash;more than two levels, though, typically means it’s time to refactor.
+
+<!-- Nicktique: 'Push' header should read 'Modifiers'. Substructures sill follow the same rules:
+
+  // ----- Header ----- //
+
+  .card-header
+
+  // Modifiers
+
+  .card-header--push
+
+  // States
+
+  .card-header.is-active
+-->
 
 ```sass
 // *************************************

@@ -41,7 +41,7 @@ But what happens when we try to make our site responsive? On small-screen device
 - Stack links atop one another
 - Apply an alternating background color to each list item
 
-See the problem? Our module definitely isn't `list-inline` anymore. It now needs its own aesthetics and responsive behavior&mdash;both of which are tailored to their surrounding design. Although we might use this pattern in multiple places on the site, its broad scope makes copying it across different designs unlikely. In this case, our best bet is to create a new Structure, and define our new themed, responsive list module inside.
+See the problem? Our module definitely isn't `list--inline` anymore. It now needs its own aesthetics and responsive behavior&mdash;both of which are tailored to their surrounding design. Although we might use this pattern in multiple places on the site, its broad scope makes copying it across different designs unlikely. In this case, our best bet is to create a new Structure, and define our new themed, responsive list module inside.
 
 Dependencies
 ------------

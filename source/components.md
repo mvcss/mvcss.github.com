@@ -7,7 +7,7 @@ priority: 14
 Components
 ==========
 
-The Components folder is where we start building the recognizable pieces of a user interface. These are abstract, reasonably portable modules that can be swapped in and out of different projects with relative ease.
+The beginnings of a recognizable user interface live in the Components directory. These are abstract, reasonably portable modules that can be swapped in and out of different projects with relative ease.
 
 Some Components, like `grid` and `card`, are used for layout and containers, and can encompass many other modules.
 

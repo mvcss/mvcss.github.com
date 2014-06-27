@@ -88,4 +88,4 @@ Collaboration with developers can sometimes be difficult, but we've found a way 
 // -------------------------------------
 ```
 
-You can add any temporary styles to this section, which will allow the maintainer of the CSS to rewrite or sort the styles appropriately. We've found that developers respect, and even enjoy, this system, as they don't have to fuss with any of the existing organization.
+You can add any temporary styles to this section, which will allow the maintainer of the CSS to rewrite or sort the styles appropriately. We've found that developers respect (and even enjoy) this system, since they're free from stressing over the proper placement or structure of a style rule.

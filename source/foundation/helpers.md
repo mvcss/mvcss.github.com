@@ -14,7 +14,7 @@ Helpers are the functions, mixins, extends, and animations used throughout an MV
 Functions
 ---------
 
-Because of the many useful functions that come pre-installed with Sass, we rarely need to define any of our own. Still, there may be occasions where you need to define some other functions (e.g., `em`, `rem`, `strip-units`). For these cases, we've dedicated the Functions section within Helpers to housing all additional functions.
+Because of the many useful functions Sass gives us for free, we rarely need to define any of our own. Still, there may be occasions where you need to define some others (e.g., `em`, `rem`, `strip-units`). For these cases, we've dedicated the Functions section within Helpers to housing any necessary additions.
 
 Mixins
 ------
@@ -48,12 +48,14 @@ By now using the `respond-to` mixin throughout a project, you can write less cod
 +respond-to($breakpoint-m)
 ```
 
+Entries in the Mixin section should always take arguments and have the ability to differ when utilized. If you're looking to add an unchanging group of properties to reuse, they belong in Extends.
+
 Extends
 -------
 
 Extends are collections of rules to use either directly in the markup, or to *extend* within modules. These are generally more verbose than Tools, but still adhere to the single responsibility principle.
 
-Even though we frequently extend these classes within modules, we don't use the percent sign syntax (`%className`) to create placeholder selectors in Sass. By never modifying Extends based on context, you don't need to worry about the potential [selector bloat][csswizardry-extends] associated with extending classes.
+Even though we frequently extend these classes within modules, we avoid the percent sign syntax (`%className`) to create placeholder selectors in Sass. It's a good reminder to ourselves that these classes shouldn't be nested in the context of anything else, avoiding potential [selector bloat][csswizardry-extends] associated with extends.
 
 ### Inside Markup
 
@@ -70,8 +72,8 @@ The `group` class applies multiple rules to a single element, and in the followi
 
 ```html
 <footer class="group">
-    <p class="fl">Made with Envy</p>
-    <img class="fr" src="logo-envy.svg" alt="Envy Logo">
+  <p class="fl">Made with Envy</p>
+  <img class="fr" src="logo-envy.svg" alt="Envy Logo">
 </footer>
 ```
 

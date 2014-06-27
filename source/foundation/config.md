@@ -42,6 +42,8 @@ All variables in MVCSS are defined in Config and are prefixed by their role or r
 *   `$componentName-*` for Components
 *   `$structureName-*` for Structures
 
+<!-- Nicktique: it doesn't matter much, but for consistency I like using $g- to define breakpoints. Additionally, $f- is now a weird divergence - $b-fontFamily makes more sense if we're gonna use $b-fontSize. -->
+
 Colors are a somewhat complicated issue, but we've had the most success defining an initial palette, and then referencing those colors within other varibles. In projects with a limited set of colors, you may not need a palette section, so we encourage you to choose the approach you prefer.
 
 ```sass
@@ -51,29 +53,12 @@ Colors are a somewhat complicated issue, but we've had the most success defining
 
 // ----- Palette ----- //
 
-// Blue
-
 $cerulean: #017ba7
-
-// Green
-
 $forest: #7ba05b
-
-// Grey
-
-$jet: #343434
 $gainsboro: #ecf0f1
-
-// Red
-
-$scarlet: #ff3f00
-
-// Yellow
-
 $gold: #ffd700
-
-// White
-
+$jet: #343434
+$scarlet: #ff3f00
 $white: #fff
 
 // ----- Base ----- //
@@ -85,16 +70,11 @@ $b-border: $b-borderWidth $b-borderStyle $b-borderColor
 $b-borderRadius: 3px
 $b-boxShadow: 0 2px 0 rgba($jet, 0.25)
 $b-fontSize: 16px
-$b-fontSize-xs: 60%
 $b-fontSize-s: 75%
 $b-fontSize-m: 90%
 $b-fontSize-l: 115%
-$b-fontSize-xl: 150%
 $b-lineHeight: 1.5
-$b-maxWidth: 62.5em // ~1000px
-$b-maxWidth-s: 43.75em // ~700px
 $b-whitespace: 1.25em // ~20px
-$b-whitespace-xs: 0.25 * $b-whitespace
 $b-whitespace-s: 0.5 * $b-whitespace
 $b-whitespace-l: 2 * $b-whitespace
 $b-whitespace-xl: 4 * $b-whitespace
@@ -128,6 +108,8 @@ $grid-defaults: "s" $breakpoint-s, "m" $breakpoint-m, "l" $breakpoint-l
 $grid-gutter: 20px
 $grid-silent: false
 ```
+
+<!-- Nicktique: if we switch $breakpoint-n or $g-n or whatever to a map, we could avoid needing $grid-defaults -->
 
 [bourbon-mixin-fontface]: https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-face.scss
 
