@@ -76,16 +76,16 @@ Using both the `grid` Component and the `collection` Structure, we can apply bot
 
 ```html
 <div class="grid collection collection--1of3">
-  <div class="collection-item grid-box grid-box--1of3">
+  <div class="grid-box grid-box--1of3 collection-item">
     <!-- Content -->
   </div>
-  <div class="collection-item grid-box grid-box--1of3">
+  <div class="grid-box grid-box--1of3 collection-item">
     <!-- Content -->
   </div>
-  <div class="collection-item grid-box grid-box--1of3">
+  <div class="grid-box grid-box--1of3 collection-item">
     <!-- Content -->
   </div>
-  <div class="collection-item grid-box grid-box--1of3">
+  <div class="grid-box grid-box--1of3 collection-item">
     <!-- Content -->
   </div>
 </div>
