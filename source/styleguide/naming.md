@@ -162,21 +162,6 @@ Elements nested within a Component or Structure that need styling *based on bein
 
 For items in scaffolding, the Component/Structure name comes first, followed by a single hyphen and the subcomponent/substructure name (also in camelCase, if necessary). Where applicable, they can have their own modifiers, states, and subcomponents/substructures&mdash;more than two levels, though, typically means it’s time to refactor.
 
-<!-- Nicktique: 'Push' header should read 'Modifiers'. Substructures sill follow the same rules:
-
-  // ----- Header ----- //
-
-  .card-header
-
-  // Modifiers
-
-  .card-header--push
-
-  // States
-
-  .card-header.is-active
--->
-
 ```sass
 // *************************************
 //
@@ -208,7 +193,7 @@ For items in scaffolding, the Component/Structure name comes first, followed by 
   padding-left: $b-whitespace
   padding-right: $b-whitespace
 
-// Push
+// Modifiers
 
 .card-header--push
   margin-bottom: $b-whitespace-l
