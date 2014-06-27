@@ -51,7 +51,7 @@ By now using the `respond-to` mixin throughout a project, you can write less cod
 Extends
 -------
 
-Extends are collections of rules to use either directly in the markup or to *extend* within modules. These are generally more verbose than Tools, but still adhere to the single responsibility principle.
+Extends are collections of rules to use either directly in the markup, or to *extend* within modules. These are generally more verbose than Tools, but still adhere to the single responsibility principle.
 
 Even though we frequently extend these classes within modules, we don't use the percent sign syntax (`%className`) to create placeholder selectors in Sass. By never modifying Extends based on context, you don't need to worry about the potential [selector bloat][csswizardry-extends] associated with extending classes.
 
