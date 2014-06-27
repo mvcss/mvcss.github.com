@@ -65,7 +65,7 @@ After defining the base properties of a Component or Structure, modifiers exist 
   background: $c-base
 
 .btn--b
-  background: $c-action
+  background: $c-highlight
 ```
 
 After creation, elements that need a modifier will use the root class (`.btn`) and any number of modifiers deemed necessary:
