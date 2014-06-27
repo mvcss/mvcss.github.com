@@ -42,10 +42,10 @@ By now using the `respond-to` mixin throughout a project, you can write less cod
 
 ```sass
 // Standard CSS
-@media screen and (min-width: $breakpoint-m)
+@media screen and (min-width: $g-m)
 
 // Sass mixin
-+respond-to($breakpoint-m)
++respond-to($g-m)
 ```
 
 Entries in the Mixin section should always take arguments and have the ability to differ when utilized. If you're looking to add an unchanging group of properties to reuse, they belong in Extends.

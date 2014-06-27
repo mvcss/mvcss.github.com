@@ -38,11 +38,9 @@ All variables in MVCSS are defined in Config and are prefixed by their role or r
 *   `$b-*` for base variables
 *   `$c-*` for colors
 *   `$f-*` for fonts
-*   `$breakpoint-*` for breakpoints
+*   `$g-*` for breakpoints
 *   `$componentName-*` for Components
 *   `$structureName-*` for Structures
-
-<!-- Nicktique: it doesn't matter much, but for consistency I like using $g- to define breakpoints. Additionally, $f- is now a weird divergence - $b-fontFamily makes more sense if we're gonna use $b-fontSize. -->
 
 Colors are a somewhat complicated issue, but we've had the most success defining an initial palette, and then referencing those colors within other varibles. In projects with a limited set of colors, you may not need a palette section, so we encourage you to choose the approach you prefer.
 
@@ -63,17 +61,27 @@ $white: #fff
 
 // ----- Base ----- //
 
+// Borders & Box Shadow
+
 $b-borderColor: lighten($jet, 30%)
+$b-borderRadius: 3px
 $b-borderStyle: solid
 $b-borderWidth: 2px
 $b-border: $b-borderWidth $b-borderStyle $b-borderColor
-$b-borderRadius: 3px
 $b-boxShadow: 0 2px 0 rgba($jet, 0.25)
+
+// Typography
+
+$b-fontFamily-heading: 'OpenSans', sans-serif
+$b-fontFamily: 'OpenSans', sans-serif
 $b-fontSize: 16px
 $b-fontSize-s: 75%
 $b-fontSize-m: 90%
 $b-fontSize-l: 115%
 $b-lineHeight: 1.5
+
+// Spacing
+
 $b-whitespace: 1.25em // ~20px
 $b-whitespace-s: 0.5 * $b-whitespace
 $b-whitespace-l: 2 * $b-whitespace
@@ -90,21 +98,16 @@ $c-subdue: lighten($cerulean, 40%)
 $c-success: $forest
 $c-warning: $gold
 
-// ----- Fonts ----- //
-
-$f-base: 'OpenSans', sans-serif
-$f-header: 'OpenSans', sans-serif
-
 // ----- Breakpoints ----- //
 
-$breakpoint-s: 30em // ~480px
-$breakpoint-m: 43.75em // ~768px
-$breakpoint-l: 64em // ~1024px
+$g-s: 30em // ~480px
+$g-m: 43.75em // ~768px
+$g-l: 64em // ~1024px
 
 // ----- Grid ----- //
 
 $grid-columns: 12
-$grid-defaults: "s" $breakpoint-s, "m" $breakpoint-m, "l" $breakpoint-l
+$grid-defaults: "s" $g-s, "m" $g-m, "l" $g-l
 $grid-gutter: 20px
 $grid-silent: false
 ```
