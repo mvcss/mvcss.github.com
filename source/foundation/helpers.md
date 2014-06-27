@@ -21,7 +21,7 @@ Mixins
 
 We use mixins to reduce the amount of repeated code when authoring style sheets. Usually, this involves simplifying lengthy syntaxes, as well as providing fallbacks and vendor prefixes for unsupported CSS properties.
 
-Take media queries for example: the most commonly used arguments are `screen` and `min-width`, so we made a mixin that includes those values as defaults unless stated otherwise.
+Take media queries for example: the most commonly used arguments are `screen` and `min-width`, so we made a mixin that includes those values as defaults, unless stated otherwise.
 
 ```sass
 // ----- Respond-to ----- //
