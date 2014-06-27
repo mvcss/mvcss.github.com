@@ -29,7 +29,7 @@ Tools are as limited in responsibility as possible, allowing you to mix and matc
 Going Too Far
 -------------
 
-If you find yourself using multiple Tools to acheive a reusable group of styles, it may be a sign that you should define those properties in their own module or modifier.
+If you find yourself using multiple Tools to achieve a reusable group of styles, it may be a sign that you should define those properties in their own module or modifier.
 
 ```html
 <a class="btn pbm pll prl ptm tsl" href="v3.zip" >Download v3.0.0</a>
