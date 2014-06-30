@@ -42,5 +42,5 @@ Markup
 - Apply modifier classes after each individual module
 
 ```html
-<div class="grid collection collection--1of3 bch mtl tci is-active has-dropdown"></div>
+<div class="g collection collection--1of3 bch mtl tci is-active has-dropdown"></div>
 ```

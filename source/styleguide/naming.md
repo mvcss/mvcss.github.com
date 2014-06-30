@@ -21,7 +21,7 @@ A class such as `.mbm` is a shorthand way to define a basic unit of bottom margi
 Components/Structures
 ---------------------
 
-Structures and Components exist as Sass partials in their respective directories, and are always singular. Examples include `icon`, `button`, `grid`, `form`, and `modal`.
+Structures and Components exist as Sass partials in their respective directories, and are always singular. Examples include `icon`, `button`, `g` (grid), `form`, and `modal`.
 
 If the name comprises two words, utilize `camelCase`&mdash;for instance, `taskList`.
 
@@ -42,7 +42,7 @@ After defining the base properties of a Component or Structure, modifiers exist 
   border: 0
   display: inline-block
   line-height: 2.5
-  padding: 0 $b-whitespace
+  padding: 0 $b-space
   font-weight: bold
 
 // -------------------------------------
@@ -174,7 +174,7 @@ For items in scaffolding, the Component/Structure name comes first, followed by 
   background: $c-invert
   border-radius: $b-borderRadius
   box-shadow: $b-boxShadow
-  padding: $b-whitespace
+  padding: $b-space
   position: relative
 
 // Modifiers, States, Context
@@ -187,19 +187,19 @@ For items in scaffolding, the Component/Structure name comes first, followed by 
 
 .card-header
   border-bottom: $b-border
-  margin-bottom: $b-whitespace-s
-  margin-left: -$b-whitespace
-  margin-right: -$b-whitespace
-  padding-left: $b-whitespace
-  padding-right: $b-whitespace
+  margin-bottom: $b-space-s
+  margin-left: -$b-space
+  margin-right: -$b-space
+  padding-left: $b-space
+  padding-right: $b-space
 
 // Modifiers
 
 .card-header--push
-  margin-bottom: $b-whitespace-l
+  margin-bottom: $b-space-l
 ```
 
-In the `card` example above, we've defined a modifier class that affects the `card-header` scaffolding item. Applying the class directly to the element descendent of `card` helps us insert additional whitespace when needed, while also keeping CSS specificity low.
+In the `card` example above, we've defined a modifier class that affects the `card-header` scaffolding item. Applying the class directly to the element descendent of `card` helps us insert additional space when needed, while also keeping CSS specificity low.
 
 Variables
 ---------

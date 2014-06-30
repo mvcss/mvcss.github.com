@@ -79,14 +79,14 @@ The `group` class applies multiple rules to a single element, and in the followi
 
 ### Inside Modules
 
-In the following `grid` Component, we extend the `group` class within the module itself.
+In the following `g` (grid) Component, we extend the `group` class within the module itself.
 
 ```sass
-.grid
+.g
   @extend .group
   display: block
-  margin-left: -$grid-gutter / 2
-  margin-right: -$grid-gutter / 2
+  margin-left: -$g-gutter / 2
+  margin-right: -$g-gutter / 2
 ```
 
 Animations

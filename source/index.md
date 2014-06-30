@@ -27,7 +27,7 @@ For a very early taste, here’s what a simple Component might consist of:
   background: $c-invert
   border-radius: $b-borderRadius
   box-shadow: $b-boxShadow
-  padding: $b-whitespace
+  padding: $b-space
 
 // -------------------------------------
 //   Modifiers
@@ -36,7 +36,7 @@ For a very early taste, here’s what a simple Component might consist of:
 // ----- Sizes ----- //
 
 .card--s
-  padding: $b-whitespace-s
+  padding: $b-space-s
 
 // ----- Theme ----- //
 
@@ -58,7 +58,7 @@ For a very early taste, here’s what a simple Component might consist of:
 // ----- Label ----- //
 
 .card-label
-  font-size: $fontSize-s
+  font-size: $b-fontSize-s
   font-weight: bold
   text-transform: uppercase
 ```

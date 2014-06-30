@@ -41,7 +41,7 @@ In the example above, we're trying to create a large button by using only Tools.
 ```sass
 .btn--l
   font-size: $b-fontSize-l
-  padding: $b-whitespace $b-whitespace-l
+  padding: $b-space $b-space-l
 ```
 
 ```html

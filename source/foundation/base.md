@@ -45,11 +45,11 @@ Collapsing margins, while an intentional feature of CSS, only add complexity whe
 // -------------------------------------
 
 ul, p
-  margin-bottom: $b-whitespace
+  margin-bottom: $b-space
   margin-top: 0
 
 li
-  margin-bottom: $b-whitespace-s
+  margin-bottom: $b-space-s
   margin-top: 0
 
 // ----- Headers ----- //
@@ -61,7 +61,7 @@ h4, .h4
   font-family: $b-fontFamily-heading
   font-weight: bold
   line-height: 1.2
-  margin-bottom: $b-whitespace-xs
+  margin-bottom: $b-space-xs
   margin-top: 0
 ```
 

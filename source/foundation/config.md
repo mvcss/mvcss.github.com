@@ -46,7 +46,7 @@ Colors are a somewhat complicated issue, but we've had the most success defining
 
 ```sass
 // -------------------------------------
-//   Variables
+//   Colors
 // -------------------------------------
 
 // ----- Palette ----- //
@@ -61,34 +61,6 @@ $white: #fff
 
 // ----- Base ----- //
 
-// Borders & Box Shadow
-
-$b-borderColor: lighten($jet, 30%)
-$b-borderRadius: 3px
-$b-borderStyle: solid
-$b-borderWidth: 2px
-$b-border: $b-borderWidth $b-borderStyle $b-borderColor
-$b-boxShadow: 0 2px 0 rgba($jet, 0.25)
-
-// Typography
-
-$b-fontFamily-heading: 'OpenSans', sans-serif
-$b-fontFamily: 'OpenSans', sans-serif
-$b-fontSize: 16px
-$b-fontSize-s: 75%
-$b-fontSize-m: 90%
-$b-fontSize-l: 115%
-$b-lineHeight: 1.5
-
-// Spacing
-
-$b-space: 1.25em // ~20px
-$b-space-s: 0.5 * $b-space
-$b-space-l: 2 * $b-space
-$b-space-xl: 4 * $b-space
-
-// ----- Colors ----- //
-
 $c-background-invert: $white
 $c-background: $gainsboro
 $c-error: $scarlet
@@ -99,18 +71,59 @@ $c-subdue: lighten($cerulean, 40%)
 $c-success: $forest
 $c-warning: $gold
 
-// ----- Breakpoints ----- //
+// ----- Components ----- //
+
+// ...
+
+// ----- Structures ----- //
+
+// ...
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+// ----- Borders & Box Shadow ----- //
+
+$b-borderColor: lighten($jet, 30%)
+$b-borderRadius: 3px
+$b-borderStyle: solid
+$b-borderWidth: 2px
+$b-border: $b-borderWidth $b-borderStyle $b-borderColor
+$b-boxShadow: 0 2px 0 rgba($jet, 0.25)
+
+// ----- Typography ----- //
+
+$b-fontFamily-heading: 'OpenSans', sans-serif
+$b-fontFamily: 'OpenSans', sans-serif
+$b-fontSize: 16px
+$b-fontSize-s: 75%
+$b-fontSize-m: 90%
+$b-fontSize-l: 115%
+$b-lineHeight: 1.5
+
+// ----- Sizing ----- //
+
+$b-space: em(20px)
+$b-space-s: 0.5 * $b-space
+$b-space-l: 2 * $b-space
+$b-space-xl: 4 * $b-space
+
+// -------------------------------------
+//   Components
+// -------------------------------------
+
+// ----- Grid ----- //
 
 $g-s: em(480px)
 $g-m: em(800px)
 $g-l: em(1024px)
 
-// ----- Grid ----- //
+// -------------------------------------
+//   Structures
+// -------------------------------------
 
-$g-columns: 12
-$g-defaults: "s" $g-s, "m" $g-m, "l" $g-l
-$g-gutter: 20px
-$g-silent: false
+// ...
 ```
 
 

@@ -48,7 +48,7 @@ Dependencies
 
 Unlike Components, Structures can depend on, or even extend, pre-existing Components. This is useful when you want to add theme or behavior to a Component, but keep any unique changes contained within their own module.
 
-In MVCSS, we use our `grid` Component primarily for page layout. We try to keep it simple and assume as little as possible, but there are cases where we want to include similar functionality inside of a more specific module. Float-based grids don't always behave predictably when their items have variable a height, so we've defined a `collection` Structure to add contextual clearfixing.
+In MVCSS, we use our `g` (grid) Component primarily for page layout. We try to keep it simple and assume as little as possible, but there are cases where we want to include similar functionality inside of a more specific module. Float-based grids don't always behave predictably when their items have variable a height, so we've defined a `collection` Structure to add contextual clearfixing.
 
 ```sass
 .collection
@@ -69,23 +69,23 @@ In MVCSS, we use our `grid` Component primarily for page layout. We try to keep 
 // ----- Item ----- //
 
 .collection-item
-  margin-bottom: $b-whitespace-l
+  margin-bottom: $b-space-l
 ```
 
-Using both the `grid` Component and the `collection` Structure, we can apply both modules' classes directly in the markup.
+Using both the `g` (grid) Component and the `collection` Structure, we can apply both modules' classes directly in the markup.
 
 ```html
-<div class="grid collection collection--1of3">
-  <div class="grid-box grid-box--1of3 collection-item">
+<div class="g collection collection--1of3">
+  <div class="g-b g-b--1of3 collection-item">
     <!-- Content -->
   </div>
-  <div class="grid-box grid-box--1of3 collection-item">
+  <div class="g-b g-b--1of3 collection-item">
     <!-- Content -->
   </div>
-  <div class="grid-box grid-box--1of3 collection-item">
+  <div class="g-b g-b--1of3 collection-item">
     <!-- Content -->
   </div>
-  <div class="grid-box grid-box--1of3 collection-item">
+  <div class="g-b g-b--1of3 collection-item">
     <!-- Content -->
   </div>
 </div>
@@ -95,14 +95,14 @@ But that's a lot of classes to keep track of! Luckily, Sass can help us simplify
 
 ```sass
 .collection
-  @extend .grid
+  @extend .g
 
 // -------------------------------------
 //   Modifiers
 // -------------------------------------
 
 .collection--1of3
-  @extend .grid-box--1of3
+  @extend .g-b--1of3
 
   .collection-item:nth-child(3n + 1)
     clear: left
@@ -114,8 +114,8 @@ But that's a lot of classes to keep track of! Luckily, Sass can help us simplify
 // ----- Item ----- //
 
 .collection-item
-  @extend .grid-box
-  margin-bottom: $b-whitespace-l
+  @extend .g-b
+  margin-bottom: $b-space-l
 ```
 
 And now we apply only a *single set* of classes in the markup.

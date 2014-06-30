@@ -9,16 +9,16 @@ Components
 
 The beginnings of a recognizable user interface live in the Components directory. These are abstract, reasonably portable modules that can be swapped in and out of different projects with relative ease.
 
-Some Components, like `grid` and `card`, are used for layout and containers, and can encompass many other modules.
+Some Components, like `g` (grid) and `card`, are used for layout and containers, and can encompass many other modules.
 
 ```html
-<div class="grid">
-  <div class="grid-box grid-box--1of2">
+<div class="g">
+  <div class="g-box g-b--1of2">
     <div class="card">
       <!-- Content -->
     </div>
   </div>
-  <div class="grid-box grid-box--1of2">
+  <div class="g-b g-b--1of2">
     <div class="card">
       <!-- Content -->
     </div>

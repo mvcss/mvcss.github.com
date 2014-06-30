@@ -16,7 +16,7 @@ Approach
 
 - A pixel value for a base font size (stored in Config) is set on the root `html` element, thereby preparing both text sizing and the relative value of an em unit
 - Line heights are unitless, e.g. `1.5`
-- Spacing (padding, margin, etc.) is a multiple of a stored base whitespace value, set in ems
+- Spacing (padding, margin, etc.) is a multiple of a stored base space value, set in ems
 - Font sizes (aside from the `html` element) are defined with percentage values, scaling the other relative properties on the element simultaneously
 
 This setup should be a easier to grasp once we reach the Config, Tools, and Base segments of Foundation.
