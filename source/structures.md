@@ -74,6 +74,8 @@ In MVCSS, we use our `g` (grid) Component primarily for page layout. We try to k
 
 Using both the `g` (grid) Component and the `collection` Structure, we can apply both modules' classes directly in the markup.
 
+**Note:** applying multiple modifiers to `grid` and `grid-box` can make markup difficult to read quickly, so we've shortened the classes to `g` and `g-b`.
+
 ```html
 <div class="g collection collection--1of3">
   <div class="g-b g-b--1of3 collection-item">

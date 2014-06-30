@@ -108,6 +108,6 @@ For example, in the case of `fadeIn`, we're likely to use this animation across 
     opacity: 1
 ```
 
-***Note:*** Animations unique to specific modules are defined at the bottom of their respective style sheets.
+**Note:** animations unique to specific modules are defined at the bottom of their respective style sheets.
 
 [csswizardry-extends]: http://csswizardry.com/2014/01/extending-silent-classes-in-sass/
