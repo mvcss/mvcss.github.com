@@ -8,7 +8,7 @@
     %title= (title = data.page.title) ? "#{title} / MVCSS" : 'MVCSS'
     %meta(name="description" content="MVCSS - A Sass-based CSS architecture for creating predictable and maintainable application style.")
 
-    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300'
+    = stylesheet_link_tag '//fonts.googleapis.com/css?family=Roboto+Slab:400,700,300'
     = stylesheet_link_tag 'application'
 
     = partial 'shared/google_analytics' if build?
@@ -36,7 +36,7 @@
 
     = partial 'shared/gauges' if build?
 
-    = javascript_include_tag 'http://code.jquery.com/jquery-1.9.1.min.js'
+    = javascript_include_tag '//code.jquery.com/jquery-1.9.1.min.js'
     :coffeescript
       $ ->
         $('.l-sidebar-toggle').on 'click', (e) ->
