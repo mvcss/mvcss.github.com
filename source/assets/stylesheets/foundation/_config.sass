@@ -11,22 +11,58 @@
 
 // ----- Variables ----- //
 
-$f-base-src: 'http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic' !default
-$f-header-src: 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' !default
+$b-fontFamily-src: 'http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic' !default
+$b-fontFamily-heading-src: 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' !default
 
 // ----- Imports ----- //
 
-@if $f-base-src == $f-header-src
-  @import url($f-base-src)
+@if $b-fontFamily-src == $b-fontFamily-heading-src
+  @import url($b-fontFamily-src)
 @else
-  @import url($f-base-src)
-  @import url($f-header-src)
+  @import url($b-fontFamily-src)
+  @import url($b-fontFamily-heading-src)
 
 // -------------------------------------
-//   Variables
+//   Colors
 // -------------------------------------
 
 // ----- Base ----- //
+
+$c-background-invert: #fff !default
+$c-background: #ecf0f1 !default
+$c-highlight: #2c3e50 !default
+$c-secondary: #666 !default
+$c-subdue: #95a5a6 !default
+$c-text-invert: #fff !default
+$c-text: #333 !default
+
+// ----- Structures ----- //
+
+// Header
+
+$header-background: $c-background-invert !default
+$header-title-link-color: $c-subdue !default
+$header-title-link-hover-color: $c-text !default
+
+// Sidebar
+
+$sidebar-background: darken($c-background, 10%) !default
+$sidebar-link-color: $c-secondary !default
+$sidebar-link-active-background: $c-highlight !default
+$sidebar-link-active-color: $c-text-invert !default
+$sidebar-link-hover-background: darken($c-background, 20%) !default
+$sidebar-link-hover-color: $c-text !default
+$sidebar-nav-sub-background: none !default
+
+// Toggle
+
+$toggle-color: $c-subdue !default
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+// ----- Borders & Box Shadow ----- //
 
 $b-borderColor: lighten(#95a5a6, 20%) !default
 $b-borderStyle: solid !default
@@ -34,6 +70,12 @@ $b-borderWidth: 2px !default
 $b-border: $b-borderWidth $b-borderStyle $b-borderColor !default
 $b-borderRadius: 3px !default
 $b-boxShadow: 0 2px 0 rgba(#333, 0.25) !default
+
+// ----- Typography ----- //
+
+$b-fontFamily-heading: 'Open Sans', serif !default
+$b-fontFamily-mono: Courier, monospace !default
+$b-fontFamily: 'Merriweather', serif !default
 $b-fontSize: 16px !default
 $b-fontSize-xs: 60% !default
 $b-fontSize-s: 75% !default
@@ -41,57 +83,38 @@ $b-fontSize-m: 90% !default
 $b-fontSize-l: 115% !default
 $b-fontSize-xl: 150% !default
 $b-lineHeight: 1.6 !default
-$b-maxWidth: 36.5em !default
-$b-whitespace: 1.25em !default
-$b-whitespace-xs: 0.25 * $b-whitespace !default
-$b-whitespace-s: 0.5 * $b-whitespace !default
-$b-whitespace-l: 2 * $b-whitespace !default
-$b-whitespace-xl: 4 * $b-whitespace !default
 
-// ----- Colors ----- //
+// ----- Sizing ----- //
 
-$c-background: #ecf0f1 !default
-$c-base: #333 !default
-$c-highlight: #2c3e50 !default
-$c-invert: #fff !default
-$c-secondary: #666 !default
-$c-subdue: #95a5a6 !default
-
-// ----- Fonts ----- //
-
-$f-base: 'Merriweather', serif !default
-$f-header: 'Open Sans', serif !default
-$f-mono: Courier, monospace !default
+$b-maxWidth: em(600px) !default
+$b-space: em(20px) !default
+$b-space-xs: 0.25 * $b-space !default
+$b-space-s: 0.5 * $b-space !default
+$b-space-l: 2 * $b-space !default
+$b-space-xl: 4 * $b-space !default
 
 // ----- Breakpoints ----- //
 
 $breakpoint-desk: 57.5em !default
 $breakpoint-tablet: 41.25em !default
 
+// -------------------------------------
+//   Structures
+// -------------------------------------
+
 // ----- Header ----- //
 
-$header-background: $c-invert !default
 $header-height: 45px !default
 $header-title-align: left !default
-$header-title-link-color: $c-subdue !default
-$header-title-link-hover-color: $c-base !default
 
 // ----- Sidebar ----- //
 
-$sidebar-background: darken($c-background, 10%) !default
 $sidebar-collapsible: true !default
-$sidebar-link-color: $c-secondary !default
-$sidebar-link-active-background: $c-highlight !default
-$sidebar-link-active-color: $c-invert !default
 $sidebar-link-fontSize: 80% !default
-$sidebar-link-hover-background: darken($c-background, 20%) !default
-$sidebar-link-hover-color: $c-base !default
-$sidebar-nav-sub-background: none !default
 $sidebar-width: 15.625em !default
 
 // ----- Toggle ----- //
 
-$toggle-color: $c-subdue !default
 $toggle-height: 3px !default
 $toggle-width: 24px !default
 

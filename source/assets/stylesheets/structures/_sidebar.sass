@@ -53,17 +53,17 @@
   background: lighten($c-highlight, 10%)
   border-color: darken($c-highlight, 10%)
   border-radius: $b-borderRadius
-  color: $c-invert
+  color: $c-text-invert
   display: block
   line-height: 2.5
-  margin: $b-whitespace-s
-  padding: 0 $b-whitespace
+  margin: $b-space-s
+  padding: 0 $b-space
   text-align: center
   &:hover,
   &:focus
     background: lighten($c-highlight, 15%)
     border-color: darken($c-highlight, 10%)
-    color: $c-invert
+    color: $c-text-invert
 
 // ----- Label ----- //
 
@@ -74,7 +74,7 @@
   font-weight: normal
   letter-spacing: $sidebar-label-letterSpacing
   margin: 0
-  padding: 0 $b-whitespace $b-whitespace-s
+  padding: 0 $b-space $b-space-s
   text-transform: uppercase
 
 // ----- Link ----- //
@@ -83,9 +83,9 @@
   border: 0
   color: $sidebar-link-color
   display: block
-  font-family: $f-header
+  font-family: $b-fontFamily-heading
   font-size: $sidebar-link-fontSize
-  padding: $b-whitespace-s $b-whitespace
+  padding: $b-space-s $b-space
   &:hover,
   &:focus
     background: $sidebar-link-hover-background
@@ -94,7 +94,7 @@
 // Sub
 
 .sidebar-link--sub
-  padding-left: $b-whitespace-l
+  padding-left: $b-space-l
 
 // Active
 

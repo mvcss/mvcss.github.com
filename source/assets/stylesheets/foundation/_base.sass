@@ -7,8 +7,8 @@
 
 html
   background: $c-background
-  color: $c-base
-  font-family: $f-base
+  color: $c-text
+  font-family: $b-fontFamily
   font-size: $b-fontSize
   line-height: $b-lineHeight
 
@@ -23,8 +23,8 @@ body
 .content
   +transform(translateX(0))
   +transition-transform(0.3s ease-in-out)
-  margin-bottom: $b-whitespace-xl
-  padding-top: $b-whitespace-xs
+  margin-bottom: $b-space-xl
+  padding-top: $b-space-xs
   @if $sidebar-collapsible
     .is-sidebar-open &
       +transform(translateX($sidebar-width))
@@ -45,33 +45,33 @@ body
 // -------------------------------------
 
 ul, ol, p
-  margin-bottom: $b-whitespace
+  margin-bottom: $b-space
   margin-top: 0
 
 ul, ol
-  padding-left: $b-whitespace-l
+  padding-left: $b-space-l
 
 li
-  margin-bottom: $b-whitespace-s
+  margin-bottom: $b-space-s
   margin-top: 0
 
 li > ul, li > ol
-  margin-top: $b-whitespace-s
+  margin-top: $b-space-s
 
 blockquote
   color: $c-secondary
   font-style: italic
-  margin-bottom: $b-whitespace
-  margin-left: $b-whitespace
+  margin-bottom: $b-space
+  margin-left: $b-space
   margin-top: 0
 
 pre,
 code
-  font-family: $f-mono
+  font-family: $b-fontFamily-mono
 
 pre
   @extend .card
-  margin-bottom: $b-whitespace
+  margin-bottom: $b-space
 
 code
   @extend .card
@@ -85,16 +85,16 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6
-  font-family: $f-header
+  font-family: $b-fontFamily-heading
   font-weight: bold
   line-height: 1.2
-  margin-bottom: $b-whitespace-s
-  margin-top: $b-whitespace
+  margin-bottom: $b-space-s
+  margin-top: $b-space
   @if $sidebar-collapsible == false
     +respond-to($breakpoint-tablet)
       margin-top: 0
   +respond-to($breakpoint-desk)
-    margin-top: $b-whitespace
+    margin-top: $b-space
 
 h2, .h2,
 h3, .h3,
@@ -113,14 +113,14 @@ h1, .h1
     display: block
     font-size: 50%
     font-weight: normal
-    margin-top: $b-whitespace-xs
+    margin-top: $b-space-xs
 
 h2, .h2
   border-bottom: $b-border
   font-size: 150%
-  margin-bottom: $b-whitespace
-  margin-top: $b-whitespace-l
-  padding-bottom: $b-whitespace-xs
+  margin-bottom: $b-space
+  margin-top: $b-space-l
+  padding-bottom: $b-space-xs
 
 h3, .h3
   font-size: 125%
