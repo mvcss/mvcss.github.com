@@ -1,0 +1,115 @@
+// *************************************
+//
+//   Sidebar
+//   -> Page listing
+//
+// *************************************
+// -------------------------------------
+//   Template (Haml)
+// -------------------------------------
+//
+// %aside.sidebar
+//   %a.sidebar-link{ href: '#' } Link
+//
+// *************************************
+
+.sidebar
+  @extend .boxSizing
+  @if $sidebar-collapsible
+    +transform(translateX(-100%))
+    +transition-transform(0.3s ease-in-out)
+  @else
+    +transform(translateX(-100%))
+    +transition-transform(0.3s ease-in-out)
+    +respond-to($breakpoint-tablet)
+      +transform(translateX(0))
+  background: $sidebar-background
+  bottom: 0
+  left: 0
+  overflow: scroll
+  position: fixed
+  top: 0
+  width: $sidebar-width
+  z-index: 10
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+@if $sidebar-collapsible
+  .sidebar.is-open
+    +transform(translateX(0))
+@else
+  .sidebar.is-open
+    +transform(translateX(0))
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Button ----- //
+
+.sidebar-btn
+  background: lighten($c-highlight, 10%)
+  border-color: darken($c-highlight, 10%)
+  border-radius: $b-borderRadius
+  color: $c-text-invert
+  display: block
+  line-height: 2.5
+  margin: $b-space-s
+  padding: 0 $b-space
+  text-align: center
+  &:hover,
+  &:focus
+    background: lighten($c-highlight, 15%)
+    border-color: darken($c-highlight, 10%)
+    color: $c-text-invert
+
+// ----- Label ----- //
+
+.sidebar-label
+  border-bottom: $b-borderWidth $b-borderStyle $header-background
+  color: $sidebar-label-color
+  font-size: $sidebar-link-fontSize
+  font-weight: normal
+  letter-spacing: $sidebar-label-letterSpacing
+  margin: 0
+  padding: 0 $b-space $b-space-s
+  text-transform: uppercase
+
+// ----- Link ----- //
+
+.sidebar-link
+  border: 0
+  color: $sidebar-link-color
+  display: block
+  font-family: $b-fontFamily-heading
+  font-size: $sidebar-link-fontSize
+  padding: $b-space-s $b-space
+  &:hover,
+  &:focus
+    background: $sidebar-link-hover-background
+    color: $sidebar-link-hover-color
+
+// Sub
+
+.sidebar-link--sub
+  padding-left: $b-space-l
+
+// Active
+
+.sidebar-link.is-active
+  background: $sidebar-link-active-background
+  color: $sidebar-link-active-color
+
+// ----- Navigation ----- //
+
+// Sub
+
+.sidebar-nav-sub
+  background: $sidebar-nav-sub-background
+  display: none
+
+.sidebar-nav-sub.is-active
+  display: block
+

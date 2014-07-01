@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
-    <meta charset='utf-8'>
-    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-    <title>Styleguide - Basics / MVCSS</title>
-    <meta content='MVCSS - A Sass-based CSS architecture for creating predictable and maintainable application style.' name='description'>
-    <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700,300" media="screen" rel="stylesheet" type="text/css" />
-    <link href="../../assets/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
-    <script>
+<!DOCTYPE html> <html lang=en> <head> <meta charset=utf-8> <meta content='IE=edge,chrome=1' http-equiv=X-UA-Compatible> <meta content='width=device-width, initial-scale=1.0' name=viewport> <title>Styleguide - Basics / MVCSS</title> <meta content='MVCSS - A Sass-based CSS architecture for creating predictable and maintainable application style.' name=description> <link href="../../assets/stylesheets/application.css" rel=stylesheet /> <script>
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-32794837-1']);
       _gaq.push(['_trackPageview']);
@@ -18,72 +8,7 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-    </script>
-  </head>
-  <body class='styleguide styleguide_basics styleguide_basics_index'>
-    <div class='l-controls'>
-      <a class='btn--a' href='https://github.com/mvcss/mvcss'>View Code &rarr;</a>
-      <p><a href="/changelog/">Changelog (v3.0.1)</a></p>
-    </div>
-    <a class='l-sidebar-toggle' href='#'>Navigation</a>
-    <aside class='l-sidebar'>
-      <header class='l-header'>
-        <div class='c-logo'>
-          <a href='/'><img width="100" height="110" alt="MVCSS" src="../../assets/images/logo.svg" /></a>
-          <b>MVCSS <span>Version 3.0.1</span></b>
-        </div>
-        <p class='c-tagline'>A Sass-based CSS Architecture</p>
-      </header>
-      <nav class='l-nav'>
-        <ul>
-          <li><a href="/">About</a></li>
-          <li><a href="/application/">Application</a></li>
-          <li>
-            <a href="/core/">Core</a>
-            <ul>
-              <li><a href="/core/reset/">Reset</a></li>
-              <li><a href="/core/settings/">Settings</a></li>
-              <li><a href="/core/helpers/">Helpers</a></li>
-              <li><a href="/core/base/">Base</a></li>
-              <li><a href="/core/content/">Content</a></li>
-              <li><a href="/core/layout/">Layout</a></li>
-            </ul>
-          </li>
-          <li><a href="/modules/">Modules</a></li>
-          <li>
-            <a href="/styleguide/">Styleguide</a>
-            <ul class='is-section-active'>
-              <li><a class="is-active" href="/styleguide/basics/">Basics</a></li>
-              <li><a href="/styleguide/sass-specific/">Sass-specific</a></li>
-              <li><a href="/styleguide/naming/">Naming Conventions</a></li>
-            </ul>
-          </li>
-          <li><a href="/library/">Library</a></li>
-        </ul>
-      </nav>
-      <footer class='l-about'>
-        <b>Crafted with care by</b>
-        <a href="http://twitter.com/nickawalsh">Nick Walsh</a>
-        &amp;
-        <a href="http://twitter.com/drewbarontini">Drew Barontini</a>
-      </footer>
-    </aside>
-    <main class='l-cell'>
-      <h2>Basics</h2>
-      
-      <ul>
-      <li>Alphabetize properties</li>
-      <li>Use soft-tabs with two-space indent</li>
-      <li>Put a space after <code>:</code></li>
-      <li>Put a space after the <code>//</code> for comments</li>
-      <li>Put a space after commas (e.g. <code>rgba(#000, 0.5)</code>)</li>
-      <li>Choose a hexidecimal format and stick to it (e.g. <code>#FFF</code> or <code>#fff</code>)</li>
-      <li><strong>Do not</strong> use ids (only classes)</li>
-      </ul>
-      <div class="highlight"><pre><span class="c1">// This is an example!</span>&#x000A;&#x000A;<span class="nc">.module</span>&#x000A;  <span class="na">background</span><span class="o">:</span> <span class="mh">#fff</span>&#x000A;  <span class="na">color</span><span class="o">:</span> <span class="mh">#000</span>&#x000A;  <span class="na">font-size</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.6</span><span class="kt">em</span>&#x000A;&#x000A;<span class="nc">.module-submodule</span>&#x000A;  <span class="na">font-size</span><span class="o">:</span> <span class="mi">2</span><span class="kt">em</span>&#x000A;  <span class="na">margin-bottom</span><span class="o">:</span> <span class="mi">1</span><span class="kt">em</span></pre></div>
-      <p><a class="btn--b" href="/styleguide/sass-specific/">Next &rarr;</a></p>
-    </main>
-    <script>
+    </script> </head> <body class='styleguide styleguide_basics styleguide_basics_index' data-id=3> <a class=toggle href="#"><div class=toggle-icn> <div class=toggle-icn-stack> <b class=srt>Toggle</b> </div> </div> </a> <aside class=sidebar> <header class=header> <div class='bucket bucket--flag'> <div class=bucket-media> <img alt=MVCSS class=header-logo width=100 height=110 src="../../assets/images/logo.svg"/> </div> <div class=bucket-content> <p class='h1 header-title'><a href="../../">MVCSS</a></p> <p class=header-version>Version 4.0.0</p> </div> </div> </header> <a class=sidebar-btn href="//github.com/mvcss/mvcss">View on GitHub</a> <nav class=sidebar-nav> <a class=sidebar-link href="../../">Overview</a> <a class=sidebar-link href="../">Styleguide</a> <div class='is-active sidebar-nav-sub'> <a class="sidebar-link sidebar-link--sub is-active" href="./">Basics</a> <a class="sidebar-link sidebar-link--sub" href="../numbers-game/">The Numbers Game</a> <a class="sidebar-link sidebar-link--sub" href="../comments/">Comments</a> <a class="sidebar-link sidebar-link--sub" href="../naming/">Naming Conventions</a> </div> <a class=sidebar-link href="../../manifest/">Manifest</a> <a class=sidebar-link href="../../foundation/">Foundation</a> <div class=sidebar-nav-sub> <a class="sidebar-link sidebar-link--sub" href="../../foundation/reset/">Reset</a> <a class="sidebar-link sidebar-link--sub" href="../../foundation/helpers/">Helpers</a> <a class="sidebar-link sidebar-link--sub" href="../../foundation/config/">Config</a> <a class="sidebar-link sidebar-link--sub" href="../../foundation/base/">Base</a> <a class="sidebar-link sidebar-link--sub" href="../../foundation/tools/">Tools</a> </div> <a class=sidebar-link href="../../components/">Components</a> <a class=sidebar-link href="../../structures/">Structures</a> <a class=sidebar-link href="../../vendor/">Vendor</a> <div class=sidebar-nav-secondary> <h3 class='sidebar-label mtl'>Meta</h3> <a class=sidebar-link href="../../about/">About</a> <a class=sidebar-link href="../../resources/">Resources</a> </div> </nav> </aside> <div class=row> <div class='cell well'> <main class=content> <article> <h1>Styleguide - Basics</h1> <h2>Style Sheets</h2> <ul> <li>Alphabetize properties (vendor-prefixed properties sorted by their non-prefixed equivalent)</li> <li>Extends and Mixins should be placed before standard properties</li> <li>Use soft tabs with a two space indention</li> <li>Add a space after <code>:</code></li> <li>Add a space after <code>//</code> comments</li> <li>Add a space after commas in values (e.g. <code>rgba(#000, 0.5)</code>)</li> <li>Stick with classes instead of IDs for styling</li> <li>Limit nesting as much as possible</li> </ul> <pre class="highlight sass"><span class="c1">// Example&#x000A;</span>&#x000A;<span class="nc">.component</span>&#x000A;  <span class="k">@extend</span> <span class="nc">.group</span>&#x000A;  <span class="nd">+transition</span><span class="p">(</span><span class="n">opacity</span> <span class="m">0</span><span class="mi">.2s</span> <span class="n">ease-in-out</span><span class="p">)</span>&#x000A;  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">5px</span>&#x000A;  <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">2px</span> <span class="m">5px</span> <span class="nf">rgba</span><span class="p">(</span><span class="mh">#000</span><span class="o">,</span> <span class="m">0</span><span class="mi">.5</span><span class="p">)</span>&#x000A;  <span class="na">-webkit-flex</span><span class="p">:</span> <span class="m">1</span> <span class="m">1</span> <span class="m">50%</span>&#x000A;  <span class="na">-ms-flex</span><span class="p">:</span> <span class="m">1</span> <span class="m">1</span> <span class="m">50%</span>&#x000A;  <span class="nl">flex</span><span class="p">:</span> <span class="m">1</span> <span class="m">1</span> <span class="m">50%</span>&#x000A;  <span class="nl">font-style</span><span class="p">:</span> <span class="nb">italic</span></pre> <h2>Markup</h2> <ul> <li>Alphabetize classes, ordered by Component, Structure, Tool, state, and context</li> <li>Apply modifier classes after each individual module</li> </ul> <pre class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g collection collection--1of3 bch mtl tci is-active has-dropdown"</span><span class="nt">&gt;&lt;/div&gt;</span></pre> </article> <ul class=pager> <li class=pager-item> <a href="../">&larr; Previous page </a> </li> <li class=pager-item> <a href="../numbers-game/">Next page &rarr; </a> </li> </ul> </main> </div> </div> <script>
       var _gauges = _gauges || [];
       (function() {
         var t   = document.createElement('script');
@@ -95,20 +20,4 @@
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(t, s);
       })();
-    </script>
-    <script src="//code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script>
-      (function() {
-      
-        $(function() {
-          return $('.l-sidebar-toggle').on('click', function(e) {
-            e.preventDefault();
-            $(this).toggleClass('is-active');
-            return $('body').toggleClass('is-sidebar-toggled');
-          });
-        });
-      
-      }).call(this);
-    </script>
-  </body>
-</html>
+    </script> <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> <script src="../../assets/javascripts/application.js"></script> </body> </html>

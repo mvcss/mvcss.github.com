@@ -1,0 +1,119 @@
+# -------------------------------------
+#   Setup
+#   -> Namespace setup
+# -------------------------------------
+
+@Leo = {}
+@Leo.Pager = {}
+
+# -------------------------------------
+#   Heading Links
+#   -> Adds an anchor link next to each heading
+#
+#   options.els - the heading elements
+# -------------------------------------
+
+Leo.headingLinks = (options) ->
+  options.els.each ->
+    el = $(@)
+    text = Leo.slugify( el.text() )
+    el.attr('id', text)
+    el.prepend("<a class='anchor' href='##{text}'>#</a>")
+
+# -------------------------------------
+#   Read Time
+#   -> Adds an estimated reading time to each page
+#
+#   options.text - the text of the page
+#   options.element - the element to append the reading time to
+#   options.wordsPerMinute - the words-per-minute to calculate against
+# -------------------------------------
+
+Leo.readTime = (options) ->
+  time = Math.ceil(options.text.split(' ').length / options.wordsPerMinute)
+  options.element.append("<b>#{time} minute read</b>")
+
+# -------------------------------------
+#   Pager
+#   -> Adds keyboard navigation for pages
+#
+#   id - the page id
+# -------------------------------------
+
+Leo.Pager = do ->
+
+  pageIndex = 0
+
+  pages = []
+
+  shortcuts =
+    'next': 39
+    'prev': 37
+
+  init = (id) ->
+    pageIndex = id
+    getPages()
+    setEventHandlers()
+
+  getPages = ->
+    <% get_pages.each do |p| %>
+    pages.push("<%= p.url %>")
+    <% end %>
+
+  setEventHandlers = ->
+    $(document).on 'keydown', (e) ->
+      switch getKeyCode(e)
+        when shortcuts.next then gotoPage('next')
+        when shortcuts.prev then gotoPage('prev')
+
+  getKeyCode = (e) ->
+    e = e || window.event
+    charCode = e.keyCode || e.which
+    charCode
+
+  gotoPage = (dir) ->
+    switch dir
+      when 'next'
+        unless pageIndex == pages.length
+          window.location = pages[pageIndex]
+      when 'prev'
+        unless pageIndex == 1
+          window.location = pages[pageIndex - 2]
+
+  init: init
+
+# -------------------------------------
+#   Slugify
+#   -> Converts a string into a title slug
+#
+#   text - the text to convert
+# -------------------------------------
+
+Leo.slugify = (text) ->
+  text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-').replace(/^-+/, '').replace(/-+$/, '')
+
+#-------------------------------------
+#  Document Ready
+#-------------------------------------
+
+jQuery ($) ->
+
+  Leo.headingLinks({
+    els: $('h2, h3, h4, h5, h6')
+  })
+
+  <% if data.leo.reading_time %>
+  Leo.readTime({
+    wordsPerMinute: 200
+    text: $('.content').text()
+    element: $('.content h1')
+  })
+  <% end %>
+
+  Leo.Pager.init( $('body').data('id') )
+
+  $('.toggle').on 'click', (e) ->
+    e.preventDefault()
+    $(@).toggleClass('is-active')
+    $('body').toggleClass('is-sidebar-open')
+    $('.sidebar').toggleClass('is-open')

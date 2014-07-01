@@ -1,0 +1,61 @@
+// *************************************
+//
+//   Helpers
+//   -> Functions, Mixins, Animations
+//
+// *************************************
+
+// -------------------------------------
+//   Functions
+// -------------------------------------
+
+// ----- Em ----- //
+// -> Converts pixel value to an em
+//
+// $target - the target pixel size
+// $context - the context font-size
+
+@function em($target, $context: $b-fontSize)
+  @if ($target == 0)
+    @return 0
+  @else
+    @return ($target / $context) * 1em
+
+// -------------------------------------
+//   Mixins
+// -------------------------------------
+
+// ----- Respond-to ----- //
+
+=respond-to($val, $query: min-width, $media: screen)
+  @media #{$media} and ($query: $val)
+    @content
+
+// ----- Transform ----- //
+
+=transform($args)
+  -webkit-transform: $args
+  -ms-transform: $args
+  transform: $args
+
+// ----- Transition Transform ----- //
+
+=transition-transform($args...)
+  -webkit-transition: -webkit-transform $args
+  transition: -webkit-transform $args
+  transition: -moz-transform $args
+  transition: -ms-transform $args
+  transition: transform $args
+
+// ----- Transition ----- //
+
+=transition($args)
+  -webkit-transition: $args
+  transition: $args
+
+// -------------------------------------
+//   Animations
+// -------------------------------------
+
+// ...
+

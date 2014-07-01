@@ -1,45 +1,38 @@
 !!! 5
-%html(lang="en")
+%html{ :lang => 'en' }
   %head
-    %meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
-    %meta(charset="utf-8")
-    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %meta{ :charset => 'utf-8' }
+    %meta{ :content => 'IE=edge,chrome=1', 'http-equiv' => 'X-UA-Compatible' }
+    %meta{ :name => 'viewport', :content => 'width=device-width, initial-scale=1.0' }
+    - unless current_page.data.nested
+      %title= "#{current_page.data.title} / #{data.leo.title}" || data.leo.title
+    - else
+      %title= "#{current_page.data.parent} - #{current_page.data.title} / #{data.leo.title}" || data.leo.title
+    %meta{ :name => "description", :content => "MVCSS - A Sass-based CSS architecture for creating predictable and maintainable application style." }
 
-    %title= (title = data.page.title) ? "#{title} / MVCSS" : 'MVCSS'
-    %meta(name="description" content="MVCSS - A Sass-based CSS architecture for creating predictable and maintainable application style.")
-
-    = stylesheet_link_tag '//fonts.googleapis.com/css?family=Roboto+Slab:400,700,300'
     = stylesheet_link_tag 'application'
 
     = partial 'shared/google_analytics' if build?
 
-  %body{ class: page_classes }
+  %body{ class: page_classes, 'data-id' => current_page.data.priority }
 
-    .l-controls
-      %a.btn--a(href='https://github.com/mvcss/mvcss') View Code &rarr;
-      %p= link_to 'Changelog (v3.0.1)', '/changelog/'
+    = link_to '#', class: 'toggle' do
+      .toggle-icn
+        .toggle-icn-stack
+          %b.srt Toggle
 
-    %a.l-sidebar-toggle(href="#") Navigation
-    %aside.l-sidebar
-      = partial 'shared/header'
-      = partial 'shared/nav'
+    = partial 'shared/sidebar'
 
-      %footer.l-about
-        %b Crafted with care by
-        = link_to 'Nick Walsh', 'http://twitter.com/nickawalsh'
-        &amp;
-        = link_to 'Drew Barontini', 'http://twitter.com/drewbarontini'
+    .row
+      .cell.well
 
-    %main.l-cell
-      = find_and_preserve do
-        = yield
+        %main.content
+          %article
+            = find_and_preserve do
+              = yield
+
+          = partial 'shared/pager'
 
     = partial 'shared/gauges' if build?
-
-    = javascript_include_tag '//code.jquery.com/jquery-1.9.1.min.js'
-    :coffeescript
-      $ ->
-        $('.l-sidebar-toggle').on 'click', (e) ->
-          e.preventDefault()
-          $(@).toggleClass('is-active')
-          $('body').toggleClass('is-sidebar-toggled')
+    = javascript_include_tag  'http://code.jquery.com/jquery-1.11.1.min.js'
+    = javascript_include_tag  'application'

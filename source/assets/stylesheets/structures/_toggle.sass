@@ -1,0 +1,89 @@
+// *************************************
+//
+//   Toggle
+//   -> Clickable icon
+//
+// -------------------------------------
+//   Template (Haml)
+// -------------------------------------
+//
+// %a.toggle{ href: '#' }
+//
+// *************************************
+
+.toggle
+  border: 0
+  @if $sidebar-collapsible
+    display: block
+  @else
+    +respond-to($breakpoint-tablet)
+      display: none
+  height: 5 * $toggle-height
+  left: $b-space
+  position: absolute
+  top: $b-space
+  -webkit-backface-visibility: hidden
+  width: $toggle-width
+  z-index: 20
+  +respond-to($breakpoint-tablet)
+    position: fixed
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// ----- Active ----- //
+
+.toggle.is-active
+  left: $sidebar-width + $b-space
+
+  .toggle-icn-stack
+    background: none
+    &::before,
+    &::after
+      +transition(all 0.3s 0.2s ease-in-out)
+      top: 0
+    &::before
+      +transform(rotate(-45deg))
+    &::after
+      +transform(rotate(45deg))
+
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Icon ----- //
+
+.toggle-icn
+  border: 0
+  display: block
+  height: 5 * $toggle-height
+  position: absolute
+  right: 0
+  -webkit-backface-visibility: hidden
+  width: $toggle-width
+
+// Stack
+
+.toggle-icn-stack
+  +transition(all 0.3s ease-in-out)
+  background: $toggle-color
+  display: block
+  height: $toggle-height
+  margin-top: $toggle-height
+  width: $toggle-width
+  &::before,
+  &::after
+    +transition(all 0.3s ease-in-out)
+    background: $toggle-color
+    content: ''
+    display: block
+    height: $toggle-height
+    position: absolute
+    width: $toggle-width
+    z-index: 0
+  &::before
+    top: -$toggle-height
+  &::after
+    top: (3 * $toggle-height)

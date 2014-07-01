@@ -1,0 +1,38 @@
+// *************************************
+//
+//   Pager
+//   -> Page navigation
+//
+// -------------------------------------
+//   Template (Haml)
+// -------------------------------------
+//
+// %ul.pager
+//   %li.pager-item
+//     %a{ href: '#' } Previous page
+//   %li.pager-item
+//     %a{ href: '#' } Next page
+//
+// *************************************
+
+.pager
+  border-top: $b-border
+  margin: 0
+  padding: 0
+  margin-top: $b-space-xl
+  padding-top: $b-space
+  text-align: center
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Item ----- //
+
+.pager-item
+  display: inline
+  list-style-type: none
+  margin-right: $b-space
+  &:last-child
+    margin-right: 0
+

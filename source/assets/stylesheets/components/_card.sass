@@ -1,0 +1,31 @@
+// *************************************
+//
+//   Card
+//   -> Individual style containers
+//
+// -------------------------------------
+//   Template (Haml)
+// -------------------------------------
+//
+// .card[.card--thin]
+//   / ...
+//
+// *************************************
+
+.card
+  @extend .boxSizing
+  background: $c-background-invert
+  border-radius: $b-borderRadius
+  box-shadow: $b-boxShadow
+  padding: $b-space
+  position: relative
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Thin ----- //
+
+.card--thin
+  box-shadow: none
+  padding: 0.25em 0.5em

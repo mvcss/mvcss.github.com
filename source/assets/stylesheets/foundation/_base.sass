@@ -1,0 +1,154 @@
+// *************************************
+//
+//   Base
+//   -> Tag-level settings
+//
+// *************************************
+
+html
+  background: $c-background
+  color: $c-text
+  font-family: $b-fontFamily
+  font-size: $b-fontSize
+  line-height: $b-lineHeight
+
+body
+  font-size: 100%
+  &.is-sidebar-open
+    overflow-y: hidden
+    position: fixed
+    +respond-to($breakpoint-tablet)
+      position: static
+
+.content
+  +transform(translateX(0))
+  +transition-transform(0.3s ease-in-out)
+  margin-bottom: $b-space-xl
+  padding-top: $b-space-xs
+  @if $sidebar-collapsible
+    .is-sidebar-open &
+      +transform(translateX($sidebar-width))
+      margin-left: 0
+      +respond-to($breakpoint-tablet)
+        +transform(translateX(0))
+        margin-left: $sidebar-width
+  @else
+    .is-sidebar-open &
+      +transform(translateX($sidebar-width))
+      +respond-to($breakpoint-tablet)
+        +transform(translateX(0))
+    +respond-to($breakpoint-tablet)
+      margin-left: $sidebar-width
+
+// -------------------------------------
+//   Block Content
+// -------------------------------------
+
+ul, ol, p
+  margin-bottom: $b-space
+  margin-top: 0
+
+ul, ol
+  padding-left: $b-space-l
+
+li
+  margin-bottom: $b-space-s
+  margin-top: 0
+
+li > ul, li > ol
+  margin-top: $b-space-s
+
+blockquote
+  color: $c-secondary
+  font-style: italic
+  margin-bottom: $b-space
+  margin-left: $b-space
+  margin-top: 0
+
+pre,
+code
+  font-family: $b-fontFamily-mono
+
+pre
+  @extend .card
+  margin-bottom: $b-space
+
+code
+  @extend .card
+  @extend .card--thin
+
+// ----- Headers ----- //
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6
+  font-family: $b-fontFamily-heading
+  font-weight: bold
+  line-height: 1.2
+  margin-bottom: $b-space-s
+  margin-top: $b-space
+  @if $sidebar-collapsible == false
+    +respond-to($breakpoint-tablet)
+      margin-top: 0
+  +respond-to($breakpoint-desk)
+    margin-top: $b-space
+
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6
+  position: relative
+  +respond-to($breakpoint-desk)
+    &:hover > a
+      display: block
+
+h1, .h1
+  font-size: 200%
+  > b
+    color: $c-subdue
+    display: block
+    font-size: 50%
+    font-weight: normal
+    margin-top: $b-space-xs
+
+h2, .h2
+  border-bottom: $b-border
+  font-size: 150%
+  margin-bottom: $b-space
+  margin-top: $b-space-l
+  padding-bottom: $b-space-xs
+
+h3, .h3
+  font-size: 125%
+
+h4, .h4
+  font-size: 110%
+
+h5, .h5
+  font-size: 115%
+
+h6, .h6
+  font-size: 105%
+
+// -------------------------------------
+//   Inline Content
+// -------------------------------------
+
+a
+  border-bottom: $b-border
+  color: $c-highlight
+  text-decoration: none
+  transition: all 0.3s ease-in-out
+  &:hover,
+  &:focus
+    border-bottom-color: $c-highlight
+    color: $c-subdue
+
+img
+  @extend .card
+  height: auto
+  max-width: 100%

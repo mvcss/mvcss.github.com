@@ -1,0 +1,27 @@
+%aside.sidebar
+
+  %header.header
+    .bucket.bucket--flag
+      .bucket-media
+        = image_tag 'logo.svg', alt: 'MVCSS', class: 'header-logo', width: '100', height: '110'
+      .bucket-content
+        %p.h1.header-title= link_to data.leo.title, '/index.html'
+        %p.header-version Version 4.0.0
+
+  = link_to 'View on GitHub', 'http://github.com/mvcss/mvcss', class: 'sidebar-btn'
+
+  %nav.sidebar-nav
+    - get_pages().each do |page|
+      - unless is_excluded_page(page)
+        = link_to page.data.title, "/#{page.path}", class: (is_page_active(page.url) ? 'sidebar-link is-active' : 'sidebar-link')
+      - else
+        - if page.data.children?
+          = link_to page.data.title, "/#{page.path}", class: (is_page_active(page.url) ? 'sidebar-link sidebar-link--parent is-active' : 'sidebar-link')
+          .sidebar-nav-sub{ class: ('is-active' if is_parent_page_active(page.url))}
+            - get_nested_pages(page.data.title).each do |nested_page|
+              = link_to nested_page.data.title, "/#{nested_page.path}", class: (is_page_active(nested_page.url) ? 'sidebar-link sidebar-link--sub is-active' : 'sidebar-link sidebar-link--sub')
+    .sidebar-nav-secondary
+      %h3.sidebar-label.mtl Meta
+      - get_secondary_pages().each do |page|
+        = link_to page.data.title, "/#{page.path}", class: (is_page_active(page.url) ? 'sidebar-link is-active' : 'sidebar-link')
+
