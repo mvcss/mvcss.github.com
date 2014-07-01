@@ -11,7 +11,7 @@ Foundation - Tools
 
 Tools are presentational utility classes for usage directly in the markup itself. They're helpful when you need a specific style in a unique context, but can't justify creating (and naming) a new module or modifier to achieve the desired effect.
 
-For example, the paragraph element inside of the following `card` Component needs its `margin-bottom` flattened, so we can easily apply a Tool class of `mbf`.
+For example, the paragraph element inside of the following `card` Component needs its `margin-bottom` made flush, so we can easily apply a Tool class of `mbf`.
 
 ```html
 <div class="card">
