@@ -73,11 +73,11 @@ $c-warning: $gold
 
 // ----- Components ----- //
 
-// ...
+// Example: $row--a-background: $c-highlight
 
 // ----- Structures ----- //
 
-// ...
+// Example: $dropdown-link-color: $c-subdue
 
 // -------------------------------------
 //   Base
@@ -123,7 +123,9 @@ $g-l: em(1024px)
 //   Structures
 // -------------------------------------
 
-// ...
+// ----- Dropdown ----- //
+
+// Example: $dropdown-width: em(200px)
 ```
 
 
