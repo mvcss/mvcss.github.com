@@ -11,7 +11,7 @@ Overview
 
 CSS, for all its simplicity, is a difficult language to manage in large-scale implementations. Naming, paths to abstraction, structure, and methodologies are all free-form; MVCSS seeks to provide order for these sorts of projects.
 
-Keeping with an architecture motif, applications are split into three major categories: [*Foundation*][foundation], [*Components*][components], and [*Structures*][structures]. If Foundation represents tools, materials, and the ground level, Components are akin to creating a window while Structures mirror a number of windows and doors creating a wall.
+Keeping with an architecture motif, applications are split into three major categories: [*Foundation*][foundation], [*Components*][components], and [*Structures*][structures]. If Foundation represents tools, materials, and the ground level, Components are akin to creating a window, while Structures mirror a number of windows and doors creating a wall.
 
 For a very early taste, here’s what a simple Component might consist of:
 
