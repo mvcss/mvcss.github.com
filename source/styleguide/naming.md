@@ -217,7 +217,7 @@ A section about naming images? I know. Let's just get through it.
 - Sub-folders for larger groups
 
 
-[config]: /config
+[config]: /foundation/config
 
 [bem-definitions]: http://bem.info/method/definitions
 [suit-naming-conventions]: https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md
