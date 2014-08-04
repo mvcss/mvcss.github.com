@@ -30,6 +30,7 @@ $b-fontFamily-heading-src: 'http://fonts.googleapis.com/css?family=Open+Sans:400
 
 $c-background-invert: #fff !default
 $c-background: #ecf0f1 !default
+$c-border: lighten(#95a5a6, 20%) !default
 $c-highlight: #2c3e50 !default
 $c-secondary: #666 !default
 $c-subdue: #95a5a6 !default
@@ -64,10 +65,9 @@ $toggle-color: $c-subdue !default
 
 // ----- Borders & Box Shadow ----- //
 
-$b-borderColor: lighten(#95a5a6, 20%) !default
 $b-borderStyle: solid !default
 $b-borderWidth: 2px !default
-$b-border: $b-borderWidth $b-borderStyle $b-borderColor !default
+$b-border: $b-borderWidth $b-borderStyle $c-border !default
 $b-borderRadius: 3px !default
 $b-boxShadow: 0 2px 0 rgba(#333, 0.25) !default
 

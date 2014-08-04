@@ -63,6 +63,7 @@ $white: #fff
 
 $c-background-invert: $white
 $c-background: $gainsboro
+$c-border: lighten($jet, 30%)
 $c-error: $scarlet
 $c-highlight: $cerulean
 $c-text-invert: $white
@@ -85,11 +86,10 @@ $c-warning: $gold
 
 // ----- Borders & Box Shadow ----- //
 
-$b-borderColor: lighten($jet, 30%)
 $b-borderRadius: 3px
 $b-borderStyle: solid
 $b-borderWidth: 2px
-$b-border: $b-borderWidth $b-borderStyle $b-borderColor
+$b-border: $b-borderWidth $b-borderStyle $c-border
 $b-boxShadow: 0 2px 0 rgba($jet, 0.25)
 
 // ----- Typography ----- //
