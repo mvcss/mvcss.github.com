@@ -37,7 +37,6 @@ All variables in MVCSS are defined in Config and are prefixed by their role or r
 
 - `$b-*` for base variables
 - `$c-*` for colors
-- `$f-*` for fonts
 - `$g-*` for breakpoints
 - `$componentName-*` for Components
 - `$structureName-*` for Structures
