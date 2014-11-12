@@ -76,6 +76,29 @@ After creation, elements that need a modifier will use the root class (`.btn`) a
 
 **Note:** modifiers typically work best when defined in hierarchical sequence (`a`, `b`) or via function (`cancel`, `submit`) as opposed to look (`red`, `blue`).
 
+### Shorthand Notation
+
+As you can see above, we'll use shorthand notation for sizing and hierarchy modifiers. For example, rather than writing `btn--large`, we'll write `btn--l`. We do this for the sake of terseness, but feel free to write out the words, if that's more comfortable for you and your authors.
+
+Here are the shorthand notation modifier conventions that we use for sizing and hierarchy:
+
+```sass
+// Sizing
+--f  (flush)
+--xs (extra small)
+--s  (small)
+--m  (medium)
+--l  (large)
+--xl (extra large)
+
+// Hierarchy
+--a (primary)
+--b (secondary)
+--c (tertiary)
+```
+
+**Note**: If you go past tertiary on the hierarchy scale, you probably need a different modifier, as you have too many levels of hierarchy.
+
 States
 ------
 
