@@ -26,7 +26,7 @@ Some Components, like `g` (grid) and `card`, are used for layout and containers,
 </div>
 ```
 
-**Note**: We shorten `grid` and its elements to `g` and `g--`/`g-`, respectively. Since we are so frequently writing out these grid classes, we want them to be as terse as possible. However, feel free to use the full words, if that's more comfortable for you.
+**Note**: We shorten `grid` classes to `g` and `grid-box` classes to `g-b`. Since we write these grid classes so frequently, we want them to be as concise as possible. However, feel free to use the full words, if that's more comfortable for you.
 
 Other Components, like `thumb`, affect only a single element, and can resemble Tools at first glance. In these situations, both the Component and Tool have a single responsibility. The *Component*, however, may be declared alongside its modifier classes, while the Tool applies more definitive styles.
 
