@@ -18,6 +18,7 @@ Style Sheets
 - Add a space after `:`
 - Add a space after `//` comments
 - Add a space after commas in values (e.g. `rgba(#000, 0.5)`)
+- Write numbers at the end of mathematic operations (e.g. `$b-space * 0.5`)
 - Stick with classes instead of IDs for styling
 - Limit nesting as much as possible
 
@@ -33,6 +34,7 @@ Style Sheets
   -ms-flex: 1 1 50%
   flex: 1 1 50%
   font-style: italic
+  padding-bottom: $b-space * 3
 ```
 
 Markup
