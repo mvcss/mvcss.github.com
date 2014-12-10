@@ -1,7 +1,6 @@
 ---
 title: Base
 type: page
-priority: 12
 parent: Foundation
 nested: true
 ---

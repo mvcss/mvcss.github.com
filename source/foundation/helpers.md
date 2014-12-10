@@ -1,7 +1,6 @@
 ---
 title: Helpers
 type: page
-priority: 10
 parent: Foundation
 nested: true
 ---

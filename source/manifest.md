@@ -1,7 +1,6 @@
 ---
 title: Manifest
 type: page
-priority: 7
 ---
 
 Manifest

@@ -1,7 +1,6 @@
 ---
 title: Reset
 type: page
-priority: 9
 parent: Foundation
 nested: true
 ---

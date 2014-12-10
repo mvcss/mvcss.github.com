@@ -1,7 +1,6 @@
 ---
 title: Config
 type: page
-priority: 11
 parent: Foundation
 nested: true
 ---

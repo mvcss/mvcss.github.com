@@ -1,7 +1,6 @@
 ---
 title: Overview
 type: page
-priority: 1
 ---
 
 Overview

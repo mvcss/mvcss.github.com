@@ -1,7 +1,6 @@
 ---
 title: Foundation
 type: page
-priority: 8
 children: true
 ---
 

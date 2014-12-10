@@ -1,7 +1,6 @@
 ---
 title: Components
 type: page
-priority: 14
 ---
 
 Components

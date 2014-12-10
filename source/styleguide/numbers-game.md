@@ -1,7 +1,6 @@
 ---
 title: The Numbers Game
 type: page
-priority: 4
 parent: Styleguide
 nested: true
 ---

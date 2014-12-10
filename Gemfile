@@ -2,7 +2,7 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
-gem "redcarpet"
+gem 'redcarpet'
 
 gem 'middleman'
 gem 'middleman-livereload'

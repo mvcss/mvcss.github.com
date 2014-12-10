@@ -1,7 +1,6 @@
 ---
 title: Naming Conventions
 type: page
-priority: 6
 parent: Styleguide
 nested: true
 ---

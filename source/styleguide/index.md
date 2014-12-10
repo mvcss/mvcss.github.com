@@ -1,7 +1,6 @@
 ---
 title: Styleguide
 type: page
-priority: 2
 children: true
 ---
 

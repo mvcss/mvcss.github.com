@@ -1,7 +1,6 @@
 ---
 title: Basics
 type: page
-priority: 3
 parent: Styleguide
 nested: true
 ---

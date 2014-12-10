@@ -11,7 +11,7 @@
   = link_to 'View on GitHub', 'http://github.com/mvcss/mvcss', class: 'sidebar-btn'
 
   %nav.sidebar-nav
-    - get_pages().each do |page|
+    - get_pages.each do |page|
       - unless is_excluded_page(page)
         = link_to page.data.title, "/#{page.path}", class: (is_page_active(page.url) ? 'sidebar-link is-active' : 'sidebar-link')
       - else

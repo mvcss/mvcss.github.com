@@ -1,7 +1,6 @@
 ---
 title: Comments
 type: page
-priority: 5
 parent: Styleguide
 nested: true
 ---

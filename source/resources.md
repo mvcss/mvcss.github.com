@@ -1,7 +1,6 @@
 ---
 title: Resources
 type: page
-priority: 18
 secondary: true
 ---
 

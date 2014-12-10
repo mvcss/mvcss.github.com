@@ -1,7 +1,6 @@
 ---
 title: Tools
 type: page
-priority: 13
 parent: Foundation
 nested: true
 ---

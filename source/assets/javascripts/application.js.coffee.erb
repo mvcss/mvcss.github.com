@@ -54,10 +54,11 @@ Leo.Pager = do ->
     pageIndex = id
     getPages()
     setEventHandlers()
+    console.log pageIndex
 
   getPages = ->
     <% get_pages.each do |p| %>
-    pages.push("<%= p.url %>")
+      pages.push("<%= p.url %>")
     <% end %>
 
   setEventHandlers = ->
@@ -74,11 +75,11 @@ Leo.Pager = do ->
   gotoPage = (dir) ->
     switch dir
       when 'next'
-        unless pageIndex == pages.length
-          window.location = pages[pageIndex]
+        unless pageIndex == pages.length - 1
+          window.location = pages[pageIndex + 1]
       when 'prev'
-        unless pageIndex == 1
-          window.location = pages[pageIndex - 2]
+        unless pageIndex == 0
+          window.location = pages[pageIndex - 1]
 
   init: init
 
@@ -117,3 +118,11 @@ jQuery ($) ->
     $(@).toggleClass('is-active')
     $('body').toggleClass('is-sidebar-open')
     $('.sidebar').toggleClass('is-open')
+
+  $(document).on 'keyup', (event) ->
+    switch event.which
+      # 's' keyboard shortcut
+      when 83
+        $('.toggle').toggleClass('is-active')
+        $('body').toggleClass('is-sidebar-open')
+        $('.sidebar').toggleClass('is-open')
