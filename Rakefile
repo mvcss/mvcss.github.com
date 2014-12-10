@@ -3,6 +3,7 @@ task :generate do
   puts "## Generating site with Middleman"
   system "rm -rf build"
   system "./bin/middleman build --clean"
+  system "cp CNAME build/CNAME"
   cd "build" do
     system "touch .nojekyll"
     system "git init"
