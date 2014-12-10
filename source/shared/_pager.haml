@@ -1,14 +1,14 @@
-- if get_page(get_page_priority(current_page.data.title) - 1) or get_page(current_page.data.priority.to_i + 1)
+- if get_page(get_page_priority(current_page.data) - 1)
   %ul.pager
 
-    - if get_page(get_page_priority(current_page.data.title) - 1)
-      - get_page(get_page_priority(current_page.data.title) - 1).each do |p|
+    - if get_page(get_page_priority(current_page.data) - 1)
+      - get_page(get_page_priority(current_page.data) - 1).each do |p|
         %li.pager-item
           = link_to "/#{p.path}" do
             &larr; Previous page
 
-    - if get_page(get_page_priority(current_page.data.title) + 1)
-      - get_page(get_page_priority(current_page.data.title) + 1).each do |p|
+    - if get_page(get_page_priority(current_page.data) + 1)
+      - get_page(get_page_priority(current_page.data) + 1).each do |p|
         %li.pager-item
           = link_to "/#{p.path}" do
             Next page &rarr;

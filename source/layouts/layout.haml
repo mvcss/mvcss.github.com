@@ -14,7 +14,7 @@
 
     = partial 'shared/google_analytics' if build?
 
-  %body{ class: page_classes, 'data-id' => get_page_priority(current_page.data.title) }
+  %body{ class: page_classes, 'data-id' => get_page_priority(current_page.data) }
 
     = link_to '#', class: 'toggle' do
       .toggle-icn
