@@ -11,7 +11,7 @@ set :relative_links, true
 # Methods defined in the helpers block are available in templates
 helpers do
   def get_page_priority(title)
-    data.priority.index(title)
+    data.priority.index(title) || data.priority.length
   end
 
   def get_pages
