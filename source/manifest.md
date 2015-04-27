@@ -96,7 +96,7 @@ If any of the Foundation files become larger than desired, split the file into s
 @import 'foundation/config/colors'
 @import 'foundation/config/base'
 @import 'foundation/config/components'
-@import 'foundation/config/structure'
+@import 'foundation/config/structures'
 // ...
 ```
 
