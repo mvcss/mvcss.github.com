@@ -42,10 +42,10 @@ Files found in Foundation are imported into the manifest in a particular order, 
 //   Foundation
 // -------------------------------------
 
-@import "foundation/reset"
-@import "foundation/helpers"
-@import "foundation/config"
-@import "foundation/base"
+@import 'foundation/reset'
+@import 'foundation/helpers'
+@import 'foundation/config'
+@import 'foundation/base'
 
 // -------------------------------------
 //   Components
@@ -69,11 +69,35 @@ Files found in Foundation are imported into the manifest in a particular order, 
 //   Foundation - Tools
 // -------------------------------------
 
-@import "foundation/tools"
+@import 'foundation/tools'
 
 // -------------------------------------
 //   Inbox
 // -------------------------------------
+```
+
+### Splitting up large files
+
+If any of the Foundation files become larger than desired, split the file into smaller, individual files. For example, if the Foundation - Config file grows too large:
+
+1. Create a `foundation/config` directory.
+2. Create partials for the `foundation/_config.sass` sections.
+3. Import the partial files in `foundation/_config.sass`.
+
+```sass
+// *************************************
+//
+//   Config
+//   -> Fonts, Variables
+//
+// *************************************
+
+@import 'foundation/config/fonts'
+@import 'foundation/config/colors'
+@import 'foundation/config/base'
+@import 'foundation/config/components'
+@import 'foundation/config/structure'
+// ...
 ```
 
 Inbox
