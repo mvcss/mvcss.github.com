@@ -127,4 +127,4 @@ $g-l: em(1024px)
 ```
 
 
-[bourbon-mixin-fontface]: https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-face.scss
+[bourbon-mixin-fontface]: https://github.com/thoughtbot/bourbon/blob/master/core/bourbon/library/_font-face.scss
