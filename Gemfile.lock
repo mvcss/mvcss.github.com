@@ -22,7 +22,7 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.5.3)
     erubis (2.7.0)
-    eventmachine (1.0.3)
+    eventmachine (1.2.0.1)
     execjs (2.0.2)
     ffi (1.9.3)
     fssm (0.2.10)
@@ -125,3 +125,6 @@ DEPENDENCIES
   middleman-minify-html
   middleman-syntax
   redcarpet
+
+BUNDLED WITH
+   1.11.2
