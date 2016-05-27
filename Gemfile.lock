@@ -107,6 +107,7 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rake (10.4.2)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -143,6 +144,7 @@ DEPENDENCIES
   middleman-livereload
   middleman-minify-html
   middleman-syntax
+  rake
   redcarpet
 
 BUNDLED WITH

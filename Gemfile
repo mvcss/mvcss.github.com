@@ -3,6 +3,7 @@
 source 'http://rubygems.org'
 
 gem 'redcarpet'
+gem 'rake'
 
 gem 'middleman', '~>3.0'
 gem 'middleman-livereload'
